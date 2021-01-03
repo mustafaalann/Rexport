@@ -196,7 +196,7 @@ namespace Rexport
             this.homePanel.Controls.Add(this.languageComboBox);
             this.homePanel.Controls.Add(this.welcomeTextLabel);
             this.homePanel.Controls.Add(this.selectLanguageLabel);
-            this.homePanel.Location = new System.Drawing.Point(2, 0);
+            this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Margin = new System.Windows.Forms.Padding(2);
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(972, 540);
@@ -240,9 +240,9 @@ namespace Rexport
             // 
             // dinamicPanel
             // 
+            this.dinamicPanel.Controls.Add(this.homePanel);
             this.dinamicPanel.Controls.Add(this.editPanel);
             this.dinamicPanel.Controls.Add(this.createPanel);
-            this.dinamicPanel.Controls.Add(this.homePanel);
             this.dinamicPanel.Location = new System.Drawing.Point(211, 35);
             this.dinamicPanel.Name = "dinamicPanel";
             this.dinamicPanel.Size = new System.Drawing.Size(972, 542);
