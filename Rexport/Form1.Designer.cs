@@ -36,6 +36,7 @@ namespace Rexport
             this.homeButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.createButton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,12 +120,22 @@ namespace Rexport
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(211, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(972, 31);
+            this.panel3.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1085, 577);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1183, 577);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -148,6 +159,7 @@ namespace Rexport
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
