@@ -89,5 +89,8 @@
   <ItemGroup>
     <None Include="Resources\minimize-window-128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-window-1281.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -83,6 +83,16 @@ namespace Rexport.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minimize_window_1281 {
+            get {
+                object obj = ResourceManager.GetObject("minimize-window-1281", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rexport {
             get {
                 object obj = ResourceManager.GetObject("Rexport", resourceCulture);
