@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="Resources\Rexport.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-window-128.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

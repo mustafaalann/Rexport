@@ -15,7 +15,7 @@ namespace Rexport
         public Home()
         {
             InitializeComponent();
-            homePanel.Hide();
+            homePanel.Show();
             editPanel.Hide();
             createPanel.Hide();
         }
@@ -106,6 +106,16 @@ namespace Rexport
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

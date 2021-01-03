@@ -30,12 +30,14 @@ namespace Rexport
         private void InitializeComponent()
         {
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.logoLabel = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.createButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
-            this.logoLabel = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.upperPanel = new System.Windows.Forms.Panel();
+            this.minimizeButton = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.PictureBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.welcomeTextLabel = new System.Windows.Forms.Label();
             this.selectLanguageLabel = new System.Windows.Forms.Label();
@@ -48,6 +50,9 @@ namespace Rexport
             this.dinamicPanel = new System.Windows.Forms.Panel();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.upperPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             this.homePanel.SuspendLayout();
             this.editPanel.SuspendLayout();
             this.createPanel.SuspendLayout();
@@ -67,6 +72,30 @@ namespace Rexport
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(211, 577);
             this.leftPanel.TabIndex = 0;
+            // 
+            // logoLabel
+            // 
+            this.logoLabel.AutoSize = true;
+            this.logoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.logoLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.logoLabel.Location = new System.Drawing.Point(-3, 160);
+            this.logoLabel.Name = "logoLabel";
+            this.logoLabel.Size = new System.Drawing.Size(214, 20);
+            this.logoLabel.TabIndex = 1;
+            this.logoLabel.Text = "a syllabus editting system";
+            this.logoLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Logo
+            // 
+            this.Logo.Image = global::Rexport.Properties.Resources.Rexport;
+            this.Logo.Location = new System.Drawing.Point(-46, -13);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(293, 183);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
+            this.Logo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // createButton
             // 
@@ -104,38 +133,38 @@ namespace Rexport
             this.homeButton.UseVisualStyleBackColor = false;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
-            // logoLabel
-            // 
-            this.logoLabel.AutoSize = true;
-            this.logoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.logoLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.logoLabel.Location = new System.Drawing.Point(-3, 160);
-            this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(214, 20);
-            this.logoLabel.TabIndex = 1;
-            this.logoLabel.Text = "a syllabus editting system";
-            this.logoLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // Logo
-            // 
-            this.Logo.Image = global::Rexport.Properties.Resources.Rexport;
-            this.Logo.Location = new System.Drawing.Point(-46, -13);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(293, 183);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
-            this.Logo.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // upperPanel
             // 
             this.upperPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.upperPanel.Controls.Add(this.minimizeButton);
+            this.upperPanel.Controls.Add(this.closeButton);
             this.upperPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.upperPanel.Location = new System.Drawing.Point(211, 0);
             this.upperPanel.Name = "upperPanel";
             this.upperPanel.Size = new System.Drawing.Size(972, 38);
             this.upperPanel.TabIndex = 1;
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.Image = global::Rexport.Properties.Resources.minimize_window_128;
+            this.minimizeButton.Location = new System.Drawing.Point(884, 2);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(43, 32);
+            this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minimizeButton.TabIndex = 1;
+            this.minimizeButton.TabStop = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Image = global::Rexport.Properties.Resources.close_window_128;
+            this.closeButton.Location = new System.Drawing.Point(926, 2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(43, 32);
+            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButton.TabIndex = 0;
+            this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // welcomeLabel
             // 
@@ -241,8 +270,8 @@ namespace Rexport
             // dinamicPanel
             // 
             this.dinamicPanel.Controls.Add(this.homePanel);
-            this.dinamicPanel.Controls.Add(this.editPanel);
             this.dinamicPanel.Controls.Add(this.createPanel);
+            this.dinamicPanel.Controls.Add(this.editPanel);
             this.dinamicPanel.Location = new System.Drawing.Point(211, 35);
             this.dinamicPanel.Name = "dinamicPanel";
             this.dinamicPanel.Size = new System.Drawing.Size(972, 542);
@@ -258,6 +287,7 @@ namespace Rexport
             this.Controls.Add(this.upperPanel);
             this.Controls.Add(this.leftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -265,6 +295,9 @@ namespace Rexport
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            this.upperPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
             this.editPanel.ResumeLayout(false);
@@ -295,6 +328,8 @@ namespace Rexport
         private System.Windows.Forms.Panel createPanel;
         private System.Windows.Forms.Label createLabel;
         private System.Windows.Forms.Panel dinamicPanel;
+        private System.Windows.Forms.PictureBox closeButton;
+        private System.Windows.Forms.PictureBox minimizeButton;
     }
 }
 
