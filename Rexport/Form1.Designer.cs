@@ -34,6 +34,8 @@ namespace Rexport
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.homeButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.createButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -42,6 +44,8 @@ namespace Rexport
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel1.Controls.Add(this.createButton);
+            this.panel1.Controls.Add(this.editButton);
             this.panel1.Controls.Add(this.homeButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -94,6 +98,27 @@ namespace Rexport
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // editButton
+            // 
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.editButton.Location = new System.Drawing.Point(0, 256);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(211, 49);
+            this.editButton.TabIndex = 2;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // createButton
+            // 
+            this.createButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.createButton.Location = new System.Drawing.Point(0, 311);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(211, 49);
+            this.createButton.TabIndex = 3;
+            this.createButton.Text = "Create";
+            this.createButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +146,8 @@ namespace Rexport
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button homeButton;
+        private System.Windows.Forms.Button createButton;
+        private System.Windows.Forms.Button editButton;
     }
 }
 
