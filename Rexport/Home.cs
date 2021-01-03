@@ -77,31 +77,7 @@ namespace Rexport
             createButton.BackColor = Color.FromArgb(255, 213, 101);
         }
 
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -117,5 +93,6 @@ namespace Rexport
         {
             Dispose();
         }
+
     }
 }

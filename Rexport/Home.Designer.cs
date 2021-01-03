@@ -176,7 +176,6 @@ namespace Rexport
             this.welcomeLabel.Size = new System.Drawing.Size(376, 44);
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Welcome to Rexport!\r\n";
-            this.welcomeLabel.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // welcomeTextLabel
             // 
@@ -190,7 +189,6 @@ namespace Rexport
             this.welcomeTextLabel.Text = "This is a syllabus editing system for computer and software\r\nengineering courses " +
     "of Izmir University of Economics. \r\nYou can edit an existing syllabus or create " +
     "a new one.\r\n";
-            this.welcomeTextLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // selectLanguageLabel
             // 
