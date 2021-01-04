@@ -16,6 +16,7 @@ namespace Rexport
         {
             InitializeComponent();
             homePanel.Show();
+            mainEditPanel.Hide();
             editPanel.Hide();
             createPanel.Hide();
         }
@@ -148,6 +149,11 @@ namespace Rexport
         {
             
         
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
 
         }
     }
