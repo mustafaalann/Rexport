@@ -21,8 +21,8 @@ namespace Rexport
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 3;
-            if(panel2.Width >= 455)
+            panel2.Width += 7;
+            if(panel2.Width >= 720)
             {
                 timer1.Stop();
                 Home h1 = new Home(true);
