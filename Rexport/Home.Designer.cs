@@ -47,6 +47,12 @@ namespace Rexport
             this.editPanel = new System.Windows.Forms.Panel();
             this.editLabel = new System.Windows.Forms.Label();
             this.createPanel = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.textBox48 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.textBox45 = new System.Windows.Forms.TextBox();
@@ -165,12 +171,6 @@ namespace Rexport
             this.dinamicPanel = new System.Windows.Forms.Panel();
             this.mainEditPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.upperPanel.SuspendLayout();
@@ -179,6 +179,7 @@ namespace Rexport
             this.homePanel.SuspendLayout();
             this.editPanel.SuspendLayout();
             this.createPanel.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -192,7 +193,6 @@ namespace Rexport
             this.tableLayoutPanel2.SuspendLayout();
             this.dinamicPanel.SuspendLayout();
             this.mainEditPanel.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -205,8 +205,9 @@ namespace Rexport
             this.leftPanel.Controls.Add(this.homeButton);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(211, 577);
+            this.leftPanel.Size = new System.Drawing.Size(281, 710);
             this.leftPanel.TabIndex = 0;
             // 
             // logoLabel
@@ -215,9 +216,10 @@ namespace Rexport
             this.logoLabel.BackColor = System.Drawing.Color.Transparent;
             this.logoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.logoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.logoLabel.Location = new System.Drawing.Point(18, 155);
+            this.logoLabel.Location = new System.Drawing.Point(24, 191);
+            this.logoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(171, 15);
+            this.logoLabel.Size = new System.Drawing.Size(201, 18);
             this.logoLabel.TabIndex = 1;
             this.logoLabel.Text = "a syllabus editting system";
             this.logoLabel.Click += new System.EventHandler(this.label1_Click);
@@ -225,9 +227,10 @@ namespace Rexport
             // Logo
             // 
             this.Logo.Image = global::Rexport.Properties.Resources.Rexport;
-            this.Logo.Location = new System.Drawing.Point(-46, -13);
+            this.Logo.Location = new System.Drawing.Point(-61, -16);
+            this.Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(293, 183);
+            this.Logo.Size = new System.Drawing.Size(391, 225);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
@@ -237,9 +240,10 @@ namespace Rexport
             // 
             this.createButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.createButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.createButton.Location = new System.Drawing.Point(0, 311);
+            this.createButton.Location = new System.Drawing.Point(0, 383);
+            this.createButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(211, 49);
+            this.createButton.Size = new System.Drawing.Size(281, 60);
             this.createButton.TabIndex = 3;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = false;
@@ -249,9 +253,10 @@ namespace Rexport
             // 
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.editButton.Location = new System.Drawing.Point(0, 256);
+            this.editButton.Location = new System.Drawing.Point(0, 315);
+            this.editButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(211, 49);
+            this.editButton.Size = new System.Drawing.Size(281, 60);
             this.editButton.TabIndex = 2;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = false;
@@ -261,9 +266,10 @@ namespace Rexport
             // 
             this.homeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(101)))));
             this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.homeButton.Location = new System.Drawing.Point(0, 201);
+            this.homeButton.Location = new System.Drawing.Point(0, 247);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(211, 49);
+            this.homeButton.Size = new System.Drawing.Size(281, 60);
             this.homeButton.TabIndex = 1;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = false;
@@ -275,17 +281,19 @@ namespace Rexport
             this.upperPanel.Controls.Add(this.minimizeButton);
             this.upperPanel.Controls.Add(this.closeButton);
             this.upperPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.upperPanel.Location = new System.Drawing.Point(211, 0);
+            this.upperPanel.Location = new System.Drawing.Point(281, 0);
+            this.upperPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.upperPanel.Name = "upperPanel";
-            this.upperPanel.Size = new System.Drawing.Size(956, 38);
+            this.upperPanel.Size = new System.Drawing.Size(1275, 47);
             this.upperPanel.TabIndex = 1;
             // 
             // minimizeButton
             // 
             this.minimizeButton.Image = global::Rexport.Properties.Resources.minimize_window_128;
-            this.minimizeButton.Location = new System.Drawing.Point(865, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(1153, 1);
+            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(43, 32);
+            this.minimizeButton.Size = new System.Drawing.Size(57, 39);
             this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizeButton.TabIndex = 1;
             this.minimizeButton.TabStop = false;
@@ -294,9 +302,10 @@ namespace Rexport
             // closeButton
             // 
             this.closeButton.Image = global::Rexport.Properties.Resources.close_window_128;
-            this.closeButton.Location = new System.Drawing.Point(912, 1);
+            this.closeButton.Location = new System.Drawing.Point(1216, 1);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(43, 32);
+            this.closeButton.Size = new System.Drawing.Size(57, 39);
             this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closeButton.TabIndex = 0;
             this.closeButton.TabStop = false;
@@ -307,9 +316,10 @@ namespace Rexport
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.welcomeLabel.Location = new System.Drawing.Point(98, 80);
+            this.welcomeLabel.Location = new System.Drawing.Point(131, 98);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(376, 44);
+            this.welcomeLabel.Size = new System.Drawing.Size(472, 55);
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Welcome to Rexport!\r\n";
             // 
@@ -318,9 +328,10 @@ namespace Rexport
             this.welcomeTextLabel.AutoSize = true;
             this.welcomeTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.welcomeTextLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
-            this.welcomeTextLabel.Location = new System.Drawing.Point(99, 149);
+            this.welcomeTextLabel.Location = new System.Drawing.Point(132, 183);
+            this.welcomeTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomeTextLabel.Name = "welcomeTextLabel";
-            this.welcomeTextLabel.Size = new System.Drawing.Size(792, 108);
+            this.welcomeTextLabel.Size = new System.Drawing.Size(1016, 132);
             this.welcomeTextLabel.TabIndex = 3;
             this.welcomeTextLabel.Text = "This is a syllabus editing system for computer and software\r\nengineering courses " +
     "of Izmir University of Economics. \r\nYou can edit an existing syllabus or create " +
@@ -331,9 +342,10 @@ namespace Rexport
             this.selectLanguageLabel.AutoSize = true;
             this.selectLanguageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.selectLanguageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.selectLanguageLabel.Location = new System.Drawing.Point(99, 288);
+            this.selectLanguageLabel.Location = new System.Drawing.Point(132, 354);
+            this.selectLanguageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.selectLanguageLabel.Name = "selectLanguageLabel";
-            this.selectLanguageLabel.Size = new System.Drawing.Size(370, 36);
+            this.selectLanguageLabel.Size = new System.Drawing.Size(475, 44);
             this.selectLanguageLabel.TabIndex = 4;
             this.selectLanguageLabel.Text = "Please select the language\r\n";
             // 
@@ -345,10 +357,10 @@ namespace Rexport
             this.languageComboBox.Items.AddRange(new object[] {
             "English",
             "Turkish"});
-            this.languageComboBox.Location = new System.Drawing.Point(105, 351);
-            this.languageComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.languageComboBox.Location = new System.Drawing.Point(140, 432);
+            this.languageComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.languageComboBox.Name = "languageComboBox";
-            this.languageComboBox.Size = new System.Drawing.Size(201, 37);
+            this.languageComboBox.Size = new System.Drawing.Size(267, 44);
             this.languageComboBox.TabIndex = 5;
             this.languageComboBox.Text = "Select Language";
             this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
@@ -361,9 +373,9 @@ namespace Rexport
             this.homePanel.Controls.Add(this.welcomeTextLabel);
             this.homePanel.Controls.Add(this.selectLanguageLabel);
             this.homePanel.Location = new System.Drawing.Point(0, 0);
-            this.homePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.homePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(972, 549);
+            this.homePanel.Size = new System.Drawing.Size(1296, 676);
             this.homePanel.TabIndex = 6;
             // 
             // editPanel
@@ -371,17 +383,19 @@ namespace Rexport
             this.editPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.editPanel.Controls.Add(this.editLabel);
             this.editPanel.Location = new System.Drawing.Point(0, 0);
+            this.editPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editPanel.Name = "editPanel";
-            this.editPanel.Size = new System.Drawing.Size(956, 546);
+            this.editPanel.Size = new System.Drawing.Size(1275, 672);
             this.editPanel.TabIndex = 6;
             // 
             // editLabel
             // 
             this.editLabel.AutoSize = true;
             this.editLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.editLabel.Location = new System.Drawing.Point(122, 69);
+            this.editLabel.Location = new System.Drawing.Point(163, 85);
+            this.editLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.editLabel.Name = "editLabel";
-            this.editLabel.Size = new System.Drawing.Size(296, 55);
+            this.editLabel.Size = new System.Drawing.Size(369, 69);
             this.editLabel.TabIndex = 0;
             this.editLabel.Text = "EDIT LABEL";
             // 
@@ -403,10 +417,90 @@ namespace Rexport
             this.createPanel.Controls.Add(this.tableLayoutPanel1);
             this.createPanel.Controls.Add(this.tableLayoutPanel2);
             this.createPanel.Location = new System.Drawing.Point(0, 0);
+            this.createPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createPanel.Name = "createPanel";
-            this.createPanel.Size = new System.Drawing.Size(956, 543);
+            this.createPanel.Size = new System.Drawing.Size(1275, 668);
             this.createPanel.TabIndex = 7;
             this.createPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.createPanel_Paint);
+            // 
+            // label36
+            // 
+            this.label36.BackColor = System.Drawing.Color.AliceBlue;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label36.Location = new System.Drawing.Point(8, 3450);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(1200, 53);
+            this.label36.TabIndex = 13;
+            this.label36.Text = "3.ASSESSMENT";
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.44444F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.55556F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel9.Controls.Add(this.label35, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.label34, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.textBox47, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.textBox48, 1, 1);
+            this.tableLayoutPanel9.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(32, 3147);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.55462F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.44538F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1168, 294);
+            this.tableLayoutPanel9.TabIndex = 12;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label35.Location = new System.Drawing.Point(21, 188);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(279, 25);
+            this.label35.TabIndex = 1;
+            this.label35.Text = "Suggested Readings/Materials";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label34.Location = new System.Drawing.Point(45, 41);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(230, 25);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Course Notes/Textbooks";
+            // 
+            // textBox47
+            // 
+            this.textBox47.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox47.Location = new System.Drawing.Point(326, 39);
+            this.textBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox47.Name = "textBox47";
+            this.textBox47.Size = new System.Drawing.Size(836, 30);
+            this.textBox47.TabIndex = 76;
+            // 
+            // textBox48
+            // 
+            this.textBox48.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox48.Location = new System.Drawing.Point(326, 185);
+            this.textBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox48.Name = "textBox48";
+            this.textBox48.Size = new System.Drawing.Size(836, 30);
+            this.textBox48.TabIndex = 77;
             // 
             // tableLayoutPanel8
             // 
@@ -467,7 +561,8 @@ namespace Rexport
             this.tableLayoutPanel8.Controls.Add(this.label70, 0, 16);
             this.tableLayoutPanel8.Controls.Add(this.textBox15, 1, 1);
             this.tableLayoutPanel8.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(24, 1295);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(32, 1594);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 17;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
@@ -487,25 +582,27 @@ namespace Rexport
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(876, 1246);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1168, 1534);
             this.tableLayoutPanel8.TabIndex = 11;
             // 
             // textBox46
             // 
             this.textBox46.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox46.Location = new System.Drawing.Point(491, 1194);
+            this.textBox46.Location = new System.Drawing.Point(655, 1472);
+            this.textBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(355, 26);
+            this.textBox46.Size = new System.Drawing.Size(472, 30);
             this.textBox46.TabIndex = 76;
             // 
             // textBox45
             // 
             this.textBox45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox45.Location = new System.Drawing.Point(91, 1194);
+            this.textBox45.Location = new System.Drawing.Point(122, 1472);
+            this.textBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(355, 26);
+            this.textBox45.Size = new System.Drawing.Size(472, 30);
             this.textBox45.TabIndex = 75;
             this.textBox45.TextChanged += new System.EventHandler(this.textBox45_TextChanged);
             // 
@@ -513,261 +610,290 @@ namespace Rexport
             // 
             this.textBox44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox44.Location = new System.Drawing.Point(491, 1119);
+            this.textBox44.Location = new System.Drawing.Point(655, 1380);
+            this.textBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(355, 26);
+            this.textBox44.Size = new System.Drawing.Size(472, 30);
             this.textBox44.TabIndex = 74;
             // 
             // textBox43
             // 
             this.textBox43.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox43.Location = new System.Drawing.Point(91, 1119);
+            this.textBox43.Location = new System.Drawing.Point(122, 1380);
+            this.textBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(355, 26);
+            this.textBox43.Size = new System.Drawing.Size(472, 30);
             this.textBox43.TabIndex = 73;
             // 
             // textBox42
             // 
             this.textBox42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox42.Location = new System.Drawing.Point(491, 1046);
+            this.textBox42.Location = new System.Drawing.Point(655, 1290);
+            this.textBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(355, 26);
+            this.textBox42.Size = new System.Drawing.Size(472, 30);
             this.textBox42.TabIndex = 72;
             // 
             // textBox41
             // 
             this.textBox41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox41.Location = new System.Drawing.Point(91, 1046);
+            this.textBox41.Location = new System.Drawing.Point(122, 1290);
+            this.textBox41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(355, 26);
+            this.textBox41.Size = new System.Drawing.Size(472, 30);
             this.textBox41.TabIndex = 71;
             // 
             // textBox40
             // 
             this.textBox40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox40.Location = new System.Drawing.Point(491, 973);
+            this.textBox40.Location = new System.Drawing.Point(655, 1200);
+            this.textBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(355, 26);
+            this.textBox40.Size = new System.Drawing.Size(472, 30);
             this.textBox40.TabIndex = 70;
             // 
             // textBox39
             // 
             this.textBox39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox39.Location = new System.Drawing.Point(91, 973);
+            this.textBox39.Location = new System.Drawing.Point(122, 1200);
+            this.textBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(355, 26);
+            this.textBox39.Size = new System.Drawing.Size(472, 30);
             this.textBox39.TabIndex = 69;
             // 
             // textBox38
             // 
             this.textBox38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox38.Location = new System.Drawing.Point(491, 900);
+            this.textBox38.Location = new System.Drawing.Point(655, 1110);
+            this.textBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(355, 26);
+            this.textBox38.Size = new System.Drawing.Size(472, 30);
             this.textBox38.TabIndex = 68;
             // 
             // textBox37
             // 
             this.textBox37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox37.Location = new System.Drawing.Point(91, 900);
+            this.textBox37.Location = new System.Drawing.Point(122, 1110);
+            this.textBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(355, 26);
+            this.textBox37.Size = new System.Drawing.Size(472, 30);
             this.textBox37.TabIndex = 67;
             // 
             // textBox36
             // 
             this.textBox36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox36.Location = new System.Drawing.Point(491, 827);
+            this.textBox36.Location = new System.Drawing.Point(655, 1020);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(355, 26);
+            this.textBox36.Size = new System.Drawing.Size(472, 30);
             this.textBox36.TabIndex = 66;
             // 
             // textBox35
             // 
             this.textBox35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox35.Location = new System.Drawing.Point(91, 827);
+            this.textBox35.Location = new System.Drawing.Point(122, 1020);
+            this.textBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(355, 26);
+            this.textBox35.Size = new System.Drawing.Size(472, 30);
             this.textBox35.TabIndex = 65;
             // 
             // textBox34
             // 
             this.textBox34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox34.Location = new System.Drawing.Point(491, 754);
+            this.textBox34.Location = new System.Drawing.Point(655, 930);
+            this.textBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(355, 26);
+            this.textBox34.Size = new System.Drawing.Size(472, 30);
             this.textBox34.TabIndex = 64;
             // 
             // textBox33
             // 
             this.textBox33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox33.Location = new System.Drawing.Point(91, 754);
+            this.textBox33.Location = new System.Drawing.Point(122, 930);
+            this.textBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(355, 26);
+            this.textBox33.Size = new System.Drawing.Size(472, 30);
             this.textBox33.TabIndex = 63;
             // 
             // textBox32
             // 
             this.textBox32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox32.Location = new System.Drawing.Point(491, 681);
+            this.textBox32.Location = new System.Drawing.Point(655, 840);
+            this.textBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(355, 26);
+            this.textBox32.Size = new System.Drawing.Size(472, 30);
             this.textBox32.TabIndex = 62;
             // 
             // textBox31
             // 
             this.textBox31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox31.Location = new System.Drawing.Point(91, 681);
+            this.textBox31.Location = new System.Drawing.Point(122, 840);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(355, 26);
+            this.textBox31.Size = new System.Drawing.Size(472, 30);
             this.textBox31.TabIndex = 61;
             // 
             // textBox30
             // 
             this.textBox30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox30.Location = new System.Drawing.Point(491, 608);
+            this.textBox30.Location = new System.Drawing.Point(655, 750);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(355, 26);
+            this.textBox30.Size = new System.Drawing.Size(472, 30);
             this.textBox30.TabIndex = 60;
             // 
             // textBox29
             // 
             this.textBox29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox29.Location = new System.Drawing.Point(91, 608);
+            this.textBox29.Location = new System.Drawing.Point(122, 750);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(355, 26);
+            this.textBox29.Size = new System.Drawing.Size(472, 30);
             this.textBox29.TabIndex = 59;
             // 
             // textBox28
             // 
             this.textBox28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox28.Location = new System.Drawing.Point(491, 535);
+            this.textBox28.Location = new System.Drawing.Point(655, 660);
+            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(355, 26);
+            this.textBox28.Size = new System.Drawing.Size(472, 30);
             this.textBox28.TabIndex = 58;
             // 
             // textBox27
             // 
             this.textBox27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox27.Location = new System.Drawing.Point(91, 535);
+            this.textBox27.Location = new System.Drawing.Point(122, 660);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(355, 26);
+            this.textBox27.Size = new System.Drawing.Size(472, 30);
             this.textBox27.TabIndex = 57;
             // 
             // textBox26
             // 
             this.textBox26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox26.Location = new System.Drawing.Point(491, 462);
+            this.textBox26.Location = new System.Drawing.Point(655, 570);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(355, 26);
+            this.textBox26.Size = new System.Drawing.Size(472, 30);
             this.textBox26.TabIndex = 56;
             // 
             // textBox25
             // 
             this.textBox25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox25.Location = new System.Drawing.Point(91, 462);
+            this.textBox25.Location = new System.Drawing.Point(122, 570);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(355, 26);
+            this.textBox25.Size = new System.Drawing.Size(472, 30);
             this.textBox25.TabIndex = 55;
             // 
             // textBox24
             // 
             this.textBox24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox24.Location = new System.Drawing.Point(491, 389);
+            this.textBox24.Location = new System.Drawing.Point(655, 480);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(355, 26);
+            this.textBox24.Size = new System.Drawing.Size(472, 30);
             this.textBox24.TabIndex = 54;
             // 
             // textBox23
             // 
             this.textBox23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox23.Location = new System.Drawing.Point(91, 389);
+            this.textBox23.Location = new System.Drawing.Point(122, 480);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(355, 26);
+            this.textBox23.Size = new System.Drawing.Size(472, 30);
             this.textBox23.TabIndex = 53;
             // 
             // textBox22
             // 
             this.textBox22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox22.Location = new System.Drawing.Point(491, 316);
+            this.textBox22.Location = new System.Drawing.Point(655, 390);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(355, 26);
+            this.textBox22.Size = new System.Drawing.Size(472, 30);
             this.textBox22.TabIndex = 52;
             // 
             // textBox21
             // 
             this.textBox21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox21.Location = new System.Drawing.Point(91, 316);
+            this.textBox21.Location = new System.Drawing.Point(122, 390);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(355, 26);
+            this.textBox21.Size = new System.Drawing.Size(472, 30);
             this.textBox21.TabIndex = 51;
             // 
             // textBox20
             // 
             this.textBox20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox20.Location = new System.Drawing.Point(491, 243);
+            this.textBox20.Location = new System.Drawing.Point(655, 300);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(355, 26);
+            this.textBox20.Size = new System.Drawing.Size(472, 30);
             this.textBox20.TabIndex = 50;
             // 
             // textBox19
             // 
             this.textBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox19.Location = new System.Drawing.Point(91, 243);
+            this.textBox19.Location = new System.Drawing.Point(122, 300);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(355, 26);
+            this.textBox19.Size = new System.Drawing.Size(472, 30);
             this.textBox19.TabIndex = 49;
             // 
             // textBox18
             // 
             this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox18.Location = new System.Drawing.Point(491, 170);
+            this.textBox18.Location = new System.Drawing.Point(655, 210);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(355, 26);
+            this.textBox18.Size = new System.Drawing.Size(472, 30);
             this.textBox18.TabIndex = 48;
             // 
             // textBox17
             // 
             this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox17.Location = new System.Drawing.Point(91, 170);
+            this.textBox17.Location = new System.Drawing.Point(122, 210);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(355, 26);
+            this.textBox17.Size = new System.Drawing.Size(472, 30);
             this.textBox17.TabIndex = 47;
             // 
             // textBox16
             // 
             this.textBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox16.Location = new System.Drawing.Point(491, 97);
+            this.textBox16.Location = new System.Drawing.Point(655, 120);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(355, 26);
+            this.textBox16.Size = new System.Drawing.Size(472, 30);
             this.textBox16.TabIndex = 46;
             // 
             // label59
@@ -775,9 +901,10 @@ namespace Rexport
             this.label59.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label59.Location = new System.Drawing.Point(24, 830);
+            this.label59.Location = new System.Drawing.Point(33, 1023);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(27, 20);
+            this.label59.Size = new System.Drawing.Size(34, 25);
             this.label59.TabIndex = 34;
             this.label59.Text = "11";
             // 
@@ -786,9 +913,10 @@ namespace Rexport
             this.label44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label44.Location = new System.Drawing.Point(29, 465);
+            this.label44.Location = new System.Drawing.Point(39, 573);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(18, 20);
+            this.label44.Size = new System.Drawing.Size(23, 25);
             this.label44.TabIndex = 18;
             this.label44.Text = "6";
             // 
@@ -797,9 +925,10 @@ namespace Rexport
             this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label29.Location = new System.Drawing.Point(29, 100);
+            this.label29.Location = new System.Drawing.Point(39, 123);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(18, 20);
+            this.label29.Size = new System.Drawing.Size(23, 25);
             this.label29.TabIndex = 3;
             this.label29.Text = "1";
             // 
@@ -808,9 +937,10 @@ namespace Rexport
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label26.Location = new System.Drawing.Point(9, 27);
+            this.label26.Location = new System.Drawing.Point(13, 33);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(58, 20);
+            this.label26.Size = new System.Drawing.Size(74, 25);
             this.label26.TabIndex = 0;
             this.label26.Text = "Weeks";
             // 
@@ -818,9 +948,10 @@ namespace Rexport
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label27.Location = new System.Drawing.Point(224, 27);
+            this.label27.Location = new System.Drawing.Point(298, 33);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 20);
+            this.label27.Size = new System.Drawing.Size(119, 25);
             this.label27.TabIndex = 1;
             this.label27.Text = "Subjects";
             // 
@@ -828,9 +959,10 @@ namespace Rexport
             // 
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label28.Location = new System.Drawing.Point(589, 27);
+            this.label28.Location = new System.Drawing.Point(786, 33);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(158, 20);
+            this.label28.Size = new System.Drawing.Size(211, 25);
             this.label28.TabIndex = 2;
             this.label28.Text = "Required Materials";
             // 
@@ -839,9 +971,10 @@ namespace Rexport
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label30.Location = new System.Drawing.Point(29, 173);
+            this.label30.Location = new System.Drawing.Point(39, 213);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(18, 20);
+            this.label30.Size = new System.Drawing.Size(23, 25);
             this.label30.TabIndex = 4;
             this.label30.Text = "2";
             // 
@@ -850,9 +983,10 @@ namespace Rexport
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label31.Location = new System.Drawing.Point(29, 246);
+            this.label31.Location = new System.Drawing.Point(39, 303);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(18, 20);
+            this.label31.Size = new System.Drawing.Size(23, 25);
             this.label31.TabIndex = 5;
             this.label31.Text = "3";
             // 
@@ -861,9 +995,10 @@ namespace Rexport
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label32.Location = new System.Drawing.Point(29, 319);
+            this.label32.Location = new System.Drawing.Point(39, 393);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(18, 20);
+            this.label32.Size = new System.Drawing.Size(23, 25);
             this.label32.TabIndex = 6;
             this.label32.Text = "4";
             // 
@@ -872,9 +1007,10 @@ namespace Rexport
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label33.Location = new System.Drawing.Point(29, 392);
+            this.label33.Location = new System.Drawing.Point(39, 483);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(18, 20);
+            this.label33.Size = new System.Drawing.Size(23, 25);
             this.label33.TabIndex = 7;
             this.label33.Text = "5";
             // 
@@ -883,9 +1019,10 @@ namespace Rexport
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label45.Location = new System.Drawing.Point(29, 538);
+            this.label45.Location = new System.Drawing.Point(39, 663);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(18, 20);
+            this.label45.Size = new System.Drawing.Size(23, 25);
             this.label45.TabIndex = 19;
             this.label45.Text = "7";
             // 
@@ -894,9 +1031,10 @@ namespace Rexport
             this.label48.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label48.Location = new System.Drawing.Point(29, 611);
+            this.label48.Location = new System.Drawing.Point(39, 753);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(18, 20);
+            this.label48.Size = new System.Drawing.Size(23, 25);
             this.label48.TabIndex = 23;
             this.label48.Text = "8";
             // 
@@ -905,9 +1043,10 @@ namespace Rexport
             this.label50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label50.Location = new System.Drawing.Point(29, 684);
+            this.label50.Location = new System.Drawing.Point(39, 843);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(18, 20);
+            this.label50.Size = new System.Drawing.Size(23, 25);
             this.label50.TabIndex = 25;
             this.label50.Text = "9";
             // 
@@ -916,9 +1055,10 @@ namespace Rexport
             this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label54.Location = new System.Drawing.Point(24, 757);
+            this.label54.Location = new System.Drawing.Point(33, 933);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(27, 20);
+            this.label54.Size = new System.Drawing.Size(34, 25);
             this.label54.TabIndex = 29;
             this.label54.Text = "10";
             // 
@@ -927,9 +1067,10 @@ namespace Rexport
             this.label60.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label60.Location = new System.Drawing.Point(24, 903);
+            this.label60.Location = new System.Drawing.Point(33, 1113);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(27, 20);
+            this.label60.Size = new System.Drawing.Size(34, 25);
             this.label60.TabIndex = 35;
             this.label60.Text = "12";
             // 
@@ -938,9 +1079,10 @@ namespace Rexport
             this.label61.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label61.Location = new System.Drawing.Point(24, 976);
+            this.label61.Location = new System.Drawing.Point(33, 1203);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(27, 20);
+            this.label61.Size = new System.Drawing.Size(34, 25);
             this.label61.TabIndex = 36;
             this.label61.Text = "13";
             // 
@@ -949,9 +1091,10 @@ namespace Rexport
             this.label62.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label62.Location = new System.Drawing.Point(24, 1049);
+            this.label62.Location = new System.Drawing.Point(33, 1293);
+            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(27, 20);
+            this.label62.Size = new System.Drawing.Size(34, 25);
             this.label62.TabIndex = 37;
             this.label62.Text = "14";
             // 
@@ -960,9 +1103,10 @@ namespace Rexport
             this.label69.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label69.Location = new System.Drawing.Point(24, 1122);
+            this.label69.Location = new System.Drawing.Point(33, 1383);
+            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(27, 20);
+            this.label69.Size = new System.Drawing.Size(34, 25);
             this.label69.TabIndex = 44;
             this.label69.Text = "15";
             // 
@@ -971,9 +1115,10 @@ namespace Rexport
             this.label70.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label70.Location = new System.Drawing.Point(24, 1197);
+            this.label70.Location = new System.Drawing.Point(33, 1474);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(27, 20);
+            this.label70.Size = new System.Drawing.Size(34, 25);
             this.label70.TabIndex = 45;
             this.label70.Text = "16";
             // 
@@ -981,18 +1126,20 @@ namespace Rexport
             // 
             this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox15.Location = new System.Drawing.Point(91, 97);
+            this.textBox15.Location = new System.Drawing.Point(122, 120);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(355, 26);
+            this.textBox15.Size = new System.Drawing.Size(472, 30);
             this.textBox15.TabIndex = 0;
             // 
             // label24
             // 
             this.label24.BackColor = System.Drawing.Color.AliceBlue;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.Location = new System.Drawing.Point(8, 1240);
+            this.label24.Location = new System.Drawing.Point(11, 1526);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(900, 43);
+            this.label24.Size = new System.Drawing.Size(1200, 53);
             this.label24.TabIndex = 10;
             this.label24.Text = "2. WEEKLY SUBJECTS AND REQUIRED MATERIALS";
             // 
@@ -1002,19 +1149,20 @@ namespace Rexport
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.5879F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.4121F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel7.Controls.Add(this.label25, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.checkedListBox1, 1, 0);
             this.tableLayoutPanel7.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(24, 1107);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(32, 1362);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.01205F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(876, 121);
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1168, 149);
             this.tableLayoutPanel7.TabIndex = 9;
             // 
             // label25
@@ -1022,9 +1170,10 @@ namespace Rexport
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(18, 50);
+            this.label25.Location = new System.Drawing.Point(28, 62);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(128, 20);
+            this.label25.Size = new System.Drawing.Size(161, 25);
             this.label25.TabIndex = 0;
             this.label25.Text = "Course Category";
             // 
@@ -1038,9 +1187,10 @@ namespace Rexport
             "Supportive Course",
             "Communication and Management Skills Course",
             "Transferable Skill Course"});
-            this.checkedListBox1.Location = new System.Drawing.Point(167, 4);
+            this.checkedListBox1.Location = new System.Drawing.Point(222, 5);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(367, 88);
+            this.checkedListBox1.Size = new System.Drawing.Size(488, 104);
             this.checkedListBox1.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -1049,7 +1199,7 @@ namespace Rexport
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.5879F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.4121F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel6.Controls.Add(this.label14, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.label22, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label23, 0, 1);
@@ -1057,15 +1207,16 @@ namespace Rexport
             this.tableLayoutPanel6.Controls.Add(this.textBox13, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.textBox14, 1, 2);
             this.tableLayoutPanel6.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(24, 747);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(32, 919);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.01205F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(876, 340);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1168, 418);
             this.tableLayoutPanel6.TabIndex = 8;
             // 
             // label14
@@ -1073,9 +1224,10 @@ namespace Rexport
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(10, 296);
+            this.label14.Location = new System.Drawing.Point(20, 364);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 20);
+            this.label14.Size = new System.Drawing.Size(178, 25);
             this.label14.TabIndex = 15;
             this.label14.Text = "Course Description";
             // 
@@ -1084,9 +1236,10 @@ namespace Rexport
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(13, 54);
+            this.label22.Location = new System.Drawing.Point(22, 66);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(137, 20);
+            this.label22.Size = new System.Drawing.Size(173, 25);
             this.label22.TabIndex = 0;
             this.label22.Text = "Course Objectives";
             // 
@@ -1095,9 +1248,10 @@ namespace Rexport
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(8, 190);
+            this.label23.Location = new System.Drawing.Point(17, 234);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(148, 20);
+            this.label23.Size = new System.Drawing.Size(183, 25);
             this.label23.TabIndex = 1;
             this.label23.Text = "Learning Outcomes";
             // 
@@ -1105,30 +1259,30 @@ namespace Rexport
             // 
             this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox12.Location = new System.Drawing.Point(189, 51);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Location = new System.Drawing.Point(253, 64);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(660, 26);
+            this.textBox12.Size = new System.Drawing.Size(879, 30);
             this.textBox12.TabIndex = 13;
             // 
             // textBox13
             // 
             this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox13.Location = new System.Drawing.Point(189, 187);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox13.Location = new System.Drawing.Point(253, 231);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(660, 26);
+            this.textBox13.Size = new System.Drawing.Size(879, 30);
             this.textBox13.TabIndex = 14;
             // 
             // textBox14
             // 
             this.textBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox14.Location = new System.Drawing.Point(189, 293);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox14.Location = new System.Drawing.Point(253, 361);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(660, 26);
+            this.textBox14.Size = new System.Drawing.Size(879, 30);
             this.textBox14.TabIndex = 16;
             // 
             // tableLayoutPanel3
@@ -1137,7 +1291,7 @@ namespace Rexport
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.5879F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.4121F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel3.Controls.Add(this.label13, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label12, 0, 1);
@@ -1145,15 +1299,16 @@ namespace Rexport
             this.tableLayoutPanel3.Controls.Add(this.textBox10, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.textBox11, 1, 2);
             this.tableLayoutPanel3.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(24, 491);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(32, 604);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.01205F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(876, 239);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1168, 294);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // label13
@@ -1161,9 +1316,10 @@ namespace Rexport
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(35, 195);
+            this.label13.Location = new System.Drawing.Point(51, 240);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 20);
+            this.label13.Size = new System.Drawing.Size(116, 25);
             this.label13.TabIndex = 15;
             this.label13.Text = "Assistant(s)";
             // 
@@ -1172,9 +1328,10 @@ namespace Rexport
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(8, 30);
+            this.label11.Location = new System.Drawing.Point(17, 37);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 20);
+            this.label11.Size = new System.Drawing.Size(183, 25);
             this.label11.TabIndex = 0;
             this.label11.Text = "Course Coordinator";
             // 
@@ -1183,9 +1340,10 @@ namespace Rexport
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(11, 116);
+            this.label12.Location = new System.Drawing.Point(21, 143);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 20);
+            this.label12.Size = new System.Drawing.Size(176, 25);
             this.label12.TabIndex = 1;
             this.label12.Text = "Course Lecturer(s)";
             // 
@@ -1193,30 +1351,30 @@ namespace Rexport
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.Location = new System.Drawing.Point(189, 27);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Location = new System.Drawing.Point(253, 35);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(660, 26);
+            this.textBox7.Size = new System.Drawing.Size(879, 30);
             this.textBox7.TabIndex = 13;
             // 
             // textBox10
             // 
             this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox10.Location = new System.Drawing.Point(189, 113);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Location = new System.Drawing.Point(253, 140);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(660, 26);
+            this.textBox10.Size = new System.Drawing.Size(879, 30);
             this.textBox10.TabIndex = 14;
             // 
             // textBox11
             // 
             this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox11.Location = new System.Drawing.Point(189, 192);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Location = new System.Drawing.Point(253, 237);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(660, 26);
+            this.textBox11.Size = new System.Drawing.Size(879, 30);
             this.textBox11.TabIndex = 16;
             // 
             // tableLayoutPanel4
@@ -1225,7 +1383,7 @@ namespace Rexport
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.5879F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.4121F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel3, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel2, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.label15, 0, 0);
@@ -1235,15 +1393,16 @@ namespace Rexport
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel1, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.textBox8, 1, 0);
             this.tableLayoutPanel4.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 229);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(32, 282);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.01205F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(876, 241);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1168, 297);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // flowLayoutPanel3
@@ -1253,18 +1412,20 @@ namespace Rexport
             this.flowLayoutPanel3.Controls.Add(this.checkBox5);
             this.flowLayoutPanel3.Controls.Add(this.checkBox4);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(167, 69);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(222, 85);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(705, 66);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(941, 82);
             this.flowLayoutPanel3.TabIndex = 23;
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox5.Location = new System.Drawing.Point(3, 3);
+            this.checkBox5.Location = new System.Drawing.Point(4, 4);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 24);
+            this.checkBox5.Size = new System.Drawing.Size(98, 29);
             this.checkBox5.TabIndex = 2;
             this.checkBox5.Text = "English";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -1275,9 +1436,10 @@ namespace Rexport
             this.checkBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox4.Location = new System.Drawing.Point(89, 3);
+            this.checkBox4.Location = new System.Drawing.Point(110, 4);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(79, 24);
+            this.checkBox4.Size = new System.Drawing.Size(99, 29);
             this.checkBox4.TabIndex = 1;
             this.checkBox4.Text = "Turkish";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -1289,18 +1451,20 @@ namespace Rexport
             this.flowLayoutPanel2.Controls.Add(this.checkBox6);
             this.flowLayoutPanel2.Controls.Add(this.checkBox12);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(167, 142);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(222, 176);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(705, 50);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(941, 61);
             this.flowLayoutPanel2.TabIndex = 22;
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox6.Location = new System.Drawing.Point(3, 3);
+            this.checkBox6.Location = new System.Drawing.Point(4, 4);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(93, 24);
+            this.checkBox6.Size = new System.Drawing.Size(112, 29);
             this.checkBox6.TabIndex = 1;
             this.checkBox6.Text = "Required";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -1309,9 +1473,10 @@ namespace Rexport
             // 
             this.checkBox12.AutoSize = true;
             this.checkBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox12.Location = new System.Drawing.Point(102, 3);
+            this.checkBox12.Location = new System.Drawing.Point(124, 4);
+            this.checkBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(83, 24);
+            this.checkBox12.Size = new System.Drawing.Size(102, 29);
             this.checkBox12.TabIndex = 2;
             this.checkBox12.Text = "Elective";
             this.checkBox12.UseVisualStyleBackColor = true;
@@ -1321,9 +1486,10 @@ namespace Rexport
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(31, 23);
+            this.label15.Location = new System.Drawing.Point(46, 28);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 20);
+            this.label15.Size = new System.Drawing.Size(125, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "Prerequisites";
             // 
@@ -1332,9 +1498,10 @@ namespace Rexport
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(14, 92);
+            this.label16.Location = new System.Drawing.Point(24, 113);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(136, 20);
+            this.label16.Size = new System.Drawing.Size(169, 25);
             this.label16.TabIndex = 1;
             this.label16.Text = "Course Language";
             // 
@@ -1343,9 +1510,10 @@ namespace Rexport
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(33, 157);
+            this.label18.Location = new System.Drawing.Point(46, 194);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 20);
+            this.label18.Size = new System.Drawing.Size(126, 25);
             this.label18.TabIndex = 2;
             this.label18.Text = "Course Type";
             // 
@@ -1354,9 +1522,10 @@ namespace Rexport
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(31, 208);
+            this.label17.Location = new System.Drawing.Point(45, 256);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(101, 20);
+            this.label17.Size = new System.Drawing.Size(128, 25);
             this.label17.TabIndex = 3;
             this.label17.Text = "Course Level";
             // 
@@ -1369,18 +1538,20 @@ namespace Rexport
             this.flowLayoutPanel1.Controls.Add(this.checkBox10);
             this.flowLayoutPanel1.Controls.Add(this.checkBox11);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(167, 199);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(222, 246);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(705, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(941, 46);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
             this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox9.Location = new System.Drawing.Point(3, 3);
+            this.checkBox9.Location = new System.Drawing.Point(4, 4);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(109, 24);
+            this.checkBox9.Size = new System.Drawing.Size(136, 29);
             this.checkBox9.TabIndex = 1;
             this.checkBox9.Text = "Short Cycle";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -1389,9 +1560,10 @@ namespace Rexport
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox3.Location = new System.Drawing.Point(118, 3);
+            this.checkBox3.Location = new System.Drawing.Point(148, 4);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(101, 24);
+            this.checkBox3.Size = new System.Drawing.Size(126, 29);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "First Cycle";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -1400,9 +1572,10 @@ namespace Rexport
             // 
             this.checkBox10.AutoSize = true;
             this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox10.Location = new System.Drawing.Point(225, 3);
+            this.checkBox10.Location = new System.Drawing.Point(282, 4);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(125, 24);
+            this.checkBox10.Size = new System.Drawing.Size(157, 29);
             this.checkBox10.TabIndex = 3;
             this.checkBox10.Text = "Second Cycle";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -1411,9 +1584,10 @@ namespace Rexport
             // 
             this.checkBox11.AutoSize = true;
             this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox11.Location = new System.Drawing.Point(356, 3);
+            this.checkBox11.Location = new System.Drawing.Point(447, 4);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(105, 24);
+            this.checkBox11.Size = new System.Drawing.Size(134, 29);
             this.checkBox11.TabIndex = 4;
             this.checkBox11.Text = "Third Cycle";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -1422,10 +1596,10 @@ namespace Rexport
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox8.Location = new System.Drawing.Point(259, 20);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Location = new System.Drawing.Point(346, 25);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(521, 26);
+            this.textBox8.Size = new System.Drawing.Size(693, 30);
             this.textBox8.TabIndex = 13;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
@@ -1435,7 +1609,7 @@ namespace Rexport
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.5879F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.4121F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel5.Controls.Add(this.checkBox7, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label19, 0, 1);
@@ -1445,25 +1619,26 @@ namespace Rexport
             this.tableLayoutPanel5.Controls.Add(this.checkBox8, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.checkedListBox3, 1, 1);
             this.tableLayoutPanel5.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(32, 3162);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(54, 8156);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.01205F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(876, 239);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1168, 294);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
             // checkBox7
             // 
             this.checkBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(166, 210);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox7.Location = new System.Drawing.Point(221, 259);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
+            this.checkBox7.Size = new System.Drawing.Size(18, 17);
             this.checkBox7.TabIndex = 20;
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
@@ -1472,9 +1647,10 @@ namespace Rexport
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(31, 27);
+            this.label2.Location = new System.Drawing.Point(46, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.Size = new System.Drawing.Size(125, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Prerequisites";
             // 
@@ -1483,9 +1659,10 @@ namespace Rexport
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.Location = new System.Drawing.Point(14, 106);
+            this.label19.Location = new System.Drawing.Point(24, 131);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(136, 20);
+            this.label19.Size = new System.Drawing.Size(169, 25);
             this.label19.TabIndex = 1;
             this.label19.Text = "Course Language";
             // 
@@ -1494,9 +1671,10 @@ namespace Rexport
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(31, 207);
+            this.label20.Location = new System.Drawing.Point(45, 255);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 20);
+            this.label20.Size = new System.Drawing.Size(128, 25);
             this.label20.TabIndex = 3;
             this.label20.Text = "Course Level";
             // 
@@ -1504,10 +1682,10 @@ namespace Rexport
             // 
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox9.Location = new System.Drawing.Point(259, 24);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Location = new System.Drawing.Point(346, 31);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(521, 26);
+            this.textBox9.Size = new System.Drawing.Size(693, 30);
             this.textBox9.TabIndex = 13;
             // 
             // label21
@@ -1515,9 +1693,10 @@ namespace Rexport
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label21.Location = new System.Drawing.Point(33, 167);
+            this.label21.Location = new System.Drawing.Point(46, 206);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 20);
+            this.label21.Size = new System.Drawing.Size(126, 25);
             this.label21.TabIndex = 2;
             this.label21.Text = "Course Type";
             // 
@@ -1525,10 +1704,10 @@ namespace Rexport
             // 
             this.checkBox8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(166, 170);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox8.Location = new System.Drawing.Point(221, 210);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
+            this.checkBox8.Size = new System.Drawing.Size(18, 17);
             this.checkBox8.TabIndex = 19;
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
@@ -1542,19 +1721,20 @@ namespace Rexport
             this.checkedListBox3.Items.AddRange(new object[] {
             "Turkish",
             "English"});
-            this.checkedListBox3.Location = new System.Drawing.Point(166, 106);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox3.Location = new System.Drawing.Point(221, 131);
+            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(103, 21);
+            this.checkedListBox3.Size = new System.Drawing.Size(137, 25);
             this.checkedListBox3.TabIndex = 21;
             // 
             // generalinfoLabel
             // 
             this.generalinfoLabel.BackColor = System.Drawing.Color.AliceBlue;
             this.generalinfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.generalinfoLabel.Location = new System.Drawing.Point(6, 6);
+            this.generalinfoLabel.Location = new System.Drawing.Point(8, 7);
+            this.generalinfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.generalinfoLabel.Name = "generalinfoLabel";
-            this.generalinfoLabel.Size = new System.Drawing.Size(474, 43);
+            this.generalinfoLabel.Size = new System.Drawing.Size(632, 53);
             this.generalinfoLabel.TabIndex = 1;
             this.generalinfoLabel.Text = "1. GENERAL INFORMATION";
             // 
@@ -1568,12 +1748,12 @@ namespace Rexport
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.37143F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 69);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 85);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(876, 39);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1168, 48);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -1581,10 +1761,9 @@ namespace Rexport
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(14, 8);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(19, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 23);
+            this.label3.Size = new System.Drawing.Size(181, 28);
             this.label3.TabIndex = 1;
             this.label3.Text = "Course Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1595,10 +1774,10 @@ namespace Rexport
             this.textBox1.AccessibleName = "";
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(256, 6);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(343, 9);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(526, 26);
+            this.textBox1.Size = new System.Drawing.Size(700, 30);
             this.textBox1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -1607,11 +1786,11 @@ namespace Rexport
             this.tableLayoutPanel2.ColumnCount = 7;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.80328F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.19672F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel2.Controls.Add(this.checkBox2, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.textBox5, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
@@ -1626,24 +1805,24 @@ namespace Rexport
             this.tableLayoutPanel2.Controls.Add(this.checkBox1, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label7, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label8, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 125);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(32, 154);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.10126F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.89874F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(876, 99);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1168, 122);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // checkBox2
             // 
             this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(274, 66);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Location = new System.Drawing.Point(366, 81);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 15;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -1651,10 +1830,10 @@ namespace Rexport
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(686, 60);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Location = new System.Drawing.Point(914, 75);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(68, 26);
+            this.textBox5.Size = new System.Drawing.Size(89, 30);
             this.textBox5.TabIndex = 11;
             // 
             // label4
@@ -1662,10 +1841,9 @@ namespace Rexport
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(54, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(74, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(65, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Code ";
             // 
@@ -1674,10 +1852,9 @@ namespace Rexport
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(182, 14);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(244, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 20);
+            this.label5.Size = new System.Drawing.Size(43, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Fall";
             // 
@@ -1686,10 +1863,9 @@ namespace Rexport
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(254, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(340, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 20);
+            this.label6.Size = new System.Drawing.Size(69, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Spring";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -1699,10 +1875,9 @@ namespace Rexport
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(670, 14);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(895, 17);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 20);
+            this.label9.Size = new System.Drawing.Size(126, 25);
             this.label9.TabIndex = 8;
             this.label9.Text = "Local Credits";
             // 
@@ -1711,10 +1886,9 @@ namespace Rexport
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(811, 14);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(1081, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
+            this.label10.Size = new System.Drawing.Size(67, 25);
             this.label10.TabIndex = 9;
             this.label10.Text = "ECTS";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -1723,50 +1897,50 @@ namespace Rexport
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(46, 60);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Location = new System.Drawing.Point(62, 75);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(68, 26);
+            this.textBox2.Size = new System.Drawing.Size(89, 30);
             this.textBox2.TabIndex = 10;
             // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(370, 60);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Location = new System.Drawing.Point(493, 75);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 26);
+            this.textBox3.Size = new System.Drawing.Size(89, 30);
             this.textBox3.TabIndex = 11;
             // 
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(529, 60);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Location = new System.Drawing.Point(705, 75);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 26);
+            this.textBox4.Size = new System.Drawing.Size(89, 30);
             this.textBox4.TabIndex = 12;
             // 
             // textBox6
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(812, 60);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Location = new System.Drawing.Point(1082, 75);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(50, 26);
+            this.textBox6.Size = new System.Drawing.Size(65, 30);
             this.textBox6.TabIndex = 13;
             // 
             // checkBox1
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(192, 66);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Location = new System.Drawing.Point(256, 81);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 14;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -1775,10 +1949,9 @@ namespace Rexport
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(355, 4);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(475, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 40);
+            this.label7.Size = new System.Drawing.Size(126, 50);
             this.label7.TabIndex = 6;
             this.label7.Text = "   Theory\r\n(Hour/Week)\r\n";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -1788,10 +1961,9 @@ namespace Rexport
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(504, 4);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(676, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 40);
+            this.label8.Size = new System.Drawing.Size(147, 50);
             this.label8.TabIndex = 7;
             this.label8.Text = "Application/Lab\r\n(Hour/Week)\r\n";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -1803,9 +1975,10 @@ namespace Rexport
             this.dinamicPanel.Controls.Add(this.editPanel);
             this.dinamicPanel.Controls.Add(this.homePanel);
             this.dinamicPanel.Controls.Add(this.mainEditPanel);
-            this.dinamicPanel.Location = new System.Drawing.Point(211, 35);
+            this.dinamicPanel.Location = new System.Drawing.Point(281, 43);
+            this.dinamicPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dinamicPanel.Name = "dinamicPanel";
-            this.dinamicPanel.Size = new System.Drawing.Size(972, 542);
+            this.dinamicPanel.Size = new System.Drawing.Size(1296, 667);
             this.dinamicPanel.TabIndex = 7;
             // 
             // mainEditPanel
@@ -1813,105 +1986,33 @@ namespace Rexport
             this.mainEditPanel.AutoScroll = true;
             this.mainEditPanel.Controls.Add(this.label1);
             this.mainEditPanel.Location = new System.Drawing.Point(0, 1);
-            this.mainEditPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainEditPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainEditPanel.Name = "mainEditPanel";
-            this.mainEditPanel.Size = new System.Drawing.Size(972, 540);
+            this.mainEditPanel.Size = new System.Drawing.Size(1296, 665);
             this.mainEditPanel.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(274, 109);
+            this.label1.Location = new System.Drawing.Point(365, 134);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 897);
+            this.label1.Size = new System.Drawing.Size(46, 1173);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.44444F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.55556F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.label35, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.label34, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.textBox47, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.textBox48, 1, 1);
-            this.tableLayoutPanel9.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(24, 2557);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.55462F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.44538F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(876, 239);
-            this.tableLayoutPanel9.TabIndex = 12;
-            // 
-            // label34
-            // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label34.Location = new System.Drawing.Point(29, 34);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(183, 20);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Course Notes/Textbooks";
-            // 
-            // label35
-            // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label35.Location = new System.Drawing.Point(7, 153);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(227, 20);
-            this.label35.TabIndex = 1;
-            this.label35.Text = "Suggested Readings/Materials";
-            // 
-            // textBox47
-            // 
-            this.textBox47.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox47.Location = new System.Drawing.Point(244, 31);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(628, 26);
-            this.textBox47.TabIndex = 76;
-            // 
-            // textBox48
-            // 
-            this.textBox48.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox48.Location = new System.Drawing.Point(244, 150);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(628, 26);
-            this.textBox48.TabIndex = 77;
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.AliceBlue;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label36.Location = new System.Drawing.Point(6, 2803);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(900, 43);
-            this.label36.TabIndex = 13;
-            this.label36.Text = "3.ASSESSMENT";
-            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1167, 577);
+            this.ClientSize = new System.Drawing.Size(1556, 710);
             this.Controls.Add(this.dinamicPanel);
             this.Controls.Add(this.upperPanel);
             this.Controls.Add(this.leftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -1926,6 +2027,8 @@ namespace Rexport
             this.editPanel.ResumeLayout(false);
             this.editPanel.PerformLayout();
             this.createPanel.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1951,8 +2054,6 @@ namespace Rexport
             this.dinamicPanel.ResumeLayout(false);
             this.mainEditPanel.ResumeLayout(false);
             this.mainEditPanel.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
