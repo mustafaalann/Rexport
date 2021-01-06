@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,7 +13,7 @@ namespace Rexport
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(bool isOn)
         {
             InitializeComponent();
             homePanel.Show();
@@ -92,7 +93,7 @@ namespace Rexport
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Application.Exit();
         }
 
         private void createLabel_Click(object sender, EventArgs e)
