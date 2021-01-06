@@ -157,5 +157,10 @@ namespace Rexport
         {
 
         }
+
+        private void createPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
