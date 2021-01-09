@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Rexport
 {
@@ -202,6 +203,8 @@ namespace Rexport
             return Regex.Replace(input, "<.*?>", String.Empty);
         }
 
+
+
         public static String replaceBetweenWithoutRegex(String str,
                                                  String start, String end,
                                                  bool startInclusive,
@@ -266,6 +269,8 @@ namespace Rexport
             htmlCode = Encoding.UTF8.GetString(bytes);
 
 
+
+
             string[] separatingStrings = {"div"};
 
             string text = htmlCode;
@@ -277,8 +282,8 @@ namespace Rexport
             foreach (var line in lines)
             {
                 System.Console.WriteLine(cnt);
-                cnt += 1;
                 System.Console.WriteLine(line);
+                 cnt += 1;
             }
             
             
@@ -362,8 +367,94 @@ namespace Rexport
             String courseNotesTextbooks = ExtractString(GetLine(lines[152], 6), "<p>", "</p>").Trim();
             String courseSuggestedReadingsMaterials = ExtractString(GetLine(lines[152], 13), "<td>", "</td>").Trim();
 
-
+            ArrayList weights = new ArrayList();
+            ArrayList nos = new ArrayList();
             //Evaluation System
+            String courseParticipationNo = ExtractString(lines[157], ">", "<").Trim();
+            String courseParticipationWeight = ExtractString(lines[159], ">", "<").Trim();
+            weights.Add(courseParticipationWeight);
+            nos.Add(courseParticipationWeight);
+
+            String courseLabNo = ExtractString(lines[161], ">", "<").Trim();
+            String courseLabWeight = ExtractString(lines[163], ">", "<").Trim();
+            weights.Add(courseLabWeight);
+            nos.Add(courseLabWeight);
+
+            String courseFieldWorkNo = ExtractString(lines[165], ">", "<").Trim();
+            String courseFieldWorkWeight = ExtractString(lines[167], ">", "<").Trim();
+            weights.Add(courseFieldWorkWeight);
+            nos.Add(courseLabWeight);
+
+            String courseQuizNo = ExtractString(lines[169], ">", "<").Trim();
+            String courseQuizWeight = ExtractString(lines[171], ">", "<").Trim();
+            weights.Add(courseQuizWeight);
+            nos.Add(courseLabWeight);
+
+            String courseHomeworkNo = ExtractString(lines[173], ">", "<").Trim();
+            String courseHomeworkWeight = ExtractString(lines[175], ">", "<").Trim();
+            weights.Add(courseHomeworkWeight);
+            nos.Add(courseLabWeight);
+
+            String coursePresentationNo = ExtractString(lines[177], ">", "<").Trim();
+            String coursePresentationWeight = ExtractString(lines[179], ">", "<").Trim();
+            weights.Add(coursePresentationWeight);
+            nos.Add(courseLabWeight);
+
+            String courseProjectNo = ExtractString(lines[181], ">", "<").Trim();
+            String courseProjectWeight = ExtractString(lines[183], ">", "<").Trim();
+            weights.Add(courseProjectWeight);
+            nos.Add(courseLabWeight);
+
+            String courseSeminalNo = ExtractString(lines[185], ">", "<").Trim();
+            String courseSeminalWeight = ExtractString(lines[187], ">", "<").Trim();
+            weights.Add(courseSeminalWeight);
+            nos.Add(courseLabWeight);
+
+            String courseOralNo = ExtractString(lines[189], ">", "<").Trim();
+            String courseOralWeight = ExtractString(lines[191], ">", "<").Trim();
+            weights.Add(courseOralWeight);
+            nos.Add(courseLabWeight);
+
+            String courseMidtermNo = ExtractString(lines[193], ">", "<").Trim();
+            String courseMidtermWeight = ExtractString(lines[195], ">", "<").Trim();
+            weights.Add(courseMidtermWeight);
+            nos.Add(courseLabWeight);
+
+            String courseFinalNo = ExtractString(lines[197], ">", "<").Trim();
+            String courseFinalWeight = ExtractString(lines[199], ">", "<").Trim();
+            weights.Add(courseFinalWeight);
+            nos.Add(courseLabWeight);
+
+            int courseTotalNo = 0;
+
+            int courseTotalWeight = 0;
+
+            foreach (var weight in weights)
+            {
+                if (weight != "")
+                {
+                    courseTotalWeight += Convert.ToInt32(weight);
+                }
+
+            }
+
+            foreach(var no in nos)
+            {
+                if (no != "")
+                {
+                    courseTotalWeight += Convert.ToInt32(no);
+                }
+
+            }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -401,7 +492,20 @@ namespace Rexport
                 + "\n" + "\n" + courseSubjectW15 + " ----- " + courseRelatedpreparationW15
                 + "\n" + "\n" + courseSubjectW16 + " ----- " + courseRelatedpreparationW16
                 + "\n" + "\n" + "\n" + courseNotesTextbooks + "\n" + courseSuggestedReadingsMaterials
-
+                + "\n" + "\n" + "\n"
+                + "\n" + "\n" + courseParticipationNo + " ----- " + courseParticipationWeight
+                + "\n" + "\n" + courseLabNo + " ----- " + courseLabWeight
+                + "\n" + "\n" + courseFieldWorkNo + " ----- " + courseFieldWorkWeight
+                + "\n" + "\n" + courseQuizNo + " ----- " + courseQuizWeight
+                + "\n" + "\n" + courseHomeworkNo + " ----- " + courseHomeworkWeight
+                + "\n" + "\n" + coursePresentationNo + " ----- " + coursePresentationWeight
+                + "\n" + "\n" + courseProjectNo + " ----- " + courseProjectWeight
+                + "\n" + "\n" + courseSeminalNo + " ----- " + courseSeminalWeight
+                + "\n" + "\n" + courseOralNo + " ----- " + courseOralWeight
+                + "\n" + "\n" + courseMidtermNo + " ----- " + courseMidtermWeight
+                + "\n" + "\n" + courseFinalNo + " ----- " + courseFinalWeight
+                + "\n" + "\n" + courseTotalNo + " ----- " + courseTotalWeight
+              
                 ;
                 
             
