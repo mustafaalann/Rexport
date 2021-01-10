@@ -531,7 +531,7 @@ namespace Rexport
 
 
 
-            /* EXAMPLES EDING DATA INTO EDIT PANEL*/
+            /* EXAMPLES ADDING DATA INTO EDIT PANEL*/
 
             textBox304.Text = courseName;
             textBox306.Text = courseCode;
