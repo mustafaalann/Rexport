@@ -535,6 +535,152 @@ namespace Rexport
 
             textBox304.Text = courseName;
             textBox306.Text = courseCode;
+            textBox307.Text = courseWeeklyHours; 
+            textBox308.Text = courseAppHours;    
+            textBox305.Text = courseLocalCredits;
+            textBox309.Text = courseECTS;
+            textBox303.Text = coursePrerequisites;
+            textBox300.Text = courseCoordinator;
+            textBox301.Text = courseLecturer;
+            textBox302.Text = courseAssistants; // !! RichTextBox
+            textBox297.Text = courseObjectives; // !! RichTextBox
+            textBox298.Text = courseLearningOutcomes1+courseLearningOutcomes2; // !! 
+            textBox299.Text = courseDescription;
+
+            // CourseCategory !! "X"
+
+            textBox296.Text = courseSubjectW1;
+            textBox295.Text = courseRelatedpreparationW1;
+            textBox294.Text = courseSubjectW2;
+            textBox293.Text = courseRelatedpreparationW2; 
+            textBox292.Text = courseSubjectW3;
+            textBox291.Text = courseRelatedpreparationW3; 
+            textBox290.Text = courseSubjectW4;
+            textBox289.Text = courseRelatedpreparationW4; 
+            textBox288.Text = courseSubjectW5;
+            textBox287.Text = courseRelatedpreparationW5; 
+            textBox286.Text = courseSubjectW6;
+            textBox285.Text = courseRelatedpreparationW6; 
+            textBox284.Text = courseSubjectW7;
+            textBox283.Text = courseRelatedpreparationW7; 
+            textBox282.Text = courseSubjectW8;
+            textBox281.Text = courseRelatedpreparationW8; 
+            textBox280.Text = courseSubjectW9;
+            textBox279.Text = courseRelatedpreparationW9; 
+            textBox278.Text = courseSubjectW10;
+            textBox277.Text = courseRelatedpreparationW10; 
+            textBox276.Text = courseSubjectW11;
+            textBox275.Text = courseRelatedpreparationW11; 
+            textBox274.Text = courseSubjectW12;
+            textBox273.Text = courseRelatedpreparationW12; 
+            textBox272.Text = courseSubjectW13;
+            textBox271.Text = courseRelatedpreparationW13; 
+            textBox270.Text = courseSubjectW14;
+            textBox269.Text = courseRelatedpreparationW14; 
+            textBox268.Text = courseSubjectW15;
+            textBox267.Text = courseRelatedpreparationW15; 
+            textBox266.Text = courseSubjectW16;
+            textBox265.Text = courseRelatedpreparationW16;
+
+            textBox263.Text = courseNotesTextbooks;
+            textBox264.Text = courseSuggestedReadingsMaterials;
+
+            // !! LO1, LO2, LO3, LO4
+
+            textBox206.Text = courseParticipationNo;
+            textBox207.Text = courseParticipationWeight;
+
+            textBox208.Text = courseLabNo;
+            textBox209.Text = courseLabWeight;
+
+            textBox211.Text = courseFieldWorkNo;
+            textBox212.Text = courseFieldWorkWeight;
+
+            textBox214.Text = courseQuizNo;
+            textBox215.Text = courseQuizWeight;
+
+            textBox217.Text = courseHomeworkNo;
+            textBox218.Text = courseHomeworkWeight;
+
+            textBox220.Text = coursePresentationNo;
+            textBox221.Text = coursePresentationWeight;
+
+            textBox222.Text = courseProjectNo;
+            textBox223.Text = courseProjectWeight;
+
+            textBox244.Text = courseSeminarNo;
+            textBox245.Text = courseSeminarWeight;
+
+            textBox244.Text = courseOralNo;
+            textBox245.Text = courseOralWeight;
+
+            textBox201.Text = courseMidtermNo;
+            textBox256.Text = courseMidtermWeight;
+
+            textBox199.Text = courseFinalNo;      // Final ? Total
+            textBox198.Text = courseFinalWeight;  // Final ? Total
+
+            // !! Weighting of Semester Activities on the Final Grade
+            // !! Weighting of End-of Semester Activities on the Final Grade
+
+            textBox152.Text = courseTheoretical2No;
+            textBox153.Text = courseTheoretical2Duration;
+            textBox151.Text = courseTheoretical2Workload;
+
+            textBox208.Text = courseLaboratory2No;       // !!
+            textBox209.Text = courseLaboratory2Duration; // !!
+            textBox210.Text = courseLaboratory2Workload; // !!
+
+            textBox157.Text = courseStudy2No;
+            textBox159.Text = courseStudy2Duration;
+            textBox160.Text = courseStudy2Workload;
+
+            textBox211.Text = courseFieldWork2No;
+            textBox212.Text = courseFieldWork2Duration;
+            textBox213.Text = courseFieldWork2Workload;
+
+            textBox214.Text = courseQuiz2No;
+            textBox215.Text = courseQuiz2Duration;
+            textBox216.Text = courseQuiz2Workload;
+
+            textBox171.Text = courseHomework2No;
+            textBox175.Text = courseHomework2Duration;
+            textBox179.Text = courseHomework2Workload;
+            
+
+            textBox176.Text = coursePresentation2No;
+            textBox177.Text = coursePresentation2Duration;
+            textBox181.Text = coursePresentation2Workload;
+            
+
+            textBox182.Text = courseProject2No;
+            textBox183.Text = courseProject2Duration;
+            textBox184.Text = courseProject2Workload;
+            
+
+            textBox185.Text = courseSeminar2No;
+            textBox186.Text = courseSeminar2Duration;
+            textBox187.Text = courseSeminar2Workload;
+            
+
+            textBox150.Text = courseOral2No;
+            textBox188.Text = courseOral2Duration;
+            textBox189.Text = courseOral2Workload;
+             
+
+            textBox149.Text = courseMidterm2No;
+            textBox148.Text = courseMidterm2Duration;
+            textBox190.Text = courseMidterm2Workload;
+            
+
+            textBox147.Text = courseFinal2No;
+            textBox146.Text = courseFinal2Duration;
+            textBox191.Text = courseFinal2Workload;
+
+            textBox192.Text = Convert.ToString(courseTotalWorkload);
+
+
+            // CourseSemester
 
             if (courseSemester == "Fall"|| courseSemester == "Güz")
             {
@@ -544,33 +690,49 @@ namespace Rexport
             {
                 checkBox19.Checked = true;
             }
+
+            // CourseLanguage
+
+            if (courseLanguage == "İngilizce" || courseLanguage == "English")
+            {
+                checkBox7.Checked = true;
+            }
+            else
+            {
+                checkBox8.Checked = true;
+            }
+
+            // CourseType
+
+            if (courseType == "Required" || courseLanguage == "Zorunlu")
+            {
+                checkBox13.Checked = true;
+            }
+            else
+            {
+                checkBox14.Checked = true;
+            }
+
+            // CourseLevel
+
+            if (courseLevel == "First Cycle" || courseLevel == "Lisans")
+            {
+                checkBox16.Checked = true;
+            }
+            else if (courseLevel == "Short Cycle" || courseLevel == "Ön Lisans")
+            {
+                checkBox15.Checked = true;
+            }
+            else if (courseLevel == "Second Cycle" || courseLevel == "Yüksek Lisans")
+            {
+                checkBox17.Checked = true;
+            }
+            else if (courseLevel == "Third Cycle" || courseLevel == "Doktora")
+            {
+                checkBox18.Checked = true;
+            }
+
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
