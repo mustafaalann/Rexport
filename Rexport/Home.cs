@@ -258,6 +258,14 @@ namespace Rexport
 
         private void button1_Click(object sender, EventArgs e)
         {
+            homePanel.Hide();
+            editPanel2.Show();
+            editLinkPanel.Hide();
+            createPanel.Hide();
+            editPanel2.BringToFront();
+
+
+
             int cnt = 0;
             WebClient client = new WebClient();
             String htmlCode = client.DownloadString("https://se.ieu.edu.tr/en/syllabus/type/read/id/CE+221");
@@ -302,7 +310,8 @@ namespace Rexport
             String courseType = ExtractString(lines[127], ">", "<").Trim();
             String courseLevel = ExtractString(lines[129], ">", "<").Trim();
             String courseCoordinator = ExtractString(GetLine(lines[130], 9), "\">", "</a></li></ul>").Trim();
-            String courseLecturer = ExtractString(GetLine(lines[130], 16), "\">", "</a></li></ul>").Trim();
+            String courseLecturerGetter = ExtractString(GetLine(lines[130], 16), "\">", "</a></li></ul>").Trim();
+            String courseLecturer = replaceBetweenWithoutRegex(courseLecturerGetter, "</a>", "\">", true, true, "\n");
             String courseAssistantGetter = ExtractString(GetLine(lines[130], 22), "\">", "</a></li></ul>").Trim();
             String courseAssistants = replaceBetweenWithoutRegex(courseAssistantGetter,"</a>","\">", true, true, "\n");
 
@@ -378,77 +387,164 @@ namespace Rexport
             String courseLabNo = ExtractString(lines[161], ">", "<").Trim();
             String courseLabWeight = ExtractString(lines[163], ">", "<").Trim();
             weights.Add(courseLabWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseLabNo);
 
             String courseFieldWorkNo = ExtractString(lines[165], ">", "<").Trim();
             String courseFieldWorkWeight = ExtractString(lines[167], ">", "<").Trim();
             weights.Add(courseFieldWorkWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseFieldWorkNo);
 
             String courseQuizNo = ExtractString(lines[169], ">", "<").Trim();
             String courseQuizWeight = ExtractString(lines[171], ">", "<").Trim();
             weights.Add(courseQuizWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseQuizNo);
 
             String courseHomeworkNo = ExtractString(lines[173], ">", "<").Trim();
             String courseHomeworkWeight = ExtractString(lines[175], ">", "<").Trim();
             weights.Add(courseHomeworkWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseHomeworkNo);
 
             String coursePresentationNo = ExtractString(lines[177], ">", "<").Trim();
             String coursePresentationWeight = ExtractString(lines[179], ">", "<").Trim();
             weights.Add(coursePresentationWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(coursePresentationNo);
 
             String courseProjectNo = ExtractString(lines[181], ">", "<").Trim();
             String courseProjectWeight = ExtractString(lines[183], ">", "<").Trim();
             weights.Add(courseProjectWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseProjectNo);
 
-            String courseSeminalNo = ExtractString(lines[185], ">", "<").Trim();
-            String courseSeminalWeight = ExtractString(lines[187], ">", "<").Trim();
-            weights.Add(courseSeminalWeight);
-            nos.Add(courseLabWeight);
+            String courseSeminarNo = ExtractString(lines[185], ">", "<").Trim();
+            String courseSeminarWeight = ExtractString(lines[187], ">", "<").Trim();
+            weights.Add(courseSeminarWeight);
+            nos.Add(courseSeminarNo);
 
             String courseOralNo = ExtractString(lines[189], ">", "<").Trim();
             String courseOralWeight = ExtractString(lines[191], ">", "<").Trim();
             weights.Add(courseOralWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseOralNo);
 
             String courseMidtermNo = ExtractString(lines[193], ">", "<").Trim();
             String courseMidtermWeight = ExtractString(lines[195], ">", "<").Trim();
             weights.Add(courseMidtermWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseMidtermNo);
 
             String courseFinalNo = ExtractString(lines[197], ">", "<").Trim();
             String courseFinalWeight = ExtractString(lines[199], ">", "<").Trim();
             weights.Add(courseFinalWeight);
-            nos.Add(courseLabWeight);
+            nos.Add(courseFinalNo);
 
             int courseTotalNo = 0;
 
             int courseTotalWeight = 0;
 
+
+            //where we calculated the numbers on the lines
             foreach (var weight in weights)
             {
                 if (weight != "")
                 {
                     courseTotalWeight += Convert.ToInt32(weight);
                 }
-
             }
-
             foreach(var no in nos)
             {
                 if (no != "")
                 {
-                    courseTotalWeight += Convert.ToInt32(no);
+                    courseTotalNo += Convert.ToInt32(no);
                 }
+            }
 
+            //ECTS WORKLOAD TABLE Dont worket the 2s in the variables
+
+            ArrayList workLoads = new ArrayList();
+
+            String courseTheoretical2No = ExtractString(lines[219], ">", "<").Trim();
+            String courseTheoretical2Duration = ExtractString(lines[221], ">", "<").Trim();
+            String courseTheoretical2Workload = ExtractString(lines[223], ">", "<").Trim();
+            workLoads.Add(courseTheoretical2Workload);
+
+            String courseLaboratory2No = ExtractString(lines[225], ">", "<").Trim();
+            String courseLaboratory2Duration = ExtractString(lines[227], ">", "<").Trim();
+            String courseLaboratory2Workload = ExtractString(lines[229], ">", "<").Trim();
+            workLoads.Add(courseLaboratory2Workload);
+
+            String courseStudy2No = ExtractString(lines[231], ">", "<").Trim();
+            String courseStudy2Duration = ExtractString(lines[233], ">", "<").Trim();
+            String courseStudy2Workload = ExtractString(lines[235], ">", "<").Trim();
+            workLoads.Add(courseStudy2Workload);
+
+
+            String courseFieldWork2No = ExtractString(lines[237], ">", "<").Trim();
+            String courseFieldWork2Duration = ExtractString(lines[239], ">", "<").Trim();
+            String courseFieldWork2Workload = ExtractString(lines[241], ">", "<").Trim();
+            workLoads.Add(courseFieldWork2Workload);
+
+            String courseQuiz2No = ExtractString(lines[243], ">", "<").Trim();
+            String courseQuiz2Duration = ExtractString(lines[245], ">", "<").Trim();
+            String courseQuiz2Workload = ExtractString(lines[247], ">", "<").Trim();
+            workLoads.Add(courseQuiz2Workload);
+
+            String courseHomework2No = ExtractString(lines[249], ">", "<").Trim();
+            String courseHomework2Duration = ExtractString(lines[251], ">", "<").Trim();
+            String courseHomework2Workload = ExtractString(lines[253], ">", "<").Trim();
+            workLoads.Add(courseHomework2Workload);
+
+            String coursePresentation2No = ExtractString(lines[255], ">", "<").Trim();
+            String coursePresentation2Duration = ExtractString(lines[257], ">", "<").Trim();
+            String coursePresentation2Workload = ExtractString(lines[259], ">", "<").Trim();
+            workLoads.Add(coursePresentation2Workload);
+
+            String courseProject2No = ExtractString(lines[261], ">", "<").Trim();
+            String courseProject2Duration = ExtractString(lines[263], ">", "<").Trim();
+            String courseProject2Workload = ExtractString(lines[265], ">", "<").Trim();
+            workLoads.Add(courseProject2Workload);
+
+            String courseSeminar2No = ExtractString(lines[267], ">", "<").Trim();
+            String courseSeminar2Duration = ExtractString(lines[269], ">", "<").Trim();
+            String courseSeminar2Workload = ExtractString(lines[271], ">", "<").Trim();
+            workLoads.Add(courseSeminar2Workload);
+
+            String courseOral2No = ExtractString(lines[273], ">", "<").Trim();
+            String courseOral2Duration = ExtractString(lines[275], ">", "<").Trim();
+            String courseOral2Workload = ExtractString(lines[277], ">", "<").Trim();
+            workLoads.Add(courseOral2Workload);
+
+            String courseMidterm2No = ExtractString(lines[279], ">", "<").Trim();
+            String courseMidterm2Duration = ExtractString(lines[281], ">", "<").Trim();
+            String courseMidterm2Workload = ExtractString(lines[283], ">", "<").Trim();
+            workLoads.Add(courseMidterm2Workload);
+
+            String courseFinal2No = ExtractString(lines[285], ">", "<").Trim();
+            String courseFinal2Duration = ExtractString(lines[287], ">", "<").Trim();
+            String courseFinal2Workload = ExtractString(lines[289], ">", "<").Trim();
+            workLoads.Add(courseFinal2Workload);
+
+            int courseTotalWorkload = 0;
+            foreach (var workload in workLoads)
+            {
+                if (workload != "")
+                {
+                    courseTotalWorkload += Convert.ToInt32(workload);
+                }
             }
 
 
 
+            /* EXAMPLES EDING DATA INTO EDIT PANEL*/
+
+            textBox304.Text = courseName;
+            textBox306.Text = courseCode;
+
+            if (courseSemester == "Fall"|| courseSemester == "Güz")
+            {
+                checkBox20.Checked = true;
+            }
+            else
+            {
+                checkBox19.Checked = true;
+            }
+            
 
 
 
@@ -470,6 +566,15 @@ namespace Rexport
 
 
 
+
+
+
+
+
+
+
+
+            /*     This is a data control String
             richTextBox1.Text = courseName + "\n" + courseCode + "\n" + courseSemester
                 + "\n" + courseWeeklyHours + "\n" + courseAppHours + "\n" + courseLocalCredits
                 + "\n" + courseECTS + "\n" + coursePrerequisites + "\n" + courseLanguage
@@ -500,18 +605,32 @@ namespace Rexport
                 + "\n" + "\n" + courseHomeworkNo + " ----- " + courseHomeworkWeight
                 + "\n" + "\n" + coursePresentationNo + " ----- " + coursePresentationWeight
                 + "\n" + "\n" + courseProjectNo + " ----- " + courseProjectWeight
-                + "\n" + "\n" + courseSeminalNo + " ----- " + courseSeminalWeight
+                + "\n" + "\n" + courseSeminarNo + " ----- " + courseSeminarWeight
                 + "\n" + "\n" + courseOralNo + " ----- " + courseOralWeight
                 + "\n" + "\n" + courseMidtermNo + " ----- " + courseMidtermWeight
                 + "\n" + "\n" + courseFinalNo + " ----- " + courseFinalWeight
                 + "\n" + "\n" + courseTotalNo + " ----- " + courseTotalWeight
-              
+                + "\n" + "\n" + "\n" + courseTheoretical2No + " ----- " + courseTheoretical2Duration + " ----- " + courseTheoretical2Workload
+                + "\n" + "\n" + courseLaboratory2No + " ----- " + courseLaboratory2Duration + " ----- " + courseLaboratory2Workload
+                + "\n" + "\n" + courseStudy2No + " ----- " + courseStudy2Duration + " ----- " + courseStudy2Workload
+                + "\n" + "\n" + courseFieldWork2No + " ----- " + courseFieldWork2Duration + " ----- " + courseFieldWork2Workload
+                + "\n" + "\n" + courseQuiz2No + " ----- " + courseQuiz2Duration + " ----- " + courseQuiz2Workload
+                + "\n" + "\n" + courseHomework2No + " ----- " + courseHomework2Duration + " ----- " + courseHomework2Workload
+                + "\n" + "\n" + coursePresentation2No + " ----- " + coursePresentation2Duration + " ----- " + coursePresentation2Workload
+                + "\n" + "\n" + courseProject2No + " ----- " + courseProject2Duration + " ----- " + courseProject2Workload
+                + "\n" + "\n" + courseSeminar2No + " ----- " + courseSeminar2Duration + " ----- " + courseSeminar2Workload
+                + "\n" + "\n" + courseOral2No + " ----- " + courseOral2Duration + " ----- " + courseOral2Workload
+                + "\n" + "\n" + courseMidterm2No + " ----- " + courseMidterm2Duration + " ----- " + courseMidterm2Workload
+                + "\n" + "\n" + courseFinal2No + " ----- " + courseFinal2Duration + " ----- " + courseFinal2Workload
+                + "\n" + "\n" + courseTotalWorkload 
+
+
                 ;
-                
-            
+            */
 
 
-          
+
+
 
 
         }
