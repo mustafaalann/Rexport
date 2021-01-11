@@ -200,6 +200,10 @@ namespace Rexport
 
         public static string StripHTML(string input)
         {
+            if(input == null)
+            {
+                return "";
+            }
             return Regex.Replace(input, "<.*?>", String.Empty);
         }
 
@@ -244,14 +248,22 @@ namespace Rexport
         public string ExtractString(string s, string start, string end)
         {
             // You should check for errors in real-world code, omitted for brevity
-            if(s.Length <= 0)
+            if (s == null)
             {
-                return "There İs No String <<<<<<<<<!!";
+                return "None";
             }
 
             int startIndex = s.IndexOf(start) + start.Length;
             int endIndex = s.IndexOf(end, startIndex);
-            return s.Substring(startIndex, endIndex - startIndex);
+            try
+            {
+                return s.Substring(startIndex, endIndex - startIndex);
+            }
+            catch(System.ArgumentOutOfRangeException ex)
+            {
+                return "";
+            }
+            
         }
 
 
@@ -268,7 +280,7 @@ namespace Rexport
 
             int cnt = 0;
             WebClient client = new WebClient();
-            String htmlCode = client.DownloadString("https://se.ieu.edu.tr/en/syllabus/type/read/id/CE+221");
+            String htmlCode = client.DownloadString("https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302");
 
            
 
@@ -293,7 +305,8 @@ namespace Rexport
                 System.Console.WriteLine(line);
                  cnt += 1;
             }
-            
+
+            int a = 0; //controlling if there is None prerequisites
             
             String courseName = ExtractString(lines[90], ">", "<").Trim();
 
@@ -304,133 +317,137 @@ namespace Rexport
             String courseLocalCredits = ExtractString(lines[116], ">", "<").Trim();
             String courseECTS = ExtractString(lines[118], ">", "<").Trim();
 
+            if(ExtractString(GetLine(lines[122], 4), ">", "<").Trim() == "None")
+            {
+                a -= 1;
+            }
         
             String coursePrerequisites = ExtractString(GetLine(lines[122],4), ">", "<").Trim();
-            String courseLanguage = ExtractString(lines[125], ">", "<").Trim();
-            String courseType = ExtractString(lines[127], ">", "<").Trim();
-            String courseLevel = ExtractString(lines[129], ">", "<").Trim();
-            String courseCoordinator = ExtractString(GetLine(lines[130], 9), "\">", "</a></li></ul>").Trim();
-            String courseLecturerGetter = ExtractString(GetLine(lines[130], 16), "\">", "</a></li></ul>").Trim();
+            String courseLanguage = ExtractString(lines[125 + a], ">", "<").Trim();
+            String courseType = ExtractString(lines[127 + a], ">", "<").Trim();
+            String courseLevel = ExtractString(lines[129 + a], ">", "<").Trim();
+            String courseCoordinator = ExtractString(GetLine(lines[130 + a], 9), "\">", "</a></li></ul>").Trim();
+            String courseLecturerGetter = ExtractString(GetLine(lines[130 + a], 16), "\">", "</a></li></ul>").Trim();
             String courseLecturer = replaceBetweenWithoutRegex(courseLecturerGetter, "</a>", "\">", true, true, "\n");
-            String courseAssistantGetter = ExtractString(GetLine(lines[130], 22), "\">", "</a></li></ul>").Trim();
+            String courseAssistantGetter = ExtractString(GetLine(lines[130 + a], 22), "\">", "</a></li></ul>").Trim();
             String courseAssistants = replaceBetweenWithoutRegex(courseAssistantGetter,"</a>","\">", true, true, "\n");
 
-            String courseObjectives = ExtractString(GetLine(lines[132], 6), "<td>", "</td>").Trim();
-            String courseLearningOutcomes1 = ExtractString(GetLine(lines[132], 13), "<span>", "</span>").Trim();
-            String courseLearningOutcomes2 = fixingGaps(StripHTML(GetLine(lines[132], 14)));
-            String courseDescription = ExtractString(GetLine(lines[132], 20), "<td>", "</td>").Trim();
+            String courseObjectives = ExtractString(GetLine(lines[132 + a], 6), "<td>", "</td>").Trim();
+            String courseLearningOutcomes1 = ExtractString(GetLine(lines[132 + a], 13), "<span>", "</span>").Trim();
+            String courseLearningOutcomes2 = fixingGaps(StripHTML(GetLine(lines[132 + a], 14)));
+            String courseDescription = ExtractString(GetLine(lines[132 + a], 20), "<td>", "</td>").Trim();
 
             //Course category is gonna come here....
 
             //Week Subjects Related Preparation part
-            String courseSubjectW1 = ExtractString(GetLine(lines[150], 9), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW1 = ExtractString(GetLine(lines[150], 10), "<td>", "</td>").Trim();
+            String courseSubjectW1 = ExtractString(GetLine(lines[150 + a], 9), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW1 = ExtractString(GetLine(lines[150 + a], 10), "<td>", "</td>").Trim();
 
-            String courseSubjectW2 = ExtractString(GetLine(lines[150], 14), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW2 = ExtractString(GetLine(lines[150], 15), "<td>", "</td>").Trim();
+            String courseSubjectW2 = ExtractString(GetLine(lines[150 + a], 14), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW2 = ExtractString(GetLine(lines[150 + a], 15), "<td>", "</td>").Trim();
 
-            String courseSubjectW3 = ExtractString(GetLine(lines[150], 19), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW3 = ExtractString(GetLine(lines[150], 20), "<td>", "</td>").Trim();
+            String courseSubjectW3 = ExtractString(GetLine(lines[150 + a], 19), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW3 = ExtractString(GetLine(lines[150 + a], 20), "<td>", "</td>").Trim();
 
-            String courseSubjectW4 = ExtractString(GetLine(lines[150], 24), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW4 = ExtractString(GetLine(lines[150], 25), "<td>", "</td>").Trim();
+            String courseSubjectW4 = ExtractString(GetLine(lines[150 + a], 24), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW4 = ExtractString(GetLine(lines[150 + a], 25), "<td>", "</td>").Trim();
 
-            String courseSubjectW5 = ExtractString(GetLine(lines[150], 29), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW5 = ExtractString(GetLine(lines[150], 30), "<td>", "</td>").Trim();
+            String courseSubjectW5 = ExtractString(GetLine(lines[150 + a], 29), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW5 = ExtractString(GetLine(lines[150 + a], 30), "<td>", "</td>").Trim();
 
-            String courseSubjectW6 = ExtractString(GetLine(lines[150], 34), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW6 = ExtractString(GetLine(lines[150], 35), "<td>", "</td>").Trim();
+            String courseSubjectW6 = ExtractString(GetLine(lines[150 + a], 34), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW6 = ExtractString(GetLine(lines[150 + a], 35), "<td>", "</td>").Trim();
 
-            String courseSubjectW7 = ExtractString(GetLine(lines[150], 39), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW7 = ExtractString(GetLine(lines[150], 40), "<td>", "</td>").Trim();
+            String courseSubjectW7 = ExtractString(GetLine(lines[150 + a], 39), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW7 = ExtractString(GetLine(lines[150 + a], 40), "<td>", "</td>").Trim();
 
-            String courseSubjectW8 = ExtractString(GetLine(lines[150], 44), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW8 = ExtractString(GetLine(lines[150], 45), "<td>", "</td>").Trim();
+            String courseSubjectW8 = ExtractString(GetLine(lines[150 + a], 44), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW8 = ExtractString(GetLine(lines[150 + a], 45), "<td>", "</td>").Trim();
 
-            String courseSubjectW9 = ExtractString(GetLine(lines[150], 49), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW9 = ExtractString(GetLine(lines[150], 50), "<td>", "</td>").Trim();
+            String courseSubjectW9 = ExtractString(GetLine(lines[150 + a], 49), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW9 = ExtractString(GetLine(lines[150 + a], 50), "<td>", "</td>").Trim();
 
-            String courseSubjectW10 = ExtractString(GetLine(lines[150], 54), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW10 = ExtractString(GetLine(lines[150], 55), "<td>", "</td>").Trim();
+            String courseSubjectW10 = ExtractString(GetLine(lines[150 + a], 54), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW10 = ExtractString(GetLine(lines[150 + a], 55), "<td>", "</td>").Trim();
 
-            String courseSubjectW11 = ExtractString(GetLine(lines[150], 59), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW11 = ExtractString(GetLine(lines[150], 60), "<td>", "</td>").Trim();
+            String courseSubjectW11 = ExtractString(GetLine(lines[150 + a], 59), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW11 = ExtractString(GetLine(lines[150 + a], 60), "<td>", "</td>").Trim();
 
-            String courseSubjectW12 = ExtractString(GetLine(lines[150], 64), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW12 = ExtractString(GetLine(lines[150], 65), "<td>", "</td>").Trim();
+            String courseSubjectW12 = ExtractString(GetLine(lines[150 + a], 64), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW12 = ExtractString(GetLine(lines[150 + a], 65), "<td>", "</td>").Trim();
 
-            String courseSubjectW13 = ExtractString(GetLine(lines[150], 69), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW13 = ExtractString(GetLine(lines[150], 70), "<td>", "</td>").Trim();
+            String courseSubjectW13 = ExtractString(GetLine(lines[150 + a], 69), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW13 = ExtractString(GetLine(lines[150 + a], 70), "<td>", "</td>").Trim();
 
-            String courseSubjectW14 = ExtractString(GetLine(lines[150], 74), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW14 = ExtractString(GetLine(lines[150], 75), "<td>", "</td>").Trim();
+            String courseSubjectW14 = ExtractString(GetLine(lines[150 + a], 74), "<td>", "</td>").Trim();
+            String courseRelatedpreparationW14 = ExtractString(GetLine(lines[150 + a], 75), "<td>", "</td>").Trim();
 
-            String courseSubjectW15 = ExtractString(GetLine(lines[150], 79), "<td>", "</td>").Trim();
+            String courseSubjectW15 = ExtractString(GetLine(lines[150 + a], 79), "<td>", "</td>").Trim();
             String courseRelatedpreparationW15 = ExtractString(GetLine(lines[150], 80), "<td>", "</td>").Trim();
 
-            String courseSubjectW16 = ExtractString(GetLine(lines[150], 84), "<td>", "</td>").Trim();
+            String courseSubjectW16 = ExtractString(GetLine(lines[150 + a], 84), "<td>", "</td>").Trim();
             String courseRelatedpreparationW16 = ExtractString(GetLine(lines[150], 85), "<td>", "</td>").Trim();
 
 
             //Course NoteBooks
-            String courseNotesTextbooks = ExtractString(GetLine(lines[152], 6), "<p>", "</p>").Trim();
-            String courseSuggestedReadingsMaterials = ExtractString(GetLine(lines[152], 13), "<td>", "</td>").Trim();
+            String courseNotesTextbooks = ExtractString(GetLine(lines[152 + a], 6), "<p>", "</p>").Trim();
+            String courseSuggestedReadingsMaterials = ExtractString(GetLine(lines[152 + a], 17), "<p>", "</p>").Trim();
 
             ArrayList weights = new ArrayList();
             ArrayList nos = new ArrayList();
             //Evaluation System
-            String courseParticipationNo = ExtractString(lines[157], ">", "<").Trim();
-            String courseParticipationWeight = ExtractString(lines[159], ">", "<").Trim();
+            String courseParticipationNo = ExtractString(lines[157 + a], ">", "<").Trim();
+            String courseParticipationWeight = ExtractString(lines[159 + a], ">", "<").Trim();
             weights.Add(courseParticipationWeight);
             nos.Add(courseParticipationWeight);
 
-            String courseLabNo = ExtractString(lines[161], ">", "<").Trim();
-            String courseLabWeight = ExtractString(lines[163], ">", "<").Trim();
+            String courseLabNo = ExtractString(lines[161 + a], ">", "<").Trim();
+            String courseLabWeight = ExtractString(lines[163 + a], ">", "<").Trim();
             weights.Add(courseLabWeight);
             nos.Add(courseLabNo);
 
-            String courseFieldWorkNo = ExtractString(lines[165], ">", "<").Trim();
-            String courseFieldWorkWeight = ExtractString(lines[167], ">", "<").Trim();
+            String courseFieldWorkNo = ExtractString(lines[165 + a], ">", "<").Trim();
+            String courseFieldWorkWeight = ExtractString(lines[167 + a], ">", "<").Trim();
             weights.Add(courseFieldWorkWeight);
             nos.Add(courseFieldWorkNo);
 
-            String courseQuizNo = ExtractString(lines[169], ">", "<").Trim();
-            String courseQuizWeight = ExtractString(lines[171], ">", "<").Trim();
+            String courseQuizNo = ExtractString(lines[169 + a], ">", "<").Trim();
+            String courseQuizWeight = ExtractString(lines[171 + a], ">", "<").Trim();
             weights.Add(courseQuizWeight);
             nos.Add(courseQuizNo);
 
-            String courseHomeworkNo = ExtractString(lines[173], ">", "<").Trim();
-            String courseHomeworkWeight = ExtractString(lines[175], ">", "<").Trim();
+            String courseHomeworkNo = ExtractString(lines[173 + a], ">", "<").Trim();
+            String courseHomeworkWeight = ExtractString(lines[175 + a], ">", "<").Trim();
             weights.Add(courseHomeworkWeight);
             nos.Add(courseHomeworkNo);
 
-            String coursePresentationNo = ExtractString(lines[177], ">", "<").Trim();
-            String coursePresentationWeight = ExtractString(lines[179], ">", "<").Trim();
+            String coursePresentationNo = ExtractString(lines[177 + a], ">", "<").Trim();
+            String coursePresentationWeight = ExtractString(lines[179 + a], ">", "<").Trim();
             weights.Add(coursePresentationWeight);
             nos.Add(coursePresentationNo);
 
-            String courseProjectNo = ExtractString(lines[181], ">", "<").Trim();
-            String courseProjectWeight = ExtractString(lines[183], ">", "<").Trim();
+            String courseProjectNo = ExtractString(lines[181 + a], ">", "<").Trim();
+            String courseProjectWeight = ExtractString(lines[183 + a], ">", "<").Trim();
             weights.Add(courseProjectWeight);
             nos.Add(courseProjectNo);
 
-            String courseSeminarNo = ExtractString(lines[185], ">", "<").Trim();
-            String courseSeminarWeight = ExtractString(lines[187], ">", "<").Trim();
+            String courseSeminarNo = ExtractString(lines[185 + a], ">", "<").Trim();
+            String courseSeminarWeight = ExtractString(lines[187 + a], ">", "<").Trim();
             weights.Add(courseSeminarWeight);
             nos.Add(courseSeminarNo);
 
-            String courseOralNo = ExtractString(lines[189], ">", "<").Trim();
-            String courseOralWeight = ExtractString(lines[191], ">", "<").Trim();
+            String courseOralNo = ExtractString(lines[189 + a], ">", "<").Trim();
+            String courseOralWeight = ExtractString(lines[191 + a], ">", "<").Trim();
             weights.Add(courseOralWeight);
             nos.Add(courseOralNo);
 
-            String courseMidtermNo = ExtractString(lines[193], ">", "<").Trim();
-            String courseMidtermWeight = ExtractString(lines[195], ">", "<").Trim();
+            String courseMidtermNo = ExtractString(lines[193 + a], ">", "<").Trim();
+            String courseMidtermWeight = ExtractString(lines[195 + a], ">", "<").Trim();
             weights.Add(courseMidtermWeight);
             nos.Add(courseMidtermNo);
 
-            String courseFinalNo = ExtractString(lines[197], ">", "<").Trim();
-            String courseFinalWeight = ExtractString(lines[199], ">", "<").Trim();
+            String courseFinalNo = ExtractString(lines[197 + a], ">", "<").Trim();
+            String courseFinalWeight = ExtractString(lines[199 + a], ">", "<").Trim();
             weights.Add(courseFinalWeight);
             nos.Add(courseFinalNo);
 
@@ -459,65 +476,65 @@ namespace Rexport
 
             ArrayList workLoads = new ArrayList();
 
-            String courseTheoretical2No = ExtractString(lines[219], ">", "<").Trim();
-            String courseTheoretical2Duration = ExtractString(lines[221], ">", "<").Trim();
-            String courseTheoretical2Workload = ExtractString(lines[223], ">", "<").Trim();
+            String courseTheoretical2No = ExtractString(lines[219 + a], ">", "<").Trim();
+            String courseTheoretical2Duration = ExtractString(lines[221 + a], ">", "<").Trim();
+            String courseTheoretical2Workload = ExtractString(lines[223 + a], ">", "<").Trim();
             workLoads.Add(courseTheoretical2Workload);
 
-            String courseLaboratory2No = ExtractString(lines[225], ">", "<").Trim();
-            String courseLaboratory2Duration = ExtractString(lines[227], ">", "<").Trim();
-            String courseLaboratory2Workload = ExtractString(lines[229], ">", "<").Trim();
+            String courseLaboratory2No = ExtractString(lines[225 + a], ">", "<").Trim();
+            String courseLaboratory2Duration = ExtractString(lines[227 + a], ">", "<").Trim();
+            String courseLaboratory2Workload = ExtractString(lines[229 + a], ">", "<").Trim();
             workLoads.Add(courseLaboratory2Workload);
 
-            String courseStudy2No = ExtractString(lines[231], ">", "<").Trim();
-            String courseStudy2Duration = ExtractString(lines[233], ">", "<").Trim();
-            String courseStudy2Workload = ExtractString(lines[235], ">", "<").Trim();
+            String courseStudy2No = ExtractString(lines[231 + a], ">", "<").Trim();
+            String courseStudy2Duration = ExtractString(lines[233 + a], ">", "<").Trim();
+            String courseStudy2Workload = ExtractString(lines[235 + a], ">", "<").Trim();
             workLoads.Add(courseStudy2Workload);
 
 
-            String courseFieldWork2No = ExtractString(lines[237], ">", "<").Trim();
-            String courseFieldWork2Duration = ExtractString(lines[239], ">", "<").Trim();
-            String courseFieldWork2Workload = ExtractString(lines[241], ">", "<").Trim();
+            String courseFieldWork2No = ExtractString(lines[237 + a], ">", "<").Trim();
+            String courseFieldWork2Duration = ExtractString(lines[239 + a], ">", "<").Trim();
+            String courseFieldWork2Workload = ExtractString(lines[241 + a], ">", "<").Trim();
             workLoads.Add(courseFieldWork2Workload);
 
-            String courseQuiz2No = ExtractString(lines[243], ">", "<").Trim();
-            String courseQuiz2Duration = ExtractString(lines[245], ">", "<").Trim();
-            String courseQuiz2Workload = ExtractString(lines[247], ">", "<").Trim();
+            String courseQuiz2No = ExtractString(lines[243 + a], ">", "<").Trim();
+            String courseQuiz2Duration = ExtractString(lines[245 + a], ">", "<").Trim();
+            String courseQuiz2Workload = ExtractString(lines[247 + a], ">", "<").Trim();
             workLoads.Add(courseQuiz2Workload);
 
-            String courseHomework2No = ExtractString(lines[249], ">", "<").Trim();
-            String courseHomework2Duration = ExtractString(lines[251], ">", "<").Trim();
-            String courseHomework2Workload = ExtractString(lines[253], ">", "<").Trim();
+            String courseHomework2No = ExtractString(lines[249 + a], ">", "<").Trim();
+            String courseHomework2Duration = ExtractString(lines[251 + a], ">", "<").Trim();
+            String courseHomework2Workload = ExtractString(lines[253 + a], ">", "<").Trim();
             workLoads.Add(courseHomework2Workload);
 
-            String coursePresentation2No = ExtractString(lines[255], ">", "<").Trim();
-            String coursePresentation2Duration = ExtractString(lines[257], ">", "<").Trim();
-            String coursePresentation2Workload = ExtractString(lines[259], ">", "<").Trim();
+            String coursePresentation2No = ExtractString(lines[255 + a], ">", "<").Trim();
+            String coursePresentation2Duration = ExtractString(lines[257 + a], ">", "<").Trim();
+            String coursePresentation2Workload = ExtractString(lines[259 + a], ">", "<").Trim();
             workLoads.Add(coursePresentation2Workload);
 
-            String courseProject2No = ExtractString(lines[261], ">", "<").Trim();
-            String courseProject2Duration = ExtractString(lines[263], ">", "<").Trim();
-            String courseProject2Workload = ExtractString(lines[265], ">", "<").Trim();
+            String courseProject2No = ExtractString(lines[261 + a], ">", "<").Trim();
+            String courseProject2Duration = ExtractString(lines[263 + a], ">", "<").Trim();
+            String courseProject2Workload = ExtractString(lines[265 + a], ">", "<").Trim();
             workLoads.Add(courseProject2Workload);
 
-            String courseSeminar2No = ExtractString(lines[267], ">", "<").Trim();
-            String courseSeminar2Duration = ExtractString(lines[269], ">", "<").Trim();
-            String courseSeminar2Workload = ExtractString(lines[271], ">", "<").Trim();
+            String courseSeminar2No = ExtractString(lines[267 + a], ">", "<").Trim();
+            String courseSeminar2Duration = ExtractString(lines[269 + a], ">", "<").Trim();
+            String courseSeminar2Workload = ExtractString(lines[271 + a], ">", "<").Trim();
             workLoads.Add(courseSeminar2Workload);
 
-            String courseOral2No = ExtractString(lines[273], ">", "<").Trim();
-            String courseOral2Duration = ExtractString(lines[275], ">", "<").Trim();
-            String courseOral2Workload = ExtractString(lines[277], ">", "<").Trim();
+            String courseOral2No = ExtractString(lines[273 + a], ">", "<").Trim();
+            String courseOral2Duration = ExtractString(lines[275 + a], ">", "<").Trim();
+            String courseOral2Workload = ExtractString(lines[277 + a], ">", "<").Trim();
             workLoads.Add(courseOral2Workload);
 
-            String courseMidterm2No = ExtractString(lines[279], ">", "<").Trim();
-            String courseMidterm2Duration = ExtractString(lines[281], ">", "<").Trim();
-            String courseMidterm2Workload = ExtractString(lines[283], ">", "<").Trim();
+            String courseMidterm2No = ExtractString(lines[279 + a], ">", "<").Trim();
+            String courseMidterm2Duration = ExtractString(lines[281 + a], ">", "<").Trim();
+            String courseMidterm2Workload = ExtractString(lines[283 + a], ">", "<").Trim();
             workLoads.Add(courseMidterm2Workload);
 
-            String courseFinal2No = ExtractString(lines[285], ">", "<").Trim();
-            String courseFinal2Duration = ExtractString(lines[287], ">", "<").Trim();
-            String courseFinal2Workload = ExtractString(lines[289], ">", "<").Trim();
+            String courseFinal2No = ExtractString(lines[285 + a], ">", "<").Trim();
+            String courseFinal2Duration = ExtractString(lines[287 + a], ">", "<").Trim();
+            String courseFinal2Workload = ExtractString(lines[289 + a], ">", "<").Trim();
             workLoads.Add(courseFinal2Workload);
 
             int courseTotalWorkload = 0;
@@ -540,50 +557,50 @@ namespace Rexport
             textBox305.Text = courseLocalCredits;
             textBox309.Text = courseECTS;
             textBox303.Text = coursePrerequisites;
-            textBox300.Text = courseCoordinator;
-            textBox301.Text = courseLecturer;
-            textBox302.Text = courseAssistants; // !! RichTextBox
-            textBox297.Text = courseObjectives; // !! RichTextBox
-            textBox298.Text = courseLearningOutcomes1+courseLearningOutcomes2; // !! 
-            textBox299.Text = courseDescription;
+            richTextBox34.Text = courseCoordinator;
+            richTextBox35.Text = courseLecturer;
+            richTextBox36.Text = courseAssistants; 
+            richTextBox37.Text = courseObjectives; 
+            richTextBox38.Text = courseLearningOutcomes1+courseLearningOutcomes2;
+            richTextBox39.Text = courseDescription;
 
             // CourseCategory !! "X"
 
-            textBox296.Text = courseSubjectW1;
-            textBox295.Text = courseRelatedpreparationW1;
-            textBox294.Text = courseSubjectW2;
-            textBox293.Text = courseRelatedpreparationW2; 
-            textBox292.Text = courseSubjectW3;
-            textBox291.Text = courseRelatedpreparationW3; 
-            textBox290.Text = courseSubjectW4;
-            textBox289.Text = courseRelatedpreparationW4; 
-            textBox288.Text = courseSubjectW5;
-            textBox287.Text = courseRelatedpreparationW5; 
-            textBox286.Text = courseSubjectW6;
-            textBox285.Text = courseRelatedpreparationW6; 
-            textBox284.Text = courseSubjectW7;
-            textBox283.Text = courseRelatedpreparationW7; 
-            textBox282.Text = courseSubjectW8;
-            textBox281.Text = courseRelatedpreparationW8; 
-            textBox280.Text = courseSubjectW9;
-            textBox279.Text = courseRelatedpreparationW9; 
-            textBox278.Text = courseSubjectW10;
-            textBox277.Text = courseRelatedpreparationW10; 
-            textBox276.Text = courseSubjectW11;
-            textBox275.Text = courseRelatedpreparationW11; 
-            textBox274.Text = courseSubjectW12;
-            textBox273.Text = courseRelatedpreparationW12; 
-            textBox272.Text = courseSubjectW13;
-            textBox271.Text = courseRelatedpreparationW13; 
-            textBox270.Text = courseSubjectW14;
-            textBox269.Text = courseRelatedpreparationW14; 
-            textBox268.Text = courseSubjectW15;
-            textBox267.Text = courseRelatedpreparationW15; 
-            textBox266.Text = courseSubjectW16;
-            textBox265.Text = courseRelatedpreparationW16;
+            richTextBox2.Text = courseSubjectW1;
+            richTextBox3.Text = courseRelatedpreparationW1;
+            richTextBox4.Text = courseSubjectW2;
+            richTextBox5.Text = courseRelatedpreparationW2;
+            richTextBox6.Text = courseSubjectW3;
+            richTextBox7.Text = courseRelatedpreparationW3;
+            richTextBox8.Text = courseSubjectW4;
+            richTextBox9.Text = courseRelatedpreparationW4;
+            richTextBox10.Text = courseSubjectW5;
+            richTextBox11.Text = courseRelatedpreparationW5;
+            richTextBox12.Text = courseSubjectW6;
+            richTextBox13.Text = courseRelatedpreparationW6;
+            richTextBox14.Text = courseSubjectW7;
+            richTextBox15.Text = courseRelatedpreparationW7;
+            richTextBox16.Text = courseSubjectW8;
+            richTextBox17.Text = courseRelatedpreparationW8;
+            richTextBox18.Text = courseSubjectW9;
+            richTextBox19.Text = courseRelatedpreparationW9;
+            richTextBox20.Text = courseSubjectW10;
+            richTextBox21.Text = courseRelatedpreparationW10;
+            richTextBox22.Text = courseSubjectW11;
+            richTextBox23.Text = courseRelatedpreparationW11;
+            richTextBox24.Text = courseSubjectW12;
+            richTextBox25.Text = courseRelatedpreparationW12;
+            richTextBox26.Text = courseSubjectW13;
+            richTextBox27.Text = courseRelatedpreparationW13;
+            richTextBox28.Text = courseSubjectW14;
+            richTextBox29.Text = courseRelatedpreparationW14;
+            richTextBox30.Text = courseSubjectW15;
+            richTextBox31.Text = courseRelatedpreparationW15;
+            richTextBox32.Text = courseSubjectW16;
+            richTextBox33.Text = courseRelatedpreparationW16;
 
-            textBox263.Text = courseNotesTextbooks;
-            textBox264.Text = courseSuggestedReadingsMaterials;
+            richTextBox40.Text = courseNotesTextbooks;
+            richTextBox41.Text = courseSuggestedReadingsMaterials;
 
             // !! LO1, LO2, LO3, LO4
 
@@ -611,37 +628,61 @@ namespace Rexport
             textBox244.Text = courseSeminarNo;
             textBox245.Text = courseSeminarWeight;
 
-            textBox244.Text = courseOralNo;
-            textBox245.Text = courseOralWeight;
+            textBox250.Text = courseOralNo;
+            textBox251.Text = courseOralWeight;
 
             textBox201.Text = courseMidtermNo;
-            textBox256.Text = courseMidtermWeight;
+            textBox258.Text = courseMidtermWeight;
 
-            textBox199.Text = courseFinalNo;      // Final ? Total
-            textBox198.Text = courseFinalWeight;  // Final ? Total
+            textBox199.Text = courseFinalNo;
+            textBox197.Text = courseFinalWeight;
 
-            // !! Weighting of Semester Activities on the Final Grade
-            // !! Weighting of End-of Semester Activities on the Final Grade
+            textBox265.Text = Convert.ToString(courseTotalNo);      
+            textBox266.Text = Convert.ToString(courseTotalWeight);
 
+            // SEMESTER TERM FINAL NOTES 
+            int finalNoCarry = 0;
+            int finalWeightCarry = 0;
+
+            if (courseFinalNo != "")
+            {
+                finalNoCarry = Convert.ToInt32(courseFinalNo);
+            }
+            if (courseFinalWeight != "")
+            {
+                finalWeightCarry = Convert.ToInt32(courseFinalWeight);
+            }
+
+            textBox194.Text = Convert.ToString( Convert.ToInt32(courseTotalNo) - finalNoCarry);
+            textBox195.Text = Convert.ToString(Convert.ToInt32(courseTotalWeight) - finalWeightCarry);
+
+            textBox196.Text = courseFinalNo;
+            textBox193.Text = courseFinalWeight;
+
+            textBox263.Text = Convert.ToString(courseTotalNo);
+            textBox264.Text = Convert.ToString(courseTotalWeight);
+
+
+            // ECTS PART
             textBox152.Text = courseTheoretical2No;
             textBox153.Text = courseTheoretical2Duration;
             textBox151.Text = courseTheoretical2Workload;
 
-            textBox208.Text = courseLaboratory2No;       // !!
-            textBox209.Text = courseLaboratory2Duration; // !!
-            textBox210.Text = courseLaboratory2Workload; // !!
+            textBox154.Text = courseLaboratory2No;       
+            textBox155.Text = courseLaboratory2Duration; 
+            textBox156.Text = courseLaboratory2Workload; 
 
             textBox157.Text = courseStudy2No;
             textBox159.Text = courseStudy2Duration;
             textBox160.Text = courseStudy2Workload;
 
-            textBox211.Text = courseFieldWork2No;
-            textBox212.Text = courseFieldWork2Duration;
-            textBox213.Text = courseFieldWork2Workload;
+            textBox161.Text = courseFieldWork2No;
+            textBox163.Text = courseFieldWork2Duration;
+            textBox164.Text = courseFieldWork2Workload;
 
-            textBox214.Text = courseQuiz2No;
-            textBox215.Text = courseQuiz2Duration;
-            textBox216.Text = courseQuiz2Workload;
+            textBox171.Text = courseQuiz2No;
+            textBox175.Text = courseQuiz2Duration;
+            textBox170.Text = courseQuiz2Workload;
 
             textBox171.Text = courseHomework2No;
             textBox175.Text = courseHomework2Duration;
