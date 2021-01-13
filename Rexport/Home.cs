@@ -863,6 +863,10 @@ namespace Rexport
 
         private void button3_Click(object sender, EventArgs e)
         {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "template_syllabus.html");
+
+            WebClient client = new WebClient();
+            String myHtml = client.DownloadString(path);
 
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Metin Dosyası|*.html";
@@ -872,9 +876,10 @@ namespace Rexport
             if (save.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter Kayit = new StreamWriter(save.FileName);
-                Kayit.WriteLine(textBox1.Text);
+                Kayit.WriteLine(myHtml);
                 Kayit.Close();
             }
+            
 
         }
     }
