@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Collections;
+using System.IO;
 
 namespace Rexport
 {
@@ -840,6 +841,40 @@ namespace Rexport
 
         private void tableLayoutPanel25_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Metin Dosyası|*.html";
+            save.OverwritePrompt = true;
+            save.CreatePrompt = true;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter Kayit = new StreamWriter(save.FileName);
+                Kayit.WriteLine(textBox1.Text);
+                Kayit.Close();
+            }
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Metin Dosyası|*.html";
+            save.OverwritePrompt = true;
+            save.CreatePrompt = true;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter Kayit = new StreamWriter(save.FileName);
+                Kayit.WriteLine(textBox1.Text);
+                Kayit.Close();
+            }
 
         }
     }
