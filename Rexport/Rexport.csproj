@@ -110,5 +110,8 @@
   <ItemGroup>
     <None Include="Resources\RexportBARGAPWithBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="template_syllabus.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
