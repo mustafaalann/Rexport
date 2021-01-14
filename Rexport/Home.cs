@@ -281,7 +281,7 @@ namespace Rexport
             int a = 0;
             int cnt = 0;
             WebClient client = new WebClient();
-            String link = "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+302";
+            String link = "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302";
             String htmlCode = client.DownloadString(link);
             if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce")
             {
@@ -1029,7 +1029,11 @@ namespace Rexport
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkNoStart", "FieldWorkNoEnd", true, true, textBox208.Text);
 
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkWeightStart", "FieldWorkWeightEnd", true, true, textBox212.Text);
+
             myHtml = replaceBetweenWithoutRegex(myHtml, "QuizNoStart", "QuizNoEnd", true, true, textBox209.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizWeightStart", "QuizWeightEnd", true, true, textBox215.Text);
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkNoStart", "HomeworkNoEnd", true, true, textBox211.Text);
 
@@ -1063,17 +1067,17 @@ namespace Rexport
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "TotalWeightStart", "TotalWeightEnd", true, true, textBox258.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalNoStart", "WeightingOfFinalNoEnd", true, true, textBox199.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TestingNoStart", "TestingNoEnd", true, true, textBox194.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalWeightStart", "WeightingOfFinalWeightEnd", true, true, textBox197.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TestingWeightStart", "TestingWeightEnd", true, true, textBox195.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalEndStart", "WeightingOfFinalEndEnd", true, true, textBox265.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Testing2NoStart", "Testing2NoEnd", true, true, textBox196.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalEndWeightStart", "WeightingOfFinalEndWeightEnd", true, true, textBox266.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Testing2WeightStart", "Testing2WeightEnd", true, true, textBox193.Text);
 
             //ECTS
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursStart", "CourseHoursEnd", true, true, textBox152.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursNumberStart", "CourseHoursNumberEnd", true, true, textBox152.Text);
             myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursDurationStart", "CourseHoursDurationEnd", true, true, textBox153.Text);
             myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursWorkloadStart", "CourseHoursWorkloadEnd", true, true, textBox151.Text);
 
