@@ -25,7 +25,7 @@ namespace Rexport
             if(panel2.Width >= 720)
             {
                 timer1.Stop();
-                Home h1 = new Home(true);
+                Home h1 = new Home();
                 h1.Show();
                 this.Hide();
                
