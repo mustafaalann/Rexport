@@ -940,30 +940,29 @@ namespace Rexport
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "AssistantStart", "AssistantEnd", true, true, richTextBox36.Text);
 
-            //HTML FIXLENDIKTEN SONRA BURAYA TEKRAR BAK COURSE CATEGORY
-            /*
-            
+            //COURSE CATEGORY
+            if (checkBox86.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "Category1Start", "Category1End", true, true, "X");
 
-            if (checkBox15.Checked)
-            {
-                myHtml = ExtractString(myHtml, "", "");
             }
-            else if (checkBox16.Checked)
+            else if (checkBox87.Checked)
             {
-                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "First Cycle");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "Category2Start", "Category2End", true, true, "X");
             }
-            else if (checkBox17.Checked)
+            else if (checkBox88.Checked)
             {
-                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Second Cycle");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "Category3Start", "Category3End", true, true, "X");
             }
-            else
+            else if (checkBox89.Checked)
             {
-                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Third Cycle");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "Category4Start", "Category4End", true, true, "X");
             }
 
-            //checkedlistbox varmis böyle yapamazsın
-
-            */
+            else if (checkBox90.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "Category5Start", "Category5End", true, true, "X");
+            }
 
             //WEEKLY SUBJECTS AND REQUIRED MATERIALS
 
@@ -1021,7 +1020,7 @@ namespace Rexport
             myHtml = replaceBetweenWithoutRegex(myHtml, "CourseSuggestedStart", "CourseSuggestedEnd", true, true, richTextBox41.Text);
 
             //ASSESMENT
-            // UI DESIGNDA LO VAR TABLODA BEN TEMPLATE SYLLABUSA GORE YAZDIM
+            
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationNoStart", "ParticipationNoEnd", true, true, textBox94.Text);
 
@@ -1132,6 +1131,103 @@ namespace Rexport
 
 
             //OUTCOME MATRIX
+            
+            //OUTCOMES HERE
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W1ProgramStart", "W1ProgramEnd", true, true, textBox192.Text);
+
+            //CONTRUBUTION LEVELS HERE
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W11Start", "W11End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W12Start", "W12End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W13Start", "W13End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W14Start", "W14End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W15Start", "W15End", true, true, textBox192.Text);
+
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W21Start", "W21End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W22Start", "W22End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W23Start", "W23End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W24Start", "W24End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W25Start", "W25End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W31Start", "W31End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W32Start", "W32End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W33Start", "W33End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W34Start", "W34End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W35Start", "W35End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W41Start", "W41End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W42Start", "W42End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W43Start", "W43End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W44Start", "W44End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W45Start", "W45End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W51Start", "W51End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W52Start", "W52End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W53Start", "W53End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W54Start", "W54End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W55Start", "W55End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W61Start", "W61End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W62Start", "W62End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W63Start", "W63End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W64Start", "W64End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W65Start", "W65End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W71Start", "W71End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W72Start", "W72End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W73Start", "W73End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W74Start", "W74End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W75Start", "W75End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W81Start", "W81End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W82Start", "W82End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W83Start", "W83End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W84Start", "W84End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W85Start", "W85End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W91Start", "91WEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W92Start", "92WEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W93Start", "93WEnd", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W94Start", "W94End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W95Start", "W95End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W101Start", "W101End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W102Start", "W102End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W103Start", "W103End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W104Start", "W104End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W105Start", "W105End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W111Start", "W111End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W112Start", "W112End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W113Start", "W113End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W114Start", "W114End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W115Start", "W115End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W121Start", "W121End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W122Start", "W122End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W123Start", "W123End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W124Start", "W124End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W125Start", "W125End", true, true, textBox192.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W131Start", "W131End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W132Start", "W132End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W133Start", "W133End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W134Start", "W134End", true, true, textBox192.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "W135Start", "W135End", true, true, textBox192.Text);
 
 
 
