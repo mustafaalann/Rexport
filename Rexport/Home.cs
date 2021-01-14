@@ -563,9 +563,9 @@ namespace Rexport
             textBox305.Text = courseLocalCredits;
             textBox309.Text = courseECTS;
             textBox303.Text = coursePrerequisites;
-            richTextBox34.Text = courseCoordinator;
-            richTextBox35.Text = courseLecturer;
-            richTextBox36.Text = courseAssistants; 
+            textBox97.Text = courseCoordinator;
+            textBox98.Text = courseLecturer;
+            textBox99.Text = courseAssistants; 
             richTextBox37.Text = courseObjectives; 
             richTextBox38.Text = courseLearningOutcomes1+courseLearningOutcomes2;
             richTextBox39.Text = courseDescription;
@@ -934,11 +934,11 @@ namespace Rexport
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Third Cycle");
             }
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseCoordinatorStart", "CourseCoordinatorEnd", true, true, richTextBox34.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseCoordinatorStart", "CourseCoordinatorEnd", true, true, textBox97.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLecturerStart", "CourseLecturerEnd", true, true, richTextBox35.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLecturerStart", "CourseLecturerEnd", true, true, textBox98.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "AssistantStart", "AssistantEnd", true, true, richTextBox36.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "AssistantStart", "AssistantEnd", true, true, textBox99.Text);
 
             //COURSE CATEGORY
             if (checkBox86.Checked)
