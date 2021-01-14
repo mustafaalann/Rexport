@@ -278,12 +278,17 @@ namespace Rexport
             editPanel2.BringToFront();
 
 
-
+            int a = 0;
             int cnt = 0;
             WebClient client = new WebClient();
-            String htmlCode = client.DownloadString("https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302");
+            String link = "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+302";
+            String htmlCode = client.DownloadString(link);
+            if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce")
+            {
+                a = a - 6;
+            }
 
-           
+
 
 
             byte[] bytes = Encoding.Default.GetBytes(htmlCode);
@@ -307,7 +312,7 @@ namespace Rexport
                  cnt += 1;
             }
 
-            int a = 0; //controlling if there is None prerequisites
+             //controlling if there is None prerequisites
             
             String courseName = ExtractString(lines[90], ">", "<").Trim();
 
