@@ -17,7 +17,7 @@ namespace Rexport
 {
     public partial class Home : Form
     {
-        public Home(bool isOn)
+        public Home()
         {
             InitializeComponent();
             homePanel.Hide();
