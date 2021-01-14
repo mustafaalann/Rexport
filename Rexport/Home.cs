@@ -19,6 +19,11 @@ namespace Rexport
     {
         public Home()
         {
+
+            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            string folderName = Path.Combine(projectPath, "Last Syllabus");
+            System.IO.Directory.CreateDirectory(folderName);
+
             InitializeComponent();
             homePanel.Hide();
             editPanel2.Hide();
@@ -1274,6 +1279,13 @@ namespace Rexport
 
         private void textBox70_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "/Last Syllabus/last_save.html");
+
 
         }
     }
