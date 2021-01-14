@@ -610,41 +610,41 @@ namespace Rexport
 
             // !! LO1, LO2, LO3, LO4
 
-            textBox206.Text = courseParticipationNo;
-            textBox207.Text = courseParticipationWeight;
+            textBox94.Text = courseParticipationNo;
+            textBox93.Text = courseParticipationWeight;
 
-            textBox208.Text = courseLabNo;
-            textBox209.Text = courseLabWeight;
+            textBox92.Text = courseLabNo;
+            textBox91.Text = courseLabWeight;
 
-            textBox211.Text = courseFieldWorkNo;
-            textBox212.Text = courseFieldWorkWeight;
+            textBox90.Text = courseFieldWorkNo;
+            textBox89.Text = courseFieldWorkWeight;
 
-            textBox214.Text = courseQuizNo;
-            textBox215.Text = courseQuizWeight;
+            textBox88.Text = courseQuizNo;
+            textBox87.Text = courseQuizWeight;
 
-            textBox217.Text = courseHomeworkNo;
-            textBox218.Text = courseHomeworkWeight;
+            textBox86.Text = courseHomeworkNo;
+            textBox85.Text = courseHomeworkWeight;
 
-            textBox220.Text = coursePresentationNo;
-            textBox221.Text = coursePresentationWeight;
+            textBox84.Text = coursePresentationNo;
+            textBox83.Text = coursePresentationWeight;
 
-            textBox222.Text = courseProjectNo;
-            textBox223.Text = courseProjectWeight;
+            textBox82.Text = courseProjectNo;
+            textBox81.Text = courseProjectWeight;
 
-            textBox244.Text = courseSeminarNo;
-            textBox245.Text = courseSeminarWeight;
+            textBox80.Text = courseSeminarNo;
+            textBox79.Text = courseSeminarWeight;
 
-            textBox250.Text = courseOralNo;
-            textBox251.Text = courseOralWeight;
+            textBox78.Text = courseOralNo;
+            textBox77.Text = courseOralWeight;
 
-            textBox201.Text = courseMidtermNo;
-            textBox258.Text = courseMidtermWeight;
+            textBox76.Text = courseMidtermNo;
+            textBox75.Text = courseMidtermWeight;
 
-            textBox199.Text = courseFinalNo;
-            textBox197.Text = courseFinalWeight;
+            textBox74.Text = courseFinalNo;
+            textBox73.Text = courseFinalWeight;
 
-            textBox265.Text = Convert.ToString(courseTotalNo);      
-            textBox266.Text = Convert.ToString(courseTotalWeight);
+            textBox95.Text = Convert.ToString(courseTotalNo);      
+            textBox96.Text = Convert.ToString(courseTotalWeight);
 
             // SEMESTER TERM FINAL NOTES 
             int finalNoCarry = 0;
@@ -1023,49 +1023,53 @@ namespace Rexport
             //ASSESMENT
             // UI DESIGNDA LO VAR TABLODA BEN TEMPLATE SYLLABUSA GORE YAZDIM
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationNoStart", "ParticipationNoEnd", true, true, textBox206.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationNoStart", "ParticipationNoEnd", true, true, textBox94.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationWeightStart", "ParticipationWeightEnd", true, true, textBox207.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationWeightStart", "ParticipationWeightEnd", true, true, textBox93.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkNoStart", "FieldWorkNoEnd", true, true, textBox208.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "LabNoStart", "LabNoEnd", true, true, textBox92.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkWeightStart", "FieldWorkWeightEnd", true, true, textBox212.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "LabWeightStart", "LabWeightEnd", true, true, textBox91.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizNoStart", "QuizNoEnd", true, true, textBox209.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkNoStart", "FieldWorkNoEnd", true, true, textBox90.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizWeightStart", "QuizWeightEnd", true, true, textBox215.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkWeightStart", "FieldWorkWeightEnd", true, true, textBox89.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkNoStart", "HomeworkNoEnd", true, true, textBox211.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizNoStart", "QuizNoEnd", true, true, textBox88.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkWeightStart", "HomeworkWeightEnd", true, true, textBox212.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizWeightStart", "QuizWeightEnd", true, true, textBox87.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationNoStart", "PresentationNoEnd", true, true, textBox214.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkNoStart", "HomeworkNoEnd", true, true, textBox86.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationWeightStart", "PresentationWeightEnd", true, true, textBox215.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkWeightStart", "HomeworkWeightEnd", true, true, textBox85.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectNoStart", "ProjectNoEnd", true, true, textBox217.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationNoStart", "PresentationNoEnd", true, true, textBox84.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectWeightStart", "ProjectWeightEnd", true, true, textBox218.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationWeightStart", "PresentationWeightEnd", true, true, textBox83.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarNoStart", "SeminarNoEnd", true, true, textBox220.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectNoStart", "ProjectNoEnd", true, true, textBox82.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarWeightStart", "SeminarWeightEnd", true, true, textBox221.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectWeightStart", "ProjectWeightEnd", true, true, textBox81.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "OralNoStart", "OralNoEnd", true, true, textBox222.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarNoStart", "SeminarNoEnd", true, true, textBox80.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "OralWeightStart", "OralWeightEnd", true, true, textBox223.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarWeightStart", "SeminarWeightEnd", true, true, textBox79.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermNoStart", "MidtermNoEnd", true, true, textBox244.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralNoStart", "OralNoEnd", true, true, textBox78.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermWeightStart", "MidtermWeightEnd", true, true, textBox245.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralWeightStart", "OralWeightEnd", true, true, textBox77.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalNoStart", "FinalNoEnd", true, true, textBox250.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermNoStart", "MidtermNoEnd", true, true, textBox76.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalWeightStart", "FinalWeightEnd", true, true, textBox251.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermWeightStart", "MidtermWeightEnd", true, true, textBox75.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalNoStart", "TotalNoEnd", true, true, textBox201.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalNoStart", "FinalNoEnd", true, true, textBox74.Text);
 
-            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalWeightStart", "TotalWeightEnd", true, true, textBox258.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalWeightStart", "FinalWeightEnd", true, true, textBox73.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalNoStart", "TotalNoEnd", true, true, textBox95.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalWeightStart", "TotalWeightEnd", true, true, textBox96.Text);
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "TestingNoStart", "TestingNoEnd", true, true, textBox194.Text);
 
@@ -1164,6 +1168,16 @@ namespace Rexport
                 Kayit.Close();
             }
             
+
+        }
+
+        private void textBox296_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox70_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
