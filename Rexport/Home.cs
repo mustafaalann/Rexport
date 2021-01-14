@@ -873,6 +873,281 @@ namespace Rexport
             WebClient client = new WebClient();
             String myHtml = client.DownloadString(path);
 
+            //GENERAL INFORMATION
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseNameStart", "CourseNameEnd", true, true, textBox304.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CodeStart", "CodeEnd", true, true, textBox306.Text);
+
+            if (checkBox20.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "FallStart", "FallEnd", true, true, "Fall");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "SpringStart", "SpringEnd", true, true, "");
+            }
+            else if (checkBox19.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "FallStart", "FallEnd", true, true, "");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "SpringStart", "SpringEnd", true, true, "Spring");
+            }
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TheoryStart", "TheoryEnd", true, true, textBox307.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "AppStart", "AppEnd", true, true, textBox308.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "LocalStart", "LocalEnd", true, true, textBox305.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ECTSStart", "ECTSEnd", true, true, textBox309.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "prerequisitesStart", "prerequisitesEnd", true, true, textBox303.Text);
+
+            if (checkBox7.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "English");
+            }
+            else if (checkBox8.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "Turkish");
+            }
+
+            if (checkBox13.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseTypeStart", "CourseTypeEnd", true, true, "Required");
+            }
+            else if (checkBox14.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseTypeStart", "CourseTypeEnd", true, true, "Elective");
+            }
+
+            if (checkBox15.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Short Cycle");
+            }
+            else if (checkBox16.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "First Cycle");
+            }
+            else if (checkBox17.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Second Cycle");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Third Cycle");
+            }
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseCoordinatorStart", "CourseCoordinatorEnd", true, true, richTextBox34.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLecturerStart", "CourseLecturerEnd", true, true, richTextBox35.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "AssistantStart", "AssistantEnd", true, true, richTextBox36.Text);
+
+            //HTML FIXLENDIKTEN SONRA BURAYA TEKRAR BAK COURSE CATEGORY
+            /*
+            
+
+            if (checkBox15.Checked)
+            {
+                myHtml = ExtractString(myHtml, "", "");
+            }
+            else if (checkBox16.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "First Cycle");
+            }
+            else if (checkBox17.Checked)
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Second Cycle");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Third Cycle");
+            }
+
+            //checkedlistbox varmis böyle yapamazsın
+
+            */
+
+            //WEEKLY SUBJECTS AND REQUIRED MATERIALS
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week1SubjectStart", "Week1SubjectEnd", true, true, richTextBox2.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week1RequiredStart", "Week1RequiredEnd", true, true, richTextBox3.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week2SubjectStart", "Week2SubjectEnd", true, true, richTextBox4.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week2RequiredStart", "Week2RequiredEnd", true, true, richTextBox5.Text);
+            
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week3SubjectStart", "Week3SubjectEnd", true, true, richTextBox6.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week3RequiredStart", "Week3RequiredEnd", true, true, richTextBox7.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week4SubjectStart", "Week4SubjectEnd", true, true, richTextBox8.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week4RequiredStart", "Week4RequiredEnd", true, true, richTextBox9.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week5SubjectStart", "Week5SubjectEnd", true, true, richTextBox10.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week5RequiredStart", "Week5RequiredEnd", true, true, richTextBox11.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week6SubjectStart", "Week6SubjectEnd", true, true, richTextBox12.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week6RequiredStart", "Week6RequiredEnd", true, true, richTextBox13.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week7SubjectStart", "Week7SubjectEnd", true, true, richTextBox14.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week7RequiredStart", "Week7RequiredEnd", true, true, richTextBox15.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week8SubjectStart", "Week8SubjectEnd", true, true, richTextBox16.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week8RequiredStart", "Week8RequiredEnd", true, true, richTextBox17.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week9SubjectStart", "Week9SubjectEnd", true, true, richTextBox18.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week9RequiredStart", "Week9RequiredEnd", true, true, richTextBox19.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week10SubjectStart", "Week10SubjectEnd", true, true, richTextBox20.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week10RequiredStart", "Week10RequiredEnd", true, true, richTextBox21.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week11SubjectStart", "Week11SubjectEnd", true, true, richTextBox22.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week11RequiredStart", "Week11RequiredEnd", true, true, richTextBox23.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week12SubjectStart", "Week12SubjectEnd", true, true, richTextBox24.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week12RequiredStart", "Week12RequiredEnd", true, true, richTextBox25.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week13SubjectStart", "Week13SubjectEnd", true, true, richTextBox26.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week13RequiredStart", "Week13RequiredEnd", true, true, richTextBox27.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week14SubjectStart", "Week14SubjectEnd", true, true, richTextBox28.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week14RequiredStart", "Week14RequiredEnd", true, true, richTextBox29.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week15SubjectStart", "Week15SubjectEnd", true, true, richTextBox30.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week15RequiredStart", "Week15RequiredEnd", true, true, richTextBox31.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week16SubjectStart", "Week16SubjectEnd", true, true, richTextBox32.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "Week16RequiredStart", "Week16RequiredEnd", true, true, richTextBox33.Text);
+
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseNotesStart", "CourseNotesEnd", true, true, richTextBox40.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseSuggestedStart", "CourseSuggestedEnd", true, true, richTextBox41.Text);
+
+            //ASSESMENT
+            // UI DESIGNDA LO VAR TABLODA BEN TEMPLATE SYLLABUSA GORE YAZDIM
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationNoStart", "ParticipationNoEnd", true, true, textBox206.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ParticipationWeightStart", "ParticipationWeightEnd", true, true, textBox207.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkNoStart", "FieldWorkNoEnd", true, true, textBox208.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizNoStart", "QuizNoEnd", true, true, textBox209.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkNoStart", "HomeworkNoEnd", true, true, textBox211.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkWeightStart", "HomeworkWeightEnd", true, true, textBox212.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationNoStart", "PresentationNoEnd", true, true, textBox214.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationWeightStart", "PresentationWeightEnd", true, true, textBox215.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectNoStart", "ProjectNoEnd", true, true, textBox217.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectWeightStart", "ProjectWeightEnd", true, true, textBox218.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarNoStart", "SeminarNoEnd", true, true, textBox220.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarWeightStart", "SeminarWeightEnd", true, true, textBox221.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralNoStart", "OralNoEnd", true, true, textBox222.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralWeightStart", "OralWeightEnd", true, true, textBox223.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermNoStart", "MidtermNoEnd", true, true, textBox244.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermWeightStart", "MidtermWeightEnd", true, true, textBox245.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalNoStart", "FinalNoEnd", true, true, textBox250.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalWeightStart", "FinalWeightEnd", true, true, textBox251.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalNoStart", "TotalNoEnd", true, true, textBox201.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalWeightStart", "TotalWeightEnd", true, true, textBox258.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalNoStart", "WeightingOfFinalNoEnd", true, true, textBox199.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalWeightStart", "WeightingOfFinalWeightEnd", true, true, textBox197.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalEndStart", "WeightingOfFinalEndEnd", true, true, textBox265.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "WeightingOfFinalEndWeightStart", "WeightingOfFinalEndWeightEnd", true, true, textBox266.Text);
+
+            //ECTS
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursStart", "CourseHoursEnd", true, true, textBox152.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursDurationStart", "CourseHoursDurationEnd", true, true, textBox153.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "CourseHoursWorkloadStart", "CourseHoursWorkloadEnd", true, true, textBox151.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "LabNumberStart", "LabNumberEnd", true, true, textBox154.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "LabDurationStart", "LabDurationEnd", true, true, textBox155.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "LabWorkloadStart", "LabWorkloadEnd", true, true, textBox156.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "StudyNumberStart", "StudyNumberEnd", true, true, textBox157.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "StudyDurationStart", "StudyDurationEnd", true, true, textBox159.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "StudyWorkloadStart", "StudyWorkloadEnd", true, true, textBox160.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkNumberStart", "FieldWorkNumberEnd", true, true, textBox161.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkDurationStart", "FieldWorkDurationEnd", true, true, textBox163.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FieldWorkWorkloadStart", "FieldWorkWorkloadEnd", true, true, textBox164.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizNumberStart", "QuizNumberEnd", true, true, textBox165.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizDurationStart", "QuizDurationEnd", true, true, textBox169.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "QuizWorkloadStart", "QuizWorkloadEnd", true, true, textBox170.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkNumberStart", "HomeworkNumberEnd", true, true, textBox171.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkDurationStart", "HomeworkDurationEnd", true, true, textBox175.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "HomeworkWorkloadStart", "HomeworkWorkloadEnd", true, true, textBox179.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationNumberStart", "PresentationNumberEnd", true, true, textBox176.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationDurationStart", "PresentationDurationEnd", true, true, textBox177.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "PresentationWorkloadStart", "PresentationWorkloadEnd", true, true, textBox181.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectNumberStart", "ProjectNumberEnd", true, true, textBox182.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectDurationStart", "ProjectDurationEnd", true, true, textBox183.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "ProjectWorkloadStart", "ProjectWorkloadEnd", true, true, textBox184.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarNumberStart", "SeminarNumberEnd", true, true, textBox185.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarDurationStart", "SeminarDurationEnd", true, true, textBox186.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "SeminarWorkloadStart", "SeminarWorkloadEnd", true, true, textBox187.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralExamNumberStart", "OralExamNumberEnd", true, true, textBox150.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralExamDurationStart", "OralExamDurationEnd", true, true, textBox188.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "OralExamWorkloadStart", "OralExamWorkloadEnd", true, true, textBox189.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermNumberStart", "MidtermNumberEnd", true, true, textBox149.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermDurationStart", "MidtermDurationEnd", true, true, textBox148.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "MidtermWorkloadStart", "MidtermWorkloadEnd", true, true, textBox190.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalNumberStart", "FinalNumberEnd", true, true, textBox147.Text);
+            myHtml = replaceBetweenWithoutRegex(myHtml, "FinalDurationStart", "FinalDurationEnd", true, true, textBox146.Text);
+
+            myHtml = replaceBetweenWithoutRegex(myHtml, "TotalStart", "TotalEnd", true, true, textBox192.Text);
+
+
+            //OUTCOME MATRIX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Metin Dosyası|*.html";
             save.OverwritePrompt = true;
