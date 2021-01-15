@@ -27,9 +27,9 @@ namespace Rexport
             InitializeComponent();
             homePanel.Hide();
             editPanel2.Hide();
-            editLinkPanel.Show();
+            editLinkPanel.Hide();
             createPanel.Hide();
-            panel1.Hide();
+            panel1.Show();
             
         }
 
@@ -1938,6 +1938,8 @@ namespace Rexport
 
 
 
+            WriteToFile(myHtml, "last_save.html");
+
 
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Metin Dosyası|*.html";
@@ -1950,10 +1952,20 @@ namespace Rexport
                 Kayit.WriteLine(myHtml);
                 Kayit.Close();
             }
-            
+
 
         }
 
+        public static void WriteToFile(string s, string fileName)
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+            FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.Append, System.IO.FileAccess.Write);
+            StreamWriter sw = new System.IO.StreamWriter(fs);
+            sw.WriteLine(s);
+            sw.Flush();
+            sw.Close();
+            fs.Close();
+        }
         private void textBox296_TextChanged(object sender, EventArgs e)
         {
 
@@ -1966,6 +1978,52 @@ namespace Rexport
 
         private void button4_Click(object sender, EventArgs e)
         {
+            panel1.Hide();
+            editPanel2.Show();
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "last_save.html");
+            WebClient client = new WebClient();
+            String myHtml = client.DownloadString(path);
+
+            byte[] bytes = Encoding.Default.GetBytes(myHtml);
+            myHtml = Encoding.UTF8.GetString(bytes);
+
+            string[] separatingStrings = { "tr>" };
+
+            string text = myHtml;
+
+            string[] lines = text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+
+
+            int cnt = 0;
+            foreach (var line in lines)
+            {
+                System.Console.WriteLine(cnt);
+                System.Console.WriteLine(line);
+                cnt += 1;
+            }
+
+            /* ADDING DATA INTO EDIT PANEL*/
+
+            textBox304.Text = ExtractString(GetLine(lines[1], 3), ">", "<").Trim();
+            textBox306.Text = ExtractString(GetLine(lines[7], 2), ">", "<").Trim();
+            if(ExtractString(GetLine(lines[7], 3), ">", "<").Trim() == "X")
+            {
+                checkBox20.Checked = true;
+            }
+            if (ExtractString(GetLine(lines[7], 4), ">", "<").Trim() == "X")
+            {
+                checkBox19.Checked = true;
+            }
+
+            /* ADDING DATA INTO EDIT PANEL*/
+
+            textBox307.Text = ExtractString(GetLine(lines[7], 5), ">", "<").Trim();
+            
+
+
+
+
+
 
         }
 
