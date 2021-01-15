@@ -1920,7 +1920,8 @@ namespace Rexport
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "template_syllabus.html");
+            //if for language!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
 
             WebClient client = new WebClient();
             String myHtml = client.DownloadString(path);
@@ -2921,7 +2922,7 @@ namespace Rexport
 
 
 
-            WriteToFile(myHtml, "last_save.html");
+            WriteOnLastSave(myHtml);
 
 
             SaveFileDialog save = new SaveFileDialog();
@@ -2939,15 +2940,18 @@ namespace Rexport
 
         }
 
-        public static void WriteToFile(string s, string fileName)
+        public static void WriteOnLastSave(string code)
         {
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
-            FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.Append, System.IO.FileAccess.Write);
-            StreamWriter sw = new System.IO.StreamWriter(fs);
-            sw.WriteLine(s);
-            sw.Flush();
-            sw.Close();
-            fs.Close();
+            var file = Path.Combine(Directory.GetCurrentDirectory(), "last_save.html");
+            if (!System.IO.File.Exists(file))
+            {
+                System.IO.File.Create(file);
+            }
+             else{
+
+                File.WriteAllText("last_save.html", code);
+            }
+
         }
         private void textBox296_TextChanged(object sender, EventArgs e)
         {
@@ -3175,8 +3179,8 @@ namespace Rexport
             textBox163.Text = ExtractString(GetLine(lines[116], 4), ">", "<").Trim();
             textBox164.Text = ExtractString(GetLine(lines[116], 5), ">", "<").Trim();
 
-            textBox171.Text = ExtractString(GetLine(lines[118], 3), ">", "<").Trim();
-            textBox175.Text = ExtractString(GetLine(lines[118], 4), ">", "<").Trim();
+            textBox165.Text = ExtractString(GetLine(lines[118], 3), ">", "<").Trim();
+            textBox169.Text = ExtractString(GetLine(lines[118], 4), ">", "<").Trim();
             textBox170.Text = ExtractString(GetLine(lines[118], 5), ">", "<").Trim();
 
             textBox171.Text = ExtractString(GetLine(lines[120], 3), ">", "<").Trim();
@@ -3196,7 +3200,7 @@ namespace Rexport
 
             textBox185.Text = ExtractString(GetLine(lines[126], 3), ">", "<").Trim();
             textBox186.Text = ExtractString(GetLine(lines[126], 4), ">", "<").Trim();
-            textBox187.Text = ExtractString(GetLine(lines[126], 5), ">", "<").Trim(); 
+            textBox187.Text = ExtractString(GetLine(lines[126], 5), ">", "<").Trim();
 
 
             textBox150.Text = ExtractString(GetLine(lines[128], 3), ">", "<").Trim();
@@ -3227,11 +3231,11 @@ namespace Rexport
 
 
 
-            
 
 
 
-            
+
+
             richTextBox34.Text = ExtractString(GetLine(lines[140], 3), ">", "<").Trim();
             richTextBox35.Text = ExtractString(GetLine(lines[142], 3), ">", "<").Trim();
             richTextBox36.Text = ExtractString(GetLine(lines[144], 3), ">", "<").Trim();
@@ -3245,6 +3249,16 @@ namespace Rexport
             richTextBox49.Text = ExtractString(GetLine(lines[160], 3), ">", "<").Trim();
             richTextBox50.Text = ExtractString(GetLine(lines[162], 3), ">", "<").Trim();
             richTextBox51.Text = ExtractString(GetLine(lines[164], 3), ">", "<").Trim();
+
+
+
+
+
+
+
+
+
+
 
 
 
