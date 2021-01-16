@@ -25,11 +25,10 @@ namespace Rexport
             System.IO.Directory.CreateDirectory(folderName);
 
             InitializeComponent();
-            homePanel.Hide();
+            homePanel.Show();
             editPanel2.Hide();
             editLinkPanel.Hide();
             createPanel.Hide();
-            panel1.Show();
 
         }
 
@@ -68,9 +67,9 @@ namespace Rexport
 
             //Hiding the other panels and showing the panel that clicked
             homePanel.Hide();
-            createPanel.Hide();
             editPanel2.Hide();
             editLinkPanel.Show();
+            createPanel.Hide();
             editLinkPanel.BringToFront();
 
             //When the button is clicked the colors of the buttons change
@@ -108,6 +107,7 @@ namespace Rexport
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+
             Application.Exit();
         }
 
@@ -273,579 +273,602 @@ namespace Rexport
 
         }
 
+        public bool isLinkValid(String link)
+        {
+            if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce"|| ExtractString(link, "https://", ".ieu.edu.tr") == "se"
+                && ExtractString(link, "/type/", "/id/") == "read")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            
+        }
+
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            homePanel.Hide();
-            editPanel2.Show();
-            editLinkPanel.Hide();
-            createPanel.Hide();
-            editPanel2.BringToFront();
 
-
-            int a = 0;
-            int cnt = 0;
-            WebClient client = new WebClient();
-            String link = "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302";
-            String htmlCode = client.DownloadString(link);
-            if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce")
+            if (!isLinkValid(textBox9.Text))
             {
-                a = a - 6;
-            }
-
-
-
-
-
-
-
-
-
-
-            byte[] bytes = Encoding.Default.GetBytes(htmlCode);
-            htmlCode = Encoding.UTF8.GetString(bytes);
-
-
-
-
-            string[] separatingStrings = { "div" };
-
-            string text = htmlCode;
-
-            string[] lines = text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
-
-
-
-            foreach (var line in lines)
-            {
-                System.Console.WriteLine(cnt);
-                System.Console.WriteLine(line);
-                cnt += 1;
-            }
-
-            //controlling if there is None prerequisites
-
-            String courseName = ExtractString(lines[90], ">", "<").Trim();
-
-            String courseCode = ExtractString(lines[108], ">", "<").Trim();
-            String courseSemester = ExtractString(lines[110], ">", "<").Trim();
-            String courseWeeklyHours = ExtractString(lines[112], ">", "<").Trim();
-            String courseAppHours = ExtractString(lines[114], ">", "<").Trim();
-            String courseLocalCredits = ExtractString(lines[116], ">", "<").Trim();
-            String courseECTS = ExtractString(lines[118], ">", "<").Trim();
-
-            if (ExtractString(GetLine(lines[122], 4), ">", "<").Trim() == "None")
-            {
-                a -= 1;
-            }
-
-            String coursePrerequisites = ExtractString(GetLine(lines[122], 4), ">", "<").Trim();
-            String courseLanguage = ExtractString(lines[125 + a], ">", "<").Trim();
-            String courseType = ExtractString(lines[127 + a], ">", "<").Trim();
-            String courseLevel = ExtractString(lines[129 + a], ">", "<").Trim();
-            String courseCoordinator = ExtractString(GetLine(lines[130 + a], 9), "\">", "</a></li></ul>").Trim();
-            String courseLecturerGetter = ExtractString(GetLine(lines[130 + a], 16), "\">", "</a></li></ul>").Trim();
-            String courseLecturer = replaceBetweenWithoutRegex(courseLecturerGetter, "</a>", "\">", true, true, "\n");
-            String courseAssistantGetter = ExtractString(GetLine(lines[130 + a], 22), "\">", "</a></li></ul>").Trim();
-            String courseAssistants = replaceBetweenWithoutRegex(courseAssistantGetter, "</a>", "\">", true, true, "\n");
-
-            String courseObjectives = ExtractString(GetLine(lines[132 + a], 6), "<td>", "</td>").Trim();
-            String courseLearningOutcomes1 = ExtractString(GetLine(lines[132 + a], 13), "<span>", "</span>").Trim();
-            String courseLearningOutcomes2 = fixingGaps(StripHTML(GetLine(lines[132 + a], 14)));
-            String courseDescription = ExtractString(GetLine(lines[132 + a], 20), "<td>", "</td>").Trim();
-
-            //Course category is gonna come here....
-
-            //Week Subjects Related Preparation part
-            String courseSubjectW1 = ExtractString(GetLine(lines[150 + a], 9), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW1 = ExtractString(GetLine(lines[150 + a], 10), "<td>", "</td>").Trim();
-
-            String courseSubjectW2 = ExtractString(GetLine(lines[150 + a], 14), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW2 = ExtractString(GetLine(lines[150 + a], 15), "<td>", "</td>").Trim();
-
-            String courseSubjectW3 = ExtractString(GetLine(lines[150 + a], 19), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW3 = ExtractString(GetLine(lines[150 + a], 20), "<td>", "</td>").Trim();
-
-            String courseSubjectW4 = ExtractString(GetLine(lines[150 + a], 24), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW4 = ExtractString(GetLine(lines[150 + a], 25), "<td>", "</td>").Trim();
-
-            String courseSubjectW5 = ExtractString(GetLine(lines[150 + a], 29), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW5 = ExtractString(GetLine(lines[150 + a], 30), "<td>", "</td>").Trim();
-
-            String courseSubjectW6 = ExtractString(GetLine(lines[150 + a], 34), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW6 = ExtractString(GetLine(lines[150 + a], 35), "<td>", "</td>").Trim();
-
-            String courseSubjectW7 = ExtractString(GetLine(lines[150 + a], 39), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW7 = ExtractString(GetLine(lines[150 + a], 40), "<td>", "</td>").Trim();
-
-            String courseSubjectW8 = ExtractString(GetLine(lines[150 + a], 44), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW8 = ExtractString(GetLine(lines[150 + a], 45), "<td>", "</td>").Trim();
-
-            String courseSubjectW9 = ExtractString(GetLine(lines[150 + a], 49), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW9 = ExtractString(GetLine(lines[150 + a], 50), "<td>", "</td>").Trim();
-
-            String courseSubjectW10 = ExtractString(GetLine(lines[150 + a], 54), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW10 = ExtractString(GetLine(lines[150 + a], 55), "<td>", "</td>").Trim();
-
-            String courseSubjectW11 = ExtractString(GetLine(lines[150 + a], 59), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW11 = ExtractString(GetLine(lines[150 + a], 60), "<td>", "</td>").Trim();
-
-            String courseSubjectW12 = ExtractString(GetLine(lines[150 + a], 64), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW12 = ExtractString(GetLine(lines[150 + a], 65), "<td>", "</td>").Trim();
-
-            String courseSubjectW13 = ExtractString(GetLine(lines[150 + a], 69), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW13 = ExtractString(GetLine(lines[150 + a], 70), "<td>", "</td>").Trim();
-
-            String courseSubjectW14 = ExtractString(GetLine(lines[150 + a], 74), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW14 = ExtractString(GetLine(lines[150 + a], 75), "<td>", "</td>").Trim();
-
-            String courseSubjectW15 = ExtractString(GetLine(lines[150 + a], 79), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW15 = ExtractString(GetLine(lines[150], 80), "<td>", "</td>").Trim();
-
-            String courseSubjectW16 = ExtractString(GetLine(lines[150 + a], 84), "<td>", "</td>").Trim();
-            String courseRelatedpreparationW16 = ExtractString(GetLine(lines[150], 85), "<td>", "</td>").Trim();
-
-
-            //Course NoteBooks
-            String courseNotesTextbooks = ExtractString(GetLine(lines[152 + a], 6), "<p>", "</p>").Trim();
-            String courseSuggestedReadingsMaterials = ExtractString(GetLine(lines[152 + a], 17), "<p>", "</p>").Trim();
-
-            ArrayList weights = new ArrayList();
-            ArrayList nos = new ArrayList();
-            //Evaluation System
-            String courseParticipationNo = ExtractString(lines[157 + a], ">", "<").Trim();
-            String courseParticipationWeight = ExtractString(lines[159 + a], ">", "<").Trim();
-            weights.Add(courseParticipationWeight);
-            nos.Add(courseParticipationWeight);
-
-            String courseLabNo = ExtractString(lines[161 + a], ">", "<").Trim();
-            String courseLabWeight = ExtractString(lines[163 + a], ">", "<").Trim();
-            weights.Add(courseLabWeight);
-            nos.Add(courseLabNo);
-
-            String courseFieldWorkNo = ExtractString(lines[165 + a], ">", "<").Trim();
-            String courseFieldWorkWeight = ExtractString(lines[167 + a], ">", "<").Trim();
-            weights.Add(courseFieldWorkWeight);
-            nos.Add(courseFieldWorkNo);
-
-            String courseQuizNo = ExtractString(lines[169 + a], ">", "<").Trim();
-            String courseQuizWeight = ExtractString(lines[171 + a], ">", "<").Trim();
-            weights.Add(courseQuizWeight);
-            nos.Add(courseQuizNo);
-
-            String courseHomeworkNo = ExtractString(lines[173 + a], ">", "<").Trim();
-            String courseHomeworkWeight = ExtractString(lines[175 + a], ">", "<").Trim();
-            weights.Add(courseHomeworkWeight);
-            nos.Add(courseHomeworkNo);
-
-            String coursePresentationNo = ExtractString(lines[177 + a], ">", "<").Trim();
-            String coursePresentationWeight = ExtractString(lines[179 + a], ">", "<").Trim();
-            weights.Add(coursePresentationWeight);
-            nos.Add(coursePresentationNo);
-
-            String courseProjectNo = ExtractString(lines[181 + a], ">", "<").Trim();
-            String courseProjectWeight = ExtractString(lines[183 + a], ">", "<").Trim();
-            weights.Add(courseProjectWeight);
-            nos.Add(courseProjectNo);
-
-            String courseSeminarNo = ExtractString(lines[185 + a], ">", "<").Trim();
-            String courseSeminarWeight = ExtractString(lines[187 + a], ">", "<").Trim();
-            weights.Add(courseSeminarWeight);
-            nos.Add(courseSeminarNo);
-
-            String courseOralNo = ExtractString(lines[189 + a], ">", "<").Trim();
-            String courseOralWeight = ExtractString(lines[191 + a], ">", "<").Trim();
-            weights.Add(courseOralWeight);
-            nos.Add(courseOralNo);
-
-            String courseMidtermNo = ExtractString(lines[193 + a], ">", "<").Trim();
-            String courseMidtermWeight = ExtractString(lines[195 + a], ">", "<").Trim();
-            weights.Add(courseMidtermWeight);
-            nos.Add(courseMidtermNo);
-
-            String courseFinalNo = ExtractString(lines[197 + a], ">", "<").Trim();
-            String courseFinalWeight = ExtractString(lines[199 + a], ">", "<").Trim();
-            weights.Add(courseFinalWeight);
-            nos.Add(courseFinalNo);
-
-            int courseTotalNo = 0;
-
-            int courseTotalWeight = 0;
-
-
-            //where we calculated the numbers on the lines
-            foreach (var weight in weights)
-            {
-                if (weight != "")
-                {
-                    courseTotalWeight += Convert.ToInt32(weight);
-                }
-            }
-            foreach (var no in nos)
-            {
-                if (no != "")
-                {
-                    courseTotalNo += Convert.ToInt32(no);
-                }
-            }
-
-            //ECTS WORKLOAD TABLE Dont worket the 2s in the variables
-
-            ArrayList workLoads = new ArrayList();
-
-            String courseTheoretical2No = ExtractString(lines[219 + a], ">", "<").Trim();
-            String courseTheoretical2Duration = ExtractString(lines[221 + a], ">", "<").Trim();
-            String courseTheoretical2Workload = ExtractString(lines[223 + a], ">", "<").Trim();
-            workLoads.Add(courseTheoretical2Workload);
-
-            String courseLaboratory2No = ExtractString(lines[225 + a], ">", "<").Trim();
-            String courseLaboratory2Duration = ExtractString(lines[227 + a], ">", "<").Trim();
-            String courseLaboratory2Workload = ExtractString(lines[229 + a], ">", "<").Trim();
-            workLoads.Add(courseLaboratory2Workload);
-
-            String courseStudy2No = ExtractString(lines[231 + a], ">", "<").Trim();
-            String courseStudy2Duration = ExtractString(lines[233 + a], ">", "<").Trim();
-            String courseStudy2Workload = ExtractString(lines[235 + a], ">", "<").Trim();
-            workLoads.Add(courseStudy2Workload);
-
-
-            String courseFieldWork2No = ExtractString(lines[237 + a], ">", "<").Trim();
-            String courseFieldWork2Duration = ExtractString(lines[239 + a], ">", "<").Trim();
-            String courseFieldWork2Workload = ExtractString(lines[241 + a], ">", "<").Trim();
-            workLoads.Add(courseFieldWork2Workload);
-
-            String courseQuiz2No = ExtractString(lines[243 + a], ">", "<").Trim();
-            String courseQuiz2Duration = ExtractString(lines[245 + a], ">", "<").Trim();
-            String courseQuiz2Workload = ExtractString(lines[247 + a], ">", "<").Trim();
-            workLoads.Add(courseQuiz2Workload);
-
-            String courseHomework2No = ExtractString(lines[249 + a], ">", "<").Trim();
-            String courseHomework2Duration = ExtractString(lines[251 + a], ">", "<").Trim();
-            String courseHomework2Workload = ExtractString(lines[253 + a], ">", "<").Trim();
-            workLoads.Add(courseHomework2Workload);
-
-            String coursePresentation2No = ExtractString(lines[255 + a], ">", "<").Trim();
-            String coursePresentation2Duration = ExtractString(lines[257 + a], ">", "<").Trim();
-            String coursePresentation2Workload = ExtractString(lines[259 + a], ">", "<").Trim();
-            workLoads.Add(coursePresentation2Workload);
-
-            String courseProject2No = ExtractString(lines[261 + a], ">", "<").Trim();
-            String courseProject2Duration = ExtractString(lines[263 + a], ">", "<").Trim();
-            String courseProject2Workload = ExtractString(lines[265 + a], ">", "<").Trim();
-            workLoads.Add(courseProject2Workload);
-
-            String courseSeminar2No = ExtractString(lines[267 + a], ">", "<").Trim();
-            String courseSeminar2Duration = ExtractString(lines[269 + a], ">", "<").Trim();
-            String courseSeminar2Workload = ExtractString(lines[271 + a], ">", "<").Trim();
-            workLoads.Add(courseSeminar2Workload);
-
-            String courseOral2No = ExtractString(lines[273 + a], ">", "<").Trim();
-            String courseOral2Duration = ExtractString(lines[275 + a], ">", "<").Trim();
-            String courseOral2Workload = ExtractString(lines[277 + a], ">", "<").Trim();
-            workLoads.Add(courseOral2Workload);
-
-            String courseMidterm2No = ExtractString(lines[279 + a], ">", "<").Trim();
-            String courseMidterm2Duration = ExtractString(lines[281 + a], ">", "<").Trim();
-            String courseMidterm2Workload = ExtractString(lines[283 + a], ">", "<").Trim();
-            workLoads.Add(courseMidterm2Workload);
-
-            String courseFinal2No = ExtractString(lines[285 + a], ">", "<").Trim();
-            String courseFinal2Duration = ExtractString(lines[287 + a], ">", "<").Trim();
-            String courseFinal2Workload = ExtractString(lines[289 + a], ">", "<").Trim();
-            workLoads.Add(courseFinal2Workload);
-
-            int courseTotalWorkload = 0;
-            foreach (var workload in workLoads)
-            {
-                if (workload != "")
-                {
-                    courseTotalWorkload += Convert.ToInt32(workload);
-                }
-            }
-
-            String W1ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 5), "<p>", "</p>").Trim();
-            String W2ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 15), "<p>", "</p>").Trim();
-            String W3ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 25), "<p>", "</p>").Trim();
-            String W4ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 35), "<p>", "</p>").Trim();
-            String W5ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 45), "<p>", "</p>").Trim();
-            String W6ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 55), "<p>", "</p>").Trim();
-            String W7ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 11), "<p>", "</p>").Trim();
-            String W8ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 21), "<p>", "</p>").Trim();
-            String W9ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 31), "<p>", "</p>").Trim();
-            String W10ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 41), "<p>", "</p>").Trim();
-            String W11ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 51), "<p>", "</p>").Trim();
-            String W12ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 61), "<p>", "</p>").Trim();
-            String W13ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 71), "<p>", "</p>").Trim();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /* ADDING DATA INTO EDIT PANEL*/
-
-            textBox304.Text = courseName;
-            textBox306.Text = courseCode;
-            textBox307.Text = courseWeeklyHours;
-            textBox308.Text = courseAppHours;
-            textBox305.Text = courseLocalCredits;
-            textBox309.Text = courseECTS;
-            textBox303.Text = coursePrerequisites;
-            textBox97.Text = courseCoordinator;
-            textBox98.Text = courseLecturer;
-            textBox99.Text = courseAssistants;
-            richTextBox37.Text = courseObjectives;
-            richTextBox38.Text = courseLearningOutcomes1 + courseLearningOutcomes2;
-            richTextBox39.Text = courseDescription;
-
-            // CourseCategory !! "X"
-
-            richTextBox2.Text = courseSubjectW1;
-            richTextBox3.Text = courseRelatedpreparationW1;
-            richTextBox4.Text = courseSubjectW2;
-            richTextBox5.Text = courseRelatedpreparationW2;
-            richTextBox6.Text = courseSubjectW3;
-            richTextBox7.Text = courseRelatedpreparationW3;
-            richTextBox8.Text = courseSubjectW4;
-            richTextBox9.Text = courseRelatedpreparationW4;
-            richTextBox10.Text = courseSubjectW5;
-            richTextBox11.Text = courseRelatedpreparationW5;
-            richTextBox12.Text = courseSubjectW6;
-            richTextBox13.Text = courseRelatedpreparationW6;
-            richTextBox14.Text = courseSubjectW7;
-            richTextBox15.Text = courseRelatedpreparationW7;
-            richTextBox16.Text = courseSubjectW8;
-            richTextBox17.Text = courseRelatedpreparationW8;
-            richTextBox18.Text = courseSubjectW9;
-            richTextBox19.Text = courseRelatedpreparationW9;
-            richTextBox20.Text = courseSubjectW10;
-            richTextBox21.Text = courseRelatedpreparationW10;
-            richTextBox22.Text = courseSubjectW11;
-            richTextBox23.Text = courseRelatedpreparationW11;
-            richTextBox24.Text = courseSubjectW12;
-            richTextBox25.Text = courseRelatedpreparationW12;
-            richTextBox26.Text = courseSubjectW13;
-            richTextBox27.Text = courseRelatedpreparationW13;
-            richTextBox28.Text = courseSubjectW14;
-            richTextBox29.Text = courseRelatedpreparationW14;
-            richTextBox30.Text = courseSubjectW15;
-            richTextBox31.Text = courseRelatedpreparationW15;
-            richTextBox32.Text = courseSubjectW16;
-            richTextBox33.Text = courseRelatedpreparationW16;
-
-            richTextBox40.Text = courseNotesTextbooks;
-            richTextBox41.Text = courseSuggestedReadingsMaterials;
-
-            // !! LO1, LO2, LO3, LO4
-
-            textBox94.Text = courseParticipationNo;
-            textBox93.Text = courseParticipationWeight;
-
-            textBox92.Text = courseLabNo;
-            textBox91.Text = courseLabWeight;
-
-            textBox90.Text = courseFieldWorkNo;
-            textBox89.Text = courseFieldWorkWeight;
-
-            textBox88.Text = courseQuizNo;
-            textBox87.Text = courseQuizWeight;
-
-            textBox86.Text = courseHomeworkNo;
-            textBox85.Text = courseHomeworkWeight;
-
-            textBox84.Text = coursePresentationNo;
-            textBox83.Text = coursePresentationWeight;
-
-            textBox82.Text = courseProjectNo;
-            textBox81.Text = courseProjectWeight;
-
-            textBox80.Text = courseSeminarNo;
-            textBox79.Text = courseSeminarWeight;
-
-            textBox78.Text = courseOralNo;
-            textBox77.Text = courseOralWeight;
-
-            textBox76.Text = courseMidtermNo;
-            textBox75.Text = courseMidtermWeight;
-
-            textBox74.Text = courseFinalNo;
-            textBox73.Text = courseFinalWeight;
-
-            textBox95.Text = Convert.ToString(courseTotalNo);
-            textBox96.Text = Convert.ToString(courseTotalWeight);
-
-            // SEMESTER TERM FINAL NOTES 
-            int finalNoCarry = 0;
-            int finalWeightCarry = 0;
-
-            if (courseFinalNo != "")
-            {
-                finalNoCarry = Convert.ToInt32(courseFinalNo);
-            }
-            if (courseFinalWeight != "")
-            {
-                finalWeightCarry = Convert.ToInt32(courseFinalWeight);
-            }
-
-            textBox194.Text = Convert.ToString(Convert.ToInt32(courseTotalNo) - finalNoCarry);
-            textBox195.Text = Convert.ToString(Convert.ToInt32(courseTotalWeight) - finalWeightCarry);
-
-            textBox196.Text = courseFinalNo;
-            textBox193.Text = courseFinalWeight;
-
-            textBox263.Text = Convert.ToString(courseTotalNo);
-            textBox264.Text = Convert.ToString(courseTotalWeight);
-
-
-            // ECTS PART
-            textBox152.Text = courseTheoretical2No;
-            textBox153.Text = courseTheoretical2Duration;
-            textBox151.Text = courseTheoretical2Workload;
-
-            textBox154.Text = courseLaboratory2No;
-            textBox155.Text = courseLaboratory2Duration;
-            textBox156.Text = courseLaboratory2Workload;
-
-            textBox157.Text = courseStudy2No;
-            textBox159.Text = courseStudy2Duration;
-            textBox160.Text = courseStudy2Workload;
-
-            textBox161.Text = courseFieldWork2No;
-            textBox163.Text = courseFieldWork2Duration;
-            textBox164.Text = courseFieldWork2Workload;
-
-            textBox171.Text = courseQuiz2No;
-            textBox175.Text = courseQuiz2Duration;
-            textBox170.Text = courseQuiz2Workload;
-
-            textBox171.Text = courseHomework2No;
-            textBox175.Text = courseHomework2Duration;
-            textBox179.Text = courseHomework2Workload;
-
-
-            textBox176.Text = coursePresentation2No;
-            textBox177.Text = coursePresentation2Duration;
-            textBox181.Text = coursePresentation2Workload;
-
-
-            textBox182.Text = courseProject2No;
-            textBox183.Text = courseProject2Duration;
-            textBox184.Text = courseProject2Workload;
-
-
-            textBox185.Text = courseSeminar2No;
-            textBox186.Text = courseSeminar2Duration;
-            textBox187.Text = courseSeminar2Workload;
-
-
-            textBox150.Text = courseOral2No;
-            textBox188.Text = courseOral2Duration;
-            textBox189.Text = courseOral2Workload;
-
-
-            textBox149.Text = courseMidterm2No;
-            textBox148.Text = courseMidterm2Duration;
-            textBox190.Text = courseMidterm2Workload;
-
-
-            textBox147.Text = courseFinal2No;
-            textBox146.Text = courseFinal2Duration;
-            textBox191.Text = courseFinal2Workload;
-
-            textBox192.Text = Convert.ToString(courseTotalWorkload);
-
-
-            // CourseSemester
-
-            if (courseSemester == "Fall" || courseSemester == "Güz")
-            {
-                checkBox20.Checked = true;
+                label115.Text = "Invalid Link";
             }
             else
             {
-                checkBox19.Checked = true;
+                homePanel.Hide();
+                editPanel2.Show();
+                editLinkPanel.Hide();
+                createPanel.Hide();
+                editPanel2.BringToFront();
+
+
+                int a = 0;
+                int cnt = 0;
+                WebClient client = new WebClient();
+                String link = textBox9.Text;
+                String htmlCode = client.DownloadString(link);
+                if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce")
+                {
+                    a = a - 6;
+                }
+
+                
+
+
+
+
+
+
+
+
+
+                byte[] bytes = Encoding.Default.GetBytes(htmlCode);
+                htmlCode = Encoding.UTF8.GetString(bytes);
+
+
+
+
+                string[] separatingStrings = { "div" };
+
+                string text = htmlCode;
+
+                string[] lines = text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+
+
+
+                foreach (var line in lines)
+                {
+                    System.Console.WriteLine(cnt);
+                    System.Console.WriteLine(line);
+                    cnt += 1;
+                }
+
+                //controlling if there is None prerequisites
+
+                String courseName = ExtractString(lines[90], ">", "<").Trim();
+
+                String courseCode = ExtractString(lines[108], ">", "<").Trim();
+                String courseSemester = ExtractString(lines[110], ">", "<").Trim();
+                String courseWeeklyHours = ExtractString(lines[112], ">", "<").Trim();
+                String courseAppHours = ExtractString(lines[114], ">", "<").Trim();
+                String courseLocalCredits = ExtractString(lines[116], ">", "<").Trim();
+                String courseECTS = ExtractString(lines[118], ">", "<").Trim();
+
+                if (ExtractString(GetLine(lines[122], 4), ">", "<").Trim() == "None")
+                {
+                    a -= 1;
+                }
+
+                String coursePrerequisites = ExtractString(GetLine(lines[122], 4), ">", "<").Trim();
+                String courseLanguage = ExtractString(lines[125 + a], ">", "<").Trim();
+                String courseType = ExtractString(lines[127 + a], ">", "<").Trim();
+                String courseLevel = ExtractString(lines[129 + a], ">", "<").Trim();
+                String courseCoordinator = ExtractString(GetLine(lines[130 + a], 9), "\">", "</a></li></ul>").Trim();
+                String courseLecturerGetter = ExtractString(GetLine(lines[130 + a], 16), "\">", "</a></li></ul>").Trim();
+                String courseLecturer = replaceBetweenWithoutRegex(courseLecturerGetter, "</a>", "\">", true, true, "\n");
+                String courseAssistantGetter = ExtractString(GetLine(lines[130 + a], 22), "\">", "</a></li></ul>").Trim();
+                String courseAssistants = replaceBetweenWithoutRegex(courseAssistantGetter, "</a>", "\">", true, true, "\n");
+
+                String courseObjectives = ExtractString(GetLine(lines[132 + a], 6), "<td>", "</td>").Trim();
+                String courseLearningOutcomes1 = ExtractString(GetLine(lines[132 + a], 13), "<span>", "</span>").Trim();
+                String courseLearningOutcomes2 = fixingGaps(StripHTML(GetLine(lines[132 + a], 14)));
+                String courseDescription = ExtractString(GetLine(lines[132 + a], 20), "<td>", "</td>").Trim();
+
+                //Course category is gonna come here....
+
+                //Week Subjects Related Preparation part
+                String courseSubjectW1 = ExtractString(GetLine(lines[150 + a], 9), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW1 = ExtractString(GetLine(lines[150 + a], 10), "<td>", "</td>").Trim();
+
+                String courseSubjectW2 = ExtractString(GetLine(lines[150 + a], 14), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW2 = ExtractString(GetLine(lines[150 + a], 15), "<td>", "</td>").Trim();
+
+                String courseSubjectW3 = ExtractString(GetLine(lines[150 + a], 19), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW3 = ExtractString(GetLine(lines[150 + a], 20), "<td>", "</td>").Trim();
+
+                String courseSubjectW4 = ExtractString(GetLine(lines[150 + a], 24), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW4 = ExtractString(GetLine(lines[150 + a], 25), "<td>", "</td>").Trim();
+
+                String courseSubjectW5 = ExtractString(GetLine(lines[150 + a], 29), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW5 = ExtractString(GetLine(lines[150 + a], 30), "<td>", "</td>").Trim();
+
+                String courseSubjectW6 = ExtractString(GetLine(lines[150 + a], 34), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW6 = ExtractString(GetLine(lines[150 + a], 35), "<td>", "</td>").Trim();
+
+                String courseSubjectW7 = ExtractString(GetLine(lines[150 + a], 39), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW7 = ExtractString(GetLine(lines[150 + a], 40), "<td>", "</td>").Trim();
+
+                String courseSubjectW8 = ExtractString(GetLine(lines[150 + a], 44), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW8 = ExtractString(GetLine(lines[150 + a], 45), "<td>", "</td>").Trim();
+
+                String courseSubjectW9 = ExtractString(GetLine(lines[150 + a], 49), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW9 = ExtractString(GetLine(lines[150 + a], 50), "<td>", "</td>").Trim();
+
+                String courseSubjectW10 = ExtractString(GetLine(lines[150 + a], 54), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW10 = ExtractString(GetLine(lines[150 + a], 55), "<td>", "</td>").Trim();
+
+                String courseSubjectW11 = ExtractString(GetLine(lines[150 + a], 59), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW11 = ExtractString(GetLine(lines[150 + a], 60), "<td>", "</td>").Trim();
+
+                String courseSubjectW12 = ExtractString(GetLine(lines[150 + a], 64), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW12 = ExtractString(GetLine(lines[150 + a], 65), "<td>", "</td>").Trim();
+
+                String courseSubjectW13 = ExtractString(GetLine(lines[150 + a], 69), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW13 = ExtractString(GetLine(lines[150 + a], 70), "<td>", "</td>").Trim();
+
+                String courseSubjectW14 = ExtractString(GetLine(lines[150 + a], 74), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW14 = ExtractString(GetLine(lines[150 + a], 75), "<td>", "</td>").Trim();
+
+                String courseSubjectW15 = ExtractString(GetLine(lines[150 + a], 79), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW15 = ExtractString(GetLine(lines[150], 80), "<td>", "</td>").Trim();
+
+                String courseSubjectW16 = ExtractString(GetLine(lines[150 + a], 84), "<td>", "</td>").Trim();
+                String courseRelatedpreparationW16 = ExtractString(GetLine(lines[150], 85), "<td>", "</td>").Trim();
+
+
+                //Course NoteBooks
+                String courseNotesTextbooks = ExtractString(GetLine(lines[152 + a], 6), "<p>", "</p>").Trim();
+                String courseSuggestedReadingsMaterials = ExtractString(GetLine(lines[152 + a], 17), "<p>", "</p>").Trim();
+
+                ArrayList weights = new ArrayList();
+                ArrayList nos = new ArrayList();
+                //Evaluation System
+                String courseParticipationNo = ExtractString(lines[157 + a], ">", "<").Trim();
+                String courseParticipationWeight = ExtractString(lines[159 + a], ">", "<").Trim();
+                weights.Add(courseParticipationWeight);
+                nos.Add(courseParticipationWeight);
+
+                String courseLabNo = ExtractString(lines[161 + a], ">", "<").Trim();
+                String courseLabWeight = ExtractString(lines[163 + a], ">", "<").Trim();
+                weights.Add(courseLabWeight);
+                nos.Add(courseLabNo);
+
+                String courseFieldWorkNo = ExtractString(lines[165 + a], ">", "<").Trim();
+                String courseFieldWorkWeight = ExtractString(lines[167 + a], ">", "<").Trim();
+                weights.Add(courseFieldWorkWeight);
+                nos.Add(courseFieldWorkNo);
+
+                String courseQuizNo = ExtractString(lines[169 + a], ">", "<").Trim();
+                String courseQuizWeight = ExtractString(lines[171 + a], ">", "<").Trim();
+                weights.Add(courseQuizWeight);
+                nos.Add(courseQuizNo);
+
+                String courseHomeworkNo = ExtractString(lines[173 + a], ">", "<").Trim();
+                String courseHomeworkWeight = ExtractString(lines[175 + a], ">", "<").Trim();
+                weights.Add(courseHomeworkWeight);
+                nos.Add(courseHomeworkNo);
+
+                String coursePresentationNo = ExtractString(lines[177 + a], ">", "<").Trim();
+                String coursePresentationWeight = ExtractString(lines[179 + a], ">", "<").Trim();
+                weights.Add(coursePresentationWeight);
+                nos.Add(coursePresentationNo);
+
+                String courseProjectNo = ExtractString(lines[181 + a], ">", "<").Trim();
+                String courseProjectWeight = ExtractString(lines[183 + a], ">", "<").Trim();
+                weights.Add(courseProjectWeight);
+                nos.Add(courseProjectNo);
+
+                String courseSeminarNo = ExtractString(lines[185 + a], ">", "<").Trim();
+                String courseSeminarWeight = ExtractString(lines[187 + a], ">", "<").Trim();
+                weights.Add(courseSeminarWeight);
+                nos.Add(courseSeminarNo);
+
+                String courseOralNo = ExtractString(lines[189 + a], ">", "<").Trim();
+                String courseOralWeight = ExtractString(lines[191 + a], ">", "<").Trim();
+                weights.Add(courseOralWeight);
+                nos.Add(courseOralNo);
+
+                String courseMidtermNo = ExtractString(lines[193 + a], ">", "<").Trim();
+                String courseMidtermWeight = ExtractString(lines[195 + a], ">", "<").Trim();
+                weights.Add(courseMidtermWeight);
+                nos.Add(courseMidtermNo);
+
+                String courseFinalNo = ExtractString(lines[197 + a], ">", "<").Trim();
+                String courseFinalWeight = ExtractString(lines[199 + a], ">", "<").Trim();
+                weights.Add(courseFinalWeight);
+                nos.Add(courseFinalNo);
+
+                int courseTotalNo = 0;
+
+                int courseTotalWeight = 0;
+
+
+                //where we calculated the numbers on the lines
+                foreach (var weight in weights)
+                {
+                    if (weight != "")
+                    {
+                        courseTotalWeight += Convert.ToInt32(weight);
+                    }
+                }
+                foreach (var no in nos)
+                {
+                    if (no != "")
+                    {
+                        courseTotalNo += Convert.ToInt32(no);
+                    }
+                }
+
+                //ECTS WORKLOAD TABLE Dont worket the 2s in the variables
+
+                ArrayList workLoads = new ArrayList();
+
+                String courseTheoretical2No = ExtractString(lines[219 + a], ">", "<").Trim();
+                String courseTheoretical2Duration = ExtractString(lines[221 + a], ">", "<").Trim();
+                String courseTheoretical2Workload = ExtractString(lines[223 + a], ">", "<").Trim();
+                workLoads.Add(courseTheoretical2Workload);
+
+                String courseLaboratory2No = ExtractString(lines[225 + a], ">", "<").Trim();
+                String courseLaboratory2Duration = ExtractString(lines[227 + a], ">", "<").Trim();
+                String courseLaboratory2Workload = ExtractString(lines[229 + a], ">", "<").Trim();
+                workLoads.Add(courseLaboratory2Workload);
+
+                String courseStudy2No = ExtractString(lines[231 + a], ">", "<").Trim();
+                String courseStudy2Duration = ExtractString(lines[233 + a], ">", "<").Trim();
+                String courseStudy2Workload = ExtractString(lines[235 + a], ">", "<").Trim();
+                workLoads.Add(courseStudy2Workload);
+
+
+                String courseFieldWork2No = ExtractString(lines[237 + a], ">", "<").Trim();
+                String courseFieldWork2Duration = ExtractString(lines[239 + a], ">", "<").Trim();
+                String courseFieldWork2Workload = ExtractString(lines[241 + a], ">", "<").Trim();
+                workLoads.Add(courseFieldWork2Workload);
+
+                String courseQuiz2No = ExtractString(lines[243 + a], ">", "<").Trim();
+                String courseQuiz2Duration = ExtractString(lines[245 + a], ">", "<").Trim();
+                String courseQuiz2Workload = ExtractString(lines[247 + a], ">", "<").Trim();
+                workLoads.Add(courseQuiz2Workload);
+
+                String courseHomework2No = ExtractString(lines[249 + a], ">", "<").Trim();
+                String courseHomework2Duration = ExtractString(lines[251 + a], ">", "<").Trim();
+                String courseHomework2Workload = ExtractString(lines[253 + a], ">", "<").Trim();
+                workLoads.Add(courseHomework2Workload);
+
+                String coursePresentation2No = ExtractString(lines[255 + a], ">", "<").Trim();
+                String coursePresentation2Duration = ExtractString(lines[257 + a], ">", "<").Trim();
+                String coursePresentation2Workload = ExtractString(lines[259 + a], ">", "<").Trim();
+                workLoads.Add(coursePresentation2Workload);
+
+                String courseProject2No = ExtractString(lines[261 + a], ">", "<").Trim();
+                String courseProject2Duration = ExtractString(lines[263 + a], ">", "<").Trim();
+                String courseProject2Workload = ExtractString(lines[265 + a], ">", "<").Trim();
+                workLoads.Add(courseProject2Workload);
+
+                String courseSeminar2No = ExtractString(lines[267 + a], ">", "<").Trim();
+                String courseSeminar2Duration = ExtractString(lines[269 + a], ">", "<").Trim();
+                String courseSeminar2Workload = ExtractString(lines[271 + a], ">", "<").Trim();
+                workLoads.Add(courseSeminar2Workload);
+
+                String courseOral2No = ExtractString(lines[273 + a], ">", "<").Trim();
+                String courseOral2Duration = ExtractString(lines[275 + a], ">", "<").Trim();
+                String courseOral2Workload = ExtractString(lines[277 + a], ">", "<").Trim();
+                workLoads.Add(courseOral2Workload);
+
+                String courseMidterm2No = ExtractString(lines[279 + a], ">", "<").Trim();
+                String courseMidterm2Duration = ExtractString(lines[281 + a], ">", "<").Trim();
+                String courseMidterm2Workload = ExtractString(lines[283 + a], ">", "<").Trim();
+                workLoads.Add(courseMidterm2Workload);
+
+                String courseFinal2No = ExtractString(lines[285 + a], ">", "<").Trim();
+                String courseFinal2Duration = ExtractString(lines[287 + a], ">", "<").Trim();
+                String courseFinal2Workload = ExtractString(lines[289 + a], ">", "<").Trim();
+                workLoads.Add(courseFinal2Workload);
+
+                int courseTotalWorkload = 0;
+                foreach (var workload in workLoads)
+                {
+                    if (workload != "")
+                    {
+                        courseTotalWorkload += Convert.ToInt32(workload);
+                    }
+                }
+
+                String W1ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 5), "<p>", "</p>").Trim();
+                String W2ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 15), "<p>", "</p>").Trim();
+                String W3ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 25), "<p>", "</p>").Trim();
+                String W4ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 35), "<p>", "</p>").Trim();
+                String W5ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 45), "<p>", "</p>").Trim();
+                String W6ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 55), "<p>", "</p>").Trim();
+                String W7ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 11), "<p>", "</p>").Trim();
+                String W8ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 21), "<p>", "</p>").Trim();
+                String W9ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 31), "<p>", "</p>").Trim();
+                String W10ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 41), "<p>", "</p>").Trim();
+                String W11ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 51), "<p>", "</p>").Trim();
+                String W12ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 61), "<p>", "</p>").Trim();
+                String W13ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 71), "<p>", "</p>").Trim();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* ADDING DATA INTO EDIT PANEL*/
+
+                textBox304.Text = courseName;
+                textBox306.Text = courseCode;
+                textBox307.Text = courseWeeklyHours;
+                textBox308.Text = courseAppHours;
+                textBox305.Text = courseLocalCredits;
+                textBox309.Text = courseECTS;
+                textBox303.Text = coursePrerequisites;
+                textBox97.Text = courseCoordinator;
+                textBox98.Text = courseLecturer;
+                textBox99.Text = courseAssistants;
+                richTextBox37.Text = courseObjectives;
+                richTextBox38.Text = courseLearningOutcomes1 + courseLearningOutcomes2;
+                richTextBox39.Text = courseDescription;
+
+                // CourseCategory !! "X"
+
+                richTextBox2.Text = courseSubjectW1;
+                richTextBox3.Text = courseRelatedpreparationW1;
+                richTextBox4.Text = courseSubjectW2;
+                richTextBox5.Text = courseRelatedpreparationW2;
+                richTextBox6.Text = courseSubjectW3;
+                richTextBox7.Text = courseRelatedpreparationW3;
+                richTextBox8.Text = courseSubjectW4;
+                richTextBox9.Text = courseRelatedpreparationW4;
+                richTextBox10.Text = courseSubjectW5;
+                richTextBox11.Text = courseRelatedpreparationW5;
+                richTextBox12.Text = courseSubjectW6;
+                richTextBox13.Text = courseRelatedpreparationW6;
+                richTextBox14.Text = courseSubjectW7;
+                richTextBox15.Text = courseRelatedpreparationW7;
+                richTextBox16.Text = courseSubjectW8;
+                richTextBox17.Text = courseRelatedpreparationW8;
+                richTextBox18.Text = courseSubjectW9;
+                richTextBox19.Text = courseRelatedpreparationW9;
+                richTextBox20.Text = courseSubjectW10;
+                richTextBox21.Text = courseRelatedpreparationW10;
+                richTextBox22.Text = courseSubjectW11;
+                richTextBox23.Text = courseRelatedpreparationW11;
+                richTextBox24.Text = courseSubjectW12;
+                richTextBox25.Text = courseRelatedpreparationW12;
+                richTextBox26.Text = courseSubjectW13;
+                richTextBox27.Text = courseRelatedpreparationW13;
+                richTextBox28.Text = courseSubjectW14;
+                richTextBox29.Text = courseRelatedpreparationW14;
+                richTextBox30.Text = courseSubjectW15;
+                richTextBox31.Text = courseRelatedpreparationW15;
+                richTextBox32.Text = courseSubjectW16;
+                richTextBox33.Text = courseRelatedpreparationW16;
+
+                richTextBox40.Text = courseNotesTextbooks;
+                richTextBox41.Text = courseSuggestedReadingsMaterials;
+
+                // !! LO1, LO2, LO3, LO4
+
+                textBox94.Text = courseParticipationNo;
+                textBox93.Text = courseParticipationWeight;
+
+                textBox92.Text = courseLabNo;
+                textBox91.Text = courseLabWeight;
+
+                textBox90.Text = courseFieldWorkNo;
+                textBox89.Text = courseFieldWorkWeight;
+
+                textBox88.Text = courseQuizNo;
+                textBox87.Text = courseQuizWeight;
+
+                textBox86.Text = courseHomeworkNo;
+                textBox85.Text = courseHomeworkWeight;
+
+                textBox84.Text = coursePresentationNo;
+                textBox83.Text = coursePresentationWeight;
+
+                textBox82.Text = courseProjectNo;
+                textBox81.Text = courseProjectWeight;
+
+                textBox80.Text = courseSeminarNo;
+                textBox79.Text = courseSeminarWeight;
+
+                textBox78.Text = courseOralNo;
+                textBox77.Text = courseOralWeight;
+
+                textBox76.Text = courseMidtermNo;
+                textBox75.Text = courseMidtermWeight;
+
+                textBox74.Text = courseFinalNo;
+                textBox73.Text = courseFinalWeight;
+
+                textBox95.Text = Convert.ToString(courseTotalNo);
+                textBox96.Text = Convert.ToString(courseTotalWeight);
+
+                // SEMESTER TERM FINAL NOTES 
+                int finalNoCarry = 0;
+                int finalWeightCarry = 0;
+
+                if (courseFinalNo != "")
+                {
+                    finalNoCarry = Convert.ToInt32(courseFinalNo);
+                }
+                if (courseFinalWeight != "")
+                {
+                    finalWeightCarry = Convert.ToInt32(courseFinalWeight);
+                }
+
+                textBox194.Text = Convert.ToString(Convert.ToInt32(courseTotalNo) - finalNoCarry);
+                textBox195.Text = Convert.ToString(Convert.ToInt32(courseTotalWeight) - finalWeightCarry);
+
+                textBox196.Text = courseFinalNo;
+                textBox193.Text = courseFinalWeight;
+
+                textBox263.Text = Convert.ToString(courseTotalNo);
+                textBox264.Text = Convert.ToString(courseTotalWeight);
+
+
+                // ECTS PART
+                textBox152.Text = courseTheoretical2No;
+                textBox153.Text = courseTheoretical2Duration;
+                textBox151.Text = courseTheoretical2Workload;
+
+                textBox154.Text = courseLaboratory2No;
+                textBox155.Text = courseLaboratory2Duration;
+                textBox156.Text = courseLaboratory2Workload;
+
+                textBox157.Text = courseStudy2No;
+                textBox159.Text = courseStudy2Duration;
+                textBox160.Text = courseStudy2Workload;
+
+                textBox161.Text = courseFieldWork2No;
+                textBox163.Text = courseFieldWork2Duration;
+                textBox164.Text = courseFieldWork2Workload;
+
+                textBox171.Text = courseQuiz2No;
+                textBox175.Text = courseQuiz2Duration;
+                textBox170.Text = courseQuiz2Workload;
+
+                textBox171.Text = courseHomework2No;
+                textBox175.Text = courseHomework2Duration;
+                textBox179.Text = courseHomework2Workload;
+
+
+                textBox176.Text = coursePresentation2No;
+                textBox177.Text = coursePresentation2Duration;
+                textBox181.Text = coursePresentation2Workload;
+
+
+                textBox182.Text = courseProject2No;
+                textBox183.Text = courseProject2Duration;
+                textBox184.Text = courseProject2Workload;
+
+
+                textBox185.Text = courseSeminar2No;
+                textBox186.Text = courseSeminar2Duration;
+                textBox187.Text = courseSeminar2Workload;
+
+
+                textBox150.Text = courseOral2No;
+                textBox188.Text = courseOral2Duration;
+                textBox189.Text = courseOral2Workload;
+
+
+                textBox149.Text = courseMidterm2No;
+                textBox148.Text = courseMidterm2Duration;
+                textBox190.Text = courseMidterm2Workload;
+
+
+                textBox147.Text = courseFinal2No;
+                textBox146.Text = courseFinal2Duration;
+                textBox191.Text = courseFinal2Workload;
+
+                textBox192.Text = Convert.ToString(courseTotalWorkload);
+
+
+                // CourseSemester
+
+                if (courseSemester == "Fall" || courseSemester == "Güz")
+                {
+                    checkBox20.Checked = true;
+                }
+                else
+                {
+                    checkBox19.Checked = true;
+                }
+
+                // CourseLanguage
+
+                if (courseLanguage == "İngilizce" || courseLanguage == "English")
+                {
+                    checkBox7.Checked = true;
+                }
+                else
+                {
+                    checkBox8.Checked = true;
+                }
+
+                // CourseType
+
+                if (courseType == "Required" || courseLanguage == "Zorunlu")
+                {
+                    checkBox13.Checked = true;
+                }
+                else
+                {
+                    checkBox14.Checked = true;
+                }
+
+                // CourseLevel
+
+                if (courseLevel == "First Cycle" || courseLevel == "Lisans")
+                {
+                    checkBox16.Checked = true;
+                }
+                else if (courseLevel == "Short Cycle" || courseLevel == "Ön Lisans")
+                {
+                    checkBox15.Checked = true;
+                }
+                else if (courseLevel == "Second Cycle" || courseLevel == "Yüksek Lisans")
+                {
+                    checkBox17.Checked = true;
+                }
+                else if (courseLevel == "Third Cycle" || courseLevel == "Doktora")
+                {
+                    checkBox18.Checked = true;
+                }
+
+                if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+302")
+                {
+                    W6ProgramCompetencies = "To be able to work effectively in Software Engineering disciplinary and multi-disciplinary teams; to be able to work individually.";
+                }
+
+
+
+
+                //LAST PART WRITING ON UI
+                richTextBox34.Text = W1ProgramCompetencies;
+                richTextBox35.Text = W2ProgramCompetencies;
+                richTextBox36.Text = W3ProgramCompetencies;
+                richTextBox42.Text = W4ProgramCompetencies;
+                richTextBox43.Text = W5ProgramCompetencies;
+                richTextBox44.Text = W6ProgramCompetencies;
+                richTextBox45.Text = W7ProgramCompetencies;
+                richTextBox46.Text = W8ProgramCompetencies;
+                richTextBox47.Text = W9ProgramCompetencies;
+                richTextBox48.Text = W10ProgramCompetencies;
+                richTextBox49.Text = W11ProgramCompetencies;
+                richTextBox50.Text = W12ProgramCompetencies;
+                richTextBox51.Text = W13ProgramCompetencies;
+
+
             }
-
-            // CourseLanguage
-
-            if (courseLanguage == "İngilizce" || courseLanguage == "English")
-            {
-                checkBox7.Checked = true;
-            }
-            else
-            {
-                checkBox8.Checked = true;
-            }
-
-            // CourseType
-
-            if (courseType == "Required" || courseLanguage == "Zorunlu")
-            {
-                checkBox13.Checked = true;
-            }
-            else
-            {
-                checkBox14.Checked = true;
-            }
-
-            // CourseLevel
-
-            if (courseLevel == "First Cycle" || courseLevel == "Lisans")
-            {
-                checkBox16.Checked = true;
-            }
-            else if (courseLevel == "Short Cycle" || courseLevel == "Ön Lisans")
-            {
-                checkBox15.Checked = true;
-            }
-            else if (courseLevel == "Second Cycle" || courseLevel == "Yüksek Lisans")
-            {
-                checkBox17.Checked = true;
-            }
-            else if (courseLevel == "Third Cycle" || courseLevel == "Doktora")
-            {
-                checkBox18.Checked = true;
-            }
-
-            if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+302")
-            {
-                W6ProgramCompetencies = "To be able to work effectively in Software Engineering disciplinary and multi-disciplinary teams; to be able to work individually.";
-            }
-
-
-
-
-            //LAST PART WRITING ON UI
-            richTextBox34.Text = W1ProgramCompetencies;
-            richTextBox35.Text = W2ProgramCompetencies;
-            richTextBox36.Text = W3ProgramCompetencies;
-            richTextBox42.Text = W4ProgramCompetencies;
-            richTextBox43.Text = W5ProgramCompetencies;
-            richTextBox44.Text = W6ProgramCompetencies;
-            richTextBox45.Text = W7ProgramCompetencies;
-            richTextBox46.Text = W8ProgramCompetencies;
-            richTextBox47.Text = W9ProgramCompetencies;
-            richTextBox48.Text = W10ProgramCompetencies;
-            richTextBox49.Text = W11ProgramCompetencies;
-            richTextBox50.Text = W12ProgramCompetencies;
-            richTextBox51.Text = W13ProgramCompetencies;
-
-
-
 
 
 
@@ -921,10 +944,21 @@ namespace Rexport
         private void button2_Click(object sender, EventArgs e)
 
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "template_syllabus.html");
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
+
+            if (comboBox1.SelectedItem.ToString() == "English")
+            {
+                path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
+            }
+            else
+            {
+                path = Path.Combine(Directory.GetCurrentDirectory(), "tr_template_syllabus.html");
+            }
 
             WebClient client = new WebClient();
             String myHtml = client.DownloadString(path);
+            byte[] bytes = Encoding.Default.GetBytes(myHtml);
+            myHtml = Encoding.UTF8.GetString(bytes);
 
             //GENERAL INFORMATION
 
@@ -941,6 +975,11 @@ namespace Rexport
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "FallStart", "FallEnd", true, true, "");
                 myHtml = replaceBetweenWithoutRegex(myHtml, "SpringStart", "SpringEnd", true, true, "X");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "FallStart", "FallEnd", true, true, "");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "SpringStart", "SpringEnd", true, true, "");
             }
             myHtml = replaceBetweenWithoutRegex(myHtml, "TheoryStart", "TheoryEnd", true, true, textBox3.Text);
 
@@ -960,6 +999,10 @@ namespace Rexport
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "Turkish");
             }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "");
+            }
 
             if (checkBox6.Checked)
             {
@@ -968,6 +1011,11 @@ namespace Rexport
             else if (checkBox12.Checked)
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseTypeStart", "CourseTypeEnd", true, true, "Elective");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseTypeStart", "CourseTypeEnd", true, true, "");
+
             }
 
             if (checkBox9.Checked)
@@ -982,9 +1030,13 @@ namespace Rexport
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Second Cycle");
             }
-            else
+            else if (checkBox11.Checked)
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Third Cycle");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "");
             }
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "CourseCoordinatorStart", "CourseCoordinatorEnd", true, true, textBox7.Text);
@@ -1903,6 +1955,8 @@ namespace Rexport
                 myHtml = replaceBetweenWithoutRegex(myHtml, "W134Start", "W134End", true, true, "");
                 myHtml = replaceBetweenWithoutRegex(myHtml, "W135Start", "W135End", true, true, "");
             }
+
+            WriteOnLastSave(myHtml);
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Metin Dosyası|*.html";
             save.OverwritePrompt = true;
@@ -1911,7 +1965,7 @@ namespace Rexport
             if (save.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter Kayit = new StreamWriter(save.FileName);
-                Kayit.WriteLine(textBox1.Text);
+                Kayit.WriteLine(myHtml);
                 Kayit.Close();
             }
 
@@ -2976,7 +3030,7 @@ namespace Rexport
 
         private void button4_Click(object sender, EventArgs e)
         {
-            panel1.Hide();
+            editLinkPanel.Hide();
             editPanel2.Show();
             var path = Path.Combine(Directory.GetCurrentDirectory(), "last_save.html");
             WebClient client = new WebClient();
@@ -3280,9 +3334,324 @@ namespace Rexport
 
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            editLinkPanel.Hide();
+            editPanel2.Show();
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "last_save.html");
+            WebClient client = new WebClient();
+            String myHtml = client.DownloadString(path);
+
+            byte[] bytes = Encoding.Default.GetBytes(myHtml);
+            myHtml = Encoding.UTF8.GetString(bytes);
+
+            string[] separatingStrings = { "tr>" };
+
+            string text = myHtml;
+
+            string[] lines = text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+
+
+            int cnt = 0;
+            foreach (var line in lines)
+            {
+                System.Console.WriteLine(cnt);
+                System.Console.WriteLine(line);
+                cnt += 1;
+            }
 
 
 
+            textBox304.Text = ExtractString(GetLine(lines[1], 3), ">", "<").Trim();
+            textBox306.Text = ExtractString(GetLine(lines[7], 2), ">", "<").Trim();
+            if (ExtractString(GetLine(lines[7], 3), ">", "<").Trim() == "X")
+            {
+                checkBox20.Checked = true;
+            }
+            if (ExtractString(GetLine(lines[7], 4), ">", "<").Trim() == "X")
+            {
+                checkBox19.Checked = true;
+            }
+
+
+
+            textBox307.Text = ExtractString(GetLine(lines[7], 5), ">", "<").Trim();
+            textBox308.Text = ExtractString(GetLine(lines[7], 6), ">", "<").Trim();
+            textBox305.Text = ExtractString(GetLine(lines[7], 7), ">", "<").Trim();
+            textBox309.Text = ExtractString(GetLine(lines[7], 8), ">", "<").Trim();
+            textBox303.Text = ExtractString(GetLine(lines[9], 3), ">", "<").Trim();
+
+            if (ExtractString(GetLine(lines[11], 3), ">", "<").Trim() == "İngilizce" || ExtractString(GetLine(lines[11], 3), ">", "<").Trim() == "English")
+            {
+                checkBox7.Checked = true;
+            }
+            else
+            {
+                checkBox8.Checked = true;
+            }
+
+
+            if (ExtractString(GetLine(lines[13], 3), ">", "<").Trim() == "Required" || ExtractString(GetLine(lines[13], 3), ">", "<").Trim() == "Zorunlu")
+            {
+                checkBox13.Checked = true;
+            }
+            else
+            {
+                checkBox14.Checked = true;
+            }
+
+            if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "First Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Lisans")
+            {
+                checkBox16.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Short Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Ön Lisans")
+            {
+                checkBox15.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Second Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Yüksek Lisans")
+            {
+                checkBox17.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Third Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Doktora")
+            {
+                checkBox18.Checked = true;
+            }
+
+            textBox97.Text = ExtractString(GetLine(lines[17], 3), ">", "<").Trim();
+            textBox98.Text = ExtractString(GetLine(lines[19], 3), ">", "<").Trim();
+            textBox99.Text = ExtractString(GetLine(lines[21], 3), ">", "<").Trim();
+            richTextBox37.Text = ExtractString(GetLine(lines[23], 3), ">", "<").Trim();
+            richTextBox38.Text = ExtractString(GetLine(lines[25], 3), ">", "<").Trim();
+            richTextBox39.Text = ExtractString(GetLine(lines[27], 3), ">", "<").Trim();
+
+
+
+
+            if (ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Core Course" || ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Temel Ders")
+            {
+                checkBox86.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Major Area Course" || ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Uzmanlık/Alan Ders")
+            {
+                checkBox87.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Supportive Course" || ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Destek Dersi")
+            {
+                checkBox88.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "Communication and Management Skills Course" || ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "İletişim ve Yönetim Becerileri Dersi")
+            {
+                checkBox89.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Transferable Skill Course" || ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Aktarılabilir Beceri Dersi")
+            {
+                checkBox90.Checked = true;
+            }
+
+            richTextBox2.Text = ExtractString(GetLine(lines[43], 3), ">", "<").Trim();
+            richTextBox3.Text = ExtractString(GetLine(lines[43], 4), ">", "<").Trim();
+            richTextBox4.Text = ExtractString(GetLine(lines[45], 3), ">", "<").Trim();
+            richTextBox5.Text = ExtractString(GetLine(lines[45], 4), ">", "<").Trim();
+            richTextBox6.Text = ExtractString(GetLine(lines[47], 3), ">", "<").Trim();
+            richTextBox7.Text = ExtractString(GetLine(lines[47], 4), ">", "<").Trim();
+            richTextBox8.Text = ExtractString(GetLine(lines[49], 3), ">", "<").Trim();
+            richTextBox9.Text = ExtractString(GetLine(lines[49], 4), ">", "<").Trim();
+            richTextBox10.Text = ExtractString(GetLine(lines[51], 3), ">", "<").Trim();
+            richTextBox11.Text = ExtractString(GetLine(lines[51], 4), ">", "<").Trim();
+            richTextBox12.Text = ExtractString(GetLine(lines[53], 3), ">", "<").Trim();
+            richTextBox13.Text = ExtractString(GetLine(lines[53], 4), ">", "<").Trim();
+            richTextBox14.Text = ExtractString(GetLine(lines[55], 3), ">", "<").Trim();
+            richTextBox15.Text = ExtractString(GetLine(lines[55], 4), ">", "<").Trim();
+            richTextBox16.Text = ExtractString(GetLine(lines[57], 3), ">", "<").Trim();
+            richTextBox17.Text = ExtractString(GetLine(lines[57], 4), ">", "<").Trim();
+            richTextBox18.Text = ExtractString(GetLine(lines[59], 3), ">", "<").Trim();
+            richTextBox19.Text = ExtractString(GetLine(lines[59], 4), ">", "<").Trim();
+            richTextBox20.Text = ExtractString(GetLine(lines[61], 3), ">", "<").Trim();
+            richTextBox21.Text = ExtractString(GetLine(lines[61], 4), ">", "<").Trim();
+            richTextBox22.Text = ExtractString(GetLine(lines[63], 3), ">", "<").Trim();
+            richTextBox23.Text = ExtractString(GetLine(lines[63], 4), ">", "<").Trim();
+            richTextBox24.Text = ExtractString(GetLine(lines[65], 3), ">", "<").Trim();
+            richTextBox25.Text = ExtractString(GetLine(lines[65], 4), ">", "<").Trim();
+            richTextBox26.Text = ExtractString(GetLine(lines[67], 3), ">", "<").Trim();
+            richTextBox27.Text = ExtractString(GetLine(lines[67], 4), ">", "<").Trim();
+            richTextBox28.Text = ExtractString(GetLine(lines[69], 3), ">", "<").Trim();
+            richTextBox29.Text = ExtractString(GetLine(lines[69], 4), ">", "<").Trim();
+            richTextBox30.Text = ExtractString(GetLine(lines[71], 3), ">", "<").Trim();
+            richTextBox31.Text = ExtractString(GetLine(lines[71], 4), ">", "<").Trim();
+            richTextBox32.Text = ExtractString(GetLine(lines[73], 3), ">", "<").Trim();
+            richTextBox33.Text = ExtractString(GetLine(lines[73], 4), ">", "<").Trim();
+
+            richTextBox40.Text = ExtractString(GetLine(lines[75], 3), ">", "<").Trim();
+            richTextBox41.Text = ExtractString(GetLine(lines[77], 3), ">", "<").Trim();
+
+
+
+            textBox94.Text = ExtractString(GetLine(lines[81], 3), ">", "<").Trim();
+            textBox93.Text = ExtractString(GetLine(lines[81], 4), ">", "<").Trim();
+
+            textBox92.Text = ExtractString(GetLine(lines[83], 3), ">", "<").Trim();
+            textBox91.Text = ExtractString(GetLine(lines[83], 4), ">", "<").Trim();
+
+            textBox90.Text = ExtractString(GetLine(lines[85], 3), ">", "<").Trim();
+            textBox89.Text = ExtractString(GetLine(lines[85], 4), ">", "<").Trim();
+
+            textBox88.Text = ExtractString(GetLine(lines[87], 3), ">", "<").Trim();
+            textBox87.Text = ExtractString(GetLine(lines[87], 4), ">", "<").Trim();
+
+            textBox86.Text = ExtractString(GetLine(lines[89], 3), ">", "<").Trim();
+            textBox85.Text = ExtractString(GetLine(lines[89], 4), ">", "<").Trim();
+
+            textBox84.Text = ExtractString(GetLine(lines[91], 3), ">", "<").Trim();
+            textBox83.Text = ExtractString(GetLine(lines[91], 4), ">", "<").Trim();
+
+            textBox82.Text = ExtractString(GetLine(lines[93], 3), ">", "<").Trim();
+            textBox81.Text = ExtractString(GetLine(lines[93], 4), ">", "<").Trim();
+
+            textBox80.Text = ExtractString(GetLine(lines[95], 3), ">", "<").Trim();
+            textBox79.Text = ExtractString(GetLine(lines[95], 4), ">", "<").Trim();
+
+            textBox78.Text = ExtractString(GetLine(lines[97], 3), ">", "<").Trim();
+            textBox77.Text = ExtractString(GetLine(lines[97], 4), ">", "<").Trim();
+
+            textBox76.Text = ExtractString(GetLine(lines[99], 3), ">", "<").Trim();
+            textBox75.Text = ExtractString(GetLine(lines[99], 4), ">", "<").Trim();
+
+            textBox74.Text = ExtractString(GetLine(lines[101], 3), ">", "<").Trim();
+            textBox73.Text = ExtractString(GetLine(lines[101], 4), ">", "<").Trim();
+
+            textBox95.Text = ExtractString(GetLine(lines[103], 3), ">", "<").Trim();
+            textBox96.Text = ExtractString(GetLine(lines[103], 4), ">", "<").Trim();
+
+
+
+            textBox194.Text = ExtractString(GetLine(lines[105], 3), ">", "<").Trim();
+            textBox195.Text = ExtractString(GetLine(lines[105], 4), ">", "<").Trim();
+
+            textBox196.Text = ExtractString(GetLine(lines[107], 3), ">", "<").Trim();
+            textBox193.Text = ExtractString(GetLine(lines[107], 3), ">", "<").Trim();
+
+
+
+
+            // ECTS PART
+            textBox152.Text = ExtractString(GetLine(lines[111], 3), ">", "<").Trim();
+            textBox153.Text = ExtractString(GetLine(lines[111], 4), ">", "<").Trim();
+            textBox151.Text = ExtractString(GetLine(lines[111], 5), ">", "<").Trim();
+
+            textBox154.Text = ExtractString(GetLine(lines[113], 3), ">", "<").Trim();
+            textBox155.Text = ExtractString(GetLine(lines[113], 4), ">", "<").Trim();
+            textBox156.Text = ExtractString(GetLine(lines[113], 5), ">", "<").Trim();
+
+            textBox157.Text = ExtractString(GetLine(lines[114], 3), ">", "<").Trim();
+            textBox159.Text = ExtractString(GetLine(lines[114], 4), ">", "<").Trim();
+            textBox160.Text = ExtractString(GetLine(lines[114], 5), ">", "<").Trim();
+
+            textBox161.Text = ExtractString(GetLine(lines[116], 3), ">", "<").Trim();
+            textBox163.Text = ExtractString(GetLine(lines[116], 4), ">", "<").Trim();
+            textBox164.Text = ExtractString(GetLine(lines[116], 5), ">", "<").Trim();
+
+            textBox165.Text = ExtractString(GetLine(lines[118], 3), ">", "<").Trim();
+            textBox169.Text = ExtractString(GetLine(lines[118], 4), ">", "<").Trim();
+            textBox170.Text = ExtractString(GetLine(lines[118], 5), ">", "<").Trim();
+
+            textBox171.Text = ExtractString(GetLine(lines[120], 3), ">", "<").Trim();
+            textBox175.Text = ExtractString(GetLine(lines[120], 4), ">", "<").Trim();
+            textBox179.Text = ExtractString(GetLine(lines[120], 5), ">", "<").Trim();
+
+
+            textBox176.Text = ExtractString(GetLine(lines[122], 3), ">", "<").Trim();
+            textBox177.Text = ExtractString(GetLine(lines[122], 4), ">", "<").Trim();
+            textBox181.Text = ExtractString(GetLine(lines[122], 5), ">", "<").Trim();
+
+
+            textBox182.Text = ExtractString(GetLine(lines[124], 3), ">", "<").Trim();
+            textBox183.Text = ExtractString(GetLine(lines[124], 4), ">", "<").Trim();
+            textBox184.Text = ExtractString(GetLine(lines[124], 5), ">", "<").Trim();
+
+
+            textBox185.Text = ExtractString(GetLine(lines[126], 3), ">", "<").Trim();
+            textBox186.Text = ExtractString(GetLine(lines[126], 4), ">", "<").Trim();
+            textBox187.Text = ExtractString(GetLine(lines[126], 5), ">", "<").Trim();
+
+
+            textBox150.Text = ExtractString(GetLine(lines[128], 3), ">", "<").Trim();
+            textBox188.Text = ExtractString(GetLine(lines[128], 4), ">", "<").Trim();
+            textBox189.Text = ExtractString(GetLine(lines[128], 5), ">", "<").Trim();
+
+
+            textBox149.Text = ExtractString(GetLine(lines[130], 3), ">", "<").Trim();
+            textBox148.Text = ExtractString(GetLine(lines[130], 4), ">", "<").Trim();
+            textBox190.Text = ExtractString(GetLine(lines[130], 5), ">", "<").Trim();
+
+
+            textBox147.Text = ExtractString(GetLine(lines[132], 3), ">", "<").Trim();
+            textBox146.Text = ExtractString(GetLine(lines[132], 4), ">", "<").Trim();
+            textBox191.Text = ExtractString(GetLine(lines[132], 5), ">", "<").Trim();
+
+            textBox192.Text = ExtractString(GetLine(lines[134], 5), ">", "<").Trim();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+            
+            try
+            {
+                
+                richTextBox34.Text = ExtractString(GetLine(lines[140], 3), ">", "<").Trim();
+                richTextBox35.Text = ExtractString(GetLine(lines[142], 3), ">", "<").Trim();
+                richTextBox36.Text = ExtractString(GetLine(lines[144], 3), ">", "<").Trim();
+                richTextBox42.Text = ExtractString(GetLine(lines[146], 3), ">", "<").Trim();
+                richTextBox43.Text = ExtractString(GetLine(lines[148], 3), ">", "<").Trim();
+                richTextBox44.Text = ExtractString(GetLine(lines[150], 3), ">", "<").Trim();
+                richTextBox45.Text = ExtractString(GetLine(lines[152], 3), ">", "<").Trim();
+                richTextBox46.Text = ExtractString(GetLine(lines[154], 3), ">", "<").Trim();
+                richTextBox47.Text = ExtractString(GetLine(lines[156], 3), ">", "<").Trim();
+                richTextBox48.Text = ExtractString(GetLine(lines[158], 3), ">", "<").Trim();
+                richTextBox49.Text = ExtractString(GetLine(lines[160], 3), ">", "<").Trim();
+                richTextBox50.Text = ExtractString(GetLine(lines[162], 3), ">", "<").Trim();
+                richTextBox51.Text = ExtractString(GetLine(lines[164], 3), ">", "<").Trim();
+            }
+            catch
+            {
+                richTextBox34.Text = ExtractString(GetLine(lines[138], 3), ">", "<").Trim();
+                richTextBox35.Text = ExtractString(GetLine(lines[140], 3), ">", "<").Trim();
+                richTextBox36.Text = ExtractString(GetLine(lines[142], 3), ">", "<").Trim();
+                richTextBox42.Text = ExtractString(GetLine(lines[144], 3), ">", "<").Trim();
+                richTextBox43.Text = ExtractString(GetLine(lines[146], 3), ">", "<").Trim();
+                richTextBox44.Text = ExtractString(GetLine(lines[148], 3), ">", "<").Trim();
+                richTextBox45.Text = ExtractString(GetLine(lines[150], 3), ">", "<").Trim();
+                richTextBox46.Text = ExtractString(GetLine(lines[152], 3), ">", "<").Trim();
+                richTextBox47.Text = ExtractString(GetLine(lines[154], 3), ">", "<").Trim();
+                richTextBox48.Text = ExtractString(GetLine(lines[156], 3), ">", "<").Trim();
+                richTextBox49.Text = ExtractString(GetLine(lines[158], 3), ">", "<").Trim();
+                richTextBox50.Text = ExtractString(GetLine(lines[160], 3), ">", "<").Trim();
+                richTextBox51.Text = ExtractString(GetLine(lines[162], 3), ">", "<").Trim();
+
+            }
+            
+
+
+
+
+
+
+
+
+        }
     }
 }
 
