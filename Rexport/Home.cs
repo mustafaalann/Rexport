@@ -1920,11 +1920,22 @@ namespace Rexport
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //if for language!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            
             var path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
+
+            if (comboBox1.SelectedItem.ToString() == "English")
+            {
+                path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
+            }
+            else
+            {
+                path = Path.Combine(Directory.GetCurrentDirectory(), "tr_template_syllabus.html");
+            }
 
             WebClient client = new WebClient();
             String myHtml = client.DownloadString(path);
+            byte[] bytes = Encoding.Default.GetBytes(myHtml);
+            myHtml = Encoding.UTF8.GetString(bytes);
 
             //GENERAL INFORMATION
 
