@@ -275,8 +275,7 @@ namespace Rexport
 
         public bool isLinkValid(String link)
         {
-            if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce"|| ExtractString(link, "https://", ".ieu.edu.tr") == "se"
-                && ExtractString(link, "/type/", "/id/") == "read")
+            if (ExtractString(link, "/type/", "/id/") == "read")
             {
                 return true;
             }
@@ -310,17 +309,26 @@ namespace Rexport
                 int cnt = 0;
                 WebClient client = new WebClient();
                 String link = textBox9.Text;
-                String htmlCode = client.DownloadString(link);
+                
+
+                if (!(link.Contains("https://")))
+                {
+                    link = "https://" + link;
+                }
+
+
+
+
                 if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce")
                 {
                     a = a - 6;
                 }
 
-                
 
 
 
 
+                String htmlCode = client.DownloadString(link);
 
 
 
@@ -349,21 +357,26 @@ namespace Rexport
 
                 //controlling if there is None prerequisites
 
-                String courseName = ExtractString(lines[90], ">", "<").Trim();
+                String courseName = ExtractString(lines[90+a], ">", "<").Trim();
 
-                String courseCode = ExtractString(lines[108], ">", "<").Trim();
-                String courseSemester = ExtractString(lines[110], ">", "<").Trim();
-                String courseWeeklyHours = ExtractString(lines[112], ">", "<").Trim();
-                String courseAppHours = ExtractString(lines[114], ">", "<").Trim();
-                String courseLocalCredits = ExtractString(lines[116], ">", "<").Trim();
-                String courseECTS = ExtractString(lines[118], ">", "<").Trim();
 
-                if (ExtractString(GetLine(lines[122], 4), ">", "<").Trim() == "None")
+                String courseCode = ExtractString(GetLine(lines[108+a], 1), ">", "<").Trim();
+                String courseSemester = ExtractString(GetLine(lines[110+a], 1), ">", "<").Trim();
+                String courseWeeklyHours = ExtractString(GetLine(lines[112+a], 1), ">", "<").Trim();
+                String courseAppHours = ExtractString(GetLine(lines[114+a], 1), ">", "<").Trim();
+                String courseLocalCredits = ExtractString(GetLine(lines[116+a], 1), ">", "<").Trim();
+                String courseECTS = ExtractString(GetLine(lines[118+a], 1), ">", "<").Trim();
+
+                
+
+                String coursePrerequisites = ExtractString(GetLine(lines[122+a], 4), ">", "<").Trim();
+                if (ExtractString(GetLine(lines[122 + a], 4), ">", "<").Trim() == "None")
                 {
                     a -= 1;
                 }
 
-                String coursePrerequisites = ExtractString(GetLine(lines[122], 4), ">", "<").Trim();
+
+
                 String courseLanguage = ExtractString(lines[125 + a], ">", "<").Trim();
                 String courseType = ExtractString(lines[127 + a], ">", "<").Trim();
                 String courseLevel = ExtractString(lines[129 + a], ">", "<").Trim();
@@ -3665,15 +3678,6 @@ namespace Rexport
 
 
 
-
-
-
-
-
-
-
-
-
            
 
             
@@ -3711,6 +3715,97 @@ namespace Rexport
                 richTextBox51.Text = ExtractString(GetLine(lines[162], 3), ">", "<").Trim();
 
             }
+
+            List<CheckBox> checkboxes = new List<CheckBox>();
+
+            checkboxes.Add(checkBox91);
+            checkboxes.Add(checkBox92);
+            checkboxes.Add(checkBox93);
+            checkboxes.Add(checkBox94);
+            checkboxes.Add(checkBox95);
+            checkboxes.Add(checkBox96);
+            checkboxes.Add(checkBox97);
+            checkboxes.Add(checkBox98);
+            checkboxes.Add(checkBox99);
+            checkboxes.Add(checkBox100);
+            checkboxes.Add(checkBox101);
+            checkboxes.Add(checkBox102);
+            checkboxes.Add(checkBox103);
+            checkboxes.Add(checkBox104);
+            checkboxes.Add(checkBox105);
+            checkboxes.Add(checkBox106);
+            checkboxes.Add(checkBox107);
+            checkboxes.Add(checkBox108);
+            checkboxes.Add(checkBox109);
+            checkboxes.Add(checkBox110);
+            checkboxes.Add(checkBox111);
+            checkboxes.Add(checkBox112);
+            checkboxes.Add(checkBox113);
+            checkboxes.Add(checkBox114);
+            checkboxes.Add(checkBox115);
+            checkboxes.Add(checkBox116);
+            checkboxes.Add(checkBox117);
+            checkboxes.Add(checkBox118);
+            checkboxes.Add(checkBox119);
+            checkboxes.Add(checkBox120);
+            checkboxes.Add(checkBox121);
+            checkboxes.Add(checkBox122);
+            checkboxes.Add(checkBox123);
+            checkboxes.Add(checkBox124);
+            checkboxes.Add(checkBox125);
+            checkboxes.Add(checkBox126);
+            checkboxes.Add(checkBox127);
+            checkboxes.Add(checkBox128);
+            checkboxes.Add(checkBox129);
+            checkboxes.Add(checkBox130);
+            checkboxes.Add(checkBox131);
+            checkboxes.Add(checkBox132);
+            checkboxes.Add(checkBox133);
+            checkboxes.Add(checkBox134);
+            checkboxes.Add(checkBox135);
+            checkboxes.Add(checkBox136);
+            checkboxes.Add(checkBox137);
+            checkboxes.Add(checkBox138);
+            checkboxes.Add(checkBox139);
+            checkboxes.Add(checkBox140);
+            checkboxes.Add(checkBox141);
+            checkboxes.Add(checkBox142);
+            checkboxes.Add(checkBox143);
+            checkboxes.Add(checkBox144);
+            checkboxes.Add(checkBox145);
+            checkboxes.Add(checkBox146);
+            checkboxes.Add(checkBox147);
+            checkboxes.Add(checkBox148);
+            checkboxes.Add(checkBox149);
+            checkboxes.Add(checkBox150);
+            checkboxes.Add(checkBox151);
+            checkboxes.Add(checkBox152);
+            checkboxes.Add(checkBox153);
+            checkboxes.Add(checkBox154);
+            checkboxes.Add(checkBox155);
+
+            int counter = 0;
+
+            for (int i = 0; i < 13; i++)
+            {
+
+                for (int j = 0; j < 5; j++)
+                {
+                    if (ExtractString(GetLine(lines[140 + (i * 2)], 4 + j), ">", "<").Trim() == "X")
+                    {
+                        checkboxes[counter].Checked = true;
+                    }
+                    else
+                    {
+                        checkboxes[counter].Checked = false;
+                    }
+                    counter++;
+
+                }
+            }
+
+
+
 
             editLinkPanel.Hide();
             editPanel2.Show();
