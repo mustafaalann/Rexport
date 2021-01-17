@@ -797,10 +797,22 @@ namespace Rexport
                 if (courseSemester == "Fall" || courseSemester == "Güz")
                 {
                     checkBox20.Checked = true;
+                    checkBox19.Checked = false;
+                }
+                else if (courseSemester == "Spring" || courseSemester == "Bahar")
+                {
+                    checkBox20.Checked = false;
+                    checkBox19.Checked = true;
+                }
+                else if (courseSemester == "Fall/Spring" || courseSemester == "Güz/Bahar")
+                {
+                    checkBox20.Checked = true;
+                    checkBox19.Checked = true;
                 }
                 else
                 {
-                    checkBox19.Checked = true;
+                    checkBox20.Checked = false;
+                    checkBox19.Checked = false;
                 }
 
                 // CourseLanguage
@@ -808,10 +820,17 @@ namespace Rexport
                 if (courseLanguage == "İngilizce" || courseLanguage == "English")
                 {
                     checkBox7.Checked = true;
+                    checkBox8.Checked = false;
                 }
-                else
+                else if(courseLanguage == "Türkçe" || courseLanguage == "Turkish")
                 {
                     checkBox8.Checked = true;
+                    checkBox7.Checked = false;
+                } else
+                {
+                    checkBox8.Checked = false;
+                    checkBox7.Checked = false;
+
                 }
 
                 // CourseType
@@ -819,10 +838,17 @@ namespace Rexport
                 if (courseType == "Required" || courseLanguage == "Zorunlu")
                 {
                     checkBox13.Checked = true;
+                    checkBox14.Checked = false;
                 }
-                else
+                else if(courseType == "Elective" || courseLanguage == "Seçmeli")
                 {
                     checkBox14.Checked = true;
+                    checkBox13.Checked = false;
+                } else
+                {
+                    checkBox14.Checked = false;
+                    checkBox13.Checked = false;
+
                 }
 
                 // CourseLevel
@@ -830,18 +856,39 @@ namespace Rexport
                 if (courseLevel == "First Cycle" || courseLevel == "Lisans")
                 {
                     checkBox16.Checked = true;
+                    checkBox15.Checked = false;
+                    checkBox17.Checked = false;
+                    checkBox18.Checked = false;
                 }
                 else if (courseLevel == "Short Cycle" || courseLevel == "Ön Lisans")
                 {
                     checkBox15.Checked = true;
+                    checkBox16.Checked = false;
+                    checkBox17.Checked = false;
+                    checkBox18.Checked = false;
                 }
                 else if (courseLevel == "Second Cycle" || courseLevel == "Yüksek Lisans")
                 {
                     checkBox17.Checked = true;
+                    checkBox15.Checked = false;
+                    checkBox16.Checked = false;
+                    checkBox18.Checked = false;
+
                 }
                 else if (courseLevel == "Third Cycle" || courseLevel == "Doktora")
                 {
                     checkBox18.Checked = true;
+                    checkBox15.Checked = false;
+                    checkBox16.Checked = false;
+                    checkBox17.Checked = false;
+
+                } else
+                {
+
+                    checkBox18.Checked = false;
+                    checkBox15.Checked = false;
+                    checkBox16.Checked = false;
+                    checkBox17.Checked = false;
                 }
 
                 if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+302")
@@ -936,7 +983,7 @@ namespace Rexport
             editLinkPanel.Hide();
             createPanel.Hide();
             editPanel2.BringToFront();
-
+            label115.Text = " ";
 
         }
 
