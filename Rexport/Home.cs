@@ -275,7 +275,8 @@ namespace Rexport
 
         public bool isLinkValid(String link)
         {
-            if (ExtractString(link, "/type/", "/id/") == "read")
+            if (ExtractString(link, "https://", ".ieu.edu.tr") == "ce" || ExtractString(link, "https://", ".ieu.edu.tr") == "se"
+                && ExtractString(link, "/type/", "/id/") == "read")
             {
                 return true;
             }
@@ -284,7 +285,7 @@ namespace Rexport
                 return false;
             }
 
-            
+
         }
 
 
@@ -292,7 +293,8 @@ namespace Rexport
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (!isLinkValid(textBox9.Text))
+
+            if(!isLinkValid(textBox9.Text))
             {
                 label115.Text = "Invalid Link";
             }
@@ -308,8 +310,8 @@ namespace Rexport
                 int a = 0;
                 int cnt = 0;
                 WebClient client = new WebClient();
+
                 String link = textBox9.Text;
-                
 
                 if (!(link.Contains("https://")))
                 {
@@ -336,6 +338,7 @@ namespace Rexport
 
                 byte[] bytes = Encoding.Default.GetBytes(htmlCode);
                 htmlCode = Encoding.UTF8.GetString(bytes);
+                htmlCode = System.Net.WebUtility.HtmlDecode(htmlCode);
                     
 
 
@@ -928,6 +931,14 @@ namespace Rexport
                 richTextBox51.Text = W13ProgramCompetencies;
 
 
+
+                homePanel.Hide();
+                editPanel2.Show();
+                editLinkPanel.Hide();
+                createPanel.Hide();
+                editPanel2.BringToFront();
+                label115.Text = " ";
+
             }
 
 
@@ -991,12 +1002,7 @@ namespace Rexport
 
 
 
-            homePanel.Hide();
-            editPanel2.Show();
-            editLinkPanel.Hide();
-            createPanel.Hide();
-            editPanel2.BringToFront();
-            label115.Text = " ";
+            
 
         }
 
@@ -3816,6 +3822,12 @@ namespace Rexport
 
 
 
+        }
+
+        private void label118_Click(object sender, EventArgs e)
+        {
+            string filename = "Rexport-Helpfile.pdf";
+            System.Diagnostics.Process.Start(filename);
         }
     }
 }
