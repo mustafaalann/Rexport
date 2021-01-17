@@ -30,6 +30,7 @@ namespace Rexport
         private void InitializeComponent()
         {
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.label118 = new System.Windows.Forms.Label();
             this.logoLabel = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.createButton = new System.Windows.Forms.Button();
@@ -849,7 +850,8 @@ namespace Rexport
             this.button1 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
+            this.ectswarning = new System.Windows.Forms.Label();
+            this.editects = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.upperPanel.SuspendLayout();
@@ -911,10 +913,24 @@ namespace Rexport
             this.leftPanel.Controls.Add(this.homeButton);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(281, 710);
             this.leftPanel.TabIndex = 0;
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.BackColor = System.Drawing.Color.Transparent;
+            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.label118.Location = new System.Drawing.Point(13, 669);
+            this.label118.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(75, 29);
+            this.label118.TabIndex = 4;
+            this.label118.Text = "Help!";
+            this.label118.Click += new System.EventHandler(this.label118_Click);
             // 
             // logoLabel
             // 
@@ -934,7 +950,7 @@ namespace Rexport
             // 
             this.Logo.Image = global::Rexport.Properties.Resources.Rexport;
             this.Logo.Location = new System.Drawing.Point(-61, -16);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Logo.Margin = new System.Windows.Forms.Padding(4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(391, 226);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -947,7 +963,7 @@ namespace Rexport
             this.createButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.createButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.createButton.Location = new System.Drawing.Point(0, 382);
-            this.createButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.createButton.Margin = new System.Windows.Forms.Padding(4);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(281, 60);
             this.createButton.TabIndex = 3;
@@ -960,7 +976,7 @@ namespace Rexport
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.editButton.Location = new System.Drawing.Point(0, 315);
-            this.editButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editButton.Margin = new System.Windows.Forms.Padding(4);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(281, 60);
             this.editButton.TabIndex = 2;
@@ -973,7 +989,7 @@ namespace Rexport
             this.homeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(101)))));
             this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.homeButton.Location = new System.Drawing.Point(0, 247);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(4);
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(281, 60);
             this.homeButton.TabIndex = 1;
@@ -988,7 +1004,7 @@ namespace Rexport
             this.upperPanel.Controls.Add(this.closeButton);
             this.upperPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.upperPanel.Location = new System.Drawing.Point(281, 0);
-            this.upperPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.upperPanel.Margin = new System.Windows.Forms.Padding(4);
             this.upperPanel.Name = "upperPanel";
             this.upperPanel.Size = new System.Drawing.Size(1275, 46);
             this.upperPanel.TabIndex = 1;
@@ -997,7 +1013,7 @@ namespace Rexport
             // 
             this.minimizeButton.Image = global::Rexport.Properties.Resources.minimize_window_128;
             this.minimizeButton.Location = new System.Drawing.Point(1155, 2);
-            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(57, 39);
             this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1009,7 +1025,7 @@ namespace Rexport
             // 
             this.closeButton.Image = global::Rexport.Properties.Resources.close_window_128;
             this.closeButton.Location = new System.Drawing.Point(1216, 2);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(57, 39);
             this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1059,6 +1075,7 @@ namespace Rexport
             this.createPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.createPanel.AutoScroll = true;
             this.createPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.createPanel.Controls.Add(this.ectswarning);
             this.createPanel.Controls.Add(this.label117);
             this.createPanel.Controls.Add(this.comboBox2);
             this.createPanel.Controls.Add(this.panel3);
@@ -1085,7 +1102,7 @@ namespace Rexport
             this.createPanel.Controls.Add(this.tableLayoutPanel1);
             this.createPanel.Controls.Add(this.tableLayoutPanel2);
             this.createPanel.Location = new System.Drawing.Point(0, 0);
-            this.createPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.createPanel.Margin = new System.Windows.Forms.Padding(4);
             this.createPanel.Name = "createPanel";
             this.createPanel.Size = new System.Drawing.Size(1275, 668);
             this.createPanel.TabIndex = 7;
@@ -1133,7 +1150,7 @@ namespace Rexport
             this.tableLayoutPanel32.Controls.Add(this.checkBox290, 0, 4);
             this.tableLayoutPanel32.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel32.Location = new System.Drawing.Point(255, 1338);
-            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 5;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1149,7 +1166,7 @@ namespace Rexport
             this.checkBox286.AutoSize = true;
             this.checkBox286.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox286.Location = new System.Drawing.Point(5, 5);
-            this.checkBox286.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox286.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox286.Name = "checkBox286";
             this.checkBox286.Size = new System.Drawing.Size(139, 27);
             this.checkBox286.TabIndex = 0;
@@ -1161,7 +1178,7 @@ namespace Rexport
             this.checkBox287.AutoSize = true;
             this.checkBox287.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox287.Location = new System.Drawing.Point(5, 41);
-            this.checkBox287.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox287.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox287.Name = "checkBox287";
             this.checkBox287.Size = new System.Drawing.Size(190, 27);
             this.checkBox287.TabIndex = 1;
@@ -1173,7 +1190,7 @@ namespace Rexport
             this.checkBox288.AutoSize = true;
             this.checkBox288.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox288.Location = new System.Drawing.Point(5, 77);
-            this.checkBox288.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox288.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox288.Name = "checkBox288";
             this.checkBox288.Size = new System.Drawing.Size(188, 27);
             this.checkBox288.TabIndex = 2;
@@ -1185,7 +1202,7 @@ namespace Rexport
             this.checkBox289.AutoSize = true;
             this.checkBox289.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox289.Location = new System.Drawing.Point(5, 113);
-            this.checkBox289.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox289.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox289.Name = "checkBox289";
             this.checkBox289.Size = new System.Drawing.Size(430, 27);
             this.checkBox289.TabIndex = 3;
@@ -1197,7 +1214,7 @@ namespace Rexport
             this.checkBox290.AutoSize = true;
             this.checkBox290.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox290.Location = new System.Drawing.Point(5, 149);
-            this.checkBox290.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox290.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox290.Name = "checkBox290";
             this.checkBox290.Size = new System.Drawing.Size(241, 28);
             this.checkBox290.TabIndex = 4;
@@ -1311,7 +1328,7 @@ namespace Rexport
             this.checkBox156.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox156.AutoSize = true;
             this.checkBox156.Location = new System.Drawing.Point(226, 1147);
-            this.checkBox156.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox156.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox156.Name = "checkBox156";
             this.checkBox156.Size = new System.Drawing.Size(18, 17);
             this.checkBox156.TabIndex = 69;
@@ -1322,7 +1339,7 @@ namespace Rexport
             this.checkBox157.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox157.AutoSize = true;
             this.checkBox157.Location = new System.Drawing.Point(173, 1147);
-            this.checkBox157.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox157.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox157.Name = "checkBox157";
             this.checkBox157.Size = new System.Drawing.Size(18, 17);
             this.checkBox157.TabIndex = 68;
@@ -1333,7 +1350,7 @@ namespace Rexport
             this.checkBox158.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox158.AutoSize = true;
             this.checkBox158.Location = new System.Drawing.Point(121, 1147);
-            this.checkBox158.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox158.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox158.Name = "checkBox158";
             this.checkBox158.Size = new System.Drawing.Size(18, 17);
             this.checkBox158.TabIndex = 67;
@@ -1344,7 +1361,7 @@ namespace Rexport
             this.checkBox159.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox159.AutoSize = true;
             this.checkBox159.Location = new System.Drawing.Point(69, 1147);
-            this.checkBox159.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox159.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox159.Name = "checkBox159";
             this.checkBox159.Size = new System.Drawing.Size(18, 17);
             this.checkBox159.TabIndex = 66;
@@ -1355,7 +1372,7 @@ namespace Rexport
             this.checkBox160.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox160.AutoSize = true;
             this.checkBox160.Location = new System.Drawing.Point(17, 1147);
-            this.checkBox160.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox160.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox160.Name = "checkBox160";
             this.checkBox160.Size = new System.Drawing.Size(18, 17);
             this.checkBox160.TabIndex = 65;
@@ -1366,7 +1383,7 @@ namespace Rexport
             this.checkBox161.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox161.AutoSize = true;
             this.checkBox161.Location = new System.Drawing.Point(226, 1049);
-            this.checkBox161.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox161.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox161.Name = "checkBox161";
             this.checkBox161.Size = new System.Drawing.Size(18, 17);
             this.checkBox161.TabIndex = 64;
@@ -1377,7 +1394,7 @@ namespace Rexport
             this.checkBox162.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox162.AutoSize = true;
             this.checkBox162.Location = new System.Drawing.Point(173, 1049);
-            this.checkBox162.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox162.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox162.Name = "checkBox162";
             this.checkBox162.Size = new System.Drawing.Size(18, 17);
             this.checkBox162.TabIndex = 63;
@@ -1388,7 +1405,7 @@ namespace Rexport
             this.checkBox163.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox163.AutoSize = true;
             this.checkBox163.Location = new System.Drawing.Point(121, 1049);
-            this.checkBox163.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox163.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox163.Name = "checkBox163";
             this.checkBox163.Size = new System.Drawing.Size(18, 17);
             this.checkBox163.TabIndex = 62;
@@ -1399,7 +1416,7 @@ namespace Rexport
             this.checkBox164.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox164.AutoSize = true;
             this.checkBox164.Location = new System.Drawing.Point(69, 1049);
-            this.checkBox164.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox164.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox164.Name = "checkBox164";
             this.checkBox164.Size = new System.Drawing.Size(18, 17);
             this.checkBox164.TabIndex = 61;
@@ -1410,7 +1427,7 @@ namespace Rexport
             this.checkBox165.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox165.AutoSize = true;
             this.checkBox165.Location = new System.Drawing.Point(17, 1049);
-            this.checkBox165.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox165.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox165.Name = "checkBox165";
             this.checkBox165.Size = new System.Drawing.Size(18, 17);
             this.checkBox165.TabIndex = 60;
@@ -1421,7 +1438,7 @@ namespace Rexport
             this.checkBox166.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox166.AutoSize = true;
             this.checkBox166.Location = new System.Drawing.Point(226, 961);
-            this.checkBox166.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox166.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox166.Name = "checkBox166";
             this.checkBox166.Size = new System.Drawing.Size(18, 17);
             this.checkBox166.TabIndex = 59;
@@ -1432,7 +1449,7 @@ namespace Rexport
             this.checkBox167.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox167.AutoSize = true;
             this.checkBox167.Location = new System.Drawing.Point(173, 961);
-            this.checkBox167.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox167.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox167.Name = "checkBox167";
             this.checkBox167.Size = new System.Drawing.Size(18, 17);
             this.checkBox167.TabIndex = 58;
@@ -1443,7 +1460,7 @@ namespace Rexport
             this.checkBox168.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox168.AutoSize = true;
             this.checkBox168.Location = new System.Drawing.Point(121, 961);
-            this.checkBox168.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox168.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox168.Name = "checkBox168";
             this.checkBox168.Size = new System.Drawing.Size(18, 17);
             this.checkBox168.TabIndex = 57;
@@ -1454,7 +1471,7 @@ namespace Rexport
             this.checkBox169.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox169.AutoSize = true;
             this.checkBox169.Location = new System.Drawing.Point(69, 961);
-            this.checkBox169.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox169.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox169.Name = "checkBox169";
             this.checkBox169.Size = new System.Drawing.Size(18, 17);
             this.checkBox169.TabIndex = 56;
@@ -1465,7 +1482,7 @@ namespace Rexport
             this.checkBox170.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox170.AutoSize = true;
             this.checkBox170.Location = new System.Drawing.Point(17, 961);
-            this.checkBox170.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox170.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox170.Name = "checkBox170";
             this.checkBox170.Size = new System.Drawing.Size(18, 17);
             this.checkBox170.TabIndex = 55;
@@ -1476,7 +1493,7 @@ namespace Rexport
             this.checkBox171.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox171.AutoSize = true;
             this.checkBox171.Location = new System.Drawing.Point(226, 873);
-            this.checkBox171.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox171.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox171.Name = "checkBox171";
             this.checkBox171.Size = new System.Drawing.Size(18, 17);
             this.checkBox171.TabIndex = 54;
@@ -1487,7 +1504,7 @@ namespace Rexport
             this.checkBox172.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox172.AutoSize = true;
             this.checkBox172.Location = new System.Drawing.Point(173, 873);
-            this.checkBox172.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox172.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox172.Name = "checkBox172";
             this.checkBox172.Size = new System.Drawing.Size(18, 17);
             this.checkBox172.TabIndex = 53;
@@ -1498,7 +1515,7 @@ namespace Rexport
             this.checkBox173.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox173.AutoSize = true;
             this.checkBox173.Location = new System.Drawing.Point(121, 873);
-            this.checkBox173.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox173.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox173.Name = "checkBox173";
             this.checkBox173.Size = new System.Drawing.Size(18, 17);
             this.checkBox173.TabIndex = 52;
@@ -1509,7 +1526,7 @@ namespace Rexport
             this.checkBox174.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox174.AutoSize = true;
             this.checkBox174.Location = new System.Drawing.Point(69, 873);
-            this.checkBox174.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox174.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox174.Name = "checkBox174";
             this.checkBox174.Size = new System.Drawing.Size(18, 17);
             this.checkBox174.TabIndex = 51;
@@ -1520,7 +1537,7 @@ namespace Rexport
             this.checkBox175.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox175.AutoSize = true;
             this.checkBox175.Location = new System.Drawing.Point(17, 873);
-            this.checkBox175.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox175.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox175.Name = "checkBox175";
             this.checkBox175.Size = new System.Drawing.Size(18, 17);
             this.checkBox175.TabIndex = 50;
@@ -1531,7 +1548,7 @@ namespace Rexport
             this.checkBox176.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox176.AutoSize = true;
             this.checkBox176.Location = new System.Drawing.Point(226, 785);
-            this.checkBox176.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox176.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox176.Name = "checkBox176";
             this.checkBox176.Size = new System.Drawing.Size(18, 17);
             this.checkBox176.TabIndex = 49;
@@ -1542,7 +1559,7 @@ namespace Rexport
             this.checkBox177.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox177.AutoSize = true;
             this.checkBox177.Location = new System.Drawing.Point(173, 785);
-            this.checkBox177.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox177.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox177.Name = "checkBox177";
             this.checkBox177.Size = new System.Drawing.Size(18, 17);
             this.checkBox177.TabIndex = 48;
@@ -1553,7 +1570,7 @@ namespace Rexport
             this.checkBox178.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox178.AutoSize = true;
             this.checkBox178.Location = new System.Drawing.Point(121, 785);
-            this.checkBox178.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox178.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox178.Name = "checkBox178";
             this.checkBox178.Size = new System.Drawing.Size(18, 17);
             this.checkBox178.TabIndex = 47;
@@ -1564,7 +1581,7 @@ namespace Rexport
             this.checkBox179.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox179.AutoSize = true;
             this.checkBox179.Location = new System.Drawing.Point(69, 785);
-            this.checkBox179.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox179.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox179.Name = "checkBox179";
             this.checkBox179.Size = new System.Drawing.Size(18, 17);
             this.checkBox179.TabIndex = 46;
@@ -1575,7 +1592,7 @@ namespace Rexport
             this.checkBox180.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox180.AutoSize = true;
             this.checkBox180.Location = new System.Drawing.Point(17, 785);
-            this.checkBox180.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox180.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox180.Name = "checkBox180";
             this.checkBox180.Size = new System.Drawing.Size(18, 17);
             this.checkBox180.TabIndex = 45;
@@ -1586,7 +1603,7 @@ namespace Rexport
             this.checkBox181.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox181.AutoSize = true;
             this.checkBox181.Location = new System.Drawing.Point(226, 697);
-            this.checkBox181.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox181.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox181.Name = "checkBox181";
             this.checkBox181.Size = new System.Drawing.Size(18, 17);
             this.checkBox181.TabIndex = 44;
@@ -1597,7 +1614,7 @@ namespace Rexport
             this.checkBox182.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox182.AutoSize = true;
             this.checkBox182.Location = new System.Drawing.Point(173, 697);
-            this.checkBox182.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox182.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox182.Name = "checkBox182";
             this.checkBox182.Size = new System.Drawing.Size(18, 17);
             this.checkBox182.TabIndex = 43;
@@ -1608,7 +1625,7 @@ namespace Rexport
             this.checkBox183.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox183.AutoSize = true;
             this.checkBox183.Location = new System.Drawing.Point(121, 697);
-            this.checkBox183.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox183.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox183.Name = "checkBox183";
             this.checkBox183.Size = new System.Drawing.Size(18, 17);
             this.checkBox183.TabIndex = 42;
@@ -1619,7 +1636,7 @@ namespace Rexport
             this.checkBox184.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox184.AutoSize = true;
             this.checkBox184.Location = new System.Drawing.Point(69, 697);
-            this.checkBox184.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox184.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox184.Name = "checkBox184";
             this.checkBox184.Size = new System.Drawing.Size(18, 17);
             this.checkBox184.TabIndex = 41;
@@ -1630,7 +1647,7 @@ namespace Rexport
             this.checkBox185.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox185.AutoSize = true;
             this.checkBox185.Location = new System.Drawing.Point(17, 697);
-            this.checkBox185.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox185.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox185.Name = "checkBox185";
             this.checkBox185.Size = new System.Drawing.Size(18, 17);
             this.checkBox185.TabIndex = 40;
@@ -1641,7 +1658,7 @@ namespace Rexport
             this.checkBox186.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox186.AutoSize = true;
             this.checkBox186.Location = new System.Drawing.Point(226, 609);
-            this.checkBox186.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox186.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox186.Name = "checkBox186";
             this.checkBox186.Size = new System.Drawing.Size(18, 17);
             this.checkBox186.TabIndex = 39;
@@ -1652,7 +1669,7 @@ namespace Rexport
             this.checkBox187.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox187.AutoSize = true;
             this.checkBox187.Location = new System.Drawing.Point(173, 609);
-            this.checkBox187.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox187.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox187.Name = "checkBox187";
             this.checkBox187.Size = new System.Drawing.Size(18, 17);
             this.checkBox187.TabIndex = 38;
@@ -1663,7 +1680,7 @@ namespace Rexport
             this.checkBox188.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox188.AutoSize = true;
             this.checkBox188.Location = new System.Drawing.Point(121, 609);
-            this.checkBox188.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox188.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox188.Name = "checkBox188";
             this.checkBox188.Size = new System.Drawing.Size(18, 17);
             this.checkBox188.TabIndex = 37;
@@ -1674,7 +1691,7 @@ namespace Rexport
             this.checkBox189.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox189.AutoSize = true;
             this.checkBox189.Location = new System.Drawing.Point(69, 609);
-            this.checkBox189.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox189.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox189.Name = "checkBox189";
             this.checkBox189.Size = new System.Drawing.Size(18, 17);
             this.checkBox189.TabIndex = 36;
@@ -1685,7 +1702,7 @@ namespace Rexport
             this.checkBox190.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox190.AutoSize = true;
             this.checkBox190.Location = new System.Drawing.Point(17, 609);
-            this.checkBox190.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox190.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox190.Name = "checkBox190";
             this.checkBox190.Size = new System.Drawing.Size(18, 17);
             this.checkBox190.TabIndex = 35;
@@ -1696,7 +1713,7 @@ namespace Rexport
             this.checkBox191.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox191.AutoSize = true;
             this.checkBox191.Location = new System.Drawing.Point(226, 521);
-            this.checkBox191.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox191.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox191.Name = "checkBox191";
             this.checkBox191.Size = new System.Drawing.Size(18, 17);
             this.checkBox191.TabIndex = 34;
@@ -1707,7 +1724,7 @@ namespace Rexport
             this.checkBox192.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox192.AutoSize = true;
             this.checkBox192.Location = new System.Drawing.Point(173, 521);
-            this.checkBox192.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox192.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox192.Name = "checkBox192";
             this.checkBox192.Size = new System.Drawing.Size(18, 17);
             this.checkBox192.TabIndex = 33;
@@ -1718,7 +1735,7 @@ namespace Rexport
             this.checkBox193.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox193.AutoSize = true;
             this.checkBox193.Location = new System.Drawing.Point(121, 521);
-            this.checkBox193.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox193.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox193.Name = "checkBox193";
             this.checkBox193.Size = new System.Drawing.Size(18, 17);
             this.checkBox193.TabIndex = 32;
@@ -1729,7 +1746,7 @@ namespace Rexport
             this.checkBox194.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox194.AutoSize = true;
             this.checkBox194.Location = new System.Drawing.Point(69, 521);
-            this.checkBox194.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox194.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox194.Name = "checkBox194";
             this.checkBox194.Size = new System.Drawing.Size(18, 17);
             this.checkBox194.TabIndex = 31;
@@ -1740,7 +1757,7 @@ namespace Rexport
             this.checkBox195.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox195.AutoSize = true;
             this.checkBox195.Location = new System.Drawing.Point(17, 521);
-            this.checkBox195.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox195.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox195.Name = "checkBox195";
             this.checkBox195.Size = new System.Drawing.Size(18, 17);
             this.checkBox195.TabIndex = 30;
@@ -1751,7 +1768,7 @@ namespace Rexport
             this.checkBox196.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox196.AutoSize = true;
             this.checkBox196.Location = new System.Drawing.Point(226, 433);
-            this.checkBox196.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox196.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox196.Name = "checkBox196";
             this.checkBox196.Size = new System.Drawing.Size(18, 17);
             this.checkBox196.TabIndex = 29;
@@ -1762,7 +1779,7 @@ namespace Rexport
             this.checkBox197.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox197.AutoSize = true;
             this.checkBox197.Location = new System.Drawing.Point(173, 433);
-            this.checkBox197.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox197.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox197.Name = "checkBox197";
             this.checkBox197.Size = new System.Drawing.Size(18, 17);
             this.checkBox197.TabIndex = 28;
@@ -1773,7 +1790,7 @@ namespace Rexport
             this.checkBox198.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox198.AutoSize = true;
             this.checkBox198.Location = new System.Drawing.Point(121, 433);
-            this.checkBox198.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox198.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox198.Name = "checkBox198";
             this.checkBox198.Size = new System.Drawing.Size(18, 17);
             this.checkBox198.TabIndex = 27;
@@ -1784,7 +1801,7 @@ namespace Rexport
             this.checkBox199.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox199.AutoSize = true;
             this.checkBox199.Location = new System.Drawing.Point(69, 433);
-            this.checkBox199.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox199.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox199.Name = "checkBox199";
             this.checkBox199.Size = new System.Drawing.Size(18, 17);
             this.checkBox199.TabIndex = 26;
@@ -1795,7 +1812,7 @@ namespace Rexport
             this.checkBox200.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox200.AutoSize = true;
             this.checkBox200.Location = new System.Drawing.Point(17, 433);
-            this.checkBox200.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox200.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox200.Name = "checkBox200";
             this.checkBox200.Size = new System.Drawing.Size(18, 17);
             this.checkBox200.TabIndex = 25;
@@ -1806,7 +1823,7 @@ namespace Rexport
             this.checkBox201.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox201.AutoSize = true;
             this.checkBox201.Location = new System.Drawing.Point(226, 345);
-            this.checkBox201.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox201.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox201.Name = "checkBox201";
             this.checkBox201.Size = new System.Drawing.Size(18, 17);
             this.checkBox201.TabIndex = 24;
@@ -1817,7 +1834,7 @@ namespace Rexport
             this.checkBox202.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox202.AutoSize = true;
             this.checkBox202.Location = new System.Drawing.Point(173, 345);
-            this.checkBox202.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox202.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox202.Name = "checkBox202";
             this.checkBox202.Size = new System.Drawing.Size(18, 17);
             this.checkBox202.TabIndex = 23;
@@ -1828,7 +1845,7 @@ namespace Rexport
             this.checkBox203.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox203.AutoSize = true;
             this.checkBox203.Location = new System.Drawing.Point(121, 345);
-            this.checkBox203.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox203.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox203.Name = "checkBox203";
             this.checkBox203.Size = new System.Drawing.Size(18, 17);
             this.checkBox203.TabIndex = 22;
@@ -1839,7 +1856,7 @@ namespace Rexport
             this.checkBox204.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox204.AutoSize = true;
             this.checkBox204.Location = new System.Drawing.Point(69, 345);
-            this.checkBox204.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox204.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox204.Name = "checkBox204";
             this.checkBox204.Size = new System.Drawing.Size(18, 17);
             this.checkBox204.TabIndex = 21;
@@ -1850,7 +1867,7 @@ namespace Rexport
             this.checkBox205.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox205.AutoSize = true;
             this.checkBox205.Location = new System.Drawing.Point(17, 345);
-            this.checkBox205.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox205.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox205.Name = "checkBox205";
             this.checkBox205.Size = new System.Drawing.Size(18, 17);
             this.checkBox205.TabIndex = 20;
@@ -1861,7 +1878,7 @@ namespace Rexport
             this.checkBox206.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox206.AutoSize = true;
             this.checkBox206.Location = new System.Drawing.Point(226, 257);
-            this.checkBox206.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox206.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox206.Name = "checkBox206";
             this.checkBox206.Size = new System.Drawing.Size(18, 17);
             this.checkBox206.TabIndex = 19;
@@ -1872,7 +1889,7 @@ namespace Rexport
             this.checkBox207.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox207.AutoSize = true;
             this.checkBox207.Location = new System.Drawing.Point(173, 257);
-            this.checkBox207.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox207.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox207.Name = "checkBox207";
             this.checkBox207.Size = new System.Drawing.Size(18, 17);
             this.checkBox207.TabIndex = 18;
@@ -1883,7 +1900,7 @@ namespace Rexport
             this.checkBox208.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox208.AutoSize = true;
             this.checkBox208.Location = new System.Drawing.Point(121, 257);
-            this.checkBox208.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox208.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox208.Name = "checkBox208";
             this.checkBox208.Size = new System.Drawing.Size(18, 17);
             this.checkBox208.TabIndex = 17;
@@ -1894,7 +1911,7 @@ namespace Rexport
             this.checkBox209.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox209.AutoSize = true;
             this.checkBox209.Location = new System.Drawing.Point(69, 257);
-            this.checkBox209.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox209.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox209.Name = "checkBox209";
             this.checkBox209.Size = new System.Drawing.Size(18, 17);
             this.checkBox209.TabIndex = 16;
@@ -1905,7 +1922,7 @@ namespace Rexport
             this.checkBox210.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox210.AutoSize = true;
             this.checkBox210.Location = new System.Drawing.Point(17, 257);
-            this.checkBox210.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox210.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox210.Name = "checkBox210";
             this.checkBox210.Size = new System.Drawing.Size(18, 17);
             this.checkBox210.TabIndex = 15;
@@ -1916,7 +1933,7 @@ namespace Rexport
             this.checkBox211.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox211.AutoSize = true;
             this.checkBox211.Location = new System.Drawing.Point(226, 169);
-            this.checkBox211.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox211.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox211.Name = "checkBox211";
             this.checkBox211.Size = new System.Drawing.Size(18, 17);
             this.checkBox211.TabIndex = 14;
@@ -1927,7 +1944,7 @@ namespace Rexport
             this.checkBox212.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox212.AutoSize = true;
             this.checkBox212.Location = new System.Drawing.Point(173, 169);
-            this.checkBox212.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox212.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox212.Name = "checkBox212";
             this.checkBox212.Size = new System.Drawing.Size(18, 17);
             this.checkBox212.TabIndex = 13;
@@ -1938,7 +1955,7 @@ namespace Rexport
             this.checkBox213.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox213.AutoSize = true;
             this.checkBox213.Location = new System.Drawing.Point(121, 169);
-            this.checkBox213.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox213.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox213.Name = "checkBox213";
             this.checkBox213.Size = new System.Drawing.Size(18, 17);
             this.checkBox213.TabIndex = 12;
@@ -1949,7 +1966,7 @@ namespace Rexport
             this.checkBox214.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox214.AutoSize = true;
             this.checkBox214.Location = new System.Drawing.Point(69, 169);
-            this.checkBox214.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox214.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox214.Name = "checkBox214";
             this.checkBox214.Size = new System.Drawing.Size(18, 17);
             this.checkBox214.TabIndex = 11;
@@ -1960,7 +1977,7 @@ namespace Rexport
             this.checkBox215.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox215.AutoSize = true;
             this.checkBox215.Location = new System.Drawing.Point(17, 169);
-            this.checkBox215.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox215.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox215.Name = "checkBox215";
             this.checkBox215.Size = new System.Drawing.Size(18, 17);
             this.checkBox215.TabIndex = 10;
@@ -1971,7 +1988,7 @@ namespace Rexport
             this.checkBox281.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox281.AutoSize = true;
             this.checkBox281.Location = new System.Drawing.Point(226, 81);
-            this.checkBox281.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox281.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox281.Name = "checkBox281";
             this.checkBox281.Size = new System.Drawing.Size(18, 17);
             this.checkBox281.TabIndex = 9;
@@ -1982,7 +1999,7 @@ namespace Rexport
             this.checkBox282.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox282.AutoSize = true;
             this.checkBox282.Location = new System.Drawing.Point(173, 81);
-            this.checkBox282.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox282.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox282.Name = "checkBox282";
             this.checkBox282.Size = new System.Drawing.Size(18, 17);
             this.checkBox282.TabIndex = 8;
@@ -1993,7 +2010,7 @@ namespace Rexport
             this.checkBox283.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox283.AutoSize = true;
             this.checkBox283.Location = new System.Drawing.Point(121, 81);
-            this.checkBox283.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox283.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox283.Name = "checkBox283";
             this.checkBox283.Size = new System.Drawing.Size(18, 17);
             this.checkBox283.TabIndex = 7;
@@ -2004,7 +2021,7 @@ namespace Rexport
             this.checkBox284.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox284.AutoSize = true;
             this.checkBox284.Location = new System.Drawing.Point(69, 81);
-            this.checkBox284.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox284.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox284.Name = "checkBox284";
             this.checkBox284.Size = new System.Drawing.Size(18, 17);
             this.checkBox284.TabIndex = 6;
@@ -2075,7 +2092,7 @@ namespace Rexport
             this.checkBox285.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox285.AutoSize = true;
             this.checkBox285.Location = new System.Drawing.Point(17, 81);
-            this.checkBox285.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox285.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox285.Name = "checkBox285";
             this.checkBox285.Size = new System.Drawing.Size(18, 17);
             this.checkBox285.TabIndex = 5;
@@ -2087,7 +2104,7 @@ namespace Rexport
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(548, 7637);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 57);
             this.button2.TabIndex = 27;
@@ -2176,7 +2193,7 @@ namespace Rexport
             this.tableLayoutPanel27.Controls.Add(this.label201, 1, 0);
             this.tableLayoutPanel27.Controls.Add(this.label202, 0, 0);
             this.tableLayoutPanel27.Controls.Add(this.checkBox280, 0, 1);
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(896, 25121);
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(896, 28680);
             this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 14;
@@ -2203,7 +2220,7 @@ namespace Rexport
             this.checkBox216.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox216.AutoSize = true;
             this.checkBox216.Location = new System.Drawing.Point(227, 1135);
-            this.checkBox216.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox216.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox216.Name = "checkBox216";
             this.checkBox216.Size = new System.Drawing.Size(18, 17);
             this.checkBox216.TabIndex = 165;
@@ -2214,7 +2231,7 @@ namespace Rexport
             this.checkBox217.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox217.AutoSize = true;
             this.checkBox217.Location = new System.Drawing.Point(173, 1135);
-            this.checkBox217.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox217.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox217.Name = "checkBox217";
             this.checkBox217.Size = new System.Drawing.Size(18, 17);
             this.checkBox217.TabIndex = 164;
@@ -2225,7 +2242,7 @@ namespace Rexport
             this.checkBox218.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox218.AutoSize = true;
             this.checkBox218.Location = new System.Drawing.Point(121, 1135);
-            this.checkBox218.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox218.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox218.Name = "checkBox218";
             this.checkBox218.Size = new System.Drawing.Size(18, 17);
             this.checkBox218.TabIndex = 163;
@@ -2236,7 +2253,7 @@ namespace Rexport
             this.checkBox219.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox219.AutoSize = true;
             this.checkBox219.Location = new System.Drawing.Point(69, 1135);
-            this.checkBox219.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox219.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox219.Name = "checkBox219";
             this.checkBox219.Size = new System.Drawing.Size(18, 17);
             this.checkBox219.TabIndex = 162;
@@ -2247,7 +2264,7 @@ namespace Rexport
             this.checkBox220.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox220.AutoSize = true;
             this.checkBox220.Location = new System.Drawing.Point(17, 1135);
-            this.checkBox220.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox220.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox220.Name = "checkBox220";
             this.checkBox220.Size = new System.Drawing.Size(18, 17);
             this.checkBox220.TabIndex = 161;
@@ -2258,7 +2275,7 @@ namespace Rexport
             this.checkBox221.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox221.AutoSize = true;
             this.checkBox221.Location = new System.Drawing.Point(227, 1041);
-            this.checkBox221.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox221.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox221.Name = "checkBox221";
             this.checkBox221.Size = new System.Drawing.Size(18, 17);
             this.checkBox221.TabIndex = 160;
@@ -2269,7 +2286,7 @@ namespace Rexport
             this.checkBox222.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox222.AutoSize = true;
             this.checkBox222.Location = new System.Drawing.Point(173, 1041);
-            this.checkBox222.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox222.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox222.Name = "checkBox222";
             this.checkBox222.Size = new System.Drawing.Size(18, 17);
             this.checkBox222.TabIndex = 159;
@@ -2280,7 +2297,7 @@ namespace Rexport
             this.checkBox223.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox223.AutoSize = true;
             this.checkBox223.Location = new System.Drawing.Point(121, 1041);
-            this.checkBox223.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox223.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox223.Name = "checkBox223";
             this.checkBox223.Size = new System.Drawing.Size(18, 17);
             this.checkBox223.TabIndex = 158;
@@ -2291,7 +2308,7 @@ namespace Rexport
             this.checkBox224.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox224.AutoSize = true;
             this.checkBox224.Location = new System.Drawing.Point(69, 1041);
-            this.checkBox224.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox224.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox224.Name = "checkBox224";
             this.checkBox224.Size = new System.Drawing.Size(18, 17);
             this.checkBox224.TabIndex = 157;
@@ -2302,7 +2319,7 @@ namespace Rexport
             this.checkBox225.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox225.AutoSize = true;
             this.checkBox225.Location = new System.Drawing.Point(17, 1041);
-            this.checkBox225.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox225.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox225.Name = "checkBox225";
             this.checkBox225.Size = new System.Drawing.Size(18, 17);
             this.checkBox225.TabIndex = 156;
@@ -2313,7 +2330,7 @@ namespace Rexport
             this.checkBox226.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox226.AutoSize = true;
             this.checkBox226.Location = new System.Drawing.Point(227, 953);
-            this.checkBox226.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox226.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox226.Name = "checkBox226";
             this.checkBox226.Size = new System.Drawing.Size(18, 17);
             this.checkBox226.TabIndex = 155;
@@ -2324,7 +2341,7 @@ namespace Rexport
             this.checkBox227.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox227.AutoSize = true;
             this.checkBox227.Location = new System.Drawing.Point(173, 953);
-            this.checkBox227.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox227.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox227.Name = "checkBox227";
             this.checkBox227.Size = new System.Drawing.Size(18, 17);
             this.checkBox227.TabIndex = 154;
@@ -2335,7 +2352,7 @@ namespace Rexport
             this.checkBox228.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox228.AutoSize = true;
             this.checkBox228.Location = new System.Drawing.Point(121, 953);
-            this.checkBox228.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox228.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox228.Name = "checkBox228";
             this.checkBox228.Size = new System.Drawing.Size(18, 17);
             this.checkBox228.TabIndex = 153;
@@ -2346,7 +2363,7 @@ namespace Rexport
             this.checkBox229.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox229.AutoSize = true;
             this.checkBox229.Location = new System.Drawing.Point(69, 953);
-            this.checkBox229.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox229.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox229.Name = "checkBox229";
             this.checkBox229.Size = new System.Drawing.Size(18, 17);
             this.checkBox229.TabIndex = 152;
@@ -2357,7 +2374,7 @@ namespace Rexport
             this.checkBox230.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox230.AutoSize = true;
             this.checkBox230.Location = new System.Drawing.Point(17, 953);
-            this.checkBox230.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox230.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox230.Name = "checkBox230";
             this.checkBox230.Size = new System.Drawing.Size(18, 17);
             this.checkBox230.TabIndex = 151;
@@ -2368,7 +2385,7 @@ namespace Rexport
             this.checkBox231.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox231.AutoSize = true;
             this.checkBox231.Location = new System.Drawing.Point(227, 865);
-            this.checkBox231.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox231.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox231.Name = "checkBox231";
             this.checkBox231.Size = new System.Drawing.Size(18, 17);
             this.checkBox231.TabIndex = 150;
@@ -2379,7 +2396,7 @@ namespace Rexport
             this.checkBox232.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox232.AutoSize = true;
             this.checkBox232.Location = new System.Drawing.Point(173, 865);
-            this.checkBox232.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox232.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox232.Name = "checkBox232";
             this.checkBox232.Size = new System.Drawing.Size(18, 17);
             this.checkBox232.TabIndex = 149;
@@ -2390,7 +2407,7 @@ namespace Rexport
             this.checkBox233.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox233.AutoSize = true;
             this.checkBox233.Location = new System.Drawing.Point(121, 865);
-            this.checkBox233.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox233.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox233.Name = "checkBox233";
             this.checkBox233.Size = new System.Drawing.Size(18, 17);
             this.checkBox233.TabIndex = 148;
@@ -2401,7 +2418,7 @@ namespace Rexport
             this.checkBox234.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox234.AutoSize = true;
             this.checkBox234.Location = new System.Drawing.Point(69, 865);
-            this.checkBox234.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox234.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox234.Name = "checkBox234";
             this.checkBox234.Size = new System.Drawing.Size(18, 17);
             this.checkBox234.TabIndex = 147;
@@ -2412,7 +2429,7 @@ namespace Rexport
             this.checkBox235.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox235.AutoSize = true;
             this.checkBox235.Location = new System.Drawing.Point(17, 865);
-            this.checkBox235.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox235.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox235.Name = "checkBox235";
             this.checkBox235.Size = new System.Drawing.Size(18, 17);
             this.checkBox235.TabIndex = 146;
@@ -2423,7 +2440,7 @@ namespace Rexport
             this.checkBox236.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox236.AutoSize = true;
             this.checkBox236.Location = new System.Drawing.Point(227, 777);
-            this.checkBox236.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox236.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox236.Name = "checkBox236";
             this.checkBox236.Size = new System.Drawing.Size(18, 17);
             this.checkBox236.TabIndex = 145;
@@ -2434,7 +2451,7 @@ namespace Rexport
             this.checkBox237.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox237.AutoSize = true;
             this.checkBox237.Location = new System.Drawing.Point(173, 777);
-            this.checkBox237.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox237.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox237.Name = "checkBox237";
             this.checkBox237.Size = new System.Drawing.Size(18, 17);
             this.checkBox237.TabIndex = 144;
@@ -2445,7 +2462,7 @@ namespace Rexport
             this.checkBox238.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox238.AutoSize = true;
             this.checkBox238.Location = new System.Drawing.Point(121, 777);
-            this.checkBox238.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox238.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox238.Name = "checkBox238";
             this.checkBox238.Size = new System.Drawing.Size(18, 17);
             this.checkBox238.TabIndex = 143;
@@ -2456,7 +2473,7 @@ namespace Rexport
             this.checkBox239.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox239.AutoSize = true;
             this.checkBox239.Location = new System.Drawing.Point(69, 777);
-            this.checkBox239.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox239.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox239.Name = "checkBox239";
             this.checkBox239.Size = new System.Drawing.Size(18, 17);
             this.checkBox239.TabIndex = 142;
@@ -2467,7 +2484,7 @@ namespace Rexport
             this.checkBox240.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox240.AutoSize = true;
             this.checkBox240.Location = new System.Drawing.Point(17, 777);
-            this.checkBox240.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox240.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox240.Name = "checkBox240";
             this.checkBox240.Size = new System.Drawing.Size(18, 17);
             this.checkBox240.TabIndex = 141;
@@ -2478,7 +2495,7 @@ namespace Rexport
             this.checkBox241.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox241.AutoSize = true;
             this.checkBox241.Location = new System.Drawing.Point(227, 689);
-            this.checkBox241.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox241.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox241.Name = "checkBox241";
             this.checkBox241.Size = new System.Drawing.Size(18, 17);
             this.checkBox241.TabIndex = 140;
@@ -2489,7 +2506,7 @@ namespace Rexport
             this.checkBox242.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox242.AutoSize = true;
             this.checkBox242.Location = new System.Drawing.Point(173, 689);
-            this.checkBox242.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox242.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox242.Name = "checkBox242";
             this.checkBox242.Size = new System.Drawing.Size(18, 17);
             this.checkBox242.TabIndex = 139;
@@ -2500,7 +2517,7 @@ namespace Rexport
             this.checkBox243.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox243.AutoSize = true;
             this.checkBox243.Location = new System.Drawing.Point(121, 689);
-            this.checkBox243.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox243.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox243.Name = "checkBox243";
             this.checkBox243.Size = new System.Drawing.Size(18, 17);
             this.checkBox243.TabIndex = 138;
@@ -2511,7 +2528,7 @@ namespace Rexport
             this.checkBox244.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox244.AutoSize = true;
             this.checkBox244.Location = new System.Drawing.Point(69, 689);
-            this.checkBox244.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox244.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox244.Name = "checkBox244";
             this.checkBox244.Size = new System.Drawing.Size(18, 17);
             this.checkBox244.TabIndex = 137;
@@ -2522,7 +2539,7 @@ namespace Rexport
             this.checkBox245.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox245.AutoSize = true;
             this.checkBox245.Location = new System.Drawing.Point(17, 689);
-            this.checkBox245.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox245.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox245.Name = "checkBox245";
             this.checkBox245.Size = new System.Drawing.Size(18, 17);
             this.checkBox245.TabIndex = 136;
@@ -2533,7 +2550,7 @@ namespace Rexport
             this.checkBox246.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox246.AutoSize = true;
             this.checkBox246.Location = new System.Drawing.Point(227, 601);
-            this.checkBox246.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox246.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox246.Name = "checkBox246";
             this.checkBox246.Size = new System.Drawing.Size(18, 17);
             this.checkBox246.TabIndex = 135;
@@ -2544,7 +2561,7 @@ namespace Rexport
             this.checkBox247.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox247.AutoSize = true;
             this.checkBox247.Location = new System.Drawing.Point(173, 601);
-            this.checkBox247.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox247.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox247.Name = "checkBox247";
             this.checkBox247.Size = new System.Drawing.Size(18, 17);
             this.checkBox247.TabIndex = 134;
@@ -2555,7 +2572,7 @@ namespace Rexport
             this.checkBox248.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox248.AutoSize = true;
             this.checkBox248.Location = new System.Drawing.Point(121, 601);
-            this.checkBox248.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox248.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox248.Name = "checkBox248";
             this.checkBox248.Size = new System.Drawing.Size(18, 17);
             this.checkBox248.TabIndex = 133;
@@ -2566,7 +2583,7 @@ namespace Rexport
             this.checkBox249.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox249.AutoSize = true;
             this.checkBox249.Location = new System.Drawing.Point(69, 601);
-            this.checkBox249.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox249.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox249.Name = "checkBox249";
             this.checkBox249.Size = new System.Drawing.Size(18, 17);
             this.checkBox249.TabIndex = 132;
@@ -2577,7 +2594,7 @@ namespace Rexport
             this.checkBox250.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox250.AutoSize = true;
             this.checkBox250.Location = new System.Drawing.Point(17, 601);
-            this.checkBox250.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox250.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox250.Name = "checkBox250";
             this.checkBox250.Size = new System.Drawing.Size(18, 17);
             this.checkBox250.TabIndex = 131;
@@ -2588,7 +2605,7 @@ namespace Rexport
             this.checkBox251.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox251.AutoSize = true;
             this.checkBox251.Location = new System.Drawing.Point(227, 513);
-            this.checkBox251.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox251.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox251.Name = "checkBox251";
             this.checkBox251.Size = new System.Drawing.Size(18, 17);
             this.checkBox251.TabIndex = 130;
@@ -2599,7 +2616,7 @@ namespace Rexport
             this.checkBox252.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox252.AutoSize = true;
             this.checkBox252.Location = new System.Drawing.Point(173, 513);
-            this.checkBox252.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox252.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox252.Name = "checkBox252";
             this.checkBox252.Size = new System.Drawing.Size(18, 17);
             this.checkBox252.TabIndex = 129;
@@ -2610,7 +2627,7 @@ namespace Rexport
             this.checkBox253.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox253.AutoSize = true;
             this.checkBox253.Location = new System.Drawing.Point(121, 513);
-            this.checkBox253.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox253.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox253.Name = "checkBox253";
             this.checkBox253.Size = new System.Drawing.Size(18, 17);
             this.checkBox253.TabIndex = 128;
@@ -2621,7 +2638,7 @@ namespace Rexport
             this.checkBox254.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox254.AutoSize = true;
             this.checkBox254.Location = new System.Drawing.Point(69, 513);
-            this.checkBox254.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox254.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox254.Name = "checkBox254";
             this.checkBox254.Size = new System.Drawing.Size(18, 17);
             this.checkBox254.TabIndex = 127;
@@ -2632,7 +2649,7 @@ namespace Rexport
             this.checkBox255.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox255.AutoSize = true;
             this.checkBox255.Location = new System.Drawing.Point(17, 513);
-            this.checkBox255.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox255.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox255.Name = "checkBox255";
             this.checkBox255.Size = new System.Drawing.Size(18, 17);
             this.checkBox255.TabIndex = 126;
@@ -2643,7 +2660,7 @@ namespace Rexport
             this.checkBox256.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox256.AutoSize = true;
             this.checkBox256.Location = new System.Drawing.Point(227, 425);
-            this.checkBox256.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox256.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox256.Name = "checkBox256";
             this.checkBox256.Size = new System.Drawing.Size(18, 17);
             this.checkBox256.TabIndex = 125;
@@ -2654,7 +2671,7 @@ namespace Rexport
             this.checkBox257.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox257.AutoSize = true;
             this.checkBox257.Location = new System.Drawing.Point(173, 425);
-            this.checkBox257.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox257.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox257.Name = "checkBox257";
             this.checkBox257.Size = new System.Drawing.Size(18, 17);
             this.checkBox257.TabIndex = 124;
@@ -2665,7 +2682,7 @@ namespace Rexport
             this.checkBox258.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox258.AutoSize = true;
             this.checkBox258.Location = new System.Drawing.Point(121, 425);
-            this.checkBox258.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox258.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox258.Name = "checkBox258";
             this.checkBox258.Size = new System.Drawing.Size(18, 17);
             this.checkBox258.TabIndex = 123;
@@ -2676,7 +2693,7 @@ namespace Rexport
             this.checkBox259.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox259.AutoSize = true;
             this.checkBox259.Location = new System.Drawing.Point(69, 425);
-            this.checkBox259.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox259.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox259.Name = "checkBox259";
             this.checkBox259.Size = new System.Drawing.Size(18, 17);
             this.checkBox259.TabIndex = 122;
@@ -2687,7 +2704,7 @@ namespace Rexport
             this.checkBox260.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox260.AutoSize = true;
             this.checkBox260.Location = new System.Drawing.Point(17, 425);
-            this.checkBox260.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox260.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox260.Name = "checkBox260";
             this.checkBox260.Size = new System.Drawing.Size(18, 17);
             this.checkBox260.TabIndex = 121;
@@ -2698,7 +2715,7 @@ namespace Rexport
             this.checkBox261.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox261.AutoSize = true;
             this.checkBox261.Location = new System.Drawing.Point(227, 337);
-            this.checkBox261.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox261.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox261.Name = "checkBox261";
             this.checkBox261.Size = new System.Drawing.Size(18, 17);
             this.checkBox261.TabIndex = 120;
@@ -2709,7 +2726,7 @@ namespace Rexport
             this.checkBox262.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox262.AutoSize = true;
             this.checkBox262.Location = new System.Drawing.Point(173, 337);
-            this.checkBox262.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox262.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox262.Name = "checkBox262";
             this.checkBox262.Size = new System.Drawing.Size(18, 17);
             this.checkBox262.TabIndex = 119;
@@ -2720,7 +2737,7 @@ namespace Rexport
             this.checkBox263.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox263.AutoSize = true;
             this.checkBox263.Location = new System.Drawing.Point(121, 337);
-            this.checkBox263.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox263.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox263.Name = "checkBox263";
             this.checkBox263.Size = new System.Drawing.Size(18, 17);
             this.checkBox263.TabIndex = 118;
@@ -2731,7 +2748,7 @@ namespace Rexport
             this.checkBox264.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox264.AutoSize = true;
             this.checkBox264.Location = new System.Drawing.Point(69, 337);
-            this.checkBox264.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox264.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox264.Name = "checkBox264";
             this.checkBox264.Size = new System.Drawing.Size(18, 17);
             this.checkBox264.TabIndex = 117;
@@ -2742,7 +2759,7 @@ namespace Rexport
             this.checkBox265.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox265.AutoSize = true;
             this.checkBox265.Location = new System.Drawing.Point(17, 337);
-            this.checkBox265.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox265.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox265.Name = "checkBox265";
             this.checkBox265.Size = new System.Drawing.Size(18, 17);
             this.checkBox265.TabIndex = 116;
@@ -2753,7 +2770,7 @@ namespace Rexport
             this.checkBox266.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox266.AutoSize = true;
             this.checkBox266.Location = new System.Drawing.Point(227, 249);
-            this.checkBox266.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox266.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox266.Name = "checkBox266";
             this.checkBox266.Size = new System.Drawing.Size(18, 17);
             this.checkBox266.TabIndex = 115;
@@ -2764,7 +2781,7 @@ namespace Rexport
             this.checkBox267.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox267.AutoSize = true;
             this.checkBox267.Location = new System.Drawing.Point(173, 249);
-            this.checkBox267.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox267.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox267.Name = "checkBox267";
             this.checkBox267.Size = new System.Drawing.Size(18, 17);
             this.checkBox267.TabIndex = 114;
@@ -2775,7 +2792,7 @@ namespace Rexport
             this.checkBox268.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox268.AutoSize = true;
             this.checkBox268.Location = new System.Drawing.Point(121, 249);
-            this.checkBox268.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox268.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox268.Name = "checkBox268";
             this.checkBox268.Size = new System.Drawing.Size(18, 17);
             this.checkBox268.TabIndex = 113;
@@ -2786,7 +2803,7 @@ namespace Rexport
             this.checkBox269.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox269.AutoSize = true;
             this.checkBox269.Location = new System.Drawing.Point(69, 249);
-            this.checkBox269.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox269.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox269.Name = "checkBox269";
             this.checkBox269.Size = new System.Drawing.Size(18, 17);
             this.checkBox269.TabIndex = 112;
@@ -2797,7 +2814,7 @@ namespace Rexport
             this.checkBox270.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox270.AutoSize = true;
             this.checkBox270.Location = new System.Drawing.Point(17, 249);
-            this.checkBox270.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox270.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox270.Name = "checkBox270";
             this.checkBox270.Size = new System.Drawing.Size(18, 17);
             this.checkBox270.TabIndex = 111;
@@ -2808,7 +2825,7 @@ namespace Rexport
             this.checkBox271.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox271.AutoSize = true;
             this.checkBox271.Location = new System.Drawing.Point(227, 161);
-            this.checkBox271.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox271.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox271.Name = "checkBox271";
             this.checkBox271.Size = new System.Drawing.Size(18, 17);
             this.checkBox271.TabIndex = 110;
@@ -2819,7 +2836,7 @@ namespace Rexport
             this.checkBox272.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox272.AutoSize = true;
             this.checkBox272.Location = new System.Drawing.Point(173, 161);
-            this.checkBox272.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox272.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox272.Name = "checkBox272";
             this.checkBox272.Size = new System.Drawing.Size(18, 17);
             this.checkBox272.TabIndex = 109;
@@ -2830,7 +2847,7 @@ namespace Rexport
             this.checkBox273.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox273.AutoSize = true;
             this.checkBox273.Location = new System.Drawing.Point(121, 161);
-            this.checkBox273.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox273.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox273.Name = "checkBox273";
             this.checkBox273.Size = new System.Drawing.Size(18, 17);
             this.checkBox273.TabIndex = 108;
@@ -2841,7 +2858,7 @@ namespace Rexport
             this.checkBox274.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox274.AutoSize = true;
             this.checkBox274.Location = new System.Drawing.Point(69, 161);
-            this.checkBox274.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox274.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox274.Name = "checkBox274";
             this.checkBox274.Size = new System.Drawing.Size(18, 17);
             this.checkBox274.TabIndex = 107;
@@ -2852,7 +2869,7 @@ namespace Rexport
             this.checkBox275.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox275.AutoSize = true;
             this.checkBox275.Location = new System.Drawing.Point(17, 161);
-            this.checkBox275.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox275.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox275.Name = "checkBox275";
             this.checkBox275.Size = new System.Drawing.Size(18, 17);
             this.checkBox275.TabIndex = 106;
@@ -2863,7 +2880,7 @@ namespace Rexport
             this.checkBox276.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox276.AutoSize = true;
             this.checkBox276.Location = new System.Drawing.Point(227, 73);
-            this.checkBox276.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox276.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox276.Name = "checkBox276";
             this.checkBox276.Size = new System.Drawing.Size(18, 17);
             this.checkBox276.TabIndex = 105;
@@ -2874,7 +2891,7 @@ namespace Rexport
             this.checkBox277.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox277.AutoSize = true;
             this.checkBox277.Location = new System.Drawing.Point(173, 73);
-            this.checkBox277.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox277.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox277.Name = "checkBox277";
             this.checkBox277.Size = new System.Drawing.Size(18, 17);
             this.checkBox277.TabIndex = 104;
@@ -2885,7 +2902,7 @@ namespace Rexport
             this.checkBox278.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox278.AutoSize = true;
             this.checkBox278.Location = new System.Drawing.Point(121, 73);
-            this.checkBox278.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox278.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox278.Name = "checkBox278";
             this.checkBox278.Size = new System.Drawing.Size(18, 17);
             this.checkBox278.TabIndex = 103;
@@ -2896,7 +2913,7 @@ namespace Rexport
             this.checkBox279.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox279.AutoSize = true;
             this.checkBox279.Location = new System.Drawing.Point(69, 73);
-            this.checkBox279.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox279.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox279.Name = "checkBox279";
             this.checkBox279.Size = new System.Drawing.Size(18, 17);
             this.checkBox279.TabIndex = 102;
@@ -2962,7 +2979,7 @@ namespace Rexport
             this.checkBox280.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox280.AutoSize = true;
             this.checkBox280.Location = new System.Drawing.Point(17, 73);
-            this.checkBox280.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox280.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox280.Name = "checkBox280";
             this.checkBox280.Size = new System.Drawing.Size(18, 17);
             this.checkBox280.TabIndex = 101;
@@ -3384,7 +3401,7 @@ namespace Rexport
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.33334F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.66667F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel12.Controls.Add(this.label73, 0, 13);
             this.tableLayoutPanel12.Controls.Add(this.textBox126, 0, 12);
             this.tableLayoutPanel12.Controls.Add(this.textBox124, 0, 12);
@@ -3476,7 +3493,7 @@ namespace Rexport
             // 
             this.textBox126.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox126.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox126.Location = new System.Drawing.Point(859, 1124);
+            this.textBox126.Location = new System.Drawing.Point(857, 1124);
             this.textBox126.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox126.Name = "textBox126";
             this.textBox126.Size = new System.Drawing.Size(89, 30);
@@ -3486,7 +3503,7 @@ namespace Rexport
             // 
             this.textBox124.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox124.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox124.Location = new System.Drawing.Point(656, 1124);
+            this.textBox124.Location = new System.Drawing.Point(654, 1124);
             this.textBox124.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox124.Name = "textBox124";
             this.textBox124.Size = new System.Drawing.Size(89, 30);
@@ -3496,7 +3513,7 @@ namespace Rexport
             // 
             this.textBox121.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox121.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox121.Location = new System.Drawing.Point(859, 1054);
+            this.textBox121.Location = new System.Drawing.Point(857, 1054);
             this.textBox121.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox121.Name = "textBox121";
             this.textBox121.Size = new System.Drawing.Size(89, 30);
@@ -3506,7 +3523,7 @@ namespace Rexport
             // 
             this.textBox120.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox120.Location = new System.Drawing.Point(656, 1054);
+            this.textBox120.Location = new System.Drawing.Point(654, 1054);
             this.textBox120.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox120.Name = "textBox120";
             this.textBox120.Size = new System.Drawing.Size(89, 30);
@@ -3516,7 +3533,7 @@ namespace Rexport
             // 
             this.textBox119.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox119.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox119.Location = new System.Drawing.Point(656, 978);
+            this.textBox119.Location = new System.Drawing.Point(654, 978);
             this.textBox119.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox119.Name = "textBox119";
             this.textBox119.Size = new System.Drawing.Size(89, 30);
@@ -3538,7 +3555,7 @@ namespace Rexport
             this.label67.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label67.Location = new System.Drawing.Point(109, 97);
+            this.label67.Location = new System.Drawing.Point(108, 97);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(351, 50);
             this.label67.TabIndex = 16;
@@ -3560,7 +3577,7 @@ namespace Rexport
             this.label71.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label71.Location = new System.Drawing.Point(660, 13);
+            this.label71.Location = new System.Drawing.Point(658, 13);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(81, 25);
             this.label71.TabIndex = 4;
@@ -3571,7 +3588,7 @@ namespace Rexport
             this.label72.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label72.Location = new System.Drawing.Point(861, 1);
+            this.label72.Location = new System.Drawing.Point(859, 1);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(85, 50);
             this.label72.TabIndex = 5;
@@ -3581,7 +3598,7 @@ namespace Rexport
             // 
             this.textBox125.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox125.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox125.Location = new System.Drawing.Point(1026, 107);
+            this.textBox125.Location = new System.Drawing.Point(1025, 107);
             this.textBox125.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox125.Name = "textBox125";
             this.textBox125.Size = new System.Drawing.Size(89, 30);
@@ -3592,7 +3609,7 @@ namespace Rexport
             this.label75.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label75.Location = new System.Drawing.Point(1023, 13);
+            this.label75.Location = new System.Drawing.Point(1022, 13);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(96, 25);
             this.label75.TabIndex = 6;
@@ -3624,7 +3641,7 @@ namespace Rexport
             // 
             this.textBox128.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox128.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox128.Location = new System.Drawing.Point(656, 107);
+            this.textBox128.Location = new System.Drawing.Point(654, 107);
             this.textBox128.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox128.Name = "textBox128";
             this.textBox128.Size = new System.Drawing.Size(89, 30);
@@ -3634,7 +3651,7 @@ namespace Rexport
             // 
             this.textBox129.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox129.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox129.Location = new System.Drawing.Point(859, 107);
+            this.textBox129.Location = new System.Drawing.Point(857, 107);
             this.textBox129.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox129.Name = "textBox129";
             this.textBox129.Size = new System.Drawing.Size(89, 30);
@@ -3644,7 +3661,7 @@ namespace Rexport
             // 
             this.textBox130.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox130.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox130.Location = new System.Drawing.Point(656, 228);
+            this.textBox130.Location = new System.Drawing.Point(654, 228);
             this.textBox130.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox130.Name = "textBox130";
             this.textBox130.Size = new System.Drawing.Size(89, 30);
@@ -3654,7 +3671,7 @@ namespace Rexport
             // 
             this.textBox131.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox131.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox131.Location = new System.Drawing.Point(859, 228);
+            this.textBox131.Location = new System.Drawing.Point(857, 228);
             this.textBox131.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox131.Name = "textBox131";
             this.textBox131.Size = new System.Drawing.Size(89, 30);
@@ -3664,7 +3681,7 @@ namespace Rexport
             // 
             this.textBox132.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox132.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox132.Location = new System.Drawing.Point(1026, 228);
+            this.textBox132.Location = new System.Drawing.Point(1025, 228);
             this.textBox132.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox132.Name = "textBox132";
             this.textBox132.Size = new System.Drawing.Size(89, 30);
@@ -3674,7 +3691,7 @@ namespace Rexport
             // 
             this.textBox133.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox133.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox133.Location = new System.Drawing.Point(656, 323);
+            this.textBox133.Location = new System.Drawing.Point(654, 323);
             this.textBox133.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox133.Name = "textBox133";
             this.textBox133.Size = new System.Drawing.Size(89, 30);
@@ -3684,7 +3701,7 @@ namespace Rexport
             // 
             this.textBox134.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox134.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox134.Location = new System.Drawing.Point(859, 323);
+            this.textBox134.Location = new System.Drawing.Point(857, 323);
             this.textBox134.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox134.Name = "textBox134";
             this.textBox134.Size = new System.Drawing.Size(89, 30);
@@ -3694,7 +3711,7 @@ namespace Rexport
             // 
             this.textBox135.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox135.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox135.Location = new System.Drawing.Point(1026, 323);
+            this.textBox135.Location = new System.Drawing.Point(1025, 323);
             this.textBox135.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox135.Name = "textBox135";
             this.textBox135.Size = new System.Drawing.Size(89, 30);
@@ -3704,7 +3721,7 @@ namespace Rexport
             // 
             this.textBox136.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox136.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox136.Location = new System.Drawing.Point(656, 419);
+            this.textBox136.Location = new System.Drawing.Point(654, 419);
             this.textBox136.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox136.Name = "textBox136";
             this.textBox136.Size = new System.Drawing.Size(89, 30);
@@ -3714,7 +3731,7 @@ namespace Rexport
             // 
             this.textBox137.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox137.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox137.Location = new System.Drawing.Point(859, 419);
+            this.textBox137.Location = new System.Drawing.Point(857, 419);
             this.textBox137.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox137.Name = "textBox137";
             this.textBox137.Size = new System.Drawing.Size(89, 30);
@@ -3724,7 +3741,7 @@ namespace Rexport
             // 
             this.textBox138.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox138.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox138.Location = new System.Drawing.Point(1026, 419);
+            this.textBox138.Location = new System.Drawing.Point(1025, 419);
             this.textBox138.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox138.Name = "textBox138";
             this.textBox138.Size = new System.Drawing.Size(89, 30);
@@ -3734,7 +3751,7 @@ namespace Rexport
             // 
             this.textBox139.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox139.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox139.Location = new System.Drawing.Point(656, 521);
+            this.textBox139.Location = new System.Drawing.Point(654, 521);
             this.textBox139.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox139.Name = "textBox139";
             this.textBox139.Size = new System.Drawing.Size(89, 30);
@@ -3744,7 +3761,7 @@ namespace Rexport
             // 
             this.textBox140.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox140.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox140.Location = new System.Drawing.Point(859, 521);
+            this.textBox140.Location = new System.Drawing.Point(857, 521);
             this.textBox140.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox140.Name = "textBox140";
             this.textBox140.Size = new System.Drawing.Size(89, 30);
@@ -3754,7 +3771,7 @@ namespace Rexport
             // 
             this.textBox141.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox141.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox141.Location = new System.Drawing.Point(1026, 521);
+            this.textBox141.Location = new System.Drawing.Point(1025, 521);
             this.textBox141.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox141.Name = "textBox141";
             this.textBox141.Size = new System.Drawing.Size(89, 30);
@@ -3764,7 +3781,7 @@ namespace Rexport
             // 
             this.textBox142.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox142.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox142.Location = new System.Drawing.Point(656, 622);
+            this.textBox142.Location = new System.Drawing.Point(654, 622);
             this.textBox142.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox142.Name = "textBox142";
             this.textBox142.Size = new System.Drawing.Size(89, 30);
@@ -3774,7 +3791,7 @@ namespace Rexport
             // 
             this.textBox143.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox143.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox143.Location = new System.Drawing.Point(859, 622);
+            this.textBox143.Location = new System.Drawing.Point(857, 622);
             this.textBox143.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox143.Name = "textBox143";
             this.textBox143.Size = new System.Drawing.Size(89, 30);
@@ -3784,7 +3801,7 @@ namespace Rexport
             // 
             this.textBox144.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox144.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox144.Location = new System.Drawing.Point(656, 727);
+            this.textBox144.Location = new System.Drawing.Point(654, 727);
             this.textBox144.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox144.Name = "textBox144";
             this.textBox144.Size = new System.Drawing.Size(89, 30);
@@ -3794,7 +3811,7 @@ namespace Rexport
             // 
             this.textBox145.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox145.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox145.Location = new System.Drawing.Point(859, 727);
+            this.textBox145.Location = new System.Drawing.Point(857, 727);
             this.textBox145.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox145.Name = "textBox145";
             this.textBox145.Size = new System.Drawing.Size(89, 30);
@@ -3804,7 +3821,7 @@ namespace Rexport
             // 
             this.textBox158.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox158.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox158.Location = new System.Drawing.Point(1026, 622);
+            this.textBox158.Location = new System.Drawing.Point(1025, 622);
             this.textBox158.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox158.Name = "textBox158";
             this.textBox158.Size = new System.Drawing.Size(89, 30);
@@ -3814,7 +3831,7 @@ namespace Rexport
             // 
             this.textBox162.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox162.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox162.Location = new System.Drawing.Point(1026, 727);
+            this.textBox162.Location = new System.Drawing.Point(1025, 727);
             this.textBox162.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox162.Name = "textBox162";
             this.textBox162.Size = new System.Drawing.Size(89, 30);
@@ -3824,7 +3841,7 @@ namespace Rexport
             // 
             this.textBox166.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox166.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox166.Location = new System.Drawing.Point(656, 816);
+            this.textBox166.Location = new System.Drawing.Point(654, 816);
             this.textBox166.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox166.Name = "textBox166";
             this.textBox166.Size = new System.Drawing.Size(89, 30);
@@ -3834,7 +3851,7 @@ namespace Rexport
             // 
             this.textBox167.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox167.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox167.Location = new System.Drawing.Point(859, 816);
+            this.textBox167.Location = new System.Drawing.Point(857, 816);
             this.textBox167.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox167.Name = "textBox167";
             this.textBox167.Size = new System.Drawing.Size(89, 30);
@@ -3844,7 +3861,7 @@ namespace Rexport
             // 
             this.textBox168.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox168.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox168.Location = new System.Drawing.Point(1026, 816);
+            this.textBox168.Location = new System.Drawing.Point(1025, 816);
             this.textBox168.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox168.Name = "textBox168";
             this.textBox168.Size = new System.Drawing.Size(89, 30);
@@ -3854,7 +3871,7 @@ namespace Rexport
             // 
             this.textBox172.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox172.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox172.Location = new System.Drawing.Point(656, 893);
+            this.textBox172.Location = new System.Drawing.Point(654, 893);
             this.textBox172.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox172.Name = "textBox172";
             this.textBox172.Size = new System.Drawing.Size(89, 30);
@@ -3864,7 +3881,7 @@ namespace Rexport
             // 
             this.textBox173.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox173.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox173.Location = new System.Drawing.Point(859, 893);
+            this.textBox173.Location = new System.Drawing.Point(857, 893);
             this.textBox173.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox173.Name = "textBox173";
             this.textBox173.Size = new System.Drawing.Size(89, 30);
@@ -3874,7 +3891,7 @@ namespace Rexport
             // 
             this.textBox174.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox174.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox174.Location = new System.Drawing.Point(1026, 893);
+            this.textBox174.Location = new System.Drawing.Point(1025, 893);
             this.textBox174.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox174.Name = "textBox174";
             this.textBox174.Size = new System.Drawing.Size(89, 30);
@@ -3884,7 +3901,7 @@ namespace Rexport
             // 
             this.textBox178.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox178.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox178.Location = new System.Drawing.Point(859, 978);
+            this.textBox178.Location = new System.Drawing.Point(857, 978);
             this.textBox178.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox178.Name = "textBox178";
             this.textBox178.Size = new System.Drawing.Size(89, 30);
@@ -3894,7 +3911,7 @@ namespace Rexport
             // 
             this.textBox180.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox180.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox180.Location = new System.Drawing.Point(1026, 978);
+            this.textBox180.Location = new System.Drawing.Point(1025, 978);
             this.textBox180.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox180.Name = "textBox180";
             this.textBox180.Size = new System.Drawing.Size(89, 30);
@@ -3927,7 +3944,7 @@ namespace Rexport
             this.label78.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label78.Location = new System.Drawing.Point(194, 895);
+            this.label78.Location = new System.Drawing.Point(193, 895);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(181, 25);
             this.label78.TabIndex = 18;
@@ -3949,7 +3966,7 @@ namespace Rexport
             this.label80.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label80.AutoSize = true;
             this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label80.Location = new System.Drawing.Point(202, 729);
+            this.label80.Location = new System.Drawing.Point(201, 729);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(165, 25);
             this.label80.TabIndex = 20;
@@ -3971,7 +3988,7 @@ namespace Rexport
             this.label82.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label82.Location = new System.Drawing.Point(191, 523);
+            this.label82.Location = new System.Drawing.Point(190, 523);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(187, 25);
             this.label82.TabIndex = 22;
@@ -3982,7 +3999,7 @@ namespace Rexport
             this.label86.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label86.Location = new System.Drawing.Point(230, 1127);
+            this.label86.Location = new System.Drawing.Point(229, 1127);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(109, 25);
             this.label86.TabIndex = 83;
@@ -3992,7 +4009,7 @@ namespace Rexport
             // 
             this.textBox122.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox122.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox122.Location = new System.Drawing.Point(1026, 1054);
+            this.textBox122.Location = new System.Drawing.Point(1025, 1054);
             this.textBox122.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox122.Name = "textBox122";
             this.textBox122.Size = new System.Drawing.Size(89, 30);
@@ -4002,7 +4019,7 @@ namespace Rexport
             // 
             this.textBox123.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox123.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox123.Location = new System.Drawing.Point(1026, 1124);
+            this.textBox123.Location = new System.Drawing.Point(1025, 1124);
             this.textBox123.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox123.Name = "textBox123";
             this.textBox123.Size = new System.Drawing.Size(89, 30);
@@ -4012,7 +4029,7 @@ namespace Rexport
             // 
             this.textBox127.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox127.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox127.Location = new System.Drawing.Point(1026, 1180);
+            this.textBox127.Location = new System.Drawing.Point(1025, 1180);
             this.textBox127.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox127.Name = "textBox127";
             this.textBox127.Size = new System.Drawing.Size(89, 30);
@@ -4035,7 +4052,7 @@ namespace Rexport
             this.tableLayoutPanel11.ColumnCount = 3;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.75412F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.245877F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel11.Controls.Add(this.textBox116, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.label65, 0, 0);
@@ -4045,7 +4062,7 @@ namespace Rexport
             this.tableLayoutPanel11.Controls.Add(this.label64, 0, 1);
             this.tableLayoutPanel11.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(32, 4667);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.55462F));
@@ -4060,8 +4077,8 @@ namespace Rexport
             // 
             this.textBox116.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox116.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox116.Location = new System.Drawing.Point(935, 185);
-            this.textBox116.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox116.Location = new System.Drawing.Point(933, 185);
+            this.textBox116.Margin = new System.Windows.Forms.Padding(4);
             this.textBox116.Name = "textBox116";
             this.textBox116.Size = new System.Drawing.Size(75, 30);
             this.textBox116.TabIndex = 80;
@@ -4071,7 +4088,7 @@ namespace Rexport
             this.label65.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label65.Location = new System.Drawing.Point(237, 41);
+            this.label65.Location = new System.Drawing.Point(236, 41);
             this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(457, 25);
@@ -4082,8 +4099,8 @@ namespace Rexport
             // 
             this.textBox115.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox115.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox115.Location = new System.Drawing.Point(935, 39);
-            this.textBox115.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox115.Location = new System.Drawing.Point(933, 39);
+            this.textBox115.Margin = new System.Windows.Forms.Padding(4);
             this.textBox115.Name = "textBox115";
             this.textBox115.Size = new System.Drawing.Size(75, 30);
             this.textBox115.TabIndex = 76;
@@ -4092,8 +4109,8 @@ namespace Rexport
             // 
             this.textBox118.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox118.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox118.Location = new System.Drawing.Point(1051, 39);
-            this.textBox118.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox118.Location = new System.Drawing.Point(1050, 39);
+            this.textBox118.Margin = new System.Windows.Forms.Padding(4);
             this.textBox118.Name = "textBox118";
             this.textBox118.Size = new System.Drawing.Size(79, 30);
             this.textBox118.TabIndex = 79;
@@ -4102,8 +4119,8 @@ namespace Rexport
             // 
             this.textBox117.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox117.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox117.Location = new System.Drawing.Point(1051, 185);
-            this.textBox117.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox117.Location = new System.Drawing.Point(1050, 185);
+            this.textBox117.Margin = new System.Windows.Forms.Padding(4);
             this.textBox117.Name = "textBox117";
             this.textBox117.Size = new System.Drawing.Size(79, 30);
             this.textBox117.TabIndex = 78;
@@ -4113,7 +4130,7 @@ namespace Rexport
             this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label64.Location = new System.Drawing.Point(204, 188);
+            this.label64.Location = new System.Drawing.Point(203, 188);
             this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(522, 25);
@@ -4126,7 +4143,7 @@ namespace Rexport
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.45614F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.54386F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 427F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 429F));
             this.tableLayoutPanel10.Controls.Add(this.textBox70, 2, 11);
             this.tableLayoutPanel10.Controls.Add(this.textBox69, 1, 11);
             this.tableLayoutPanel10.Controls.Add(this.textBox68, 2, 10);
@@ -4190,8 +4207,8 @@ namespace Rexport
             // 
             this.textBox70.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox70.Location = new System.Drawing.Point(887, 998);
-            this.textBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox70.Location = new System.Drawing.Point(886, 998);
+            this.textBox70.Margin = new System.Windows.Forms.Padding(4);
             this.textBox70.Name = "textBox70";
             this.textBox70.Size = new System.Drawing.Size(132, 30);
             this.textBox70.TabIndex = 104;
@@ -4201,8 +4218,8 @@ namespace Rexport
             // 
             this.textBox69.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox69.Location = new System.Drawing.Point(460, 998);
-            this.textBox69.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox69.Location = new System.Drawing.Point(459, 998);
+            this.textBox69.Margin = new System.Windows.Forms.Padding(4);
             this.textBox69.Name = "textBox69";
             this.textBox69.Size = new System.Drawing.Size(132, 30);
             this.textBox69.TabIndex = 103;
@@ -4211,8 +4228,8 @@ namespace Rexport
             // 
             this.textBox68.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox68.Location = new System.Drawing.Point(887, 920);
-            this.textBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox68.Location = new System.Drawing.Point(886, 920);
+            this.textBox68.Margin = new System.Windows.Forms.Padding(4);
             this.textBox68.Name = "textBox68";
             this.textBox68.Size = new System.Drawing.Size(132, 30);
             this.textBox68.TabIndex = 102;
@@ -4221,8 +4238,8 @@ namespace Rexport
             // 
             this.textBox67.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox67.Location = new System.Drawing.Point(460, 920);
-            this.textBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox67.Location = new System.Drawing.Point(459, 920);
+            this.textBox67.Margin = new System.Windows.Forms.Padding(4);
             this.textBox67.Name = "textBox67";
             this.textBox67.Size = new System.Drawing.Size(132, 30);
             this.textBox67.TabIndex = 101;
@@ -4231,8 +4248,8 @@ namespace Rexport
             // 
             this.textBox66.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox66.Location = new System.Drawing.Point(887, 840);
-            this.textBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox66.Location = new System.Drawing.Point(886, 840);
+            this.textBox66.Margin = new System.Windows.Forms.Padding(4);
             this.textBox66.Name = "textBox66";
             this.textBox66.Size = new System.Drawing.Size(132, 30);
             this.textBox66.TabIndex = 100;
@@ -4241,8 +4258,8 @@ namespace Rexport
             // 
             this.textBox65.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox65.Location = new System.Drawing.Point(460, 840);
-            this.textBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox65.Location = new System.Drawing.Point(459, 840);
+            this.textBox65.Margin = new System.Windows.Forms.Padding(4);
             this.textBox65.Name = "textBox65";
             this.textBox65.Size = new System.Drawing.Size(132, 30);
             this.textBox65.TabIndex = 99;
@@ -4251,8 +4268,8 @@ namespace Rexport
             // 
             this.textBox64.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox64.Location = new System.Drawing.Point(887, 755);
-            this.textBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox64.Location = new System.Drawing.Point(886, 755);
+            this.textBox64.Margin = new System.Windows.Forms.Padding(4);
             this.textBox64.Name = "textBox64";
             this.textBox64.Size = new System.Drawing.Size(132, 30);
             this.textBox64.TabIndex = 98;
@@ -4261,8 +4278,8 @@ namespace Rexport
             // 
             this.textBox63.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox63.Location = new System.Drawing.Point(460, 755);
-            this.textBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox63.Location = new System.Drawing.Point(459, 755);
+            this.textBox63.Margin = new System.Windows.Forms.Padding(4);
             this.textBox63.Name = "textBox63";
             this.textBox63.Size = new System.Drawing.Size(132, 30);
             this.textBox63.TabIndex = 97;
@@ -4271,8 +4288,8 @@ namespace Rexport
             // 
             this.textBox62.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox62.Location = new System.Drawing.Point(887, 655);
-            this.textBox62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox62.Location = new System.Drawing.Point(886, 655);
+            this.textBox62.Margin = new System.Windows.Forms.Padding(4);
             this.textBox62.Name = "textBox62";
             this.textBox62.Size = new System.Drawing.Size(132, 30);
             this.textBox62.TabIndex = 96;
@@ -4281,8 +4298,8 @@ namespace Rexport
             // 
             this.textBox61.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox61.Location = new System.Drawing.Point(460, 655);
-            this.textBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox61.Location = new System.Drawing.Point(459, 655);
+            this.textBox61.Margin = new System.Windows.Forms.Padding(4);
             this.textBox61.Name = "textBox61";
             this.textBox61.Size = new System.Drawing.Size(132, 30);
             this.textBox61.TabIndex = 95;
@@ -4291,8 +4308,8 @@ namespace Rexport
             // 
             this.textBox60.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox60.Location = new System.Drawing.Point(887, 550);
-            this.textBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox60.Location = new System.Drawing.Point(886, 550);
+            this.textBox60.Margin = new System.Windows.Forms.Padding(4);
             this.textBox60.Name = "textBox60";
             this.textBox60.Size = new System.Drawing.Size(132, 30);
             this.textBox60.TabIndex = 94;
@@ -4301,8 +4318,8 @@ namespace Rexport
             // 
             this.textBox59.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox59.Location = new System.Drawing.Point(460, 550);
-            this.textBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox59.Location = new System.Drawing.Point(459, 550);
+            this.textBox59.Margin = new System.Windows.Forms.Padding(4);
             this.textBox59.Name = "textBox59";
             this.textBox59.Size = new System.Drawing.Size(132, 30);
             this.textBox59.TabIndex = 93;
@@ -4311,8 +4328,8 @@ namespace Rexport
             // 
             this.textBox58.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox58.Location = new System.Drawing.Point(887, 449);
-            this.textBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox58.Location = new System.Drawing.Point(886, 449);
+            this.textBox58.Margin = new System.Windows.Forms.Padding(4);
             this.textBox58.Name = "textBox58";
             this.textBox58.Size = new System.Drawing.Size(132, 30);
             this.textBox58.TabIndex = 92;
@@ -4321,8 +4338,8 @@ namespace Rexport
             // 
             this.textBox57.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox57.Location = new System.Drawing.Point(460, 449);
-            this.textBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox57.Location = new System.Drawing.Point(459, 449);
+            this.textBox57.Margin = new System.Windows.Forms.Padding(4);
             this.textBox57.Name = "textBox57";
             this.textBox57.Size = new System.Drawing.Size(132, 30);
             this.textBox57.TabIndex = 91;
@@ -4331,8 +4348,8 @@ namespace Rexport
             // 
             this.textBox56.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox56.Location = new System.Drawing.Point(887, 347);
-            this.textBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox56.Location = new System.Drawing.Point(886, 347);
+            this.textBox56.Margin = new System.Windows.Forms.Padding(4);
             this.textBox56.Name = "textBox56";
             this.textBox56.Size = new System.Drawing.Size(132, 30);
             this.textBox56.TabIndex = 90;
@@ -4341,8 +4358,8 @@ namespace Rexport
             // 
             this.textBox55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox55.Location = new System.Drawing.Point(460, 347);
-            this.textBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox55.Location = new System.Drawing.Point(459, 347);
+            this.textBox55.Margin = new System.Windows.Forms.Padding(4);
             this.textBox55.Name = "textBox55";
             this.textBox55.Size = new System.Drawing.Size(132, 30);
             this.textBox55.TabIndex = 89;
@@ -4351,8 +4368,8 @@ namespace Rexport
             // 
             this.textBox54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox54.Location = new System.Drawing.Point(887, 251);
-            this.textBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox54.Location = new System.Drawing.Point(886, 251);
+            this.textBox54.Margin = new System.Windows.Forms.Padding(4);
             this.textBox54.Name = "textBox54";
             this.textBox54.Size = new System.Drawing.Size(132, 30);
             this.textBox54.TabIndex = 88;
@@ -4361,8 +4378,8 @@ namespace Rexport
             // 
             this.textBox53.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox53.Location = new System.Drawing.Point(460, 251);
-            this.textBox53.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox53.Location = new System.Drawing.Point(459, 251);
+            this.textBox53.Margin = new System.Windows.Forms.Padding(4);
             this.textBox53.Name = "textBox53";
             this.textBox53.Size = new System.Drawing.Size(132, 30);
             this.textBox53.TabIndex = 87;
@@ -4371,8 +4388,8 @@ namespace Rexport
             // 
             this.textBox52.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox52.Location = new System.Drawing.Point(887, 156);
-            this.textBox52.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox52.Location = new System.Drawing.Point(886, 156);
+            this.textBox52.Margin = new System.Windows.Forms.Padding(4);
             this.textBox52.Name = "textBox52";
             this.textBox52.Size = new System.Drawing.Size(132, 30);
             this.textBox52.TabIndex = 86;
@@ -4381,8 +4398,8 @@ namespace Rexport
             // 
             this.textBox51.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox51.Location = new System.Drawing.Point(460, 156);
-            this.textBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox51.Location = new System.Drawing.Point(459, 156);
+            this.textBox51.Margin = new System.Windows.Forms.Padding(4);
             this.textBox51.Name = "textBox51";
             this.textBox51.Size = new System.Drawing.Size(132, 30);
             this.textBox51.TabIndex = 85;
@@ -4391,8 +4408,8 @@ namespace Rexport
             // 
             this.textBox50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox50.Location = new System.Drawing.Point(887, 64);
-            this.textBox50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox50.Location = new System.Drawing.Point(886, 64);
+            this.textBox50.Margin = new System.Windows.Forms.Padding(4);
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(132, 30);
             this.textBox50.TabIndex = 84;
@@ -4401,8 +4418,8 @@ namespace Rexport
             // 
             this.textBox49.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox49.Location = new System.Drawing.Point(460, 64);
-            this.textBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox49.Location = new System.Drawing.Point(459, 64);
+            this.textBox49.Margin = new System.Windows.Forms.Padding(4);
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(132, 30);
             this.textBox49.TabIndex = 10;
@@ -4434,7 +4451,7 @@ namespace Rexport
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label38.Location = new System.Drawing.Point(485, 7);
+            this.label38.Location = new System.Drawing.Point(484, 7);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(81, 25);
             this.label38.TabIndex = 4;
@@ -4445,7 +4462,7 @@ namespace Rexport
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label39.Location = new System.Drawing.Point(903, 7);
+            this.label39.Location = new System.Drawing.Point(902, 7);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(100, 25);
             this.label39.TabIndex = 5;
@@ -4565,8 +4582,8 @@ namespace Rexport
             // 
             this.textBox71.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox71.Location = new System.Drawing.Point(460, 1069);
-            this.textBox71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox71.Location = new System.Drawing.Point(459, 1069);
+            this.textBox71.Margin = new System.Windows.Forms.Padding(4);
             this.textBox71.Name = "textBox71";
             this.textBox71.Size = new System.Drawing.Size(132, 30);
             this.textBox71.TabIndex = 106;
@@ -4575,8 +4592,8 @@ namespace Rexport
             // 
             this.textBox72.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox72.Location = new System.Drawing.Point(887, 1069);
-            this.textBox72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox72.Location = new System.Drawing.Point(886, 1069);
+            this.textBox72.Margin = new System.Windows.Forms.Padding(4);
             this.textBox72.Name = "textBox72";
             this.textBox72.Size = new System.Drawing.Size(132, 30);
             this.textBox72.TabIndex = 107;
@@ -4616,7 +4633,7 @@ namespace Rexport
             this.tableLayoutPanel9.Controls.Add(this.textBox48, 1, 1);
             this.tableLayoutPanel9.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(32, 3147);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.55462F));
@@ -4656,7 +4673,7 @@ namespace Rexport
             this.textBox47.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox47.Location = new System.Drawing.Point(326, 39);
-            this.textBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox47.Margin = new System.Windows.Forms.Padding(4);
             this.textBox47.Name = "textBox47";
             this.textBox47.Size = new System.Drawing.Size(836, 30);
             this.textBox47.TabIndex = 76;
@@ -4666,7 +4683,7 @@ namespace Rexport
             this.textBox48.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox48.Location = new System.Drawing.Point(326, 185);
-            this.textBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox48.Margin = new System.Windows.Forms.Padding(4);
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(836, 30);
             this.textBox48.TabIndex = 77;
@@ -4731,7 +4748,7 @@ namespace Rexport
             this.tableLayoutPanel8.Controls.Add(this.textBox15, 1, 1);
             this.tableLayoutPanel8.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(32, 1594);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 17;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
@@ -4759,7 +4776,7 @@ namespace Rexport
             this.textBox46.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox46.Location = new System.Drawing.Point(655, 1472);
-            this.textBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox46.Margin = new System.Windows.Forms.Padding(4);
             this.textBox46.Name = "textBox46";
             this.textBox46.Size = new System.Drawing.Size(472, 30);
             this.textBox46.TabIndex = 76;
@@ -4769,7 +4786,7 @@ namespace Rexport
             this.textBox45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox45.Location = new System.Drawing.Point(122, 1472);
-            this.textBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox45.Margin = new System.Windows.Forms.Padding(4);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(472, 30);
             this.textBox45.TabIndex = 75;
@@ -4780,7 +4797,7 @@ namespace Rexport
             this.textBox44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox44.Location = new System.Drawing.Point(655, 1380);
-            this.textBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox44.Margin = new System.Windows.Forms.Padding(4);
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(472, 30);
             this.textBox44.TabIndex = 74;
@@ -4790,7 +4807,7 @@ namespace Rexport
             this.textBox43.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox43.Location = new System.Drawing.Point(122, 1380);
-            this.textBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox43.Margin = new System.Windows.Forms.Padding(4);
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new System.Drawing.Size(472, 30);
             this.textBox43.TabIndex = 73;
@@ -4800,7 +4817,7 @@ namespace Rexport
             this.textBox42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox42.Location = new System.Drawing.Point(655, 1290);
-            this.textBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox42.Margin = new System.Windows.Forms.Padding(4);
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(472, 30);
             this.textBox42.TabIndex = 72;
@@ -4810,7 +4827,7 @@ namespace Rexport
             this.textBox41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox41.Location = new System.Drawing.Point(122, 1290);
-            this.textBox41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox41.Margin = new System.Windows.Forms.Padding(4);
             this.textBox41.Name = "textBox41";
             this.textBox41.Size = new System.Drawing.Size(472, 30);
             this.textBox41.TabIndex = 71;
@@ -4820,7 +4837,7 @@ namespace Rexport
             this.textBox40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox40.Location = new System.Drawing.Point(655, 1200);
-            this.textBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox40.Margin = new System.Windows.Forms.Padding(4);
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(472, 30);
             this.textBox40.TabIndex = 70;
@@ -4830,7 +4847,7 @@ namespace Rexport
             this.textBox39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox39.Location = new System.Drawing.Point(122, 1200);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox39.Margin = new System.Windows.Forms.Padding(4);
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(472, 30);
             this.textBox39.TabIndex = 69;
@@ -4840,7 +4857,7 @@ namespace Rexport
             this.textBox38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox38.Location = new System.Drawing.Point(655, 1110);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox38.Margin = new System.Windows.Forms.Padding(4);
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(472, 30);
             this.textBox38.TabIndex = 68;
@@ -4850,7 +4867,7 @@ namespace Rexport
             this.textBox37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox37.Location = new System.Drawing.Point(122, 1110);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox37.Margin = new System.Windows.Forms.Padding(4);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(472, 30);
             this.textBox37.TabIndex = 67;
@@ -4860,7 +4877,7 @@ namespace Rexport
             this.textBox36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox36.Location = new System.Drawing.Point(655, 1020);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(4);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(472, 30);
             this.textBox36.TabIndex = 66;
@@ -4870,7 +4887,7 @@ namespace Rexport
             this.textBox35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox35.Location = new System.Drawing.Point(122, 1020);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox35.Margin = new System.Windows.Forms.Padding(4);
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(472, 30);
             this.textBox35.TabIndex = 65;
@@ -4880,7 +4897,7 @@ namespace Rexport
             this.textBox34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox34.Location = new System.Drawing.Point(655, 930);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox34.Margin = new System.Windows.Forms.Padding(4);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(472, 30);
             this.textBox34.TabIndex = 64;
@@ -4890,7 +4907,7 @@ namespace Rexport
             this.textBox33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox33.Location = new System.Drawing.Point(122, 930);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox33.Margin = new System.Windows.Forms.Padding(4);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(472, 30);
             this.textBox33.TabIndex = 63;
@@ -4900,7 +4917,7 @@ namespace Rexport
             this.textBox32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox32.Location = new System.Drawing.Point(655, 840);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox32.Margin = new System.Windows.Forms.Padding(4);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(472, 30);
             this.textBox32.TabIndex = 62;
@@ -4910,7 +4927,7 @@ namespace Rexport
             this.textBox31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox31.Location = new System.Drawing.Point(122, 840);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(4);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(472, 30);
             this.textBox31.TabIndex = 61;
@@ -4920,7 +4937,7 @@ namespace Rexport
             this.textBox30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox30.Location = new System.Drawing.Point(655, 750);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(4);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(472, 30);
             this.textBox30.TabIndex = 60;
@@ -4930,7 +4947,7 @@ namespace Rexport
             this.textBox29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox29.Location = new System.Drawing.Point(122, 750);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(4);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(472, 30);
             this.textBox29.TabIndex = 59;
@@ -4940,7 +4957,7 @@ namespace Rexport
             this.textBox28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox28.Location = new System.Drawing.Point(655, 660);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(472, 30);
             this.textBox28.TabIndex = 58;
@@ -4950,7 +4967,7 @@ namespace Rexport
             this.textBox27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox27.Location = new System.Drawing.Point(122, 660);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(4);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(472, 30);
             this.textBox27.TabIndex = 57;
@@ -4960,7 +4977,7 @@ namespace Rexport
             this.textBox26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox26.Location = new System.Drawing.Point(655, 570);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(472, 30);
             this.textBox26.TabIndex = 56;
@@ -4970,7 +4987,7 @@ namespace Rexport
             this.textBox25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox25.Location = new System.Drawing.Point(122, 570);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(4);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(472, 30);
             this.textBox25.TabIndex = 55;
@@ -4980,7 +4997,7 @@ namespace Rexport
             this.textBox24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox24.Location = new System.Drawing.Point(655, 480);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(472, 30);
             this.textBox24.TabIndex = 54;
@@ -4990,7 +5007,7 @@ namespace Rexport
             this.textBox23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox23.Location = new System.Drawing.Point(122, 480);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(472, 30);
             this.textBox23.TabIndex = 53;
@@ -5000,7 +5017,7 @@ namespace Rexport
             this.textBox22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox22.Location = new System.Drawing.Point(655, 390);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(472, 30);
             this.textBox22.TabIndex = 52;
@@ -5010,7 +5027,7 @@ namespace Rexport
             this.textBox21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox21.Location = new System.Drawing.Point(122, 390);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(472, 30);
             this.textBox21.TabIndex = 51;
@@ -5020,7 +5037,7 @@ namespace Rexport
             this.textBox20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox20.Location = new System.Drawing.Point(655, 300);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(472, 30);
             this.textBox20.TabIndex = 50;
@@ -5030,7 +5047,7 @@ namespace Rexport
             this.textBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox19.Location = new System.Drawing.Point(122, 300);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(472, 30);
             this.textBox19.TabIndex = 49;
@@ -5040,7 +5057,7 @@ namespace Rexport
             this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox18.Location = new System.Drawing.Point(655, 210);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(472, 30);
             this.textBox18.TabIndex = 48;
@@ -5050,7 +5067,7 @@ namespace Rexport
             this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox17.Location = new System.Drawing.Point(122, 210);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(472, 30);
             this.textBox17.TabIndex = 47;
@@ -5060,7 +5077,7 @@ namespace Rexport
             this.textBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox16.Location = new System.Drawing.Point(655, 120);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(472, 30);
             this.textBox16.TabIndex = 46;
@@ -5296,7 +5313,7 @@ namespace Rexport
             this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox15.Location = new System.Drawing.Point(122, 120);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(472, 30);
             this.textBox15.TabIndex = 0;
@@ -5322,7 +5339,7 @@ namespace Rexport
             this.tableLayoutPanel7.Controls.Add(this.label25, 0, 0);
             this.tableLayoutPanel7.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(32, 1338);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -5360,7 +5377,7 @@ namespace Rexport
             this.tableLayoutPanel6.Controls.Add(this.textBox14, 1, 2);
             this.tableLayoutPanel6.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(32, 919);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -5452,7 +5469,7 @@ namespace Rexport
             this.tableLayoutPanel3.Controls.Add(this.textBox11, 1, 2);
             this.tableLayoutPanel3.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(32, 604);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -5618,7 +5635,7 @@ namespace Rexport
             this.tableLayoutPanel4.Controls.Add(this.textBox8, 1, 0);
             this.tableLayoutPanel4.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(32, 282);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -5637,7 +5654,7 @@ namespace Rexport
             this.flowLayoutPanel3.Controls.Add(this.checkBox4);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(222, 85);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(941, 82);
             this.flowLayoutPanel3.TabIndex = 23;
@@ -5647,7 +5664,7 @@ namespace Rexport
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox5.Location = new System.Drawing.Point(4, 4);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(98, 29);
             this.checkBox5.TabIndex = 2;
@@ -5661,7 +5678,7 @@ namespace Rexport
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox4.Location = new System.Drawing.Point(110, 4);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(99, 29);
             this.checkBox4.TabIndex = 1;
@@ -5676,7 +5693,7 @@ namespace Rexport
             this.flowLayoutPanel2.Controls.Add(this.checkBox12);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(222, 176);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(941, 61);
             this.flowLayoutPanel2.TabIndex = 22;
@@ -5686,7 +5703,7 @@ namespace Rexport
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox6.Location = new System.Drawing.Point(4, 4);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(112, 29);
             this.checkBox6.TabIndex = 1;
@@ -5698,7 +5715,7 @@ namespace Rexport
             this.checkBox12.AutoSize = true;
             this.checkBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox12.Location = new System.Drawing.Point(124, 4);
-            this.checkBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox12.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(102, 29);
             this.checkBox12.TabIndex = 2;
@@ -5763,7 +5780,7 @@ namespace Rexport
             this.flowLayoutPanel1.Controls.Add(this.checkBox11);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(222, 246);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(941, 46);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -5773,7 +5790,7 @@ namespace Rexport
             this.checkBox9.AutoSize = true;
             this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox9.Location = new System.Drawing.Point(4, 4);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(136, 29);
             this.checkBox9.TabIndex = 1;
@@ -5785,7 +5802,7 @@ namespace Rexport
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox3.Location = new System.Drawing.Point(148, 4);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(126, 29);
             this.checkBox3.TabIndex = 2;
@@ -5797,7 +5814,7 @@ namespace Rexport
             this.checkBox10.AutoSize = true;
             this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox10.Location = new System.Drawing.Point(282, 4);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(157, 29);
             this.checkBox10.TabIndex = 3;
@@ -5809,7 +5826,7 @@ namespace Rexport
             this.checkBox11.AutoSize = true;
             this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox11.Location = new System.Drawing.Point(447, 4);
-            this.checkBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(134, 29);
             this.checkBox11.TabIndex = 4;
@@ -5890,7 +5907,7 @@ namespace Rexport
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel2.Controls.Add(this.checkBox2, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.textBox5, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
@@ -5919,7 +5936,7 @@ namespace Rexport
             // 
             this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(305, 81);
+            this.checkBox2.Location = new System.Drawing.Point(303, 81);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(18, 17);
@@ -5930,7 +5947,7 @@ namespace Rexport
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(854, 75);
+            this.textBox5.Location = new System.Drawing.Point(852, 75);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(89, 30);
@@ -5941,7 +5958,7 @@ namespace Rexport
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(54, 17);
+            this.label4.Location = new System.Drawing.Point(53, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 25);
             this.label4.TabIndex = 3;
@@ -5952,7 +5969,7 @@ namespace Rexport
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(193, 17);
+            this.label5.Location = new System.Drawing.Point(191, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 25);
             this.label5.TabIndex = 4;
@@ -5963,7 +5980,7 @@ namespace Rexport
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(279, 17);
+            this.label6.Location = new System.Drawing.Point(277, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 25);
             this.label6.TabIndex = 5;
@@ -5975,7 +5992,7 @@ namespace Rexport
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(835, 17);
+            this.label9.Location = new System.Drawing.Point(833, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 25);
             this.label9.TabIndex = 8;
@@ -5986,7 +6003,7 @@ namespace Rexport
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(1051, 17);
+            this.label10.Location = new System.Drawing.Point(1050, 17);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 25);
             this.label10.TabIndex = 9;
@@ -5997,7 +6014,7 @@ namespace Rexport
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(42, 75);
+            this.textBox2.Location = new System.Drawing.Point(41, 75);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(89, 30);
@@ -6007,7 +6024,7 @@ namespace Rexport
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(432, 75);
+            this.textBox3.Location = new System.Drawing.Point(430, 75);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(89, 30);
@@ -6017,7 +6034,7 @@ namespace Rexport
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(645, 75);
+            this.textBox4.Location = new System.Drawing.Point(643, 75);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(89, 30);
@@ -6027,7 +6044,7 @@ namespace Rexport
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(1052, 75);
+            this.textBox6.Location = new System.Drawing.Point(1051, 75);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(65, 30);
@@ -6037,7 +6054,7 @@ namespace Rexport
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(206, 81);
+            this.checkBox1.Location = new System.Drawing.Point(204, 81);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
@@ -6049,7 +6066,7 @@ namespace Rexport
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(414, 4);
+            this.label7.Location = new System.Drawing.Point(412, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 50);
             this.label7.TabIndex = 6;
@@ -6061,7 +6078,7 @@ namespace Rexport
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(616, 4);
+            this.label8.Location = new System.Drawing.Point(614, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 50);
             this.label8.TabIndex = 7;
@@ -6071,12 +6088,12 @@ namespace Rexport
             // dinamicPanel
             // 
             this.dinamicPanel.BackColor = System.Drawing.Color.DimGray;
-            this.dinamicPanel.Controls.Add(this.createPanel);
             this.dinamicPanel.Controls.Add(this.editPanel2);
+            this.dinamicPanel.Controls.Add(this.createPanel);
             this.dinamicPanel.Controls.Add(this.editLinkPanel);
             this.dinamicPanel.Controls.Add(this.homePanel);
             this.dinamicPanel.Location = new System.Drawing.Point(281, 43);
-            this.dinamicPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dinamicPanel.Margin = new System.Windows.Forms.Padding(4);
             this.dinamicPanel.Name = "dinamicPanel";
             this.dinamicPanel.Size = new System.Drawing.Size(1296, 667);
             this.dinamicPanel.TabIndex = 7;
@@ -6086,6 +6103,7 @@ namespace Rexport
             this.editPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.editPanel2.AutoScroll = true;
             this.editPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.editPanel2.Controls.Add(this.editects);
             this.editPanel2.Controls.Add(this.panel2);
             this.editPanel2.Controls.Add(this.label116);
             this.editPanel2.Controls.Add(this.comboBox1);
@@ -6112,7 +6130,7 @@ namespace Rexport
             this.editPanel2.Controls.Add(this.tableLayoutPanel21);
             this.editPanel2.Controls.Add(this.tableLayoutPanel22);
             this.editPanel2.Location = new System.Drawing.Point(0, -1);
-            this.editPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.editPanel2.Name = "editPanel2";
             this.editPanel2.Size = new System.Drawing.Size(1275, 668);
             this.editPanel2.TabIndex = 9;
@@ -6254,7 +6272,7 @@ namespace Rexport
             this.checkBox155.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox155.AutoSize = true;
             this.checkBox155.Location = new System.Drawing.Point(226, 1148);
-            this.checkBox155.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox155.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox155.Name = "checkBox155";
             this.checkBox155.Size = new System.Drawing.Size(18, 17);
             this.checkBox155.TabIndex = 69;
@@ -6265,7 +6283,7 @@ namespace Rexport
             this.checkBox154.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox154.AutoSize = true;
             this.checkBox154.Location = new System.Drawing.Point(173, 1148);
-            this.checkBox154.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox154.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox154.Name = "checkBox154";
             this.checkBox154.Size = new System.Drawing.Size(18, 17);
             this.checkBox154.TabIndex = 68;
@@ -6276,7 +6294,7 @@ namespace Rexport
             this.checkBox153.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox153.AutoSize = true;
             this.checkBox153.Location = new System.Drawing.Point(121, 1148);
-            this.checkBox153.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox153.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox153.Name = "checkBox153";
             this.checkBox153.Size = new System.Drawing.Size(18, 17);
             this.checkBox153.TabIndex = 67;
@@ -6287,7 +6305,7 @@ namespace Rexport
             this.checkBox152.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox152.AutoSize = true;
             this.checkBox152.Location = new System.Drawing.Point(69, 1148);
-            this.checkBox152.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox152.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox152.Name = "checkBox152";
             this.checkBox152.Size = new System.Drawing.Size(18, 17);
             this.checkBox152.TabIndex = 66;
@@ -6298,7 +6316,7 @@ namespace Rexport
             this.checkBox151.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox151.AutoSize = true;
             this.checkBox151.Location = new System.Drawing.Point(17, 1148);
-            this.checkBox151.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox151.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox151.Name = "checkBox151";
             this.checkBox151.Size = new System.Drawing.Size(18, 17);
             this.checkBox151.TabIndex = 65;
@@ -6309,7 +6327,7 @@ namespace Rexport
             this.checkBox150.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox150.AutoSize = true;
             this.checkBox150.Location = new System.Drawing.Point(226, 1050);
-            this.checkBox150.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox150.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox150.Name = "checkBox150";
             this.checkBox150.Size = new System.Drawing.Size(18, 17);
             this.checkBox150.TabIndex = 64;
@@ -6320,7 +6338,7 @@ namespace Rexport
             this.checkBox149.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox149.AutoSize = true;
             this.checkBox149.Location = new System.Drawing.Point(173, 1050);
-            this.checkBox149.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox149.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox149.Name = "checkBox149";
             this.checkBox149.Size = new System.Drawing.Size(18, 17);
             this.checkBox149.TabIndex = 63;
@@ -6331,7 +6349,7 @@ namespace Rexport
             this.checkBox148.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox148.AutoSize = true;
             this.checkBox148.Location = new System.Drawing.Point(121, 1050);
-            this.checkBox148.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox148.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox148.Name = "checkBox148";
             this.checkBox148.Size = new System.Drawing.Size(18, 17);
             this.checkBox148.TabIndex = 62;
@@ -6342,7 +6360,7 @@ namespace Rexport
             this.checkBox147.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox147.AutoSize = true;
             this.checkBox147.Location = new System.Drawing.Point(69, 1050);
-            this.checkBox147.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox147.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox147.Name = "checkBox147";
             this.checkBox147.Size = new System.Drawing.Size(18, 17);
             this.checkBox147.TabIndex = 61;
@@ -6353,7 +6371,7 @@ namespace Rexport
             this.checkBox146.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox146.AutoSize = true;
             this.checkBox146.Location = new System.Drawing.Point(17, 1050);
-            this.checkBox146.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox146.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox146.Name = "checkBox146";
             this.checkBox146.Size = new System.Drawing.Size(18, 17);
             this.checkBox146.TabIndex = 60;
@@ -6364,7 +6382,7 @@ namespace Rexport
             this.checkBox145.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox145.AutoSize = true;
             this.checkBox145.Location = new System.Drawing.Point(226, 962);
-            this.checkBox145.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox145.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox145.Name = "checkBox145";
             this.checkBox145.Size = new System.Drawing.Size(18, 17);
             this.checkBox145.TabIndex = 59;
@@ -6375,7 +6393,7 @@ namespace Rexport
             this.checkBox144.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox144.AutoSize = true;
             this.checkBox144.Location = new System.Drawing.Point(173, 962);
-            this.checkBox144.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox144.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox144.Name = "checkBox144";
             this.checkBox144.Size = new System.Drawing.Size(18, 17);
             this.checkBox144.TabIndex = 58;
@@ -6386,7 +6404,7 @@ namespace Rexport
             this.checkBox143.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox143.AutoSize = true;
             this.checkBox143.Location = new System.Drawing.Point(121, 962);
-            this.checkBox143.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox143.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox143.Name = "checkBox143";
             this.checkBox143.Size = new System.Drawing.Size(18, 17);
             this.checkBox143.TabIndex = 57;
@@ -6397,7 +6415,7 @@ namespace Rexport
             this.checkBox142.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox142.AutoSize = true;
             this.checkBox142.Location = new System.Drawing.Point(69, 962);
-            this.checkBox142.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox142.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox142.Name = "checkBox142";
             this.checkBox142.Size = new System.Drawing.Size(18, 17);
             this.checkBox142.TabIndex = 56;
@@ -6408,7 +6426,7 @@ namespace Rexport
             this.checkBox141.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox141.AutoSize = true;
             this.checkBox141.Location = new System.Drawing.Point(17, 962);
-            this.checkBox141.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox141.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox141.Name = "checkBox141";
             this.checkBox141.Size = new System.Drawing.Size(18, 17);
             this.checkBox141.TabIndex = 55;
@@ -6419,7 +6437,7 @@ namespace Rexport
             this.checkBox140.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox140.AutoSize = true;
             this.checkBox140.Location = new System.Drawing.Point(226, 874);
-            this.checkBox140.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox140.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox140.Name = "checkBox140";
             this.checkBox140.Size = new System.Drawing.Size(18, 17);
             this.checkBox140.TabIndex = 54;
@@ -6430,7 +6448,7 @@ namespace Rexport
             this.checkBox139.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox139.AutoSize = true;
             this.checkBox139.Location = new System.Drawing.Point(173, 874);
-            this.checkBox139.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox139.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox139.Name = "checkBox139";
             this.checkBox139.Size = new System.Drawing.Size(18, 17);
             this.checkBox139.TabIndex = 53;
@@ -6441,7 +6459,7 @@ namespace Rexport
             this.checkBox138.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox138.AutoSize = true;
             this.checkBox138.Location = new System.Drawing.Point(121, 874);
-            this.checkBox138.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox138.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox138.Name = "checkBox138";
             this.checkBox138.Size = new System.Drawing.Size(18, 17);
             this.checkBox138.TabIndex = 52;
@@ -6452,7 +6470,7 @@ namespace Rexport
             this.checkBox137.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox137.AutoSize = true;
             this.checkBox137.Location = new System.Drawing.Point(69, 874);
-            this.checkBox137.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox137.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox137.Name = "checkBox137";
             this.checkBox137.Size = new System.Drawing.Size(18, 17);
             this.checkBox137.TabIndex = 51;
@@ -6463,7 +6481,7 @@ namespace Rexport
             this.checkBox136.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox136.AutoSize = true;
             this.checkBox136.Location = new System.Drawing.Point(17, 874);
-            this.checkBox136.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox136.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox136.Name = "checkBox136";
             this.checkBox136.Size = new System.Drawing.Size(18, 17);
             this.checkBox136.TabIndex = 50;
@@ -6474,7 +6492,7 @@ namespace Rexport
             this.checkBox135.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox135.AutoSize = true;
             this.checkBox135.Location = new System.Drawing.Point(226, 786);
-            this.checkBox135.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox135.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox135.Name = "checkBox135";
             this.checkBox135.Size = new System.Drawing.Size(18, 17);
             this.checkBox135.TabIndex = 49;
@@ -6485,7 +6503,7 @@ namespace Rexport
             this.checkBox134.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox134.AutoSize = true;
             this.checkBox134.Location = new System.Drawing.Point(173, 786);
-            this.checkBox134.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox134.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox134.Name = "checkBox134";
             this.checkBox134.Size = new System.Drawing.Size(18, 17);
             this.checkBox134.TabIndex = 48;
@@ -6496,7 +6514,7 @@ namespace Rexport
             this.checkBox133.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox133.AutoSize = true;
             this.checkBox133.Location = new System.Drawing.Point(121, 786);
-            this.checkBox133.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox133.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox133.Name = "checkBox133";
             this.checkBox133.Size = new System.Drawing.Size(18, 17);
             this.checkBox133.TabIndex = 47;
@@ -6507,7 +6525,7 @@ namespace Rexport
             this.checkBox132.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox132.AutoSize = true;
             this.checkBox132.Location = new System.Drawing.Point(69, 786);
-            this.checkBox132.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox132.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox132.Name = "checkBox132";
             this.checkBox132.Size = new System.Drawing.Size(18, 17);
             this.checkBox132.TabIndex = 46;
@@ -6518,7 +6536,7 @@ namespace Rexport
             this.checkBox131.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox131.AutoSize = true;
             this.checkBox131.Location = new System.Drawing.Point(17, 786);
-            this.checkBox131.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox131.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox131.Name = "checkBox131";
             this.checkBox131.Size = new System.Drawing.Size(18, 17);
             this.checkBox131.TabIndex = 45;
@@ -6529,7 +6547,7 @@ namespace Rexport
             this.checkBox130.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox130.AutoSize = true;
             this.checkBox130.Location = new System.Drawing.Point(226, 698);
-            this.checkBox130.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox130.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox130.Name = "checkBox130";
             this.checkBox130.Size = new System.Drawing.Size(18, 17);
             this.checkBox130.TabIndex = 44;
@@ -6540,7 +6558,7 @@ namespace Rexport
             this.checkBox129.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox129.AutoSize = true;
             this.checkBox129.Location = new System.Drawing.Point(173, 698);
-            this.checkBox129.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox129.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox129.Name = "checkBox129";
             this.checkBox129.Size = new System.Drawing.Size(18, 17);
             this.checkBox129.TabIndex = 43;
@@ -6551,7 +6569,7 @@ namespace Rexport
             this.checkBox128.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox128.AutoSize = true;
             this.checkBox128.Location = new System.Drawing.Point(121, 698);
-            this.checkBox128.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox128.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox128.Name = "checkBox128";
             this.checkBox128.Size = new System.Drawing.Size(18, 17);
             this.checkBox128.TabIndex = 42;
@@ -6562,7 +6580,7 @@ namespace Rexport
             this.checkBox127.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox127.AutoSize = true;
             this.checkBox127.Location = new System.Drawing.Point(69, 698);
-            this.checkBox127.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox127.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox127.Name = "checkBox127";
             this.checkBox127.Size = new System.Drawing.Size(18, 17);
             this.checkBox127.TabIndex = 41;
@@ -6573,7 +6591,7 @@ namespace Rexport
             this.checkBox126.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox126.AutoSize = true;
             this.checkBox126.Location = new System.Drawing.Point(17, 698);
-            this.checkBox126.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox126.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox126.Name = "checkBox126";
             this.checkBox126.Size = new System.Drawing.Size(18, 17);
             this.checkBox126.TabIndex = 40;
@@ -6584,7 +6602,7 @@ namespace Rexport
             this.checkBox125.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox125.AutoSize = true;
             this.checkBox125.Location = new System.Drawing.Point(226, 610);
-            this.checkBox125.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox125.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox125.Name = "checkBox125";
             this.checkBox125.Size = new System.Drawing.Size(18, 17);
             this.checkBox125.TabIndex = 39;
@@ -6595,7 +6613,7 @@ namespace Rexport
             this.checkBox124.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox124.AutoSize = true;
             this.checkBox124.Location = new System.Drawing.Point(173, 610);
-            this.checkBox124.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox124.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox124.Name = "checkBox124";
             this.checkBox124.Size = new System.Drawing.Size(18, 17);
             this.checkBox124.TabIndex = 38;
@@ -6606,7 +6624,7 @@ namespace Rexport
             this.checkBox123.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox123.AutoSize = true;
             this.checkBox123.Location = new System.Drawing.Point(121, 610);
-            this.checkBox123.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox123.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox123.Name = "checkBox123";
             this.checkBox123.Size = new System.Drawing.Size(18, 17);
             this.checkBox123.TabIndex = 37;
@@ -6617,7 +6635,7 @@ namespace Rexport
             this.checkBox122.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox122.AutoSize = true;
             this.checkBox122.Location = new System.Drawing.Point(69, 610);
-            this.checkBox122.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox122.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox122.Name = "checkBox122";
             this.checkBox122.Size = new System.Drawing.Size(18, 17);
             this.checkBox122.TabIndex = 36;
@@ -6628,7 +6646,7 @@ namespace Rexport
             this.checkBox121.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox121.AutoSize = true;
             this.checkBox121.Location = new System.Drawing.Point(17, 610);
-            this.checkBox121.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox121.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox121.Name = "checkBox121";
             this.checkBox121.Size = new System.Drawing.Size(18, 17);
             this.checkBox121.TabIndex = 35;
@@ -6639,7 +6657,7 @@ namespace Rexport
             this.checkBox120.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox120.AutoSize = true;
             this.checkBox120.Location = new System.Drawing.Point(226, 522);
-            this.checkBox120.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox120.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox120.Name = "checkBox120";
             this.checkBox120.Size = new System.Drawing.Size(18, 17);
             this.checkBox120.TabIndex = 34;
@@ -6650,7 +6668,7 @@ namespace Rexport
             this.checkBox119.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox119.AutoSize = true;
             this.checkBox119.Location = new System.Drawing.Point(173, 522);
-            this.checkBox119.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox119.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox119.Name = "checkBox119";
             this.checkBox119.Size = new System.Drawing.Size(18, 17);
             this.checkBox119.TabIndex = 33;
@@ -6661,7 +6679,7 @@ namespace Rexport
             this.checkBox118.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox118.AutoSize = true;
             this.checkBox118.Location = new System.Drawing.Point(121, 522);
-            this.checkBox118.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox118.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox118.Name = "checkBox118";
             this.checkBox118.Size = new System.Drawing.Size(18, 17);
             this.checkBox118.TabIndex = 32;
@@ -6672,7 +6690,7 @@ namespace Rexport
             this.checkBox117.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox117.AutoSize = true;
             this.checkBox117.Location = new System.Drawing.Point(69, 522);
-            this.checkBox117.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox117.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox117.Name = "checkBox117";
             this.checkBox117.Size = new System.Drawing.Size(18, 17);
             this.checkBox117.TabIndex = 31;
@@ -6683,7 +6701,7 @@ namespace Rexport
             this.checkBox116.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox116.AutoSize = true;
             this.checkBox116.Location = new System.Drawing.Point(17, 522);
-            this.checkBox116.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox116.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox116.Name = "checkBox116";
             this.checkBox116.Size = new System.Drawing.Size(18, 17);
             this.checkBox116.TabIndex = 30;
@@ -6694,7 +6712,7 @@ namespace Rexport
             this.checkBox115.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox115.AutoSize = true;
             this.checkBox115.Location = new System.Drawing.Point(226, 434);
-            this.checkBox115.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox115.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox115.Name = "checkBox115";
             this.checkBox115.Size = new System.Drawing.Size(18, 17);
             this.checkBox115.TabIndex = 29;
@@ -6705,7 +6723,7 @@ namespace Rexport
             this.checkBox114.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox114.AutoSize = true;
             this.checkBox114.Location = new System.Drawing.Point(173, 434);
-            this.checkBox114.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox114.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox114.Name = "checkBox114";
             this.checkBox114.Size = new System.Drawing.Size(18, 17);
             this.checkBox114.TabIndex = 28;
@@ -6716,7 +6734,7 @@ namespace Rexport
             this.checkBox113.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox113.AutoSize = true;
             this.checkBox113.Location = new System.Drawing.Point(121, 434);
-            this.checkBox113.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox113.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox113.Name = "checkBox113";
             this.checkBox113.Size = new System.Drawing.Size(18, 17);
             this.checkBox113.TabIndex = 27;
@@ -6727,7 +6745,7 @@ namespace Rexport
             this.checkBox112.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox112.AutoSize = true;
             this.checkBox112.Location = new System.Drawing.Point(69, 434);
-            this.checkBox112.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox112.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox112.Name = "checkBox112";
             this.checkBox112.Size = new System.Drawing.Size(18, 17);
             this.checkBox112.TabIndex = 26;
@@ -6738,7 +6756,7 @@ namespace Rexport
             this.checkBox111.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox111.AutoSize = true;
             this.checkBox111.Location = new System.Drawing.Point(17, 434);
-            this.checkBox111.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox111.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox111.Name = "checkBox111";
             this.checkBox111.Size = new System.Drawing.Size(18, 17);
             this.checkBox111.TabIndex = 25;
@@ -6749,7 +6767,7 @@ namespace Rexport
             this.checkBox110.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox110.AutoSize = true;
             this.checkBox110.Location = new System.Drawing.Point(226, 346);
-            this.checkBox110.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox110.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox110.Name = "checkBox110";
             this.checkBox110.Size = new System.Drawing.Size(18, 17);
             this.checkBox110.TabIndex = 24;
@@ -6760,7 +6778,7 @@ namespace Rexport
             this.checkBox109.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox109.AutoSize = true;
             this.checkBox109.Location = new System.Drawing.Point(173, 346);
-            this.checkBox109.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox109.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox109.Name = "checkBox109";
             this.checkBox109.Size = new System.Drawing.Size(18, 17);
             this.checkBox109.TabIndex = 23;
@@ -6771,7 +6789,7 @@ namespace Rexport
             this.checkBox108.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox108.AutoSize = true;
             this.checkBox108.Location = new System.Drawing.Point(121, 346);
-            this.checkBox108.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox108.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox108.Name = "checkBox108";
             this.checkBox108.Size = new System.Drawing.Size(18, 17);
             this.checkBox108.TabIndex = 22;
@@ -6782,7 +6800,7 @@ namespace Rexport
             this.checkBox107.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox107.AutoSize = true;
             this.checkBox107.Location = new System.Drawing.Point(69, 346);
-            this.checkBox107.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox107.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox107.Name = "checkBox107";
             this.checkBox107.Size = new System.Drawing.Size(18, 17);
             this.checkBox107.TabIndex = 21;
@@ -6793,7 +6811,7 @@ namespace Rexport
             this.checkBox106.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox106.AutoSize = true;
             this.checkBox106.Location = new System.Drawing.Point(17, 346);
-            this.checkBox106.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox106.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox106.Name = "checkBox106";
             this.checkBox106.Size = new System.Drawing.Size(18, 17);
             this.checkBox106.TabIndex = 20;
@@ -6804,7 +6822,7 @@ namespace Rexport
             this.checkBox105.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox105.AutoSize = true;
             this.checkBox105.Location = new System.Drawing.Point(226, 258);
-            this.checkBox105.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox105.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox105.Name = "checkBox105";
             this.checkBox105.Size = new System.Drawing.Size(18, 17);
             this.checkBox105.TabIndex = 19;
@@ -6815,7 +6833,7 @@ namespace Rexport
             this.checkBox104.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox104.AutoSize = true;
             this.checkBox104.Location = new System.Drawing.Point(173, 258);
-            this.checkBox104.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox104.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox104.Name = "checkBox104";
             this.checkBox104.Size = new System.Drawing.Size(18, 17);
             this.checkBox104.TabIndex = 18;
@@ -6826,7 +6844,7 @@ namespace Rexport
             this.checkBox103.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox103.AutoSize = true;
             this.checkBox103.Location = new System.Drawing.Point(121, 258);
-            this.checkBox103.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox103.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox103.Name = "checkBox103";
             this.checkBox103.Size = new System.Drawing.Size(18, 17);
             this.checkBox103.TabIndex = 17;
@@ -6837,7 +6855,7 @@ namespace Rexport
             this.checkBox102.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox102.AutoSize = true;
             this.checkBox102.Location = new System.Drawing.Point(69, 258);
-            this.checkBox102.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox102.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox102.Name = "checkBox102";
             this.checkBox102.Size = new System.Drawing.Size(18, 17);
             this.checkBox102.TabIndex = 16;
@@ -6848,7 +6866,7 @@ namespace Rexport
             this.checkBox101.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox101.AutoSize = true;
             this.checkBox101.Location = new System.Drawing.Point(17, 258);
-            this.checkBox101.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox101.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox101.Name = "checkBox101";
             this.checkBox101.Size = new System.Drawing.Size(18, 17);
             this.checkBox101.TabIndex = 15;
@@ -6859,7 +6877,7 @@ namespace Rexport
             this.checkBox100.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox100.AutoSize = true;
             this.checkBox100.Location = new System.Drawing.Point(226, 170);
-            this.checkBox100.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox100.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox100.Name = "checkBox100";
             this.checkBox100.Size = new System.Drawing.Size(18, 17);
             this.checkBox100.TabIndex = 14;
@@ -6870,7 +6888,7 @@ namespace Rexport
             this.checkBox99.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox99.AutoSize = true;
             this.checkBox99.Location = new System.Drawing.Point(173, 170);
-            this.checkBox99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox99.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox99.Name = "checkBox99";
             this.checkBox99.Size = new System.Drawing.Size(18, 17);
             this.checkBox99.TabIndex = 13;
@@ -6881,7 +6899,7 @@ namespace Rexport
             this.checkBox98.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox98.AutoSize = true;
             this.checkBox98.Location = new System.Drawing.Point(121, 170);
-            this.checkBox98.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox98.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox98.Name = "checkBox98";
             this.checkBox98.Size = new System.Drawing.Size(18, 17);
             this.checkBox98.TabIndex = 12;
@@ -6892,7 +6910,7 @@ namespace Rexport
             this.checkBox97.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox97.AutoSize = true;
             this.checkBox97.Location = new System.Drawing.Point(69, 170);
-            this.checkBox97.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox97.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox97.Name = "checkBox97";
             this.checkBox97.Size = new System.Drawing.Size(18, 17);
             this.checkBox97.TabIndex = 11;
@@ -6903,7 +6921,7 @@ namespace Rexport
             this.checkBox96.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox96.AutoSize = true;
             this.checkBox96.Location = new System.Drawing.Point(17, 170);
-            this.checkBox96.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox96.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox96.Name = "checkBox96";
             this.checkBox96.Size = new System.Drawing.Size(18, 17);
             this.checkBox96.TabIndex = 10;
@@ -6914,7 +6932,7 @@ namespace Rexport
             this.checkBox95.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox95.AutoSize = true;
             this.checkBox95.Location = new System.Drawing.Point(226, 83);
-            this.checkBox95.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox95.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox95.Name = "checkBox95";
             this.checkBox95.Size = new System.Drawing.Size(18, 17);
             this.checkBox95.TabIndex = 9;
@@ -6925,7 +6943,7 @@ namespace Rexport
             this.checkBox94.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox94.AutoSize = true;
             this.checkBox94.Location = new System.Drawing.Point(173, 83);
-            this.checkBox94.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox94.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox94.Name = "checkBox94";
             this.checkBox94.Size = new System.Drawing.Size(18, 17);
             this.checkBox94.TabIndex = 8;
@@ -6936,7 +6954,7 @@ namespace Rexport
             this.checkBox93.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox93.AutoSize = true;
             this.checkBox93.Location = new System.Drawing.Point(121, 83);
-            this.checkBox93.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox93.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox93.Name = "checkBox93";
             this.checkBox93.Size = new System.Drawing.Size(18, 17);
             this.checkBox93.TabIndex = 7;
@@ -6947,7 +6965,7 @@ namespace Rexport
             this.checkBox92.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox92.AutoSize = true;
             this.checkBox92.Location = new System.Drawing.Point(69, 83);
-            this.checkBox92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox92.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox92.Name = "checkBox92";
             this.checkBox92.Size = new System.Drawing.Size(18, 17);
             this.checkBox92.TabIndex = 6;
@@ -7018,7 +7036,7 @@ namespace Rexport
             this.checkBox91.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox91.AutoSize = true;
             this.checkBox91.Location = new System.Drawing.Point(17, 83);
-            this.checkBox91.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox91.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox91.Name = "checkBox91";
             this.checkBox91.Size = new System.Drawing.Size(18, 17);
             this.checkBox91.TabIndex = 5;
@@ -7036,7 +7054,7 @@ namespace Rexport
             this.tableLayoutPanel14.Controls.Add(this.checkBox90, 0, 4);
             this.tableLayoutPanel14.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(255, 1404);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 5;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -7052,7 +7070,7 @@ namespace Rexport
             this.checkBox86.AutoSize = true;
             this.checkBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox86.Location = new System.Drawing.Point(5, 5);
-            this.checkBox86.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox86.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox86.Name = "checkBox86";
             this.checkBox86.Size = new System.Drawing.Size(139, 27);
             this.checkBox86.TabIndex = 0;
@@ -7064,7 +7082,7 @@ namespace Rexport
             this.checkBox87.AutoSize = true;
             this.checkBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox87.Location = new System.Drawing.Point(5, 41);
-            this.checkBox87.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox87.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox87.Name = "checkBox87";
             this.checkBox87.Size = new System.Drawing.Size(190, 27);
             this.checkBox87.TabIndex = 1;
@@ -7076,7 +7094,7 @@ namespace Rexport
             this.checkBox88.AutoSize = true;
             this.checkBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox88.Location = new System.Drawing.Point(5, 77);
-            this.checkBox88.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox88.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox88.Name = "checkBox88";
             this.checkBox88.Size = new System.Drawing.Size(188, 27);
             this.checkBox88.TabIndex = 2;
@@ -7088,7 +7106,7 @@ namespace Rexport
             this.checkBox89.AutoSize = true;
             this.checkBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox89.Location = new System.Drawing.Point(5, 113);
-            this.checkBox89.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox89.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox89.Name = "checkBox89";
             this.checkBox89.Size = new System.Drawing.Size(430, 27);
             this.checkBox89.TabIndex = 3;
@@ -7100,7 +7118,7 @@ namespace Rexport
             this.checkBox90.AutoSize = true;
             this.checkBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox90.Location = new System.Drawing.Point(5, 149);
-            this.checkBox90.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox90.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox90.Name = "checkBox90";
             this.checkBox90.Size = new System.Drawing.Size(241, 28);
             this.checkBox90.TabIndex = 4;
@@ -7113,7 +7131,7 @@ namespace Rexport
             this.tableLayoutPanel26.ColumnCount = 3;
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.45614F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.54386F));
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 427F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 429F));
             this.tableLayoutPanel26.Controls.Add(this.textBox73, 2, 11);
             this.tableLayoutPanel26.Controls.Add(this.textBox74, 1, 11);
             this.tableLayoutPanel26.Controls.Add(this.textBox75, 2, 10);
@@ -7177,8 +7195,8 @@ namespace Rexport
             // 
             this.textBox73.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox73.Location = new System.Drawing.Point(887, 998);
-            this.textBox73.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox73.Location = new System.Drawing.Point(886, 998);
+            this.textBox73.Margin = new System.Windows.Forms.Padding(4);
             this.textBox73.Name = "textBox73";
             this.textBox73.Size = new System.Drawing.Size(132, 30);
             this.textBox73.TabIndex = 104;
@@ -7187,8 +7205,8 @@ namespace Rexport
             // 
             this.textBox74.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox74.Location = new System.Drawing.Point(460, 998);
-            this.textBox74.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox74.Location = new System.Drawing.Point(459, 998);
+            this.textBox74.Margin = new System.Windows.Forms.Padding(4);
             this.textBox74.Name = "textBox74";
             this.textBox74.Size = new System.Drawing.Size(132, 30);
             this.textBox74.TabIndex = 103;
@@ -7197,8 +7215,8 @@ namespace Rexport
             // 
             this.textBox75.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox75.Location = new System.Drawing.Point(887, 920);
-            this.textBox75.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox75.Location = new System.Drawing.Point(886, 920);
+            this.textBox75.Margin = new System.Windows.Forms.Padding(4);
             this.textBox75.Name = "textBox75";
             this.textBox75.Size = new System.Drawing.Size(132, 30);
             this.textBox75.TabIndex = 102;
@@ -7207,8 +7225,8 @@ namespace Rexport
             // 
             this.textBox76.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox76.Location = new System.Drawing.Point(460, 920);
-            this.textBox76.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox76.Location = new System.Drawing.Point(459, 920);
+            this.textBox76.Margin = new System.Windows.Forms.Padding(4);
             this.textBox76.Name = "textBox76";
             this.textBox76.Size = new System.Drawing.Size(132, 30);
             this.textBox76.TabIndex = 101;
@@ -7217,8 +7235,8 @@ namespace Rexport
             // 
             this.textBox77.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox77.Location = new System.Drawing.Point(887, 840);
-            this.textBox77.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox77.Location = new System.Drawing.Point(886, 840);
+            this.textBox77.Margin = new System.Windows.Forms.Padding(4);
             this.textBox77.Name = "textBox77";
             this.textBox77.Size = new System.Drawing.Size(132, 30);
             this.textBox77.TabIndex = 100;
@@ -7227,8 +7245,8 @@ namespace Rexport
             // 
             this.textBox78.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox78.Location = new System.Drawing.Point(460, 840);
-            this.textBox78.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox78.Location = new System.Drawing.Point(459, 840);
+            this.textBox78.Margin = new System.Windows.Forms.Padding(4);
             this.textBox78.Name = "textBox78";
             this.textBox78.Size = new System.Drawing.Size(132, 30);
             this.textBox78.TabIndex = 99;
@@ -7237,8 +7255,8 @@ namespace Rexport
             // 
             this.textBox79.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox79.Location = new System.Drawing.Point(887, 755);
-            this.textBox79.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox79.Location = new System.Drawing.Point(886, 755);
+            this.textBox79.Margin = new System.Windows.Forms.Padding(4);
             this.textBox79.Name = "textBox79";
             this.textBox79.Size = new System.Drawing.Size(132, 30);
             this.textBox79.TabIndex = 98;
@@ -7247,8 +7265,8 @@ namespace Rexport
             // 
             this.textBox80.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox80.Location = new System.Drawing.Point(460, 755);
-            this.textBox80.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox80.Location = new System.Drawing.Point(459, 755);
+            this.textBox80.Margin = new System.Windows.Forms.Padding(4);
             this.textBox80.Name = "textBox80";
             this.textBox80.Size = new System.Drawing.Size(132, 30);
             this.textBox80.TabIndex = 97;
@@ -7257,8 +7275,8 @@ namespace Rexport
             // 
             this.textBox81.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox81.Location = new System.Drawing.Point(887, 655);
-            this.textBox81.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox81.Location = new System.Drawing.Point(886, 655);
+            this.textBox81.Margin = new System.Windows.Forms.Padding(4);
             this.textBox81.Name = "textBox81";
             this.textBox81.Size = new System.Drawing.Size(132, 30);
             this.textBox81.TabIndex = 96;
@@ -7267,8 +7285,8 @@ namespace Rexport
             // 
             this.textBox82.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox82.Location = new System.Drawing.Point(460, 655);
-            this.textBox82.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox82.Location = new System.Drawing.Point(459, 655);
+            this.textBox82.Margin = new System.Windows.Forms.Padding(4);
             this.textBox82.Name = "textBox82";
             this.textBox82.Size = new System.Drawing.Size(132, 30);
             this.textBox82.TabIndex = 95;
@@ -7277,8 +7295,8 @@ namespace Rexport
             // 
             this.textBox83.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox83.Location = new System.Drawing.Point(887, 550);
-            this.textBox83.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox83.Location = new System.Drawing.Point(886, 550);
+            this.textBox83.Margin = new System.Windows.Forms.Padding(4);
             this.textBox83.Name = "textBox83";
             this.textBox83.Size = new System.Drawing.Size(132, 30);
             this.textBox83.TabIndex = 94;
@@ -7287,8 +7305,8 @@ namespace Rexport
             // 
             this.textBox84.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox84.Location = new System.Drawing.Point(460, 550);
-            this.textBox84.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox84.Location = new System.Drawing.Point(459, 550);
+            this.textBox84.Margin = new System.Windows.Forms.Padding(4);
             this.textBox84.Name = "textBox84";
             this.textBox84.Size = new System.Drawing.Size(132, 30);
             this.textBox84.TabIndex = 93;
@@ -7297,8 +7315,8 @@ namespace Rexport
             // 
             this.textBox85.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox85.Location = new System.Drawing.Point(887, 449);
-            this.textBox85.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox85.Location = new System.Drawing.Point(886, 449);
+            this.textBox85.Margin = new System.Windows.Forms.Padding(4);
             this.textBox85.Name = "textBox85";
             this.textBox85.Size = new System.Drawing.Size(132, 30);
             this.textBox85.TabIndex = 92;
@@ -7307,8 +7325,8 @@ namespace Rexport
             // 
             this.textBox86.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox86.Location = new System.Drawing.Point(460, 449);
-            this.textBox86.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox86.Location = new System.Drawing.Point(459, 449);
+            this.textBox86.Margin = new System.Windows.Forms.Padding(4);
             this.textBox86.Name = "textBox86";
             this.textBox86.Size = new System.Drawing.Size(132, 30);
             this.textBox86.TabIndex = 91;
@@ -7317,8 +7335,8 @@ namespace Rexport
             // 
             this.textBox87.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox87.Location = new System.Drawing.Point(887, 347);
-            this.textBox87.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox87.Location = new System.Drawing.Point(886, 347);
+            this.textBox87.Margin = new System.Windows.Forms.Padding(4);
             this.textBox87.Name = "textBox87";
             this.textBox87.Size = new System.Drawing.Size(132, 30);
             this.textBox87.TabIndex = 90;
@@ -7327,8 +7345,8 @@ namespace Rexport
             // 
             this.textBox88.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox88.Location = new System.Drawing.Point(460, 347);
-            this.textBox88.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox88.Location = new System.Drawing.Point(459, 347);
+            this.textBox88.Margin = new System.Windows.Forms.Padding(4);
             this.textBox88.Name = "textBox88";
             this.textBox88.Size = new System.Drawing.Size(132, 30);
             this.textBox88.TabIndex = 89;
@@ -7337,8 +7355,8 @@ namespace Rexport
             // 
             this.textBox89.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox89.Location = new System.Drawing.Point(887, 251);
-            this.textBox89.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox89.Location = new System.Drawing.Point(886, 251);
+            this.textBox89.Margin = new System.Windows.Forms.Padding(4);
             this.textBox89.Name = "textBox89";
             this.textBox89.Size = new System.Drawing.Size(132, 30);
             this.textBox89.TabIndex = 88;
@@ -7347,8 +7365,8 @@ namespace Rexport
             // 
             this.textBox90.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox90.Location = new System.Drawing.Point(460, 251);
-            this.textBox90.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox90.Location = new System.Drawing.Point(459, 251);
+            this.textBox90.Margin = new System.Windows.Forms.Padding(4);
             this.textBox90.Name = "textBox90";
             this.textBox90.Size = new System.Drawing.Size(132, 30);
             this.textBox90.TabIndex = 87;
@@ -7357,8 +7375,8 @@ namespace Rexport
             // 
             this.textBox91.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox91.Location = new System.Drawing.Point(887, 156);
-            this.textBox91.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox91.Location = new System.Drawing.Point(886, 156);
+            this.textBox91.Margin = new System.Windows.Forms.Padding(4);
             this.textBox91.Name = "textBox91";
             this.textBox91.Size = new System.Drawing.Size(132, 30);
             this.textBox91.TabIndex = 86;
@@ -7367,8 +7385,8 @@ namespace Rexport
             // 
             this.textBox92.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox92.Location = new System.Drawing.Point(460, 156);
-            this.textBox92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox92.Location = new System.Drawing.Point(459, 156);
+            this.textBox92.Margin = new System.Windows.Forms.Padding(4);
             this.textBox92.Name = "textBox92";
             this.textBox92.Size = new System.Drawing.Size(132, 30);
             this.textBox92.TabIndex = 85;
@@ -7377,8 +7395,8 @@ namespace Rexport
             // 
             this.textBox93.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox93.Location = new System.Drawing.Point(887, 64);
-            this.textBox93.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox93.Location = new System.Drawing.Point(886, 64);
+            this.textBox93.Margin = new System.Windows.Forms.Padding(4);
             this.textBox93.Name = "textBox93";
             this.textBox93.Size = new System.Drawing.Size(132, 30);
             this.textBox93.TabIndex = 84;
@@ -7387,8 +7405,8 @@ namespace Rexport
             // 
             this.textBox94.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox94.Location = new System.Drawing.Point(460, 64);
-            this.textBox94.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox94.Location = new System.Drawing.Point(459, 64);
+            this.textBox94.Margin = new System.Windows.Forms.Padding(4);
             this.textBox94.Name = "textBox94";
             this.textBox94.Size = new System.Drawing.Size(132, 30);
             this.textBox94.TabIndex = 10;
@@ -7420,7 +7438,7 @@ namespace Rexport
             this.label43.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label43.Location = new System.Drawing.Point(485, 7);
+            this.label43.Location = new System.Drawing.Point(484, 7);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(81, 25);
             this.label43.TabIndex = 4;
@@ -7431,7 +7449,7 @@ namespace Rexport
             this.label188.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label188.AutoSize = true;
             this.label188.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label188.Location = new System.Drawing.Point(903, 7);
+            this.label188.Location = new System.Drawing.Point(902, 7);
             this.label188.Name = "label188";
             this.label188.Size = new System.Drawing.Size(100, 25);
             this.label188.TabIndex = 5;
@@ -7551,8 +7569,8 @@ namespace Rexport
             // 
             this.textBox95.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox95.Location = new System.Drawing.Point(460, 1069);
-            this.textBox95.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox95.Location = new System.Drawing.Point(459, 1069);
+            this.textBox95.Margin = new System.Windows.Forms.Padding(4);
             this.textBox95.Name = "textBox95";
             this.textBox95.Size = new System.Drawing.Size(132, 30);
             this.textBox95.TabIndex = 106;
@@ -7561,8 +7579,8 @@ namespace Rexport
             // 
             this.textBox96.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox96.Location = new System.Drawing.Point(887, 1069);
-            this.textBox96.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox96.Location = new System.Drawing.Point(886, 1069);
+            this.textBox96.Margin = new System.Windows.Forms.Padding(4);
             this.textBox96.Name = "textBox96";
             this.textBox96.Size = new System.Drawing.Size(132, 30);
             this.textBox96.TabIndex = 107;
@@ -7584,7 +7602,7 @@ namespace Rexport
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(556, 7604);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(212, 57);
             this.button3.TabIndex = 28;
@@ -7673,7 +7691,7 @@ namespace Rexport
             this.tableLayoutPanel25.Controls.Add(this.label171, 1, 0);
             this.tableLayoutPanel25.Controls.Add(this.label170, 0, 0);
             this.tableLayoutPanel25.Controls.Add(this.checkBox21, 0, 1);
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(896, 25124);
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(896, 28674);
             this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 14;
@@ -7700,7 +7718,7 @@ namespace Rexport
             this.checkBox85.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox85.AutoSize = true;
             this.checkBox85.Location = new System.Drawing.Point(227, 1135);
-            this.checkBox85.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox85.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox85.Name = "checkBox85";
             this.checkBox85.Size = new System.Drawing.Size(18, 17);
             this.checkBox85.TabIndex = 165;
@@ -7711,7 +7729,7 @@ namespace Rexport
             this.checkBox84.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox84.AutoSize = true;
             this.checkBox84.Location = new System.Drawing.Point(173, 1135);
-            this.checkBox84.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox84.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox84.Name = "checkBox84";
             this.checkBox84.Size = new System.Drawing.Size(18, 17);
             this.checkBox84.TabIndex = 164;
@@ -7722,7 +7740,7 @@ namespace Rexport
             this.checkBox83.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox83.AutoSize = true;
             this.checkBox83.Location = new System.Drawing.Point(121, 1135);
-            this.checkBox83.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox83.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox83.Name = "checkBox83";
             this.checkBox83.Size = new System.Drawing.Size(18, 17);
             this.checkBox83.TabIndex = 163;
@@ -7733,7 +7751,7 @@ namespace Rexport
             this.checkBox82.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox82.AutoSize = true;
             this.checkBox82.Location = new System.Drawing.Point(69, 1135);
-            this.checkBox82.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox82.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox82.Name = "checkBox82";
             this.checkBox82.Size = new System.Drawing.Size(18, 17);
             this.checkBox82.TabIndex = 162;
@@ -7744,7 +7762,7 @@ namespace Rexport
             this.checkBox81.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox81.AutoSize = true;
             this.checkBox81.Location = new System.Drawing.Point(17, 1135);
-            this.checkBox81.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox81.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox81.Name = "checkBox81";
             this.checkBox81.Size = new System.Drawing.Size(18, 17);
             this.checkBox81.TabIndex = 161;
@@ -7755,7 +7773,7 @@ namespace Rexport
             this.checkBox80.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox80.AutoSize = true;
             this.checkBox80.Location = new System.Drawing.Point(227, 1041);
-            this.checkBox80.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox80.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox80.Name = "checkBox80";
             this.checkBox80.Size = new System.Drawing.Size(18, 17);
             this.checkBox80.TabIndex = 160;
@@ -7766,7 +7784,7 @@ namespace Rexport
             this.checkBox79.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox79.AutoSize = true;
             this.checkBox79.Location = new System.Drawing.Point(173, 1041);
-            this.checkBox79.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox79.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox79.Name = "checkBox79";
             this.checkBox79.Size = new System.Drawing.Size(18, 17);
             this.checkBox79.TabIndex = 159;
@@ -7777,7 +7795,7 @@ namespace Rexport
             this.checkBox78.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox78.AutoSize = true;
             this.checkBox78.Location = new System.Drawing.Point(121, 1041);
-            this.checkBox78.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox78.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox78.Name = "checkBox78";
             this.checkBox78.Size = new System.Drawing.Size(18, 17);
             this.checkBox78.TabIndex = 158;
@@ -7788,7 +7806,7 @@ namespace Rexport
             this.checkBox77.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox77.AutoSize = true;
             this.checkBox77.Location = new System.Drawing.Point(69, 1041);
-            this.checkBox77.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox77.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox77.Name = "checkBox77";
             this.checkBox77.Size = new System.Drawing.Size(18, 17);
             this.checkBox77.TabIndex = 157;
@@ -7799,7 +7817,7 @@ namespace Rexport
             this.checkBox76.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox76.AutoSize = true;
             this.checkBox76.Location = new System.Drawing.Point(17, 1041);
-            this.checkBox76.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox76.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox76.Name = "checkBox76";
             this.checkBox76.Size = new System.Drawing.Size(18, 17);
             this.checkBox76.TabIndex = 156;
@@ -7810,7 +7828,7 @@ namespace Rexport
             this.checkBox75.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox75.AutoSize = true;
             this.checkBox75.Location = new System.Drawing.Point(227, 953);
-            this.checkBox75.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox75.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox75.Name = "checkBox75";
             this.checkBox75.Size = new System.Drawing.Size(18, 17);
             this.checkBox75.TabIndex = 155;
@@ -7821,7 +7839,7 @@ namespace Rexport
             this.checkBox74.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox74.AutoSize = true;
             this.checkBox74.Location = new System.Drawing.Point(173, 953);
-            this.checkBox74.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox74.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox74.Name = "checkBox74";
             this.checkBox74.Size = new System.Drawing.Size(18, 17);
             this.checkBox74.TabIndex = 154;
@@ -7832,7 +7850,7 @@ namespace Rexport
             this.checkBox73.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox73.AutoSize = true;
             this.checkBox73.Location = new System.Drawing.Point(121, 953);
-            this.checkBox73.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox73.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox73.Name = "checkBox73";
             this.checkBox73.Size = new System.Drawing.Size(18, 17);
             this.checkBox73.TabIndex = 153;
@@ -7843,7 +7861,7 @@ namespace Rexport
             this.checkBox72.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox72.AutoSize = true;
             this.checkBox72.Location = new System.Drawing.Point(69, 953);
-            this.checkBox72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox72.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox72.Name = "checkBox72";
             this.checkBox72.Size = new System.Drawing.Size(18, 17);
             this.checkBox72.TabIndex = 152;
@@ -7854,7 +7872,7 @@ namespace Rexport
             this.checkBox71.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox71.AutoSize = true;
             this.checkBox71.Location = new System.Drawing.Point(17, 953);
-            this.checkBox71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox71.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox71.Name = "checkBox71";
             this.checkBox71.Size = new System.Drawing.Size(18, 17);
             this.checkBox71.TabIndex = 151;
@@ -7865,7 +7883,7 @@ namespace Rexport
             this.checkBox70.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox70.AutoSize = true;
             this.checkBox70.Location = new System.Drawing.Point(227, 865);
-            this.checkBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox70.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox70.Name = "checkBox70";
             this.checkBox70.Size = new System.Drawing.Size(18, 17);
             this.checkBox70.TabIndex = 150;
@@ -7876,7 +7894,7 @@ namespace Rexport
             this.checkBox69.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox69.AutoSize = true;
             this.checkBox69.Location = new System.Drawing.Point(173, 865);
-            this.checkBox69.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox69.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox69.Name = "checkBox69";
             this.checkBox69.Size = new System.Drawing.Size(18, 17);
             this.checkBox69.TabIndex = 149;
@@ -7887,7 +7905,7 @@ namespace Rexport
             this.checkBox68.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox68.AutoSize = true;
             this.checkBox68.Location = new System.Drawing.Point(121, 865);
-            this.checkBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox68.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox68.Name = "checkBox68";
             this.checkBox68.Size = new System.Drawing.Size(18, 17);
             this.checkBox68.TabIndex = 148;
@@ -7898,7 +7916,7 @@ namespace Rexport
             this.checkBox67.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox67.AutoSize = true;
             this.checkBox67.Location = new System.Drawing.Point(69, 865);
-            this.checkBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox67.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox67.Name = "checkBox67";
             this.checkBox67.Size = new System.Drawing.Size(18, 17);
             this.checkBox67.TabIndex = 147;
@@ -7909,7 +7927,7 @@ namespace Rexport
             this.checkBox66.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox66.AutoSize = true;
             this.checkBox66.Location = new System.Drawing.Point(17, 865);
-            this.checkBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox66.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox66.Name = "checkBox66";
             this.checkBox66.Size = new System.Drawing.Size(18, 17);
             this.checkBox66.TabIndex = 146;
@@ -7920,7 +7938,7 @@ namespace Rexport
             this.checkBox65.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox65.AutoSize = true;
             this.checkBox65.Location = new System.Drawing.Point(227, 777);
-            this.checkBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox65.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox65.Name = "checkBox65";
             this.checkBox65.Size = new System.Drawing.Size(18, 17);
             this.checkBox65.TabIndex = 145;
@@ -7931,7 +7949,7 @@ namespace Rexport
             this.checkBox64.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox64.AutoSize = true;
             this.checkBox64.Location = new System.Drawing.Point(173, 777);
-            this.checkBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox64.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox64.Name = "checkBox64";
             this.checkBox64.Size = new System.Drawing.Size(18, 17);
             this.checkBox64.TabIndex = 144;
@@ -7942,7 +7960,7 @@ namespace Rexport
             this.checkBox63.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox63.AutoSize = true;
             this.checkBox63.Location = new System.Drawing.Point(121, 777);
-            this.checkBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox63.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox63.Name = "checkBox63";
             this.checkBox63.Size = new System.Drawing.Size(18, 17);
             this.checkBox63.TabIndex = 143;
@@ -7953,7 +7971,7 @@ namespace Rexport
             this.checkBox62.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox62.AutoSize = true;
             this.checkBox62.Location = new System.Drawing.Point(69, 777);
-            this.checkBox62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox62.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox62.Name = "checkBox62";
             this.checkBox62.Size = new System.Drawing.Size(18, 17);
             this.checkBox62.TabIndex = 142;
@@ -7964,7 +7982,7 @@ namespace Rexport
             this.checkBox61.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox61.AutoSize = true;
             this.checkBox61.Location = new System.Drawing.Point(17, 777);
-            this.checkBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox61.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox61.Name = "checkBox61";
             this.checkBox61.Size = new System.Drawing.Size(18, 17);
             this.checkBox61.TabIndex = 141;
@@ -7975,7 +7993,7 @@ namespace Rexport
             this.checkBox60.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox60.AutoSize = true;
             this.checkBox60.Location = new System.Drawing.Point(227, 689);
-            this.checkBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox60.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox60.Name = "checkBox60";
             this.checkBox60.Size = new System.Drawing.Size(18, 17);
             this.checkBox60.TabIndex = 140;
@@ -7986,7 +8004,7 @@ namespace Rexport
             this.checkBox59.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox59.AutoSize = true;
             this.checkBox59.Location = new System.Drawing.Point(173, 689);
-            this.checkBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox59.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox59.Name = "checkBox59";
             this.checkBox59.Size = new System.Drawing.Size(18, 17);
             this.checkBox59.TabIndex = 139;
@@ -7997,7 +8015,7 @@ namespace Rexport
             this.checkBox58.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox58.AutoSize = true;
             this.checkBox58.Location = new System.Drawing.Point(121, 689);
-            this.checkBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox58.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox58.Name = "checkBox58";
             this.checkBox58.Size = new System.Drawing.Size(18, 17);
             this.checkBox58.TabIndex = 138;
@@ -8008,7 +8026,7 @@ namespace Rexport
             this.checkBox57.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox57.AutoSize = true;
             this.checkBox57.Location = new System.Drawing.Point(69, 689);
-            this.checkBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox57.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox57.Name = "checkBox57";
             this.checkBox57.Size = new System.Drawing.Size(18, 17);
             this.checkBox57.TabIndex = 137;
@@ -8019,7 +8037,7 @@ namespace Rexport
             this.checkBox56.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox56.AutoSize = true;
             this.checkBox56.Location = new System.Drawing.Point(17, 689);
-            this.checkBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox56.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox56.Name = "checkBox56";
             this.checkBox56.Size = new System.Drawing.Size(18, 17);
             this.checkBox56.TabIndex = 136;
@@ -8030,7 +8048,7 @@ namespace Rexport
             this.checkBox55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox55.AutoSize = true;
             this.checkBox55.Location = new System.Drawing.Point(227, 601);
-            this.checkBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox55.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox55.Name = "checkBox55";
             this.checkBox55.Size = new System.Drawing.Size(18, 17);
             this.checkBox55.TabIndex = 135;
@@ -8041,7 +8059,7 @@ namespace Rexport
             this.checkBox54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox54.AutoSize = true;
             this.checkBox54.Location = new System.Drawing.Point(173, 601);
-            this.checkBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox54.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox54.Name = "checkBox54";
             this.checkBox54.Size = new System.Drawing.Size(18, 17);
             this.checkBox54.TabIndex = 134;
@@ -8052,7 +8070,7 @@ namespace Rexport
             this.checkBox53.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox53.AutoSize = true;
             this.checkBox53.Location = new System.Drawing.Point(121, 601);
-            this.checkBox53.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox53.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox53.Name = "checkBox53";
             this.checkBox53.Size = new System.Drawing.Size(18, 17);
             this.checkBox53.TabIndex = 133;
@@ -8063,7 +8081,7 @@ namespace Rexport
             this.checkBox52.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox52.AutoSize = true;
             this.checkBox52.Location = new System.Drawing.Point(69, 601);
-            this.checkBox52.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox52.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox52.Name = "checkBox52";
             this.checkBox52.Size = new System.Drawing.Size(18, 17);
             this.checkBox52.TabIndex = 132;
@@ -8074,7 +8092,7 @@ namespace Rexport
             this.checkBox51.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox51.AutoSize = true;
             this.checkBox51.Location = new System.Drawing.Point(17, 601);
-            this.checkBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox51.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox51.Name = "checkBox51";
             this.checkBox51.Size = new System.Drawing.Size(18, 17);
             this.checkBox51.TabIndex = 131;
@@ -8085,7 +8103,7 @@ namespace Rexport
             this.checkBox50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox50.AutoSize = true;
             this.checkBox50.Location = new System.Drawing.Point(227, 513);
-            this.checkBox50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox50.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox50.Name = "checkBox50";
             this.checkBox50.Size = new System.Drawing.Size(18, 17);
             this.checkBox50.TabIndex = 130;
@@ -8096,7 +8114,7 @@ namespace Rexport
             this.checkBox49.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox49.AutoSize = true;
             this.checkBox49.Location = new System.Drawing.Point(173, 513);
-            this.checkBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox49.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox49.Name = "checkBox49";
             this.checkBox49.Size = new System.Drawing.Size(18, 17);
             this.checkBox49.TabIndex = 129;
@@ -8107,7 +8125,7 @@ namespace Rexport
             this.checkBox48.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox48.AutoSize = true;
             this.checkBox48.Location = new System.Drawing.Point(121, 513);
-            this.checkBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox48.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox48.Name = "checkBox48";
             this.checkBox48.Size = new System.Drawing.Size(18, 17);
             this.checkBox48.TabIndex = 128;
@@ -8118,7 +8136,7 @@ namespace Rexport
             this.checkBox47.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox47.AutoSize = true;
             this.checkBox47.Location = new System.Drawing.Point(69, 513);
-            this.checkBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox47.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox47.Name = "checkBox47";
             this.checkBox47.Size = new System.Drawing.Size(18, 17);
             this.checkBox47.TabIndex = 127;
@@ -8129,7 +8147,7 @@ namespace Rexport
             this.checkBox46.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox46.AutoSize = true;
             this.checkBox46.Location = new System.Drawing.Point(17, 513);
-            this.checkBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox46.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox46.Name = "checkBox46";
             this.checkBox46.Size = new System.Drawing.Size(18, 17);
             this.checkBox46.TabIndex = 126;
@@ -8140,7 +8158,7 @@ namespace Rexport
             this.checkBox45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox45.AutoSize = true;
             this.checkBox45.Location = new System.Drawing.Point(227, 425);
-            this.checkBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox45.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox45.Name = "checkBox45";
             this.checkBox45.Size = new System.Drawing.Size(18, 17);
             this.checkBox45.TabIndex = 125;
@@ -8151,7 +8169,7 @@ namespace Rexport
             this.checkBox44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox44.AutoSize = true;
             this.checkBox44.Location = new System.Drawing.Point(173, 425);
-            this.checkBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox44.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox44.Name = "checkBox44";
             this.checkBox44.Size = new System.Drawing.Size(18, 17);
             this.checkBox44.TabIndex = 124;
@@ -8162,7 +8180,7 @@ namespace Rexport
             this.checkBox43.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox43.AutoSize = true;
             this.checkBox43.Location = new System.Drawing.Point(121, 425);
-            this.checkBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox43.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox43.Name = "checkBox43";
             this.checkBox43.Size = new System.Drawing.Size(18, 17);
             this.checkBox43.TabIndex = 123;
@@ -8173,7 +8191,7 @@ namespace Rexport
             this.checkBox42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox42.AutoSize = true;
             this.checkBox42.Location = new System.Drawing.Point(69, 425);
-            this.checkBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox42.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox42.Name = "checkBox42";
             this.checkBox42.Size = new System.Drawing.Size(18, 17);
             this.checkBox42.TabIndex = 122;
@@ -8184,7 +8202,7 @@ namespace Rexport
             this.checkBox41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox41.AutoSize = true;
             this.checkBox41.Location = new System.Drawing.Point(17, 425);
-            this.checkBox41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox41.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox41.Name = "checkBox41";
             this.checkBox41.Size = new System.Drawing.Size(18, 17);
             this.checkBox41.TabIndex = 121;
@@ -8195,7 +8213,7 @@ namespace Rexport
             this.checkBox40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox40.AutoSize = true;
             this.checkBox40.Location = new System.Drawing.Point(227, 337);
-            this.checkBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox40.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox40.Name = "checkBox40";
             this.checkBox40.Size = new System.Drawing.Size(18, 17);
             this.checkBox40.TabIndex = 120;
@@ -8206,7 +8224,7 @@ namespace Rexport
             this.checkBox39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox39.AutoSize = true;
             this.checkBox39.Location = new System.Drawing.Point(173, 337);
-            this.checkBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox39.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox39.Name = "checkBox39";
             this.checkBox39.Size = new System.Drawing.Size(18, 17);
             this.checkBox39.TabIndex = 119;
@@ -8217,7 +8235,7 @@ namespace Rexport
             this.checkBox38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox38.AutoSize = true;
             this.checkBox38.Location = new System.Drawing.Point(121, 337);
-            this.checkBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox38.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox38.Name = "checkBox38";
             this.checkBox38.Size = new System.Drawing.Size(18, 17);
             this.checkBox38.TabIndex = 118;
@@ -8228,7 +8246,7 @@ namespace Rexport
             this.checkBox37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox37.AutoSize = true;
             this.checkBox37.Location = new System.Drawing.Point(69, 337);
-            this.checkBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox37.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox37.Name = "checkBox37";
             this.checkBox37.Size = new System.Drawing.Size(18, 17);
             this.checkBox37.TabIndex = 117;
@@ -8239,7 +8257,7 @@ namespace Rexport
             this.checkBox36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox36.AutoSize = true;
             this.checkBox36.Location = new System.Drawing.Point(17, 337);
-            this.checkBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox36.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox36.Name = "checkBox36";
             this.checkBox36.Size = new System.Drawing.Size(18, 17);
             this.checkBox36.TabIndex = 116;
@@ -8250,7 +8268,7 @@ namespace Rexport
             this.checkBox35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox35.AutoSize = true;
             this.checkBox35.Location = new System.Drawing.Point(227, 249);
-            this.checkBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox35.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox35.Name = "checkBox35";
             this.checkBox35.Size = new System.Drawing.Size(18, 17);
             this.checkBox35.TabIndex = 115;
@@ -8261,7 +8279,7 @@ namespace Rexport
             this.checkBox34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox34.AutoSize = true;
             this.checkBox34.Location = new System.Drawing.Point(173, 249);
-            this.checkBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox34.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox34.Name = "checkBox34";
             this.checkBox34.Size = new System.Drawing.Size(18, 17);
             this.checkBox34.TabIndex = 114;
@@ -8272,7 +8290,7 @@ namespace Rexport
             this.checkBox33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox33.AutoSize = true;
             this.checkBox33.Location = new System.Drawing.Point(121, 249);
-            this.checkBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox33.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox33.Name = "checkBox33";
             this.checkBox33.Size = new System.Drawing.Size(18, 17);
             this.checkBox33.TabIndex = 113;
@@ -8283,7 +8301,7 @@ namespace Rexport
             this.checkBox32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox32.AutoSize = true;
             this.checkBox32.Location = new System.Drawing.Point(69, 249);
-            this.checkBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox32.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox32.Name = "checkBox32";
             this.checkBox32.Size = new System.Drawing.Size(18, 17);
             this.checkBox32.TabIndex = 112;
@@ -8294,7 +8312,7 @@ namespace Rexport
             this.checkBox31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox31.AutoSize = true;
             this.checkBox31.Location = new System.Drawing.Point(17, 249);
-            this.checkBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox31.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox31.Name = "checkBox31";
             this.checkBox31.Size = new System.Drawing.Size(18, 17);
             this.checkBox31.TabIndex = 111;
@@ -8305,7 +8323,7 @@ namespace Rexport
             this.checkBox30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox30.AutoSize = true;
             this.checkBox30.Location = new System.Drawing.Point(227, 161);
-            this.checkBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox30.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox30.Name = "checkBox30";
             this.checkBox30.Size = new System.Drawing.Size(18, 17);
             this.checkBox30.TabIndex = 110;
@@ -8316,7 +8334,7 @@ namespace Rexport
             this.checkBox29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox29.AutoSize = true;
             this.checkBox29.Location = new System.Drawing.Point(173, 161);
-            this.checkBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox29.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox29.Name = "checkBox29";
             this.checkBox29.Size = new System.Drawing.Size(18, 17);
             this.checkBox29.TabIndex = 109;
@@ -8327,7 +8345,7 @@ namespace Rexport
             this.checkBox28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox28.AutoSize = true;
             this.checkBox28.Location = new System.Drawing.Point(121, 161);
-            this.checkBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox28.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox28.Name = "checkBox28";
             this.checkBox28.Size = new System.Drawing.Size(18, 17);
             this.checkBox28.TabIndex = 108;
@@ -8338,7 +8356,7 @@ namespace Rexport
             this.checkBox27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox27.AutoSize = true;
             this.checkBox27.Location = new System.Drawing.Point(69, 161);
-            this.checkBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox27.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox27.Name = "checkBox27";
             this.checkBox27.Size = new System.Drawing.Size(18, 17);
             this.checkBox27.TabIndex = 107;
@@ -8349,7 +8367,7 @@ namespace Rexport
             this.checkBox26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox26.AutoSize = true;
             this.checkBox26.Location = new System.Drawing.Point(17, 161);
-            this.checkBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox26.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox26.Name = "checkBox26";
             this.checkBox26.Size = new System.Drawing.Size(18, 17);
             this.checkBox26.TabIndex = 106;
@@ -8360,7 +8378,7 @@ namespace Rexport
             this.checkBox25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox25.AutoSize = true;
             this.checkBox25.Location = new System.Drawing.Point(227, 73);
-            this.checkBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox25.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox25.Name = "checkBox25";
             this.checkBox25.Size = new System.Drawing.Size(18, 17);
             this.checkBox25.TabIndex = 105;
@@ -8371,7 +8389,7 @@ namespace Rexport
             this.checkBox24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox24.AutoSize = true;
             this.checkBox24.Location = new System.Drawing.Point(173, 73);
-            this.checkBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox24.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox24.Name = "checkBox24";
             this.checkBox24.Size = new System.Drawing.Size(18, 17);
             this.checkBox24.TabIndex = 104;
@@ -8382,7 +8400,7 @@ namespace Rexport
             this.checkBox23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox23.AutoSize = true;
             this.checkBox23.Location = new System.Drawing.Point(121, 73);
-            this.checkBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox23.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox23.Name = "checkBox23";
             this.checkBox23.Size = new System.Drawing.Size(18, 17);
             this.checkBox23.TabIndex = 103;
@@ -8393,7 +8411,7 @@ namespace Rexport
             this.checkBox22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox22.AutoSize = true;
             this.checkBox22.Location = new System.Drawing.Point(69, 73);
-            this.checkBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox22.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox22.Name = "checkBox22";
             this.checkBox22.Size = new System.Drawing.Size(18, 17);
             this.checkBox22.TabIndex = 102;
@@ -8459,7 +8477,7 @@ namespace Rexport
             this.checkBox21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox21.AutoSize = true;
             this.checkBox21.Location = new System.Drawing.Point(17, 73);
-            this.checkBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox21.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox21.Name = "checkBox21";
             this.checkBox21.Size = new System.Drawing.Size(18, 17);
             this.checkBox21.TabIndex = 101;
@@ -8572,7 +8590,7 @@ namespace Rexport
             this.richTextBox51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox51.Location = new System.Drawing.Point(59, 1161);
-            this.richTextBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox51.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox51.Name = "richTextBox51";
             this.richTextBox51.Size = new System.Drawing.Size(807, 88);
             this.richTextBox51.TabIndex = 112;
@@ -8583,7 +8601,7 @@ namespace Rexport
             this.richTextBox50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox50.Location = new System.Drawing.Point(59, 1072);
-            this.richTextBox50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox50.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox50.Name = "richTextBox50";
             this.richTextBox50.Size = new System.Drawing.Size(807, 80);
             this.richTextBox50.TabIndex = 111;
@@ -8594,7 +8612,7 @@ namespace Rexport
             this.richTextBox49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox49.Location = new System.Drawing.Point(59, 983);
-            this.richTextBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox49.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox49.Name = "richTextBox49";
             this.richTextBox49.Size = new System.Drawing.Size(807, 80);
             this.richTextBox49.TabIndex = 110;
@@ -8605,7 +8623,7 @@ namespace Rexport
             this.richTextBox48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox48.Location = new System.Drawing.Point(59, 894);
-            this.richTextBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox48.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox48.Name = "richTextBox48";
             this.richTextBox48.Size = new System.Drawing.Size(807, 80);
             this.richTextBox48.TabIndex = 109;
@@ -8616,7 +8634,7 @@ namespace Rexport
             this.richTextBox47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox47.Location = new System.Drawing.Point(59, 805);
-            this.richTextBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox47.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox47.Name = "richTextBox47";
             this.richTextBox47.Size = new System.Drawing.Size(807, 80);
             this.richTextBox47.TabIndex = 108;
@@ -8627,7 +8645,7 @@ namespace Rexport
             this.richTextBox46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox46.Location = new System.Drawing.Point(59, 716);
-            this.richTextBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox46.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox46.Name = "richTextBox46";
             this.richTextBox46.Size = new System.Drawing.Size(807, 80);
             this.richTextBox46.TabIndex = 107;
@@ -8638,7 +8656,7 @@ namespace Rexport
             this.richTextBox45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox45.Location = new System.Drawing.Point(59, 627);
-            this.richTextBox45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox45.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox45.Name = "richTextBox45";
             this.richTextBox45.Size = new System.Drawing.Size(807, 80);
             this.richTextBox45.TabIndex = 106;
@@ -8649,7 +8667,7 @@ namespace Rexport
             this.richTextBox44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox44.Location = new System.Drawing.Point(59, 538);
-            this.richTextBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox44.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox44.Name = "richTextBox44";
             this.richTextBox44.Size = new System.Drawing.Size(807, 80);
             this.richTextBox44.TabIndex = 105;
@@ -8660,7 +8678,7 @@ namespace Rexport
             this.richTextBox43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox43.Location = new System.Drawing.Point(59, 449);
-            this.richTextBox43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox43.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox43.Name = "richTextBox43";
             this.richTextBox43.Size = new System.Drawing.Size(807, 80);
             this.richTextBox43.TabIndex = 104;
@@ -8671,7 +8689,7 @@ namespace Rexport
             this.richTextBox42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox42.Location = new System.Drawing.Point(59, 360);
-            this.richTextBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox42.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox42.Name = "richTextBox42";
             this.richTextBox42.Size = new System.Drawing.Size(807, 80);
             this.richTextBox42.TabIndex = 103;
@@ -8682,7 +8700,7 @@ namespace Rexport
             this.richTextBox36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox36.Location = new System.Drawing.Point(59, 271);
-            this.richTextBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox36.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox36.Name = "richTextBox36";
             this.richTextBox36.Size = new System.Drawing.Size(807, 80);
             this.richTextBox36.TabIndex = 102;
@@ -8693,7 +8711,7 @@ namespace Rexport
             this.richTextBox35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox35.Location = new System.Drawing.Point(59, 182);
-            this.richTextBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox35.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox35.Name = "richTextBox35";
             this.richTextBox35.Size = new System.Drawing.Size(807, 80);
             this.richTextBox35.TabIndex = 101;
@@ -8869,7 +8887,7 @@ namespace Rexport
             this.richTextBox34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox34.Location = new System.Drawing.Point(59, 96);
-            this.richTextBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox34.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox34.Name = "richTextBox34";
             this.richTextBox34.Size = new System.Drawing.Size(807, 77);
             this.richTextBox34.TabIndex = 100;
@@ -8893,7 +8911,7 @@ namespace Rexport
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.33334F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.66667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel5.Controls.Add(this.label20, 0, 13);
             this.tableLayoutPanel5.Controls.Add(this.textBox146, 0, 12);
             this.tableLayoutPanel5.Controls.Add(this.textBox147, 0, 12);
@@ -8985,7 +9003,7 @@ namespace Rexport
             // 
             this.textBox146.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox146.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox146.Location = new System.Drawing.Point(859, 1124);
+            this.textBox146.Location = new System.Drawing.Point(857, 1124);
             this.textBox146.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox146.Name = "textBox146";
             this.textBox146.Size = new System.Drawing.Size(89, 30);
@@ -8995,7 +9013,7 @@ namespace Rexport
             // 
             this.textBox147.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox147.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox147.Location = new System.Drawing.Point(656, 1124);
+            this.textBox147.Location = new System.Drawing.Point(654, 1124);
             this.textBox147.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox147.Name = "textBox147";
             this.textBox147.Size = new System.Drawing.Size(89, 30);
@@ -9005,7 +9023,7 @@ namespace Rexport
             // 
             this.textBox148.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox148.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox148.Location = new System.Drawing.Point(859, 1054);
+            this.textBox148.Location = new System.Drawing.Point(857, 1054);
             this.textBox148.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox148.Name = "textBox148";
             this.textBox148.Size = new System.Drawing.Size(89, 30);
@@ -9015,7 +9033,7 @@ namespace Rexport
             // 
             this.textBox149.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox149.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox149.Location = new System.Drawing.Point(656, 1054);
+            this.textBox149.Location = new System.Drawing.Point(654, 1054);
             this.textBox149.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox149.Name = "textBox149";
             this.textBox149.Size = new System.Drawing.Size(89, 30);
@@ -9025,7 +9043,7 @@ namespace Rexport
             // 
             this.textBox150.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox150.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox150.Location = new System.Drawing.Point(656, 978);
+            this.textBox150.Location = new System.Drawing.Point(654, 978);
             this.textBox150.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox150.Name = "textBox150";
             this.textBox150.Size = new System.Drawing.Size(89, 30);
@@ -9047,7 +9065,7 @@ namespace Rexport
             this.label87.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label87.Location = new System.Drawing.Point(109, 97);
+            this.label87.Location = new System.Drawing.Point(108, 97);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(351, 50);
             this.label87.TabIndex = 16;
@@ -9069,7 +9087,7 @@ namespace Rexport
             this.label89.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label89.Location = new System.Drawing.Point(660, 13);
+            this.label89.Location = new System.Drawing.Point(658, 13);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(81, 25);
             this.label89.TabIndex = 4;
@@ -9080,7 +9098,7 @@ namespace Rexport
             this.label90.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label90.Location = new System.Drawing.Point(861, 1);
+            this.label90.Location = new System.Drawing.Point(859, 1);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(85, 50);
             this.label90.TabIndex = 5;
@@ -9090,7 +9108,7 @@ namespace Rexport
             // 
             this.textBox151.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox151.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox151.Location = new System.Drawing.Point(1026, 107);
+            this.textBox151.Location = new System.Drawing.Point(1025, 107);
             this.textBox151.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox151.Name = "textBox151";
             this.textBox151.Size = new System.Drawing.Size(89, 30);
@@ -9101,7 +9119,7 @@ namespace Rexport
             this.label91.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label91.AutoSize = true;
             this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label91.Location = new System.Drawing.Point(1023, 13);
+            this.label91.Location = new System.Drawing.Point(1022, 13);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(96, 25);
             this.label91.TabIndex = 6;
@@ -9133,7 +9151,7 @@ namespace Rexport
             // 
             this.textBox152.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox152.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox152.Location = new System.Drawing.Point(656, 107);
+            this.textBox152.Location = new System.Drawing.Point(654, 107);
             this.textBox152.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox152.Name = "textBox152";
             this.textBox152.Size = new System.Drawing.Size(89, 30);
@@ -9143,7 +9161,7 @@ namespace Rexport
             // 
             this.textBox153.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox153.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox153.Location = new System.Drawing.Point(859, 107);
+            this.textBox153.Location = new System.Drawing.Point(857, 107);
             this.textBox153.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox153.Name = "textBox153";
             this.textBox153.Size = new System.Drawing.Size(89, 30);
@@ -9153,7 +9171,7 @@ namespace Rexport
             // 
             this.textBox154.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox154.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox154.Location = new System.Drawing.Point(656, 228);
+            this.textBox154.Location = new System.Drawing.Point(654, 228);
             this.textBox154.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox154.Name = "textBox154";
             this.textBox154.Size = new System.Drawing.Size(89, 30);
@@ -9163,7 +9181,7 @@ namespace Rexport
             // 
             this.textBox155.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox155.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox155.Location = new System.Drawing.Point(859, 228);
+            this.textBox155.Location = new System.Drawing.Point(857, 228);
             this.textBox155.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox155.Name = "textBox155";
             this.textBox155.Size = new System.Drawing.Size(89, 30);
@@ -9173,7 +9191,7 @@ namespace Rexport
             // 
             this.textBox156.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox156.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox156.Location = new System.Drawing.Point(1026, 228);
+            this.textBox156.Location = new System.Drawing.Point(1025, 228);
             this.textBox156.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox156.Name = "textBox156";
             this.textBox156.Size = new System.Drawing.Size(89, 30);
@@ -9183,7 +9201,7 @@ namespace Rexport
             // 
             this.textBox157.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox157.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox157.Location = new System.Drawing.Point(656, 323);
+            this.textBox157.Location = new System.Drawing.Point(654, 323);
             this.textBox157.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox157.Name = "textBox157";
             this.textBox157.Size = new System.Drawing.Size(89, 30);
@@ -9193,7 +9211,7 @@ namespace Rexport
             // 
             this.textBox159.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox159.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox159.Location = new System.Drawing.Point(859, 323);
+            this.textBox159.Location = new System.Drawing.Point(857, 323);
             this.textBox159.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox159.Name = "textBox159";
             this.textBox159.Size = new System.Drawing.Size(89, 30);
@@ -9203,7 +9221,7 @@ namespace Rexport
             // 
             this.textBox160.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox160.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox160.Location = new System.Drawing.Point(1026, 323);
+            this.textBox160.Location = new System.Drawing.Point(1025, 323);
             this.textBox160.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox160.Name = "textBox160";
             this.textBox160.Size = new System.Drawing.Size(89, 30);
@@ -9213,7 +9231,7 @@ namespace Rexport
             // 
             this.textBox161.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox161.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox161.Location = new System.Drawing.Point(656, 419);
+            this.textBox161.Location = new System.Drawing.Point(654, 419);
             this.textBox161.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox161.Name = "textBox161";
             this.textBox161.Size = new System.Drawing.Size(89, 30);
@@ -9223,7 +9241,7 @@ namespace Rexport
             // 
             this.textBox163.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox163.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox163.Location = new System.Drawing.Point(859, 419);
+            this.textBox163.Location = new System.Drawing.Point(857, 419);
             this.textBox163.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox163.Name = "textBox163";
             this.textBox163.Size = new System.Drawing.Size(89, 30);
@@ -9233,7 +9251,7 @@ namespace Rexport
             // 
             this.textBox164.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox164.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox164.Location = new System.Drawing.Point(1026, 419);
+            this.textBox164.Location = new System.Drawing.Point(1025, 419);
             this.textBox164.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox164.Name = "textBox164";
             this.textBox164.Size = new System.Drawing.Size(89, 30);
@@ -9243,7 +9261,7 @@ namespace Rexport
             // 
             this.textBox165.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox165.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox165.Location = new System.Drawing.Point(656, 521);
+            this.textBox165.Location = new System.Drawing.Point(654, 521);
             this.textBox165.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox165.Name = "textBox165";
             this.textBox165.Size = new System.Drawing.Size(89, 30);
@@ -9253,7 +9271,7 @@ namespace Rexport
             // 
             this.textBox169.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox169.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox169.Location = new System.Drawing.Point(859, 521);
+            this.textBox169.Location = new System.Drawing.Point(857, 521);
             this.textBox169.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox169.Name = "textBox169";
             this.textBox169.Size = new System.Drawing.Size(89, 30);
@@ -9263,7 +9281,7 @@ namespace Rexport
             // 
             this.textBox170.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox170.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox170.Location = new System.Drawing.Point(1026, 521);
+            this.textBox170.Location = new System.Drawing.Point(1025, 521);
             this.textBox170.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox170.Name = "textBox170";
             this.textBox170.Size = new System.Drawing.Size(89, 30);
@@ -9273,7 +9291,7 @@ namespace Rexport
             // 
             this.textBox171.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox171.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox171.Location = new System.Drawing.Point(656, 622);
+            this.textBox171.Location = new System.Drawing.Point(654, 622);
             this.textBox171.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox171.Name = "textBox171";
             this.textBox171.Size = new System.Drawing.Size(89, 30);
@@ -9283,7 +9301,7 @@ namespace Rexport
             // 
             this.textBox175.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox175.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox175.Location = new System.Drawing.Point(859, 622);
+            this.textBox175.Location = new System.Drawing.Point(857, 622);
             this.textBox175.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox175.Name = "textBox175";
             this.textBox175.Size = new System.Drawing.Size(89, 30);
@@ -9293,7 +9311,7 @@ namespace Rexport
             // 
             this.textBox176.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox176.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox176.Location = new System.Drawing.Point(656, 727);
+            this.textBox176.Location = new System.Drawing.Point(654, 727);
             this.textBox176.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox176.Name = "textBox176";
             this.textBox176.Size = new System.Drawing.Size(89, 30);
@@ -9303,7 +9321,7 @@ namespace Rexport
             // 
             this.textBox177.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox177.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox177.Location = new System.Drawing.Point(859, 727);
+            this.textBox177.Location = new System.Drawing.Point(857, 727);
             this.textBox177.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox177.Name = "textBox177";
             this.textBox177.Size = new System.Drawing.Size(89, 30);
@@ -9313,7 +9331,7 @@ namespace Rexport
             // 
             this.textBox179.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox179.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox179.Location = new System.Drawing.Point(1026, 622);
+            this.textBox179.Location = new System.Drawing.Point(1025, 622);
             this.textBox179.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox179.Name = "textBox179";
             this.textBox179.Size = new System.Drawing.Size(89, 30);
@@ -9323,7 +9341,7 @@ namespace Rexport
             // 
             this.textBox181.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox181.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox181.Location = new System.Drawing.Point(1026, 727);
+            this.textBox181.Location = new System.Drawing.Point(1025, 727);
             this.textBox181.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox181.Name = "textBox181";
             this.textBox181.Size = new System.Drawing.Size(89, 30);
@@ -9333,7 +9351,7 @@ namespace Rexport
             // 
             this.textBox182.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox182.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox182.Location = new System.Drawing.Point(656, 816);
+            this.textBox182.Location = new System.Drawing.Point(654, 816);
             this.textBox182.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox182.Name = "textBox182";
             this.textBox182.Size = new System.Drawing.Size(89, 30);
@@ -9343,7 +9361,7 @@ namespace Rexport
             // 
             this.textBox183.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox183.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox183.Location = new System.Drawing.Point(859, 816);
+            this.textBox183.Location = new System.Drawing.Point(857, 816);
             this.textBox183.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox183.Name = "textBox183";
             this.textBox183.Size = new System.Drawing.Size(89, 30);
@@ -9353,7 +9371,7 @@ namespace Rexport
             // 
             this.textBox184.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox184.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox184.Location = new System.Drawing.Point(1026, 816);
+            this.textBox184.Location = new System.Drawing.Point(1025, 816);
             this.textBox184.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox184.Name = "textBox184";
             this.textBox184.Size = new System.Drawing.Size(89, 30);
@@ -9363,7 +9381,7 @@ namespace Rexport
             // 
             this.textBox185.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox185.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox185.Location = new System.Drawing.Point(656, 893);
+            this.textBox185.Location = new System.Drawing.Point(654, 893);
             this.textBox185.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox185.Name = "textBox185";
             this.textBox185.Size = new System.Drawing.Size(89, 30);
@@ -9373,7 +9391,7 @@ namespace Rexport
             // 
             this.textBox186.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox186.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox186.Location = new System.Drawing.Point(859, 893);
+            this.textBox186.Location = new System.Drawing.Point(857, 893);
             this.textBox186.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox186.Name = "textBox186";
             this.textBox186.Size = new System.Drawing.Size(89, 30);
@@ -9383,7 +9401,7 @@ namespace Rexport
             // 
             this.textBox187.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox187.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox187.Location = new System.Drawing.Point(1026, 893);
+            this.textBox187.Location = new System.Drawing.Point(1025, 893);
             this.textBox187.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox187.Name = "textBox187";
             this.textBox187.Size = new System.Drawing.Size(89, 30);
@@ -9393,7 +9411,7 @@ namespace Rexport
             // 
             this.textBox188.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox188.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox188.Location = new System.Drawing.Point(859, 978);
+            this.textBox188.Location = new System.Drawing.Point(857, 978);
             this.textBox188.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox188.Name = "textBox188";
             this.textBox188.Size = new System.Drawing.Size(89, 30);
@@ -9403,7 +9421,7 @@ namespace Rexport
             // 
             this.textBox189.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox189.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox189.Location = new System.Drawing.Point(1026, 978);
+            this.textBox189.Location = new System.Drawing.Point(1025, 978);
             this.textBox189.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox189.Name = "textBox189";
             this.textBox189.Size = new System.Drawing.Size(89, 30);
@@ -9436,7 +9454,7 @@ namespace Rexport
             this.label96.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label96.Location = new System.Drawing.Point(194, 895);
+            this.label96.Location = new System.Drawing.Point(193, 895);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(181, 25);
             this.label96.TabIndex = 18;
@@ -9458,7 +9476,7 @@ namespace Rexport
             this.label98.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label98.Location = new System.Drawing.Point(202, 729);
+            this.label98.Location = new System.Drawing.Point(201, 729);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(165, 25);
             this.label98.TabIndex = 20;
@@ -9480,7 +9498,7 @@ namespace Rexport
             this.label100.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label100.AutoSize = true;
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label100.Location = new System.Drawing.Point(191, 523);
+            this.label100.Location = new System.Drawing.Point(190, 523);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(187, 25);
             this.label100.TabIndex = 22;
@@ -9491,7 +9509,7 @@ namespace Rexport
             this.label101.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label101.Location = new System.Drawing.Point(230, 1127);
+            this.label101.Location = new System.Drawing.Point(229, 1127);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(109, 25);
             this.label101.TabIndex = 83;
@@ -9501,7 +9519,7 @@ namespace Rexport
             // 
             this.textBox190.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox190.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox190.Location = new System.Drawing.Point(1026, 1054);
+            this.textBox190.Location = new System.Drawing.Point(1025, 1054);
             this.textBox190.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox190.Name = "textBox190";
             this.textBox190.Size = new System.Drawing.Size(89, 30);
@@ -9511,7 +9529,7 @@ namespace Rexport
             // 
             this.textBox191.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox191.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox191.Location = new System.Drawing.Point(1026, 1124);
+            this.textBox191.Location = new System.Drawing.Point(1025, 1124);
             this.textBox191.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox191.Name = "textBox191";
             this.textBox191.Size = new System.Drawing.Size(89, 30);
@@ -9521,7 +9539,7 @@ namespace Rexport
             // 
             this.textBox192.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox192.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox192.Location = new System.Drawing.Point(1026, 1180);
+            this.textBox192.Location = new System.Drawing.Point(1025, 1180);
             this.textBox192.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox192.Name = "textBox192";
             this.textBox192.Size = new System.Drawing.Size(89, 30);
@@ -9544,7 +9562,7 @@ namespace Rexport
             this.tableLayoutPanel13.ColumnCount = 3;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.75412F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.245877F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel13.Controls.Add(this.textBox264, 2, 2);
             this.tableLayoutPanel13.Controls.Add(this.label1, 0, 2);
@@ -9557,7 +9575,7 @@ namespace Rexport
             this.tableLayoutPanel13.Controls.Add(this.textBox263, 1, 2);
             this.tableLayoutPanel13.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(32, 4710);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 3;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.28571F));
@@ -9572,8 +9590,8 @@ namespace Rexport
             // 
             this.textBox264.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox264.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox264.Location = new System.Drawing.Point(1053, 138);
-            this.textBox264.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox264.Location = new System.Drawing.Point(1052, 138);
+            this.textBox264.Margin = new System.Windows.Forms.Padding(4);
             this.textBox264.Name = "textBox264";
             this.textBox264.Size = new System.Drawing.Size(76, 30);
             this.textBox264.TabIndex = 83;
@@ -9583,7 +9601,7 @@ namespace Rexport
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(426, 141);
+            this.label1.Location = new System.Drawing.Point(425, 141);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 25);
@@ -9595,7 +9613,7 @@ namespace Rexport
             this.label103.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label103.Location = new System.Drawing.Point(237, 23);
+            this.label103.Location = new System.Drawing.Point(236, 23);
             this.label103.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(457, 25);
@@ -9606,8 +9624,8 @@ namespace Rexport
             // 
             this.textBox194.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox194.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox194.Location = new System.Drawing.Point(935, 20);
-            this.textBox194.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox194.Location = new System.Drawing.Point(933, 20);
+            this.textBox194.Margin = new System.Windows.Forms.Padding(4);
             this.textBox194.Name = "textBox194";
             this.textBox194.Size = new System.Drawing.Size(75, 30);
             this.textBox194.TabIndex = 76;
@@ -9616,8 +9634,8 @@ namespace Rexport
             // 
             this.textBox195.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox195.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox195.Location = new System.Drawing.Point(1051, 20);
-            this.textBox195.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox195.Location = new System.Drawing.Point(1050, 20);
+            this.textBox195.Margin = new System.Windows.Forms.Padding(4);
             this.textBox195.Name = "textBox195";
             this.textBox195.Size = new System.Drawing.Size(79, 30);
             this.textBox195.TabIndex = 79;
@@ -9626,8 +9644,8 @@ namespace Rexport
             // 
             this.textBox196.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox196.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox196.Location = new System.Drawing.Point(935, 85);
-            this.textBox196.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox196.Location = new System.Drawing.Point(933, 85);
+            this.textBox196.Margin = new System.Windows.Forms.Padding(4);
             this.textBox196.Name = "textBox196";
             this.textBox196.Size = new System.Drawing.Size(75, 30);
             this.textBox196.TabIndex = 78;
@@ -9637,7 +9655,7 @@ namespace Rexport
             this.label104.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label104.Location = new System.Drawing.Point(204, 87);
+            this.label104.Location = new System.Drawing.Point(203, 87);
             this.label104.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(522, 25);
@@ -9648,8 +9666,8 @@ namespace Rexport
             // 
             this.textBox193.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox193.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox193.Location = new System.Drawing.Point(1052, 85);
-            this.textBox193.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox193.Location = new System.Drawing.Point(1051, 85);
+            this.textBox193.Margin = new System.Windows.Forms.Padding(4);
             this.textBox193.Name = "textBox193";
             this.textBox193.Size = new System.Drawing.Size(77, 30);
             this.textBox193.TabIndex = 80;
@@ -9658,8 +9676,8 @@ namespace Rexport
             // 
             this.textBox263.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox263.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox263.Location = new System.Drawing.Point(935, 138);
-            this.textBox263.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox263.Location = new System.Drawing.Point(933, 138);
+            this.textBox263.Margin = new System.Windows.Forms.Padding(4);
             this.textBox263.Name = "textBox263";
             this.textBox263.Size = new System.Drawing.Size(75, 30);
             this.textBox263.TabIndex = 82;
@@ -9688,7 +9706,7 @@ namespace Rexport
             this.tableLayoutPanel15.Controls.Add(this.richTextBox40, 1, 0);
             this.tableLayoutPanel15.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(32, 3200);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 2;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.26178F));
@@ -9704,7 +9722,7 @@ namespace Rexport
             this.richTextBox41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox41.Location = new System.Drawing.Point(325, 123);
-            this.richTextBox41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox41.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox41.Name = "richTextBox41";
             this.richTextBox41.Size = new System.Drawing.Size(838, 108);
             this.richTextBox41.TabIndex = 79;
@@ -9739,7 +9757,7 @@ namespace Rexport
             this.richTextBox40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox40.Location = new System.Drawing.Point(325, 5);
-            this.richTextBox40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox40.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox40.Name = "richTextBox40";
             this.richTextBox40.Size = new System.Drawing.Size(838, 109);
             this.richTextBox40.TabIndex = 78;
@@ -9805,7 +9823,7 @@ namespace Rexport
             this.tableLayoutPanel16.Controls.Add(this.richTextBox2, 1, 1);
             this.tableLayoutPanel16.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel16.Location = new System.Drawing.Point(32, 1659);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 17;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
@@ -10427,7 +10445,7 @@ namespace Rexport
             this.tableLayoutPanel17.Controls.Add(this.label146, 0, 0);
             this.tableLayoutPanel17.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(32, 1404);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -10465,7 +10483,7 @@ namespace Rexport
             this.tableLayoutPanel18.Controls.Add(this.richTextBox37, 1, 0);
             this.tableLayoutPanel18.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(32, 919);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 3;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -10481,7 +10499,7 @@ namespace Rexport
             this.richTextBox39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox39.Location = new System.Drawing.Point(222, 358);
-            this.richTextBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox39.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox39.Name = "richTextBox39";
             this.richTextBox39.Size = new System.Drawing.Size(941, 119);
             this.richTextBox39.TabIndex = 19;
@@ -10492,7 +10510,7 @@ namespace Rexport
             this.richTextBox38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox38.Location = new System.Drawing.Point(222, 171);
-            this.richTextBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox38.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox38.Name = "richTextBox38";
             this.richTextBox38.Size = new System.Drawing.Size(941, 178);
             this.richTextBox38.TabIndex = 18;
@@ -10539,7 +10557,7 @@ namespace Rexport
             this.richTextBox37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox37.Location = new System.Drawing.Point(222, 5);
-            this.richTextBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox37.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox37.Name = "richTextBox37";
             this.richTextBox37.Size = new System.Drawing.Size(941, 157);
             this.richTextBox37.TabIndex = 17;
@@ -10560,7 +10578,7 @@ namespace Rexport
             this.tableLayoutPanel19.Controls.Add(this.textBox97, 1, 0);
             this.tableLayoutPanel19.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(32, 599);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 3;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.64286F));
@@ -10600,7 +10618,7 @@ namespace Rexport
             this.textBox99.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox99.Location = new System.Drawing.Point(223, 238);
-            this.textBox99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox99.Margin = new System.Windows.Forms.Padding(4);
             this.textBox99.Name = "textBox99";
             this.textBox99.Size = new System.Drawing.Size(939, 30);
             this.textBox99.TabIndex = 18;
@@ -10634,7 +10652,7 @@ namespace Rexport
             this.textBox98.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox98.Location = new System.Drawing.Point(223, 128);
-            this.textBox98.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox98.Margin = new System.Windows.Forms.Padding(4);
             this.textBox98.Name = "textBox98";
             this.textBox98.Size = new System.Drawing.Size(939, 30);
             this.textBox98.TabIndex = 17;
@@ -10704,7 +10722,7 @@ namespace Rexport
             this.textBox97.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox97.Location = new System.Drawing.Point(223, 29);
-            this.textBox97.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox97.Margin = new System.Windows.Forms.Padding(4);
             this.textBox97.Name = "textBox97";
             this.textBox97.Size = new System.Drawing.Size(939, 30);
             this.textBox97.TabIndex = 16;
@@ -10726,7 +10744,7 @@ namespace Rexport
             this.tableLayoutPanel20.Controls.Add(this.textBox303, 1, 0);
             this.tableLayoutPanel20.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tableLayoutPanel20.Location = new System.Drawing.Point(32, 282);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 4;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.98795F));
@@ -10745,7 +10763,7 @@ namespace Rexport
             this.flowLayoutPanel4.Controls.Add(this.checkBox8);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(222, 85);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(941, 82);
             this.flowLayoutPanel4.TabIndex = 23;
@@ -10755,7 +10773,7 @@ namespace Rexport
             this.checkBox7.AutoSize = true;
             this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox7.Location = new System.Drawing.Point(4, 4);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(98, 29);
             this.checkBox7.TabIndex = 2;
@@ -10768,7 +10786,7 @@ namespace Rexport
             this.checkBox8.AutoSize = true;
             this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox8.Location = new System.Drawing.Point(110, 4);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(99, 29);
             this.checkBox8.TabIndex = 1;
@@ -10783,7 +10801,7 @@ namespace Rexport
             this.flowLayoutPanel5.Controls.Add(this.checkBox14);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(222, 176);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(941, 61);
             this.flowLayoutPanel5.TabIndex = 22;
@@ -10793,7 +10811,7 @@ namespace Rexport
             this.checkBox13.AutoSize = true;
             this.checkBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox13.Location = new System.Drawing.Point(4, 4);
-            this.checkBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox13.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(112, 29);
             this.checkBox13.TabIndex = 1;
@@ -10805,7 +10823,7 @@ namespace Rexport
             this.checkBox14.AutoSize = true;
             this.checkBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox14.Location = new System.Drawing.Point(124, 4);
-            this.checkBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox14.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(102, 29);
             this.checkBox14.TabIndex = 2;
@@ -10870,7 +10888,7 @@ namespace Rexport
             this.flowLayoutPanel6.Controls.Add(this.checkBox18);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(222, 246);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(941, 46);
             this.flowLayoutPanel6.TabIndex = 7;
@@ -10880,7 +10898,7 @@ namespace Rexport
             this.checkBox15.AutoSize = true;
             this.checkBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox15.Location = new System.Drawing.Point(4, 4);
-            this.checkBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox15.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(136, 29);
             this.checkBox15.TabIndex = 1;
@@ -10892,7 +10910,7 @@ namespace Rexport
             this.checkBox16.AutoSize = true;
             this.checkBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox16.Location = new System.Drawing.Point(148, 4);
-            this.checkBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox16.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(126, 29);
             this.checkBox16.TabIndex = 2;
@@ -10904,7 +10922,7 @@ namespace Rexport
             this.checkBox17.AutoSize = true;
             this.checkBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox17.Location = new System.Drawing.Point(282, 4);
-            this.checkBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox17.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox17.Name = "checkBox17";
             this.checkBox17.Size = new System.Drawing.Size(157, 29);
             this.checkBox17.TabIndex = 3;
@@ -10916,7 +10934,7 @@ namespace Rexport
             this.checkBox18.AutoSize = true;
             this.checkBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox18.Location = new System.Drawing.Point(447, 4);
-            this.checkBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox18.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox18.Name = "checkBox18";
             this.checkBox18.Size = new System.Drawing.Size(134, 29);
             this.checkBox18.TabIndex = 4;
@@ -10994,7 +11012,7 @@ namespace Rexport
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel22.Controls.Add(this.checkBox19, 2, 1);
             this.tableLayoutPanel22.Controls.Add(this.textBox305, 5, 1);
             this.tableLayoutPanel22.Controls.Add(this.label159, 0, 0);
@@ -11023,7 +11041,7 @@ namespace Rexport
             // 
             this.checkBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(305, 81);
+            this.checkBox19.Location = new System.Drawing.Point(303, 81);
             this.checkBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox19.Name = "checkBox19";
             this.checkBox19.Size = new System.Drawing.Size(18, 17);
@@ -11034,7 +11052,7 @@ namespace Rexport
             // 
             this.textBox305.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox305.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox305.Location = new System.Drawing.Point(854, 75);
+            this.textBox305.Location = new System.Drawing.Point(852, 75);
             this.textBox305.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox305.Name = "textBox305";
             this.textBox305.Size = new System.Drawing.Size(89, 30);
@@ -11045,7 +11063,7 @@ namespace Rexport
             this.label159.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label159.AutoSize = true;
             this.label159.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label159.Location = new System.Drawing.Point(54, 17);
+            this.label159.Location = new System.Drawing.Point(53, 17);
             this.label159.Name = "label159";
             this.label159.Size = new System.Drawing.Size(65, 25);
             this.label159.TabIndex = 3;
@@ -11056,7 +11074,7 @@ namespace Rexport
             this.label160.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label160.AutoSize = true;
             this.label160.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label160.Location = new System.Drawing.Point(193, 17);
+            this.label160.Location = new System.Drawing.Point(191, 17);
             this.label160.Name = "label160";
             this.label160.Size = new System.Drawing.Size(43, 25);
             this.label160.TabIndex = 4;
@@ -11067,7 +11085,7 @@ namespace Rexport
             this.label161.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label161.AutoSize = true;
             this.label161.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label161.Location = new System.Drawing.Point(279, 17);
+            this.label161.Location = new System.Drawing.Point(277, 17);
             this.label161.Name = "label161";
             this.label161.Size = new System.Drawing.Size(69, 25);
             this.label161.TabIndex = 5;
@@ -11078,7 +11096,7 @@ namespace Rexport
             this.label162.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label162.AutoSize = true;
             this.label162.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label162.Location = new System.Drawing.Point(835, 17);
+            this.label162.Location = new System.Drawing.Point(833, 17);
             this.label162.Name = "label162";
             this.label162.Size = new System.Drawing.Size(126, 25);
             this.label162.TabIndex = 8;
@@ -11089,7 +11107,7 @@ namespace Rexport
             this.label163.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label163.AutoSize = true;
             this.label163.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label163.Location = new System.Drawing.Point(1051, 17);
+            this.label163.Location = new System.Drawing.Point(1050, 17);
             this.label163.Name = "label163";
             this.label163.Size = new System.Drawing.Size(67, 25);
             this.label163.TabIndex = 9;
@@ -11099,7 +11117,7 @@ namespace Rexport
             // 
             this.textBox306.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox306.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox306.Location = new System.Drawing.Point(42, 75);
+            this.textBox306.Location = new System.Drawing.Point(41, 75);
             this.textBox306.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox306.Name = "textBox306";
             this.textBox306.Size = new System.Drawing.Size(89, 30);
@@ -11109,7 +11127,7 @@ namespace Rexport
             // 
             this.textBox307.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox307.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox307.Location = new System.Drawing.Point(432, 75);
+            this.textBox307.Location = new System.Drawing.Point(430, 75);
             this.textBox307.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox307.Name = "textBox307";
             this.textBox307.Size = new System.Drawing.Size(89, 30);
@@ -11119,7 +11137,7 @@ namespace Rexport
             // 
             this.textBox308.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox308.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox308.Location = new System.Drawing.Point(645, 75);
+            this.textBox308.Location = new System.Drawing.Point(643, 75);
             this.textBox308.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox308.Name = "textBox308";
             this.textBox308.Size = new System.Drawing.Size(89, 30);
@@ -11129,7 +11147,7 @@ namespace Rexport
             // 
             this.textBox309.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox309.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox309.Location = new System.Drawing.Point(1052, 75);
+            this.textBox309.Location = new System.Drawing.Point(1051, 75);
             this.textBox309.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox309.Name = "textBox309";
             this.textBox309.Size = new System.Drawing.Size(65, 30);
@@ -11139,7 +11157,7 @@ namespace Rexport
             // 
             this.checkBox20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(206, 81);
+            this.checkBox20.Location = new System.Drawing.Point(204, 81);
             this.checkBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox20.Name = "checkBox20";
             this.checkBox20.Size = new System.Drawing.Size(18, 17);
@@ -11151,7 +11169,7 @@ namespace Rexport
             this.label164.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label164.AutoSize = true;
             this.label164.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label164.Location = new System.Drawing.Point(414, 4);
+            this.label164.Location = new System.Drawing.Point(412, 4);
             this.label164.Name = "label164";
             this.label164.Size = new System.Drawing.Size(126, 50);
             this.label164.TabIndex = 6;
@@ -11162,7 +11180,7 @@ namespace Rexport
             this.label165.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label165.AutoSize = true;
             this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label165.Location = new System.Drawing.Point(616, 4);
+            this.label165.Location = new System.Drawing.Point(614, 4);
             this.label165.Name = "label165";
             this.label165.Size = new System.Drawing.Size(147, 50);
             this.label165.TabIndex = 7;
@@ -11177,7 +11195,7 @@ namespace Rexport
             this.editLinkPanel.Controls.Add(this.textBox9);
             this.editLinkPanel.Controls.Add(this.label2);
             this.editLinkPanel.Location = new System.Drawing.Point(0, 0);
-            this.editLinkPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editLinkPanel.Margin = new System.Windows.Forms.Padding(4);
             this.editLinkPanel.Name = "editLinkPanel";
             this.editLinkPanel.Size = new System.Drawing.Size(1275, 672);
             this.editLinkPanel.TabIndex = 8;
@@ -11197,7 +11215,7 @@ namespace Rexport
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Location = new System.Drawing.Point(892, 587);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(355, 57);
             this.button5.TabIndex = 4;
@@ -11211,7 +11229,7 @@ namespace Rexport
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(77, 255);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 57);
             this.button1.TabIndex = 2;
@@ -11224,7 +11242,7 @@ namespace Rexport
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox9.Location = new System.Drawing.Point(102, 200);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(752, 30);
             this.textBox9.TabIndex = 1;
@@ -11240,19 +11258,23 @@ namespace Rexport
             this.label2.TabIndex = 0;
             this.label2.Text = "Please enter the link of your syllabus.";
             // 
-            // label118
+            // ectswarning
             // 
-            this.label118.AutoSize = true;
-            this.label118.BackColor = System.Drawing.Color.Transparent;
-            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.label118.Location = new System.Drawing.Point(13, 669);
-            this.label118.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(75, 29);
-            this.label118.TabIndex = 4;
-            this.label118.Text = "Help!";
-            this.label118.Click += new System.EventHandler(this.label118_Click);
+            this.ectswarning.AutoSize = true;
+            this.ectswarning.ForeColor = System.Drawing.Color.Red;
+            this.ectswarning.Location = new System.Drawing.Point(772, 7650);
+            this.ectswarning.Name = "ectswarning";
+            this.ectswarning.Size = new System.Drawing.Size(0, 17);
+            this.ectswarning.TabIndex = 37;
+            // 
+            // editects
+            // 
+            this.editects.AutoSize = true;
+            this.editects.ForeColor = System.Drawing.Color.Red;
+            this.editects.Location = new System.Drawing.Point(939, 7643);
+            this.editects.Name = "editects";
+            this.editects.Size = new System.Drawing.Size(0, 17);
+            this.editects.TabIndex = 35;
             // 
             // Home
             // 
@@ -12187,6 +12209,8 @@ namespace Rexport
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label115;
         private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label ectswarning;
+        private System.Windows.Forms.Label editects;
     }
 }
 
