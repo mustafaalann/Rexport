@@ -328,7 +328,7 @@ namespace Rexport
 
                 byte[] bytes = Encoding.Default.GetBytes(htmlCode);
                 htmlCode = Encoding.UTF8.GetString(bytes);
-
+                    
 
 
 
@@ -835,12 +835,12 @@ namespace Rexport
 
                 // CourseType
 
-                if (courseType == "Required" || courseLanguage == "Zorunlu")
+                if (courseType == "Required" || courseType == "Zorunlu")
                 {
                     checkBox13.Checked = true;
                     checkBox14.Checked = false;
                 }
-                else if(courseType == "Elective" || courseLanguage == "Seçmeli")
+                else if(courseType == "Elective" || courseType == "Seçmeli")
                 {
                     checkBox14.Checked = true;
                     checkBox13.Checked = false;
@@ -995,7 +995,16 @@ namespace Rexport
         private void button2_Click(object sender, EventArgs e)
 
         {
+            
+
             var path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
+
+            if (comboBox1.SelectedItem == null)
+            {
+
+                comboBox1.SelectedItem = "English";
+                comboBox2.SelectedItem = "English";
+            }
 
             if (comboBox1.SelectedItem.ToString() == "English")
             {
@@ -2025,8 +2034,18 @@ namespace Rexport
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             
+
+
             var path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
+
+            if(comboBox1.SelectedItem == null)
+            {
+
+                comboBox1.SelectedItem = "English";
+                comboBox2.SelectedItem = "English";
+            }
 
             if (comboBox1.SelectedItem.ToString() == "English")
             {
