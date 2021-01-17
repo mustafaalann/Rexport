@@ -266,7 +266,7 @@ namespace Rexport
             {
                 return s.Substring(startIndex, endIndex - startIndex);
             }
-            catch (System.ArgumentOutOfRangeException ex)
+            catch 
             {
                 return "";
             }
@@ -299,11 +299,11 @@ namespace Rexport
             }
             else
             {
-                homePanel.Hide();
-                editPanel2.Show();
-                editLinkPanel.Hide();
-                createPanel.Hide();
-                editPanel2.BringToFront();
+
+                label115.ForeColor = Color.Blue;
+                label115.Text = "Loading...";
+
+               
 
 
                 int a = 0;
@@ -498,14 +498,14 @@ namespace Rexport
 
 
                 //where we calculated the numbers on the lines
-                foreach (var weight in weights)
+                foreach (String weight in weights)
                 {
                     if (weight != "")
                     {
                         courseTotalWeight += Convert.ToInt32(weight);
                     }
                 }
-                foreach (var no in nos)
+                foreach (String no in nos)
                 {
                     if (no != "")
                     {
@@ -579,7 +579,7 @@ namespace Rexport
                 workLoads.Add(courseFinal2Workload);
 
                 int courseTotalWorkload = 0;
-                foreach (var workload in workLoads)
+                foreach (String workload in workLoads)
                 {
                     if (workload != "")
                     {
@@ -931,7 +931,11 @@ namespace Rexport
 
 
 
-
+            homePanel.Hide();
+            editPanel2.Show();
+            editLinkPanel.Hide();
+            createPanel.Hide();
+            editPanel2.BringToFront();
 
 
         }
@@ -3336,8 +3340,7 @@ namespace Rexport
 
         private void button5_Click(object sender, EventArgs e)
         {
-            editLinkPanel.Hide();
-            editPanel2.Show();
+            
             var path = Path.Combine(Directory.GetCurrentDirectory(), "last_save.html");
             WebClient client = new WebClient();
             String myHtml = client.DownloadString(path);
@@ -3642,8 +3645,9 @@ namespace Rexport
                 richTextBox51.Text = ExtractString(GetLine(lines[162], 3), ">", "<").Trim();
 
             }
-            
 
+            editLinkPanel.Hide();
+            editPanel2.Show();
 
 
 
