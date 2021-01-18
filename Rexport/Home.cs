@@ -669,14 +669,14 @@ namespace Rexport
 
                 if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/CE+221" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/CE+221")
                 {
+                    d = -2;
                     b = 1;
                     c = -54;
                 }
 
+                
 
-
-
-                String W1ProgramCompetencies;
+                    String W1ProgramCompetencies;
                 String W2ProgramCompetencies;
                 String W3ProgramCompetencies;
                 String W4ProgramCompetencies;
@@ -4265,6 +4265,13 @@ namespace Rexport
 
             int counter = 0;
 
+
+
+
+            try
+            {
+
+            
             for (int i = 0; i < 13; i++)
             {
 
@@ -4283,6 +4290,12 @@ namespace Rexport
                 }
             }
 
+         }
+
+            catch
+            {
+
+            }
 
 
 
