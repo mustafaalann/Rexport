@@ -20,10 +20,6 @@ namespace Rexport
         public Home()
         {
 
-            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string folderName = Path.Combine(projectPath, "Last Syllabus");
-            System.IO.Directory.CreateDirectory(folderName);
-
             InitializeComponent();
             homePanel.Show();
             editPanel2.Hide();
