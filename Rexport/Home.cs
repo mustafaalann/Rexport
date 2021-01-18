@@ -2425,6 +2425,11 @@ namespace Rexport
                 myHtml = replaceBetweenWithoutRegex(myHtml, "FallStart", "FallEnd", true, true, "");
                 myHtml = replaceBetweenWithoutRegex(myHtml, "SpringStart", "SpringEnd", true, true, "X");
             }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "FallStart", "FallEnd", true, true, "");
+                myHtml = replaceBetweenWithoutRegex(myHtml, "SpringStart", "SpringEnd", true, true, "");
+            }
             myHtml = replaceBetweenWithoutRegex(myHtml, "TheoryStart", "TheoryEnd", true, true, textBox307.Text);
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "AppStart", "AppEnd", true, true, textBox308.Text);
@@ -2438,10 +2443,15 @@ namespace Rexport
             if (checkBox7.Checked)
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "English");
+
             }
             else if (checkBox8.Checked)
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "Turkish");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLanguageStart", "CourseLanguageEnd", true, true, "");
             }
 
             if (checkBox13.Checked)
@@ -2451,6 +2461,10 @@ namespace Rexport
             else if (checkBox14.Checked)
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseTypeStart", "CourseTypeEnd", true, true, "Elective");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseTypeStart", "CourseTypeEnd", true, true, "");
             }
 
             if (checkBox15.Checked)
@@ -2465,9 +2479,13 @@ namespace Rexport
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Second Cycle");
             }
-            else
+            else if (checkBox18.Checked)
             {
                 myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "Third Cycle");
+            }
+            else
+            {
+                myHtml = replaceBetweenWithoutRegex(myHtml, "CourseLevelStart", "CourseLevelEnd", true, true, "");
             }
 
             myHtml = replaceBetweenWithoutRegex(myHtml, "CourseCoordinatorStart", "CourseCoordinatorEnd", true, true, textBox97.Text);
@@ -3617,22 +3635,52 @@ namespace Rexport
             if (ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Core Course" || ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Temel Ders")
             {
                 checkBox86.Checked = true;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
+
+
             }
             else if (ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Major Area Course" || ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Uzmanlık/Alan Ders")
             {
+                checkBox86.Checked = false;
                 checkBox87.Checked = true;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
             }
             else if (ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Supportive Course" || ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Destek Dersi")
             {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
                 checkBox88.Checked = true;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
             }
             else if (ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "Communication and Management Skills Course" || ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "İletişim ve Yönetim Becerileri Dersi")
             {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
                 checkBox89.Checked = true;
+                checkBox90.Checked = false;
             }
             else if (ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Transferable Skill Course" || ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Aktarılabilir Beceri Dersi")
             {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
                 checkBox90.Checked = true;
+            }
+            else
+            {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
             }
 
             richTextBox2.Text = ExtractString(GetLine(lines[43], 3), ">", "<").Trim();
@@ -3954,7 +4002,7 @@ namespace Rexport
 
 
 
-            if (ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Core Course" || ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Temel Ders")
+            if (ExtractString(GetLine(lines[30], 2), ">", "<").Trim() == "X" || ExtractString(GetLine(lines[30], 2), ">", "<").Trim() == "X")
             {
                 checkBox86.Checked = true;
                 checkBox87.Checked = false;
@@ -3964,7 +4012,7 @@ namespace Rexport
 
 
             }
-            else if (ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Major Area Course" || ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Uzmanlık/Alan Ders")
+            else if (ExtractString(GetLine(lines[32], 2), ">", "<").Trim() == "X" || ExtractString(GetLine(lines[32], 2), ">", "<").Trim() == "X")
             {
                 checkBox86.Checked = false;
                 checkBox87.Checked = true;
@@ -3972,7 +4020,7 @@ namespace Rexport
                 checkBox89.Checked = false;
                 checkBox90.Checked = false;
             }
-            else if (ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Supportive Course" || ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Destek Dersi")
+            else if (ExtractString(GetLine(lines[34], 2), ">", "<").Trim() == "X" || ExtractString(GetLine(lines[34], 2), ">", "<").Trim() == "X")
             {
                 checkBox86.Checked = false;
                 checkBox87.Checked = false;
@@ -3981,7 +4029,7 @@ namespace Rexport
                 checkBox90.Checked = false;
 
             }
-            else if (ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "Communication and Management Skills Course" || ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "İletişim ve Yönetim Becerileri Dersi")
+            else if (ExtractString(GetLine(lines[36], 2), ">", "<").Trim() == "X" || ExtractString(GetLine(lines[36], 2), ">", "<").Trim() == "X")
             {
                 checkBox86.Checked = false;
                 checkBox87.Checked = false;
@@ -3989,7 +4037,7 @@ namespace Rexport
                 checkBox89.Checked = true;
                 checkBox90.Checked = false;
             }
-            else if (ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Transferable Skill Course" || ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Aktarılabilir Beceri Dersi")
+            else if (ExtractString(GetLine(lines[38], 2), ">", "<").Trim() == "X" || ExtractString(GetLine(lines[38], 2), ">", "<").Trim() == "X")
             {
                 checkBox86.Checked = false;
                 checkBox87.Checked = false;
