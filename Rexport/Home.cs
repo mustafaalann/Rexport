@@ -672,23 +672,23 @@ namespace Rexport
                     b = 1;
                     c = -54;
                 }
-                
 
 
 
-                String W1ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 5), "<p>", "</p>").Trim();
-                String W2ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 15), "<p>", "</p>").Trim();
-                String W3ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 25), "<p>", "</p>").Trim();
-                String W4ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 35), "<p>", "</p>").Trim();
-                String W5ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 45), "<p>", "</p>").Trim();
-                String W6ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 55), "<p>", "</p>").Trim();
-                String W7ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 65 + c), "<p>", "</p>").Trim();
-                String W8ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 75 + c), "<p>", "</p>").Trim();
-                String W9ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 85 + c), "<p>", "</p>").Trim();
-                String W10ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 95 + c ), "<p>", "</p>").Trim();
-                String W11ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 105 + c), "<p>", "</p>").Trim();
-                String W12ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 115 + c), "<p>", "</p>").Trim();
-                String W13ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 125 + c), "<p>", "</p>").Trim();
+
+                String W1ProgramCompetencies;
+                String W2ProgramCompetencies;
+                String W3ProgramCompetencies;
+                String W4ProgramCompetencies;
+                String W5ProgramCompetencies;
+                String W6ProgramCompetencies;
+                String W7ProgramCompetencies;
+                String W8ProgramCompetencies;
+                String W9ProgramCompetencies;
+                String W10ProgramCompetencies;
+                String W11ProgramCompetencies;
+                String W12ProgramCompetencies;
+                String W13ProgramCompetencies;
 
 
                 if (ExtractString(link, "edu.tr/", "/syllabus/") == "tr")
@@ -853,7 +853,24 @@ namespace Rexport
                 }
 
 
+                /* Special Cases*/
+                if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+115" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+115")
+                {
+                    courseObjectives = "This course will introduce the basic elements of structural programming. Java programming language will be used in code applications." +
+                        "Topics include the concept of type, main types, expressions, standard functions, " +
+                        "input/output statements, control structures, selection statements, repetition statements, functions, modularity in programming, global and local variables, dynamic variables, and arrays.";
+                    courseLearningOutcomes2 = "The students who succeeded in this course;" +
+                        "-will be able to define the fundamental concepts in programming," +
+                        "will be able to write, compile and debug programs in Java language," +
+                        "will be able to use control structures (decision and loop statements) in Java codes," +
+                        "will be able to design functions in Java codes," +
+                        "will be able to use arrays in Java codes," +
+                       " will be able to define classes in Java codes.";
+                    courseDescription = "This course introduces the students to the fundamental concepts of programming using Java programming language.";
 
+
+
+                }
 
 
 
@@ -1133,7 +1150,8 @@ namespace Rexport
                     checkBox17.Checked = false;
                 }
 
-                
+
+
                 
 
 
