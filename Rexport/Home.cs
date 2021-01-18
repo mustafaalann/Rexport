@@ -260,10 +260,11 @@ namespace Rexport
                 return "None";
             }
 
-            int startIndex = s.IndexOf(start) + start.Length;
-            int endIndex = s.IndexOf(end, startIndex);
+            
             try
             {
+                int startIndex = s.IndexOf(start) + start.Length;
+                int endIndex = s.IndexOf(end, startIndex);
                 return s.Substring(startIndex, endIndex - startIndex);
             }
             catch 
@@ -1132,10 +1133,7 @@ namespace Rexport
                     checkBox17.Checked = false;
                 }
 
-                if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/SE+302" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/SE+302")
-                {
-                    W6ProgramCompetencies = "To be able to work effectively in Software Engineering disciplinary and multi-disciplinary teams; to be able to work individually.";
-                }
+                
                 
 
 
@@ -2331,7 +2329,16 @@ namespace Rexport
                 myHtml = replaceBetweenWithoutRegex(myHtml, "W135Start", "W135End", true, true, "");
             }
 
-            int ask =Convert.ToInt32(textBox6.Text);
+            int ask = 0;
+            try
+            {
+                ask = Convert.ToInt32(textBox6.Text);
+            }
+            catch
+            {
+                
+            }
+            
 
             if (controller > (ask*2.5)) 
 
@@ -3434,8 +3441,17 @@ namespace Rexport
                 myHtml = replaceBetweenWithoutRegex(myHtml, "W135Start", "W135End", true, true, "");
             }
 
+            int ectsedit = 0;
+            try
+            {
 
-            int ectsedit = Convert.ToInt32(textBox309.Text);
+                ectsedit = Convert.ToInt32(textBox309.Text);
+            }
+            catch
+            {
+                ectsedit = 0;
+            }
+            
 
             if (editController > (ectsedit * 2.5))
                
@@ -3846,37 +3862,72 @@ namespace Rexport
             if (ExtractString(GetLine(lines[11], 3), ">", "<").Trim() == "İngilizce" || ExtractString(GetLine(lines[11], 3), ">", "<").Trim() == "English")
             {
                 checkBox7.Checked = true;
+                checkBox8.Checked = false;
+            }
+            else if (ExtractString(GetLine(lines[11], 3), ">", "<").Trim() == "Türkçe" || ExtractString(GetLine(lines[11], 3), ">", "<").Trim() == "Turkish")
+            {
+                checkBox8.Checked = true;
+                checkBox7.Checked = false;
             }
             else
             {
-                checkBox8.Checked = true;
+                checkBox7.Checked = false;
+                checkBox8.Checked = false;
             }
 
 
             if (ExtractString(GetLine(lines[13], 3), ">", "<").Trim() == "Required" || ExtractString(GetLine(lines[13], 3), ">", "<").Trim() == "Zorunlu")
             {
+                checkBox14.Checked = false;
                 checkBox13.Checked = true;
+            }
+            else if (ExtractString(GetLine(lines[13], 3), ">", "<").Trim() == "Elective" || ExtractString(GetLine(lines[13], 3), ">", "<").Trim() == "Seçmeli")
+            {
+                checkBox13.Checked = false;
+                checkBox14.Checked = true;
             }
             else
             {
-                checkBox14.Checked = true;
+                checkBox13.Checked = false;
+                checkBox14.Checked = false;
+
             }
 
-            if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "First Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Lisans")
-            {
-                checkBox16.Checked = true;
-            }
-            else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Short Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Ön Lisans")
+            
+            if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Short Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Ön Lisans")
             {
                 checkBox15.Checked = true;
+                checkBox16.Checked = false;
+                checkBox17.Checked = false;
+                checkBox18.Checked = false;
+            }
+            else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "First Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Lisans")
+            {
+                checkBox15.Checked = false;
+                checkBox16.Checked = true;
+                checkBox17.Checked = false;
+                checkBox18.Checked = false;
             }
             else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Second Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Yüksek Lisans")
             {
+                checkBox15.Checked = false;
+                checkBox16.Checked = false;
                 checkBox17.Checked = true;
+                checkBox18.Checked = false;
             }
             else if (ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Third Cycle" || ExtractString(GetLine(lines[15], 3), ">", "<").Trim() == "Doktora")
             {
+                checkBox15.Checked = false;
+                checkBox16.Checked = false;
+                checkBox17.Checked = false;
                 checkBox18.Checked = true;
+            }
+            else
+            {
+                checkBox15.Checked = false;
+                checkBox16.Checked = false;
+                checkBox17.Checked = false;
+                checkBox18.Checked = false;
             }
 
             textBox97.Text = ExtractString(GetLine(lines[17], 3), ">", "<").Trim();
@@ -3892,24 +3943,54 @@ namespace Rexport
             if (ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Core Course" || ExtractString(GetLine(lines[30], 3), ">", "<").Trim() == "Temel Ders")
             {
                 checkBox86.Checked = true;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
+
+
             }
             else if (ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Major Area Course" || ExtractString(GetLine(lines[32], 3), ">", "<").Trim() == "Uzmanlık/Alan Ders")
             {
+                checkBox86.Checked = false;
                 checkBox87.Checked = true;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
             }
             else if (ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Supportive Course" || ExtractString(GetLine(lines[34], 3), ">", "<").Trim() == "Destek Dersi")
             {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
                 checkBox88.Checked = true;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
+
             }
             else if (ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "Communication and Management Skills Course" || ExtractString(GetLine(lines[36], 3), ">", "<").Trim() == "İletişim ve Yönetim Becerileri Dersi")
             {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
                 checkBox89.Checked = true;
+                checkBox90.Checked = false;
             }
             else if (ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Transferable Skill Course" || ExtractString(GetLine(lines[38], 3), ">", "<").Trim() == "Aktarılabilir Beceri Dersi")
             {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
                 checkBox90.Checked = true;
             }
-
+            else
+            {
+                checkBox86.Checked = false;
+                checkBox87.Checked = false;
+                checkBox88.Checked = false;
+                checkBox89.Checked = false;
+                checkBox90.Checked = false;
+            }
             richTextBox2.Text = ExtractString(GetLine(lines[43], 3), ">", "<").Trim();
             richTextBox3.Text = ExtractString(GetLine(lines[43], 4), ">", "<").Trim();
             richTextBox4.Text = ExtractString(GetLine(lines[45], 3), ">", "<").Trim();
