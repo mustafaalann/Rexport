@@ -1267,7 +1267,7 @@ namespace Rexport
                 comboBox2.SelectedItem = "English";
             }
 
-            if (comboBox1.SelectedItem.ToString() == "English")
+            if (comboBox2.SelectedItem.ToString() == "English")
             {
                 path = Path.Combine(Directory.GetCurrentDirectory(), "eng_template_syllabus.html");
             }
