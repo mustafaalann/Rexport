@@ -397,6 +397,65 @@ namespace Rexport
 
                 //Course category is gonna come here....
 
+
+                if(ExtractString(GetLine(lines[137 + a], 1), ">", "<").Trim()=="X")
+                {
+                    checkBox86.Checked = true;
+                    checkBox87.Checked = false;
+                    checkBox88.Checked = false;
+                    checkBox89.Checked = false;
+                    checkBox90.Checked = false;
+                }
+                 else if (ExtractString(GetLine(lines[139 + a], 1), ">", "<").Trim() == "X")
+                {
+                    checkBox86.Checked = false;
+                    checkBox87.Checked = true;
+                    checkBox88.Checked = false;
+                    checkBox89.Checked = false;
+                    checkBox90.Checked = false;
+                }
+                else if (ExtractString(GetLine(lines[141 + a], 1), ">", "<").Trim() == "X")
+                {
+                    checkBox86.Checked = false;
+                    checkBox87.Checked = false;
+                    checkBox88.Checked = true;
+                    checkBox89.Checked = false;
+                    checkBox90.Checked = false;
+                }
+                else if (ExtractString(GetLine(lines[143 + a], 1), ">", "<").Trim() == "X")
+                {
+                    checkBox86.Checked = false;
+                    checkBox87.Checked = false;
+                    checkBox88.Checked = false;
+                    checkBox89.Checked = true;
+                    checkBox90.Checked = false;
+                }
+                else if (ExtractString(GetLine(lines[145 + a], 1), ">", "<").Trim() == "X")
+                {
+                    checkBox86.Checked = false;
+                    checkBox87.Checked = false;
+                    checkBox88.Checked = false;
+                    checkBox89.Checked = false;
+                    checkBox90.Checked = true;
+                }
+                else
+                {
+                    checkBox86.Checked = false;
+                    checkBox87.Checked = false;
+                    checkBox88.Checked = false;
+                    checkBox89.Checked = false;
+                    checkBox90.Checked = false;
+                }
+
+
+
+
+
+
+
+
+
+
                 //Week Subjects Related Preparation part
                 String courseSubjectW1 = ExtractString(GetLine(lines[150 + a], 9), "<td>", "</td>").Trim();
                 String courseRelatedpreparationW1 = ExtractString(GetLine(lines[150 + a], 10), "<td>", "</td>").Trim();
@@ -603,6 +662,17 @@ namespace Rexport
                         courseTotalWorkload += Convert.ToInt32(workload);
                     }
                 }
+                int b = 0;
+                int c = 0;
+                int d = 0;
+
+                if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/CE+221" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/CE+221")
+                {
+                    b = 1;
+                    c = -54;
+                }
+                
+
 
 
                 String W1ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 5), "<p>", "</p>").Trim();
@@ -611,19 +681,141 @@ namespace Rexport
                 String W4ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 35), "<p>", "</p>").Trim();
                 String W5ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 45), "<p>", "</p>").Trim();
                 String W6ProgramCompetencies = ExtractString(GetLine(lines[310 + a], 55), "<p>", "</p>").Trim();
-                String W7ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 11), "<p>", "</p>").Trim();
-                String W8ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 21), "<p>", "</p>").Trim();
-                String W9ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 31), "<p>", "</p>").Trim();
-                String W10ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 41), "<p>", "</p>").Trim();
-                String W11ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 51), "<p>", "</p>").Trim();
-                String W12ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 61), "<p>", "</p>").Trim();
-                String W13ProgramCompetencies = ExtractString(GetLine(lines[311 + a], 71), "<p>", "</p>").Trim();
+                String W7ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 65 + c), "<p>", "</p>").Trim();
+                String W8ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 75 + c), "<p>", "</p>").Trim();
+                String W9ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 85 + c), "<p>", "</p>").Trim();
+                String W10ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 95 + c ), "<p>", "</p>").Trim();
+                String W11ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 105 + c), "<p>", "</p>").Trim();
+                String W12ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 115 + c), "<p>", "</p>").Trim();
+                String W13ProgramCompetencies = ExtractString(GetLine(lines[310 + a + b], 125 + c), "<p>", "</p>").Trim();
 
 
-                if (link == "https://se.ieu.edu.tr/en/syllabus/type/read/id/CE+221" || link == "https://ce.ieu.edu.tr/en/syllabus/type/read/id/CE+221")
+                if (ExtractString(link, "edu.tr/", "/syllabus/") == "tr")
                 {
-                    W6ProgramCompetencies = "To be able to work effectively in Software Engineering disciplinary and multi-disciplinary teams; to be able to work individually";
+                    W1ProgramCompetencies = "Matematik, Fen Bilimleri, Bilgisayar Bilimleri ve Yazılım Mühendisliği konularında yeterli bilgi sahibidir; bu alanlardaki kuramsal ve uygulamalı bilgileri, Yazılım Mühendisliği problemlerinde kullanır.";
+                    W2ProgramCompetencies = "Karmaşık Yazılım Mühendisliği problemlerini saptar, tanımlar, formüle eder ve çözer; bu amaca uygun analiz ve modelleme yöntemlerini seçer ve uygular.";
+                    W3ProgramCompetencies = "Karmaşık bir yazılım sistemini, süreci veya ürünü gerçekçi kısıtlar ve koşullar altında, belirli gereksinimleri karşılayacak şekilde tasarlar, gerçekleştirir, sınar, doğrular, raporlar, ölçer ve bakımını yapar; bu amaçla modern yöntemleri uygular.";
+                    W4ProgramCompetencies = "Yazılım Mühendisliği uygulamalarında karşılaşılan karmaşık problemlerin analizi ve çözümü için gerekli olan modern teknik ve araçları geliştirir, seçer ve kullanır; bilişim teknolojilerini etkin bir şekilde kullanır.";
+                    W5ProgramCompetencies = "Yazılım Mühendisliği problemlerinin incelenmesi için deney tasarlar, deney yapar, veri toplar, sonuçları analiz eder ve yorumlar.";
+                    W6ProgramCompetencies = "Yazılım Mühendisliği disiplini içinde ve çok disiplinli takımlarda etkin biçimde çalışır; bireysel çalışma sergiler.";
+                    W7ProgramCompetencies = "Türkçe sözlü ve yazılı etkin iletişim kurar; etkin rapor yazar ve yazılı raporları anlar, tasarım ve üretim raporları hazırlar, etkin sunum yapar, açık ve anlaşılır talimat verir ve alır.";
+                    W8ProgramCompetencies = "Mühendislik ve Yazılım uygulamalarının evrensel ve toplumsal boyutlarda sağlık, çevre ve güvenlik üzerindeki etkileri ve çağın mühendislik alanına yansıyan sorunları hakkında bilgi sahibidir; mühendislik ve yazılım çözümlerinin hukuksal sonuçlarının farkındadır.";
+                    W9ProgramCompetencies = "Etik ilkelerine uygun davranma, mesleki ve etik sorumluluk bilincine sahiptir; mühendislik uygulamalarında kullanılan standartlar hakkında bilgi sahibidir. ";
+                    W10ProgramCompetencies = "Proje yönetimi, risk yönetimi ve değişiklik yönetimi gibi, iş hayatındaki uygulamalar hakkında bilgi sahibidir; girişimcilik, yenilikçilik hakkında bilinçlidir; sürdürülebilir kalkınma hakkında bilgi sahibidir.";
+                    W11ProgramCompetencies = "Bir yabancı dili kullanarak Yazılım Mühendisliği ile ilişkili konularda, bilgi toplar ve meslektaşları ile iletişim kurar. (\"European Language Portfolio Global Scale\", Level B1)";
+                    W12ProgramCompetencies = "İkinci yabancı dili orta düzeyde kullanır.";
+                    W13ProgramCompetencies = "Yaşam boyu öğrenmenin gerekliliği bilincindedir; bilgiye erişebilir, bilim ve teknolojideki gelişmeleri izler ve kendini sürekli yeniler; insanlık tarihi boyunca oluşan bilgi birikimini Yazılım Mühendisliği alanıyla ilişkilendirir. ";
+                }
+                else
+                {
+                    W1ProgramCompetencies = "To have adequate knowledge in Mathematics, Science, Computer Science and Software Engineering; to be able to use theoretical and applied information in these areas on complex engineering problems.";
+                    W2ProgramCompetencies = "To be able to identify, define, formulate, and solve complex Software Engineering problems; to be able to select and apply proper analysis and modeling methods for this purpose.";
+                    W3ProgramCompetencies = "To be able to design, implement, verify, validate, document, measure and maintain a complex software system, process, or product under realistic constraints and conditions, in such a way as to meet the requirements; ability to apply modern methods for this purpose.";
+                    W4ProgramCompetencies = "To be able to devise, select, and use modern techniques and tools needed for analysis and solution of complex problems in software engineering applications; to be able to use information technologies effectively";
+                    W5ProgramCompetencies = "To be able to design and conduct experiments, gather data, analyze and interpret results for investigating complex Software Engineering problems.";
+                    W6ProgramCompetencies = "To be able to work effectively in Software Engineering disciplinary and multi-disciplinary teams; to be able to work individually.";
+                    W7ProgramCompetencies = "To be able to communicate effectively in Turkish, both orally and in writing; to be able to author and comprehend written reports, to be able to prepare design and implementation reports, to be able to present effectively, to be able to give and receive clear and comprehensible instructions.";
+                    W8ProgramCompetencies = "To have knowledge about global and social impact of engineering practices and software applications on health, environment, and safety; to have knowledge about contemporary issues as they pertain to engineering; to be aware of the legal ramifications of Engineering and Software Engineering solutions";
+                    W9ProgramCompetencies = "To be aware of ethical behavior, professional and ethical responsibility; to have knowledge about standards utilized in engineering applications";
+                    W10ProgramCompetencies = "To have knowledge about industrial practices such as project management, risk management, and change management; to have awareness of entrepreneurship and innovation; to have knowledge about sustainable development.";
+                    W11ProgramCompetencies = "To be able to collect data in the area of Software Engineering, and to be able to communicate with colleagues in a foreign language. (\"European Language Portfolio Global Scale\", Level B1)";
+                    W12ProgramCompetencies = "To be able to speak a second foreign language at a medium level of fluency efficiently.";
+                    W13ProgramCompetencies = "To recognize the need for lifelong learning; to be able to access information, to be able to stay current with developments in science and technology; to be able to relate the knowledge accumulated throughout the human history to Software Engineering";
+                }
 
+
+                //get X values
+                List<CheckBox> checkboxes = new List<CheckBox>();
+
+                checkboxes.Add(checkBox91);
+                checkboxes.Add(checkBox92);
+                checkboxes.Add(checkBox93);
+                checkboxes.Add(checkBox94);
+                checkboxes.Add(checkBox95);
+                checkboxes.Add(checkBox96);
+                checkboxes.Add(checkBox97);
+                checkboxes.Add(checkBox98);
+                checkboxes.Add(checkBox99);
+                checkboxes.Add(checkBox100);
+                checkboxes.Add(checkBox101);
+                checkboxes.Add(checkBox102);
+                checkboxes.Add(checkBox103);
+                checkboxes.Add(checkBox104);
+                checkboxes.Add(checkBox105);
+                checkboxes.Add(checkBox106);
+                checkboxes.Add(checkBox107);
+                checkboxes.Add(checkBox108);
+                checkboxes.Add(checkBox109);
+                checkboxes.Add(checkBox110);
+                checkboxes.Add(checkBox111);
+                checkboxes.Add(checkBox112);
+                checkboxes.Add(checkBox113);
+                checkboxes.Add(checkBox114);
+                checkboxes.Add(checkBox115);
+                checkboxes.Add(checkBox116);
+                checkboxes.Add(checkBox117);
+                checkboxes.Add(checkBox118);
+                checkboxes.Add(checkBox119);
+                checkboxes.Add(checkBox120);
+                checkboxes.Add(checkBox121);
+                checkboxes.Add(checkBox122);
+                checkboxes.Add(checkBox123);
+                checkboxes.Add(checkBox124);
+                checkboxes.Add(checkBox125);
+                checkboxes.Add(checkBox126);
+                checkboxes.Add(checkBox127);
+                checkboxes.Add(checkBox128);
+                checkboxes.Add(checkBox129);
+                checkboxes.Add(checkBox130);
+                checkboxes.Add(checkBox131);
+                checkboxes.Add(checkBox132);
+                checkboxes.Add(checkBox133);
+                checkboxes.Add(checkBox134);
+                checkboxes.Add(checkBox135);
+                checkboxes.Add(checkBox136);
+                checkboxes.Add(checkBox137);
+                checkboxes.Add(checkBox138);
+                checkboxes.Add(checkBox139);
+                checkboxes.Add(checkBox140);
+                checkboxes.Add(checkBox141);
+                checkboxes.Add(checkBox142);
+                checkboxes.Add(checkBox143);
+                checkboxes.Add(checkBox144);
+                checkboxes.Add(checkBox145);
+                checkboxes.Add(checkBox146);
+                checkboxes.Add(checkBox147);
+                checkboxes.Add(checkBox148);
+                checkboxes.Add(checkBox149);
+                checkboxes.Add(checkBox150);
+                checkboxes.Add(checkBox151);
+                checkboxes.Add(checkBox152);
+                checkboxes.Add(checkBox153);
+                checkboxes.Add(checkBox154);
+                checkboxes.Add(checkBox155);
+
+                int counter1 = 0;
+
+                for (int i = 0; i < 60; i = i + 10)
+                {
+                    
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if (ExtractString(GetLine(lines[310 + a], 7 + j + i), ">", "<").Trim() == "X")
+                        {
+                            System.Console.WriteLine(7 + j + i);
+                            checkboxes[counter1].Checked = true;
+                        }
+                        else
+                        {
+                            System.Console.WriteLine(7 + j + i);
+                            checkboxes[counter1].Checked = false;
+
+                        }
+                        counter1++;
+                        
+                    }
+
+                    
                 }
 
 
@@ -631,6 +823,33 @@ namespace Rexport
 
 
 
+
+
+                
+
+
+                for (int i = 0; i < 70; i = i + 10)
+                {
+
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if (ExtractString(GetLine(lines[310 + a + b], 67 + j + i + c), ">", "<").Trim() == "X")
+                        {
+                            System.Console.WriteLine(7 + j + i);
+                            checkboxes[counter1].Checked = true;
+                        }
+                        else
+                        {
+                            System.Console.WriteLine(7 + j + i + c);
+                            checkboxes[counter1].Checked = false;
+
+                        }
+                        counter1++;
+
+                    }
+
+
+                }
 
 
 
@@ -917,6 +1136,7 @@ namespace Rexport
                 {
                     W6ProgramCompetencies = "To be able to work effectively in Software Engineering disciplinary and multi-disciplinary teams; to be able to work individually.";
                 }
+                
 
 
 
@@ -3982,6 +4202,20 @@ namespace Rexport
         {
             string filename = "Rexport-Helpfile.pdf";
             System.Diagnostics.Process.Start(filename);
+        }
+
+        private void upperPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        Point lastPoint;
+        private void upperPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
     
