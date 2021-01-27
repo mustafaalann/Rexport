@@ -1,6 +1,12 @@
 ![](Screenshots/home_page.png)
+![](Screenshots/edit1_page.png)
+![](Screenshots/edit2_page1.png)
+![](Screenshots/edit2_page2.png)
+![](Screenshots/edit2_page3.png)
+![](Screenshots/edit2_page4.png)
+![](Screenshots/export_page.png)
 
-![RexportWithBackground](https://user-images.githubusercontent.com/61295658/103626555-6aee2480-4f4d-11eb-841f-fe4cf0348a45.png)
+![](logo_rexport.png)
 -Avvaş Sueda TUTKAN
 -Necati Atamer ŞAHİN
 -Berk HOŞGÖREN
